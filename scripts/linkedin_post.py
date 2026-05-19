@@ -12,6 +12,7 @@ Env vars required:
 """
 import argparse
 import json
+import mimetypes
 import os
 import re
 import sys
@@ -21,6 +22,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 LINKEDIN_UGC_URL = "https://api.linkedin.com/v2/ugcPosts"
+LINKEDIN_REGISTER_URL = "https://api.linkedin.com/v2/assets?action=registerUpload"
 MAX_CHARS = 3000
 
 
@@ -28,16 +30,10 @@ def extract_post(raw: str, slug: str | None) -> tuple[str, str | None]:
     """Return (post_text, section_header) for the requested draft."""
     if slug:
         section_pattern = re.compile(
-            rf"(##\s+Post\s+\d+\s+—\s+{re.escape(slug)}\b.*?)(?=^##\s|\Z)",
+            rf"(##\s+(?:Post|Option)\s+\d+\s+[-–—]\s+{re.escape(slug)}\b.*?)(?=^##\s|\Z)",
             re.DOTALL | re.MULTILINE,
         )
         match = section_pattern.search(raw)
-        if not match:
-            section_pattern = re.compile(
-                rf"(##\s+Post\s+\d+\s+[-–—]\s+{re.escape(slug)}\b.*?)(?=^##\s|\Z)",
-                re.DOTALL | re.MULTILINE,
-            )
-            match = section_pattern.search(raw)
         if not match:
             sys.exit(f"ERROR: no draft section found for slug '{slug}'.")
         section = match.group(1)
@@ -52,16 +48,85 @@ def extract_post(raw: str, slug: str | None) -> tuple[str, str | None]:
     return body_match.group(1).strip(), header
 
 
-def post_to_linkedin(text: str, token: str, author_urn: str) -> tuple[int, str]:
+def register_image_upload(token: str, author_urn: str) -> tuple[str, str]:
+    """Register an image upload; return (upload_url, asset_urn)."""
+    body = {
+        "registerUploadRequest": {
+            "recipes": ["urn:li:digitalmediaRecipe:feedshare-image"],
+            "owner": author_urn,
+            "serviceRelationships": [
+                {
+                    "relationshipType": "OWNER",
+                    "identifier": "urn:li:userGeneratedContent",
+                }
+            ],
+        }
+    }
+    req = urllib.request.Request(
+        LINKEDIN_REGISTER_URL,
+        data=json.dumps(body).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "X-Restli-Protocol-Version": "2.0.0",
+        },
+        method="POST",
+    )
+    with urllib.request.urlopen(req) as r:
+        payload = json.loads(r.read().decode("utf-8"))
+    value = payload["value"]
+    upload_url = value["uploadMechanism"][
+        "com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest"
+    ]["uploadUrl"]
+    return upload_url, value["asset"]
+
+
+def upload_image_binary(upload_url: str, token: str, image_path: Path) -> None:
+    content_type = mimetypes.guess_type(str(image_path))[0] or "image/png"
+    data = image_path.read_bytes()
+    req = urllib.request.Request(
+        upload_url,
+        data=data,
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": content_type,
+        },
+        method="PUT",
+    )
+    with urllib.request.urlopen(req) as r:
+        if not (200 <= r.status < 300):
+            raise RuntimeError(f"image upload failed: HTTP {r.status}")
+
+
+def post_to_linkedin(
+    text: str,
+    token: str,
+    author_urn: str,
+    image_path: Path | None = None,
+    image_alt: str = "",
+) -> tuple[int, str]:
+    share_content: dict = {
+        "shareCommentary": {"text": text},
+        "shareMediaCategory": "NONE",
+    }
+
+    if image_path is not None:
+        upload_url, asset_urn = register_image_upload(token, author_urn)
+        upload_image_binary(upload_url, token, image_path)
+        share_content["shareMediaCategory"] = "IMAGE"
+        share_content["media"] = [
+            {
+                "status": "READY",
+                "description": {"text": image_alt or text[:200]},
+                "media": asset_urn,
+                "title": {"text": image_alt[:100] if image_alt else "Post image"},
+            }
+        ]
+
     body = {
         "author": author_urn,
         "lifecycleState": "PUBLISHED",
-        "specificContent": {
-            "com.linkedin.ugc.ShareContent": {
-                "shareCommentary": {"text": text},
-                "shareMediaCategory": "NONE",
-            }
-        },
+        "specificContent": {"com.linkedin.ugc.ShareContent": share_content},
         "visibility": {"com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"},
     }
     req = urllib.request.Request(
@@ -118,6 +183,8 @@ def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("draft_path", help="Path to a draft markdown file.")
     p.add_argument("--slug", help="Post slug from the section header. If omitted, the first ---POST--- block is used.")
+    p.add_argument("--image", help="Optional path to a PNG/JPG image to attach.")
+    p.add_argument("--image-alt", default="", help="Alt text for the attached image (accessibility).")
     p.add_argument("--dry-run", action="store_true", help="Print what would be posted; do not call the API.")
     args = p.parse_args()
 
@@ -132,11 +199,23 @@ def main() -> int:
     if len(text) > MAX_CHARS:
         sys.exit(f"ERROR: post is {len(text)} chars; LinkedIn limit is {MAX_CHARS}.")
 
+    image_path = None
+    if args.image:
+        image_path = Path(args.image)
+        if not image_path.is_file():
+            sys.exit(f"ERROR: image file not found: {image_path}")
+
     if args.dry_run:
         print("=== DRY RUN ===")
         if section_header:
             print(f"Section: {section_header}")
         print(f"Length: {len(text)} chars")
+        word_count = len(text.split())
+        print(f"Words: {word_count}")
+        if image_path:
+            print(f"Image: {image_path} ({image_path.stat().st_size} bytes)")
+            if args.image_alt:
+                print(f"Alt: {args.image_alt}")
         print("---")
         print(text)
         print("---")
@@ -153,7 +232,7 @@ def main() -> int:
     if not author.startswith("urn:li:person:"):
         sys.exit(f"ERROR: LINKEDIN_AUTHOR_URN must look like 'urn:li:person:<id>', got: {author}")
 
-    status, response = post_to_linkedin(text, token, author)
+    status, response = post_to_linkedin(text, token, author, image_path, args.image_alt)
     print(f"HTTP {status}")
     print(response)
 
