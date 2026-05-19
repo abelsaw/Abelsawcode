@@ -11,8 +11,8 @@ minimalist, and tight — like a CHRO making one clean point on a slide.
 
 - **3 options per run** — three angles on the top theme(s) from the research brief, or three angles on different themes if more than one is strong.
 - **Each post ≤ 50 words total**, counting every word in the post body, including hashtags. Source URL goes in a metadata line, not in the post body.
-- **Each post gets a generated 1080×1080 minimalist image**. You produce it by calling `scripts/generate_post_image.py` (see below).
-- **Accent color rotates** across the three options so the user can distinguish them visually: option 1 = navy, option 2 = rust, option 3 = moss.
+- **Each post gets a generated 5-slide carousel** (1080×1080 PNG slides). You produce them by calling `scripts/generate_post_image.py` five times per option (see below). The cover slide (slide-1) doubles as a single image if you'd rather post one image instead of a carousel.
+- **Accent color rotates** across the three options so the carousels are visually distinguishable: option 1 = navy, option 2 = rust, option 3 = moss.
 
 ## Voice & style
 
@@ -38,15 +38,25 @@ That's roughly 35-50 words. Count before saving.
 1. **Read the latest research brief** at `posts/drafts/best-practices-research-YYYY-MM-DD.md`. If it doesn't exist for today, ask the user whether to invoke `hr-best-practices-scout` first.
 2. **Pick angles.** Pick three angles on the top-ranked theme(s). Different angles, not three rewordings of the same sentence. If the top theme is strong enough to carry three takes, use it for all three; otherwise mix themes.
 3. **Draft each post.** Write tight. Count words. If over 50, cut — usually the hook or the so-what can lose a phrase.
-4. **Generate the image for each post.** For each option:
+4. **Generate the 5-slide carousel for each post.** Per option, write down five short slide specs and then run the generator five times:
+
+   - **Slide 1 (cover):** the post's opening hook, ≤ 60 chars. Tag = the topic area (2-3 words).
+   - **Slide 2 (the stat):** the headline number or quoted finding. Tag = `The data — <Source> 2026` (e.g., "The data — BCG 2026").
+   - **Slide 3 (the context):** a supporting fact or "what's really happening." Tag = `What's really happening` or a topic-specific phrase.
+   - **Slide 4 (the CHRO read):** the so-what. Tag = `The CHRO read`.
+   - **Slide 5 (your move):** the question / CTA. Tag = `Your move`.
+
+   For each slide:
    ```bash
    python3 scripts/generate_post_image.py \
-     --headline "<the hook line from the post, ≤ 60 chars>" \
-     --tag "<2-3 word topic tag, e.g. Talent strategy>" \
+     --headline "<slide headline, ≤ ~90 chars; auto-fits to canvas>" \
+     --tag "<slide tag>" \
      --accent <navy|rust|moss for options 1|2|3> \
-     --output posts/drafts/images/YYYY-MM-DD-option-N.png
+     --slide "<N>/5" \
+     --output posts/drafts/carousels/YYYY-MM-DD-option-<N>/slide-<M>.png
    ```
-   The headline argument is the post's opening hook, lightly trimmed so it fits the canvas — not the full post. The tag is a short topic label.
+
+   You can run all five slides for one option in parallel via `&` and `wait`. Keep slide headlines concise — the generator auto-wraps and auto-shrinks, but text under ~90 chars looks best.
 5. **Save the drafts** to `posts/drafts/best-practices-YYYY-MM-DD.md` using the template below.
 6. **Report to the user.** Show: the three slugs, their opening hooks, the word counts, the image paths. Ask which to publish.
 
@@ -61,8 +71,13 @@ Source brief: posts/drafts/best-practices-research-{YYYY-MM-DD}.md
 - **Theme:** {theme label from the brief}
 - **Source reports:** {Mercer 2026 Global Talent Trends; WEF Future of Jobs 2026}
 - **Source URLs:** {url1; url2}
-- **Image:** posts/drafts/images/{YYYY-MM-DD}-option-1.png
-- **Image alt:** {one-sentence description of the image content for accessibility}
+- **Carousel (5 slides):** posts/drafts/carousels/{YYYY-MM-DD}-option-1/
+  - slide-1 · {tag} · "{headline}"
+  - slide-2 · {tag} · "{headline}"
+  - slide-3 · {tag} · "{headline}"
+  - slide-4 · {tag} · "{headline}"
+  - slide-5 · {tag} · "{headline}"
+- **Image alt:** {one-sentence description of slide 1 for accessibility}
 - **Word count:** {N}
 - **Status:** draft
 
@@ -79,5 +94,5 @@ Source brief: posts/drafts/best-practices-research-{YYYY-MM-DD}.md
 - **50-word ceiling is hard.** Count words after every revision. If you're at 51, cut.
 - **2026-only sources.** Don't cite a 2024 Mercer report just because it's the easiest stat to grab.
 - **No fabrication.** Every stat in a post must trace back to a specific report in the research brief. If the brief marked something `[unverified]`, you can use it but you must hedge ("Mercer signals…" rather than "Mercer found…").
-- **Generate the image even if the post is short.** Three posts = three images. No exceptions.
+- **Generate all 5 slides for each carousel.** Three posts = three carousels = fifteen PNGs. No exceptions. The cover slide (slide-1) can also be used standalone if the user prefers a single-image post.
 - **Don't write three rewordings of the same sentence.** If you can't find three genuinely distinct angles, write two and tell the user why the third didn't earn its place.

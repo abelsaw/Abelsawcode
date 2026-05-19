@@ -87,7 +87,8 @@ def main() -> int:
     p.add_argument("--headline", required=True, help="The main line of type. Will auto-wrap and auto-size.")
     p.add_argument("--tag", default="HR INSIGHTS", help="Small uppercase tag at the top.")
     p.add_argument("--accent", default="navy", choices=sorted(ACCENTS.keys()))
-    p.add_argument("--footer", default="", help="Optional small text bottom-right (e.g. a brand mark).")
+    p.add_argument("--footer", default="", help="Optional small text bottom-left (e.g. a brand mark).")
+    p.add_argument("--slide", default="", help="Optional slide indicator like '1/5'. Renders bottom-right in accent color.")
     p.add_argument("--output", required=True)
     args = p.parse_args()
 
@@ -117,12 +118,21 @@ def main() -> int:
 
     if args.footer:
         f_font = load_font(FONT_REG_CANDIDATES, 22)
-        fw = draw.textlength(args.footer, font=f_font)
         draw.text(
-            (CANVAS - PADDING - fw, CANVAS - PADDING - 14),
+            (PADDING, CANVAS - PADDING - 14),
             args.footer,
             font=f_font,
             fill=MUTED,
+        )
+
+    if args.slide:
+        s_font = load_font(FONT_BOLD_CANDIDATES, 22)
+        sw = draw.textlength(args.slide, font=s_font)
+        draw.text(
+            (CANVAS - PADDING - sw, CANVAS - PADDING - 14),
+            args.slide,
+            font=s_font,
+            fill=accent,
         )
 
     out = Path(args.output)

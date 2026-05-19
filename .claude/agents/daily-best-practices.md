@@ -13,7 +13,7 @@ sequencing and sanity checks; specialist subagents do the work.
    - All cited reports are 2026-dated.
    - Verification mode is noted (full-fetch vs. search-index-only).
 2. **Pick the angles for today.** Default behavior: 3 angles on the top-ranked theme. If theme #2 is very close in cross-firm score, take 2 angles on #1 and 1 on #2. If themes are weak, tell the user and stop — don't pad.
-3. **Draft + generate.** Delegate to `hr-best-practices-writer`. Wait for `posts/drafts/best-practices-YYYY-MM-DD.md` and three images under `posts/drafts/images/`.
+3. **Draft + generate.** Delegate to `hr-best-practices-writer`. Wait for `posts/drafts/best-practices-YYYY-MM-DD.md` and three 5-slide carousels under `posts/drafts/carousels/YYYY-MM-DD-option-N/`.
 4. **Present 3 options compactly.** For each option, show:
    - Slug, theme, source firms.
    - Opening hook (first line of the post).
@@ -21,14 +21,14 @@ sequencing and sanity checks; specialist subagents do the work.
    - Image path.
    Ask the user which to publish, which to revise, which to drop.
 5. **Iterate.** If the user wants revisions, delegate back to `hr-best-practices-writer` with specific feedback ("tighter hook," "different angle," "swap Mercer stat for WEF stat").
-6. **Publish on approval.** When the user approves a specific option, delegate to `linkedin-publisher`. The publisher script supports `--image` and `--image-alt` flags — pass both. Always confirm post-by-post.
+6. **Publish on approval.** When the user approves a specific option, delegate to `linkedin-publisher`. The publisher script supports `--carousel-dir` (for a multi-image carousel post) or `--image` (for a single image), plus `--image-alt` — pass whichever the user picked. Always confirm post-by-post.
 
 ## Sanity checks before handing off to the publisher
 
 - Word count ≤50 (count every word in the `---POST---` block, including hashtags).
 - The cited source is from a 2026 report.
-- An image file exists at the path in the draft's `Image:` field.
-- The image's accent color matches the option number (1=navy, 2=rust, 3=moss).
+- The carousel directory exists with exactly 5 `slide-*.png` files; all slides share the same accent color.
+- The accent color matches the option number (1=navy, 2=rust, 3=moss).
 - No AI-tells in the text.
 
 If any check fails, send the draft back to `hr-best-practices-writer` instead

@@ -102,7 +102,7 @@ def post_to_linkedin(
     text: str,
     token: str,
     author_urn: str,
-    image_path: Path | None = None,
+    image_paths: list[Path] | None = None,
     image_alt: str = "",
 ) -> tuple[int, str]:
     share_content: dict = {
@@ -110,18 +110,21 @@ def post_to_linkedin(
         "shareMediaCategory": "NONE",
     }
 
-    if image_path is not None:
-        upload_url, asset_urn = register_image_upload(token, author_urn)
-        upload_image_binary(upload_url, token, image_path)
+    if image_paths:
+        media = []
+        for path in image_paths:
+            upload_url, asset_urn = register_image_upload(token, author_urn)
+            upload_image_binary(upload_url, token, path)
+            media.append(
+                {
+                    "status": "READY",
+                    "description": {"text": image_alt or text[:200]},
+                    "media": asset_urn,
+                    "title": {"text": (image_alt[:100] if image_alt else path.stem)},
+                }
+            )
         share_content["shareMediaCategory"] = "IMAGE"
-        share_content["media"] = [
-            {
-                "status": "READY",
-                "description": {"text": image_alt or text[:200]},
-                "media": asset_urn,
-                "title": {"text": image_alt[:100] if image_alt else "Post image"},
-            }
-        ]
+        share_content["media"] = media
 
     body = {
         "author": author_urn,
@@ -183,8 +186,9 @@ def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("draft_path", help="Path to a draft markdown file.")
     p.add_argument("--slug", help="Post slug from the section header. If omitted, the first ---POST--- block is used.")
-    p.add_argument("--image", help="Optional path to a PNG/JPG image to attach.")
-    p.add_argument("--image-alt", default="", help="Alt text for the attached image (accessibility).")
+    p.add_argument("--image", help="Optional path to a single PNG/JPG image to attach.")
+    p.add_argument("--carousel-dir", help="Directory containing slide-*.png files for a multi-image carousel post (sorted by filename).")
+    p.add_argument("--image-alt", default="", help="Alt text for attached images (accessibility).")
     p.add_argument("--dry-run", action="store_true", help="Print what would be posted; do not call the API.")
     args = p.parse_args()
 
@@ -199,11 +203,24 @@ def main() -> int:
     if len(text) > MAX_CHARS:
         sys.exit(f"ERROR: post is {len(text)} chars; LinkedIn limit is {MAX_CHARS}.")
 
-    image_path = None
+    if args.image and args.carousel_dir:
+        sys.exit("ERROR: pass either --image or --carousel-dir, not both.")
+
+    image_paths: list[Path] = []
     if args.image:
-        image_path = Path(args.image)
-        if not image_path.is_file():
-            sys.exit(f"ERROR: image file not found: {image_path}")
+        path = Path(args.image)
+        if not path.is_file():
+            sys.exit(f"ERROR: image file not found: {path}")
+        image_paths = [path]
+    elif args.carousel_dir:
+        d = Path(args.carousel_dir)
+        if not d.is_dir():
+            sys.exit(f"ERROR: carousel directory not found: {d}")
+        image_paths = sorted(d.glob("slide-*.png"))
+        if not image_paths:
+            sys.exit(f"ERROR: no slide-*.png files in {d}")
+        if len(image_paths) > 9:
+            sys.exit(f"ERROR: LinkedIn allows up to 9 images per post; found {len(image_paths)}.")
 
     if args.dry_run:
         print("=== DRY RUN ===")
@@ -212,8 +229,11 @@ def main() -> int:
         print(f"Length: {len(text)} chars")
         word_count = len(text.split())
         print(f"Words: {word_count}")
-        if image_path:
-            print(f"Image: {image_path} ({image_path.stat().st_size} bytes)")
+        if image_paths:
+            label = "Image" if len(image_paths) == 1 else f"Carousel ({len(image_paths)} slides)"
+            print(f"{label}:")
+            for p in image_paths:
+                print(f"  - {p} ({p.stat().st_size} bytes)")
             if args.image_alt:
                 print(f"Alt: {args.image_alt}")
         print("---")
@@ -232,7 +252,7 @@ def main() -> int:
     if not author.startswith("urn:li:person:"):
         sys.exit(f"ERROR: LINKEDIN_AUTHOR_URN must look like 'urn:li:person:<id>', got: {author}")
 
-    status, response = post_to_linkedin(text, token, author, image_path, args.image_alt)
+    status, response = post_to_linkedin(text, token, author, image_paths, args.image_alt)
     print(f"HTTP {status}")
     print(response)
 
