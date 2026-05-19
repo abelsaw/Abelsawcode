@@ -12,11 +12,12 @@ from datetime import datetime, timezone
 
 USER_AGENT = "linkedin-post-agent/0.1 (by /u/anonymous)"
 
-REDDIT_SUBS = ["business", "technology", "Entrepreneur", "startups"]
+REDDIT_SUBS = ["popular", "news", "worldnews", "business", "technology"]
 RSS_FEEDS = [
-    ("TechCrunch", "https://techcrunch.com/feed/"),
-    ("The Verge", "https://www.theverge.com/rss/index.xml"),
-    ("Ars Technica", "https://feeds.arstechnica.com/arstechnica/index"),
+    ("BBC", "https://feeds.bbci.co.uk/news/rss.xml"),
+    ("NPR", "https://feeds.npr.org/1001/rss.xml"),
+    ("Google News", "https://news.google.com/rss"),
+    ("The Guardian", "https://www.theguardian.com/international/rss"),
     ("Hacker News", "https://hnrss.org/frontpage"),
 ]
 
