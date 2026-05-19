@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-"""Generate a minimalist 1080x1080 LinkedIn post image.
+"""Generate a bold editorial 1080x1080 LinkedIn carousel slide.
 
-Style: off-white background, small uppercase category tag, short accent
-bar, then a single bold headline that auto-fits the canvas. Designed
-for HR best-practices posts — no stock photos, no decoration, just
-type. Outputs PNG (the format LinkedIn accepts for image attachments).
+Style: top color band carrying the topic tag (white) and an oversized
+slide number (white), with a generous cream body area below holding a
+big sans-serif headline. A short accent rule anchors the bottom.
+
+This is the locked default style for the daily best-practices flow —
+chosen for scroll-stopping presence in the LinkedIn feed and strong
+visual hierarchy across a 5-slide swipe.
 """
 import argparse
 import sys
@@ -17,10 +20,12 @@ except ImportError:
 
 CANVAS = 1080
 PADDING = 96
+BAND_H = 360
 
-BG = (250, 250, 247)        # warm off-white
-INK = (15, 23, 42)          # near-black navy
-MUTED = (100, 116, 139)     # slate
+BG = (250, 248, 244)
+INK = (15, 15, 15)
+WHITE = (255, 255, 255)
+MUTED = (108, 116, 124)
 
 ACCENTS = {
     "navy": (30, 58, 138),
@@ -34,7 +39,6 @@ FONT_BOLD_CANDIDATES = [
     "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
     "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
     "/Library/Fonts/Arial Bold.ttf",
-    "/System/Library/Fonts/Helvetica.ttc",
 ]
 FONT_REG_CANDIDATES = [
     "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
@@ -54,8 +58,7 @@ def wrap(draw, text, font, max_width):
     words = text.split()
     lines, cur = [], []
     for w in words:
-        trial = " ".join(cur + [w])
-        if draw.textlength(trial, font=font) <= max_width:
+        if draw.textlength(" ".join(cur + [w]), font=font) <= max_width:
             cur.append(w)
         else:
             if cur:
@@ -70,11 +73,11 @@ def wrap(draw, text, font, max_width):
 
 
 def fit_headline(draw, text, max_w, max_h):
-    for size in range(112, 40, -4):
+    for size in range(124, 44, -4):
         font = load_font(FONT_BOLD_CANDIDATES, size)
         lines = wrap(draw, text, font, max_w)
         bbox = draw.textbbox((0, 0), "Hg", font=font)
-        line_h = (bbox[3] - bbox[1]) * 1.2
+        line_h = (bbox[3] - bbox[1]) * 1.25
         total_h = line_h * len(lines)
         widths_ok = all(draw.textlength(ln, font=font) <= max_w for ln in lines)
         if total_h <= max_h and widths_ok and len(lines) <= 6:
@@ -82,13 +85,25 @@ def fit_headline(draw, text, max_w, max_h):
     return font, lines, line_h
 
 
+def parse_slide(slide_arg):
+    if not slide_arg:
+        return None, None
+    parts = slide_arg.split("/")
+    if len(parts) != 2:
+        return None, None
+    try:
+        return int(parts[0]), int(parts[1])
+    except ValueError:
+        return None, None
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--headline", required=True, help="The main line of type. Will auto-wrap and auto-size.")
-    p.add_argument("--tag", default="HR INSIGHTS", help="Small uppercase tag at the top.")
+    p.add_argument("--headline", required=True, help="The main line of type. Auto-wraps and auto-sizes.")
+    p.add_argument("--tag", default="HR INSIGHTS", help="Topic tag, rendered uppercase in the top band.")
     p.add_argument("--accent", default="navy", choices=sorted(ACCENTS.keys()))
-    p.add_argument("--footer", default="", help="Optional small text bottom-left (e.g. a brand mark).")
-    p.add_argument("--slide", default="", help="Optional slide indicator like '1/5'. Renders bottom-right in accent color.")
+    p.add_argument("--slide", default="", help="Optional slide indicator like '1/5'. Renders as a large white number in the band.")
+    p.add_argument("--footer", default="", help="Optional small text bottom-left in the body area.")
     p.add_argument("--output", required=True)
     args = p.parse_args()
 
@@ -96,43 +111,57 @@ def main() -> int:
     draw = ImageDraw.Draw(img)
     accent = ACCENTS[args.accent]
 
-    tag_font = load_font(FONT_BOLD_CANDIDATES, 26)
-    tag = args.tag.upper().strip()
-    spaced = " ".join(list(tag.replace(" ", "  ")))
-    draw.text((PADDING, PADDING), spaced, font=tag_font, fill=MUTED)
-    tag_bbox = draw.textbbox((PADDING, PADDING), spaced, font=tag_font)
+    draw.rectangle([0, 0, CANVAS, BAND_H], fill=accent)
 
-    line_y = tag_bbox[3] + 32
-    draw.rectangle([PADDING, line_y, PADDING + 80, line_y + 5], fill=accent)
+    tag_font = load_font(FONT_BOLD_CANDIDATES, 32)
+    draw.text((PADDING, PADDING), args.tag.upper().strip(), font=tag_font, fill=WHITE)
 
-    headline_top = line_y + 90
-    footer_h = 80 if args.footer else 0
+    slide_num, slide_total = parse_slide(args.slide)
+    if slide_num is not None and slide_total is not None:
+        sn_font = load_font(FONT_BOLD_CANDIDATES, 220)
+        sn_text = f"{slide_num:02d}"
+        sn_w = draw.textlength(sn_text, font=sn_font)
+        sn_bbox = draw.textbbox((0, 0), sn_text, font=sn_font)
+        sn_h = sn_bbox[3] - sn_bbox[1]
+        draw.text(
+            (CANVAS - PADDING - sn_w, (BAND_H - sn_h) // 2 - 40),
+            sn_text,
+            font=sn_font,
+            fill=WHITE,
+        )
+        of_font = load_font(FONT_BOLD_CANDIDATES, 22)
+        of_text = f"OF {slide_total:02d}"
+        of_w = draw.textlength(of_text, font=of_font)
+        draw.text(
+            (CANVAS - PADDING - of_w, BAND_H - 64),
+            of_text,
+            font=of_font,
+            fill=WHITE,
+        )
+
+    head_top = BAND_H + 80
+    footer_h = 60 if args.footer else 40
     max_w = CANVAS - 2 * PADDING
-    max_h = CANVAS - headline_top - PADDING - footer_h
+    max_h = CANVAS - head_top - PADDING - footer_h
 
     font, lines, line_h = fit_headline(draw, args.headline, max_w, max_h)
-    y = headline_top
+    y = head_top
     for ln in lines:
         draw.text((PADDING, y), ln, font=font, fill=INK)
         y += line_h
 
+    draw.rectangle(
+        [PADDING, CANVAS - PADDING - 5, PADDING + 140, CANVAS - PADDING],
+        fill=accent,
+    )
+
     if args.footer:
         f_font = load_font(FONT_REG_CANDIDATES, 22)
         draw.text(
-            (PADDING, CANVAS - PADDING - 14),
+            (PADDING + 160, CANVAS - PADDING - 14),
             args.footer,
             font=f_font,
             fill=MUTED,
-        )
-
-    if args.slide:
-        s_font = load_font(FONT_BOLD_CANDIDATES, 22)
-        sw = draw.textlength(args.slide, font=s_font)
-        draw.text(
-            (CANVAS - PADDING - sw, CANVAS - PADDING - 14),
-            args.slide,
-            font=s_font,
-            fill=accent,
         )
 
     out = Path(args.output)
