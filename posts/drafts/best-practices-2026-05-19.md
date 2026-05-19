@@ -21,13 +21,13 @@ Themes covered: #1 (Human-AI work redesign, 6 firms), #2 (AI literacy/reskilling
 - **Status:** draft
 
 ---POST---
-AI isn't a tech project. It's a work-design project.
+Most AI rollouts are CIO projects. That's why most fail.
 
-BCG 2026: 50-55% of jobs will be significantly reshaped, not replaced, within three years.
+BCG 2026: 50-55% of jobs will be reshaped within three years. Not by IT. By work design.
 
-The firms making AI ROI this year redesigned roles first, then deployed tools.
+If your CHRO isn't co-leading AI deployment, you're optimizing the wrong layer.
 
-Where does work design sit in your AI stack?
+The bottleneck was never the model.
 
 #FutureOfWork #PeopleStrategy #AIatWork
 ---END---
@@ -46,17 +46,17 @@ Where does work design sit in your AI stack?
   - slide-4 · The CHRO read · "Tools deployed, capability missing. That's a gap, not a strategy."
   - slide-5 · Your move · "What's your real reskill rate?"
 - **Image alt:** Minimalist rust-accented card: "Your AI strategy is your reskill rate."
-- **Word count:** 45
+- **Word count:** 49
 - **Status:** draft
 
 ---POST---
-Your AI strategy is whatever percent of your workforce got trained this year.
+The AI labor crisis isn't coming. It's a choice you already made.
 
-Aon 2026: 73% of organizations piloted AI. Only 18% reskilled most of their people.
+Aon 2026: 73% deployed AI. Only 18% reskilled most of their people.
 
-Tools deployed, capability missing. That's a gap, not a strategy.
+That's not a gap. It's a strategy: deploy fast, let employees absorb the cost.
 
-What's your real reskill rate?
+Defensible in court? Or just in the boardroom?
 
 #AIatWork #Reskilling #HumanResources
 ---END---
@@ -75,17 +75,15 @@ What's your real reskill rate?
   - slide-4 · The CHRO read · "Manager development isn't soft investment. It's where AI ROI shows up — or doesn't."
   - slide-5 · Your move · "What did you put behind your manager layer this quarter?"
 - **Image alt:** Minimalist moss-green-accented card: "Managers are the AI multiplier."
-- **Word count:** 47
+- **Word count:** 49
 - **Status:** draft
 
 ---POST---
-Your managers are the bottleneck. For engagement and for AI.
+We're told to develop managers. The data says: develop fewer.
 
-Gallup 2026: employees whose manager backs AI are 8.7× more likely to say work has transformed.
+Gallup 2026: manager engagement dropped 9 points in three years.
 
-Manager development isn't soft investment. It's the multiplier.
+The middle layer was built for industrial pace. It's breaking under AI's. Promoting ICs into a role that no longer works is HR's most expensive habit.
 
-What did you put behind your manager layer this quarter?
-
-#Leadership #ManagerDevelopment #PeopleStrategy
+#Leadership #FutureOfWork #PeopleStrategy
 ---END---
