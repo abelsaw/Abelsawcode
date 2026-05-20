@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 """Render a LinkedIn carousel from a JSON spec.
 
-Styles:
-  terminal  — dev/AI engineer aesthetic: deep blue-black, neon-green mono accents.
+Styles (default: aurora):
   aurora    — premium gradient (indigo->black), cyan accents, frosted glass cards.
+  terminal  — dev/AI engineer aesthetic: deep blue-black, neon-green mono accents.
   editorial — modern tech editorial: warm off-white, electric-blue mono accents.
-  tesla     — legacy: stark black, white type, source wordmark top-left.
-  muji      — legacy: warm off-white, centered ink type, taupe accent rules.
 
 Slide types:
   cover, point, stat, list, takeaway, cta
@@ -25,8 +23,6 @@ SIZE = 1080
 MARGIN = 90
 
 # ---------------- themes ----------------
-M  = dict(bg=(245, 242, 236), ink=(38, 38, 38),  muted=(130, 125, 115), accent=(190, 180, 162))
-T  = dict(bg=(0, 0, 0),       ink=(255, 255, 255), muted=(140, 140, 145), accent=(227, 25, 55))
 TR = dict(bg=(10, 14, 19),    ink=(240, 244, 248), muted=(100, 116, 139), accent=(74, 222, 128))
 AU = dict(bg_top=(30, 27, 75), bg_bot=(2, 6, 23), ink=(255, 255, 255), muted=(148, 163, 184),
           accent=(34, 211, 238), accent2=(217, 70, 239))
@@ -135,288 +131,6 @@ def overlay_card(img, rect, fill_rgba, border_rgba=None, radius=24, border_w=1):
         width=border_w if border_rgba else 0,
     )
     return Image.alpha_composite(img.convert("RGBA"), layer).convert("RGB")
-
-
-# ============================== Muji ==============================
-def _muji_page(draw, page, total):
-    if total <= 1:
-        return
-    f = sans(20, bold=True)
-    text = f"{page:02d}   /   {total:02d}"
-    bb = draw.textbbox((0, 0), text, font=f)
-    draw.text((SIZE - MARGIN - (bb[2] - bb[0]), SIZE - MARGIN + 10), text, fill=M["muted"], font=f)
-
-
-def render_cover_muji(slide, source, page, total):
-    img = Image.new("RGB", (SIZE, SIZE), M["bg"])
-    draw = ImageDraw.Draw(img)
-    headline = slide.get("headline", "")
-    max_w = SIZE - 2 * MARGIN
-    f, lines, size = auto_size(headline, max_w, draw, 92, 44, bold=True, max_lines=6)
-    line_h = int(size * 1.18)
-    y = (SIZE - line_h * len(lines)) // 2 - 50
-    for line in lines:
-        bb = draw.textbbox((0, 0), line, font=f)
-        draw.text(((SIZE - (bb[2] - bb[0])) // 2, y), line, fill=M["ink"], font=f)
-        y += line_h
-    draw.line([(SIZE // 2 - 36, y + 24), (SIZE // 2 + 36, y + 24)], fill=M["accent"], width=2)
-    if source:
-        sf = sans(22, bold=True)
-        spaced = tracked_caps(source)
-        bb = draw.textbbox((0, 0), spaced, font=sf)
-        draw.text(((SIZE - (bb[2] - bb[0])) // 2, SIZE - MARGIN), spaced, fill=M["muted"], font=sf)
-    _muji_page(draw, page, total)
-    return img
-
-
-def render_content_muji(slide, source, page, total):
-    img = Image.new("RGB", (SIZE, SIZE), M["bg"])
-    draw = ImageDraw.Draw(img)
-    max_w = SIZE - 2 * MARGIN
-    y = MARGIN + 20
-    kicker = (slide.get("kicker") or "").strip()
-    if kicker:
-        kf = sans(22, bold=True)
-        draw.text((MARGIN, y), tracked_caps(kicker), fill=M["muted"], font=kf)
-        y += 36
-        draw.line([(MARGIN, y + 4), (MARGIN + 60, y + 4)], fill=M["accent"], width=2)
-        y += 38
-    is_stat = slide.get("type") == "stat"
-    start = 168 if is_stat else 70
-    floor = 84 if is_stat else 38
-    max_lines = 2 if is_stat else 5
-    headline = slide.get("headline", "")
-    if headline:
-        f, lines, size = auto_size(headline, max_w, draw, start, floor, bold=True, max_lines=max_lines)
-        line_h = int(size * 1.14)
-        for line in lines:
-            draw.text((MARGIN, y), line, fill=M["ink"], font=f)
-            y += line_h
-        y += 28
-    body = slide.get("body", "")
-    if body:
-        f, lines, _ = auto_size(body, max_w, draw, 30, 22, bold=False, max_lines=10)
-        lh = int(f.size * 1.45)
-        for line in lines:
-            draw.text((MARGIN, y), line, fill=M["muted"], font=f)
-            y += lh
-    _muji_page(draw, page, total)
-    return img
-
-
-def render_list_muji(slide, source, page, total):
-    img = Image.new("RGB", (SIZE, SIZE), M["bg"])
-    draw = ImageDraw.Draw(img)
-    y = MARGIN + 20
-    kicker = (slide.get("kicker") or "").strip()
-    if kicker:
-        kf = sans(22, bold=True)
-        draw.text((MARGIN, y), tracked_caps(kicker), fill=M["muted"], font=kf)
-        y += 36
-        draw.line([(MARGIN, y + 4), (MARGIN + 60, y + 4)], fill=M["accent"], width=2)
-        y += 50
-    items = slide.get("items", [])[:4]
-    num_x, text_x = MARGIN, MARGIN + 110
-    text_w = SIZE - text_x - MARGIN
-    slot = (SIZE - MARGIN - y) // max(len(items), 1)
-    for i, item in enumerate(items, start=1):
-        nf = sans(34, bold=True)
-        draw.text((num_x, y + 2), f"{i:02d}", fill=M["accent"], font=nf)
-        tf, tlines, _ = auto_size(item.get("title", ""), text_w, draw, 36, 24, bold=True, max_lines=2)
-        ty = y
-        for line in tlines:
-            draw.text((text_x, ty), line, fill=M["ink"], font=tf)
-            ty += int(tf.size * 1.18)
-        body = item.get("body", "")
-        if body:
-            bf, blines, _ = auto_size(body, text_w, draw, 24, 18, bold=False, max_lines=3)
-            ty += 4
-            for line in blines:
-                draw.text((text_x, ty), line, fill=M["muted"], font=bf)
-                ty += int(bf.size * 1.4)
-        y += slot
-    _muji_page(draw, page, total)
-    return img
-
-
-def render_cta_muji(slide, source, page, total):
-    img = Image.new("RGB", (SIZE, SIZE), M["bg"])
-    draw = ImageDraw.Draw(img)
-    max_w = SIZE - 2 * MARGIN
-    headline = slide.get("headline", "")
-    body = slide.get("body", "")
-    hf, hlines, hsize = auto_size(headline, max_w, draw, 76, 44, bold=True, max_lines=4)
-    h_line_h = int(hsize * 1.16)
-    block_h = h_line_h * len(hlines)
-    bf = blines = None
-    if body:
-        bf, blines, _ = auto_size(body, max_w, draw, 28, 20, bold=False, max_lines=5)
-        block_h += 40 + int(bf.size * 1.5 * len(blines))
-    y = (SIZE - block_h) // 2 - 20
-    for line in hlines:
-        bb = draw.textbbox((0, 0), line, font=hf)
-        draw.text(((SIZE - (bb[2] - bb[0])) // 2, y), line, fill=M["ink"], font=hf)
-        y += h_line_h
-    if blines:
-        y += 30
-        draw.line([(SIZE // 2 - 36, y - 6), (SIZE // 2 + 36, y - 6)], fill=M["accent"], width=2)
-        y += 12
-        for line in blines:
-            bb = draw.textbbox((0, 0), line, font=bf)
-            draw.text(((SIZE - (bb[2] - bb[0])) // 2, y), line, fill=M["muted"], font=bf)
-            y += int(bf.size * 1.5)
-    _muji_page(draw, page, total)
-    return img
-
-
-# ============================== Tesla ==============================
-def _tesla_page(draw, page, total):
-    if total <= 1:
-        return
-    f = sans(18, bold=True)
-    text = f"{page:02d}   /   {total:02d}"
-    bb = draw.textbbox((0, 0), text, font=f)
-    draw.text((SIZE - MARGIN - (bb[2] - bb[0]), SIZE - MARGIN + 12), text, fill=T["muted"], font=f)
-
-
-def render_cover_tesla(slide, source, page, total):
-    img = Image.new("RGB", (SIZE, SIZE), T["bg"])
-    draw = ImageDraw.Draw(img)
-    headline = slide.get("headline", "")
-    body = (slide.get("body") or "").strip()
-    max_w = SIZE - 2 * MARGIN
-    f, lines, size = auto_size(headline, max_w, draw, 124, 52, bold=True, max_lines=5)
-    line_h = int(size * 1.08)
-    block_h = line_h * len(lines)
-    bf = blines = None
-    if body:
-        bf, blines, _ = auto_size(body, max_w, draw, 28, 22, bold=False, max_lines=3)
-        block_h += 28 + int(bf.size * 1.5 * len(blines))
-    y = SIZE - MARGIN - 80 - block_h
-    for line in lines:
-        draw.text((MARGIN, y), line, fill=T["ink"], font=f)
-        y += line_h
-    if blines:
-        y += 28
-        for line in blines:
-            draw.text((MARGIN, y), line, fill=T["muted"], font=bf)
-            y += int(bf.size * 1.5)
-    if source:
-        sf = sans(20, bold=True)
-        draw.text((MARGIN, MARGIN), tracked_caps(source), fill=T["muted"], font=sf)
-    _tesla_page(draw, page, total)
-    return img
-
-
-def render_content_tesla(slide, source, page, total):
-    img = Image.new("RGB", (SIZE, SIZE), T["bg"])
-    draw = ImageDraw.Draw(img)
-    max_w = SIZE - 2 * MARGIN
-    y = MARGIN + 30
-    kicker = (slide.get("kicker") or "").strip()
-    if kicker:
-        kf = sans(20, bold=True)
-        draw.text((MARGIN, y), tracked_caps(kicker), fill=T["muted"], font=kf)
-        y += 70
-    is_stat = slide.get("type") == "stat"
-    if is_stat:
-        headline = slide.get("headline", "")
-        f, lines, size = auto_size(headline, max_w, draw, 280, 110, bold=True, max_lines=2)
-        line_h = int(size * 1.02)
-        block_h = line_h * len(lines)
-        ny = (SIZE - block_h) // 2 - 30
-        for line in lines:
-            bb = draw.textbbox((0, 0), line, font=f)
-            draw.text(((SIZE - (bb[2] - bb[0])) // 2, ny), line, fill=T["ink"], font=f)
-            ny += line_h
-        body = slide.get("body", "")
-        if body:
-            bf = sans(22, bold=True)
-            label = tracked_caps(body)
-            bb = draw.textbbox((0, 0), label, font=bf)
-            if bb[2] - bb[0] > max_w:
-                bf = sans(18, bold=True)
-                bb = draw.textbbox((0, 0), label, font=bf)
-            draw.text(((SIZE - (bb[2] - bb[0])) // 2, ny + 40), label, fill=T["muted"], font=bf)
-    else:
-        headline = slide.get("headline", "")
-        if headline:
-            f, lines, size = auto_size(headline, max_w, draw, 84, 42, bold=True, max_lines=4)
-            line_h = int(size * 1.12)
-            for line in lines:
-                draw.text((MARGIN, y), line, fill=T["ink"], font=f)
-                y += line_h
-            y += 36
-        body = slide.get("body", "")
-        if body:
-            f, lines, _ = auto_size(body, max_w, draw, 28, 20, bold=False, max_lines=10)
-            lh = int(f.size * 1.50)
-            for line in lines:
-                draw.text((MARGIN, y), line, fill=T["muted"], font=f)
-                y += lh
-    _tesla_page(draw, page, total)
-    return img
-
-
-def render_list_tesla(slide, source, page, total):
-    img = Image.new("RGB", (SIZE, SIZE), T["bg"])
-    draw = ImageDraw.Draw(img)
-    y = MARGIN + 30
-    kicker = (slide.get("kicker") or "").strip()
-    if kicker:
-        kf = sans(20, bold=True)
-        draw.text((MARGIN, y), tracked_caps(kicker), fill=T["muted"], font=kf)
-        y += 80
-    items = slide.get("items", [])[:4]
-    num_x, text_x = MARGIN, MARGIN + 110
-    text_w = SIZE - text_x - MARGIN
-    slot = (SIZE - MARGIN - y) // max(len(items), 1)
-    for i, item in enumerate(items, start=1):
-        nf = sans(36, bold=True)
-        draw.text((num_x, y + 2), f"{i:02d}", fill=T["accent"], font=nf)
-        tf, tlines, _ = auto_size(item.get("title", ""), text_w, draw, 38, 24, bold=True, max_lines=2)
-        ty = y
-        for line in tlines:
-            draw.text((text_x, ty), line, fill=T["ink"], font=tf)
-            ty += int(tf.size * 1.18)
-        body = item.get("body", "")
-        if body:
-            bf, blines, _ = auto_size(body, text_w, draw, 24, 18, bold=False, max_lines=3)
-            ty += 6
-            for line in blines:
-                draw.text((text_x, ty), line, fill=T["muted"], font=bf)
-                ty += int(bf.size * 1.45)
-        y += slot
-    _tesla_page(draw, page, total)
-    return img
-
-
-def render_cta_tesla(slide, source, page, total):
-    img = Image.new("RGB", (SIZE, SIZE), T["bg"])
-    draw = ImageDraw.Draw(img)
-    max_w = SIZE - 2 * MARGIN
-    headline = slide.get("headline", "")
-    body = slide.get("body", "")
-    hf, hlines, hsize = auto_size(headline, max_w, draw, 84, 44, bold=True, max_lines=4)
-    h_line_h = int(hsize * 1.14)
-    block_h = h_line_h * len(hlines)
-    bf = blines = None
-    if body:
-        bf, blines, _ = auto_size(body, max_w, draw, 28, 20, bold=False, max_lines=5)
-        block_h += 36 + int(bf.size * 1.5 * len(blines))
-    y = (SIZE - block_h) // 2 - 20
-    for line in hlines:
-        bb = draw.textbbox((0, 0), line, font=hf)
-        draw.text(((SIZE - (bb[2] - bb[0])) // 2, y), line, fill=T["ink"], font=hf)
-        y += h_line_h
-    if blines:
-        y += 36
-        for line in blines:
-            bb = draw.textbbox((0, 0), line, font=bf)
-            draw.text(((SIZE - (bb[2] - bb[0])) // 2, y), line, fill=T["muted"], font=bf)
-            y += int(bf.size * 1.5)
-    _tesla_page(draw, page, total)
-    return img
 
 
 # ============================== Terminal ==============================
@@ -892,11 +606,9 @@ def render_cta_editorial(slide, source, page, total):
 
 # ============================== Dispatch ==============================
 STYLE_RENDERERS = {
-    "muji":     {"cover": render_cover_muji,     "point": render_content_muji,     "stat": render_content_muji,     "takeaway": render_content_muji,     "list": render_list_muji,     "cta": render_cta_muji},
-    "tesla":    {"cover": render_cover_tesla,    "point": render_content_tesla,    "stat": render_content_tesla,    "takeaway": render_content_tesla,    "list": render_list_tesla,    "cta": render_cta_tesla},
-    "terminal": {"cover": render_cover_terminal, "point": render_content_terminal, "stat": render_content_terminal, "takeaway": render_content_terminal, "list": render_list_terminal, "cta": render_cta_terminal},
-    "aurora":   {"cover": render_cover_aurora,   "point": render_content_aurora,   "stat": render_content_aurora,   "takeaway": render_content_aurora,   "list": render_list_aurora,   "cta": render_cta_aurora},
-    "editorial":{"cover": render_cover_editorial,"point": render_content_editorial,"stat": render_content_editorial,"takeaway": render_content_editorial,"list": render_list_editorial,"cta": render_cta_editorial},
+    "terminal":  {"cover": render_cover_terminal,  "point": render_content_terminal,  "stat": render_content_terminal,  "takeaway": render_content_terminal,  "list": render_list_terminal,  "cta": render_cta_terminal},
+    "aurora":    {"cover": render_cover_aurora,    "point": render_content_aurora,    "stat": render_content_aurora,    "takeaway": render_content_aurora,    "list": render_list_aurora,    "cta": render_cta_aurora},
+    "editorial": {"cover": render_cover_editorial, "point": render_content_editorial, "stat": render_content_editorial, "takeaway": render_content_editorial, "list": render_list_editorial, "cta": render_cta_editorial},
 }
 
 
@@ -914,7 +626,7 @@ def main():
     args = p.parse_args()
     with open(args.spec) as f:
         spec = json.load(f)
-    style = args.style or spec.get("style") or "tesla"
+    style = args.style or spec.get("style") or "aurora"
     if style not in STYLE_RENDERERS:
         raise SystemExit(f"unknown style: {style}")
     slides = spec.get("slides", [])

@@ -1,11 +1,11 @@
 ---
 name: linkedin-post
-description: Generates 3 daily LinkedIn carousel options (8-slide Tesla-style carousel + 180-250 word caption) from credible tech and AI sources, weighting first-party announcements from AI labs higher. Use when the user asks for today's LinkedIn options, daily carousel drafts, or anything along the lines of "give me my LinkedIn picks for today".
+description: Generates 3 daily LinkedIn carousel options (8-slide Aurora-style carousel + 180-250 word caption) from credible tech and AI sources, weighting first-party announcements from AI labs higher. Use when the user asks for today's LinkedIn options, daily carousel drafts, or anything along the lines of "give me my LinkedIn picks for today".
 tools: Bash, Read, Write, Edit
 model: sonnet
 ---
 
-You produce 3 daily LinkedIn carousel options. Each option is an 8-slide Tesla-style image carousel plus a long-form LinkedIn caption (180-250 words), saved under `out/YYYY-MM-DD/option-{N}/`.
+You produce 3 daily LinkedIn carousel options. Each option is an 8-slide Aurora-style image carousel plus a long-form LinkedIn caption (180-250 words), saved under `out/YYYY-MM-DD/option-{N}/`.
 
 ## Workflow
 
@@ -29,7 +29,7 @@ You produce 3 daily LinkedIn carousel options. Each option is an 8-slide Tesla-s
 5. For each story, build an 8-slide carousel spec and save it to `out/<DATE>/option-<N>/spec.json`:
    ```json
    {
-     "style":  "tesla",
+     "style":  "aurora",
      "source": "<SHORT LABEL, e.g. ANTHROPIC, OPENAI, ARS TECHNICA>",
      "url":    "<source url from the trending item>",
      "slides": [
@@ -51,7 +51,7 @@ You produce 3 daily LinkedIn carousel options. Each option is an 8-slide Tesla-s
    }
    ```
    Spec rules:
-   - **Style is `tesla` by default.** Black background, white type, source wordmark top-left, page indicator bottom-right. Headlines stay declarative and confident; bodies elaborate enough to give the reader a reason to swipe.
+   - **Style is `aurora` by default.** Indigo-to-black gradient background, cyan accents, white type, frosted-glass cards on the list slide. Source wordmark top-left in cyan tracked caps; page indicator bottom-right. Headlines stay confident and polished — less "stark product reveal", more "premium keynote".
    - **Cover** is a HOOK, not a label. Create a curiosity gap. Examples: "Anthropic just rewrote the agent playbook", "OpenAI quietly broke the cost curve", "Why Google's new model is the one to watch". Add an optional `body` subhead if it sharpens the hook.
    - **Headlines** on content slides: 4-9 words. Punchy, no filler.
    - **Bodies** on point slides: 50-80 words, 3-4 short sentences. Plain language. Show your thinking — the reader is here for the angle, not the headline. Skip filler like "interestingly" or "as we all know".
