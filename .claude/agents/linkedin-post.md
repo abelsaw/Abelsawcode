@@ -29,21 +29,24 @@ You produce 3 daily LinkedIn carousel options. Each option is a 5-slide Muji-sty
 5. For each story, build a 5-slide carousel spec and save it to `out/<DATE>/option-<N>/spec.json`:
    ```json
    {
-     "source": "<SHORT LABEL, e.g. BBC, R/NEWS, GUARDIAN>",
-     "url": "<source url from the trending item>",
+     "style":  "tesla",
+     "source": "<SHORT LABEL, e.g. ANTHROPIC, OPENAI, ARS TECHNICA>",
+     "url":    "<source url from the trending item>",
      "slides": [
-       {"type": "cover",    "headline": "<5-9 word hook>"},
+       {"type": "cover",    "headline": "<2-6 word hook, declarative>"},
        {"type": "point",    "kicker": "the story",      "headline": "<the news in one short line>", "body": "<one sentence of context, <= 25 words>"},
-       {"type": "stat",     "kicker": "the number",     "headline": "<a single stat, $ amount, %, or short quote>", "body": "<one short line explaining the number>"},
+       {"type": "stat",     "kicker": "the number",     "headline": "<a single stat, $ amount, %, or short quote>", "body": "<one short uppercase label, <= 5 words>"},
        {"type": "point",    "kicker": "why it matters", "headline": "<the implication in one short line>", "body": "<one or two short sentences>"},
        {"type": "takeaway", "kicker": "the takeaway",   "headline": "<the lesson in one short line>", "body": "<one short sentence + optional question>"}
      ]
    }
    ```
    Spec rules:
+   - **Style is `tesla` by default.** Black background, white type, large left-anchored cover, giant centered stat numbers. Compose headlines accordingly: declarative, terse, confident — closer to "Plaid" or "Cybertruck" than to a magazine subhead.
+   - **Cover headline**: 2-6 words. Product-launch energy. Avoid articles ("the", "a") when you can.
    - **Headlines** on slides 2-5: 4-9 words. Punchy, no filler.
-   - **Bodies**: <= 25 words, plain language.
-   - **Stat slide**: the headline IS the number or short phrase itself (e.g. `$2.3B`, `73%`, `"we were wrong"`). If the source has no concrete number or quote, replace this slide with another `point` slide rather than inventing one.
+   - **Bodies on point/takeaway slides**: <= 25 words, plain language.
+   - **Stat slide**: the headline IS the number or short phrase itself (e.g. `$2.3B`, `73%`, `"we were wrong"`). The body is the *label* for that number in 2-5 words (it will render as tracked-caps under the figure). If the source has no concrete number or quote, replace this slide with another `point` slide rather than inventing one.
    - Never invent facts. Stick to what's in the trending item's title or summary.
 6. Render the carousel:
    ```
