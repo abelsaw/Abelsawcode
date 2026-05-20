@@ -11,12 +11,13 @@ from 2026 HR research, ready for the user to review and publish.
 
 ## Optional arguments (parsed from the skill `args` string)
 
+- `region: <apac|global>` — geographic lens. **Default: `apac`.** Asia Pacific is the default audience and source-weighting for this CHRO. Pass `region: global` to remove the regional anchor.
 - `theme: <topic>` — scope the posts to one topic (e.g. `theme: AI in HR`, `theme: pay transparency`). Default: surface the most-mentioned 2026 themes across the catalog.
 - `sources: +<Firm1>, +<Firm2>` — include named firms in addition to the catalog. Use `-<Firm>` to exclude.
 - `count: N` — produce N post options instead of the default 3 (cap at 5).
 - `discover: off` — disable the new-source discovery pass (default: on).
 
-If args are empty, run the default flow.
+If args are empty, run the default flow: `region: apac`, default themes, 3 options, discovery on.
 
 ---
 
@@ -32,13 +33,18 @@ Invoke the `hr-best-practices-scout` agent with a prompt that includes:
 
 - Today's date (compute from context).
 - A 2026-only window directive.
-- The full source catalog content (Tier 1 + Tier 2 + Auto-discovered).
+- The full source catalog content (Tier 1 + Tier 2 + Tier 3 + Auto-discovered).
 - The user's `theme:` override and any `+sources` / `-sources` adjustments.
-- **The discovery directive (when `discover` is not `off`):** "During your searches, if you encounter 2026 HR research from a credible firm NOT in the catalog that adds new convergence to a theme you're surfacing, USE it and report it back so it can be added to the catalog. Apply the discovery rules in `.claude/skills/linkedin-post/sources.md`."
+- **The regional lens directive (default `apac`):**
+  - "Apply the regional lens from `.claude/skills/linkedin-post/sources.md`. With `region: apac`, prioritize APAC regional breakouts of Tier 1/2 reports (e.g. Mercer Asia Talent Trends, McKinsey Asia, BCG Southeast Asia), sweep Tier 3 sources (Hays, Robert Walters, Michael Page, INSEAD, ILO Asia-Pacific, ADB, Singapore MOM, AHRI, HKIHRM, People Matters, HR Asia), and prefer APAC stats over global averages when both exist. Run queries like `'Mercer Asia Talent Trends 2026 findings'`, `'Hays Asia Salary Guide 2026'`, `'Robert Walters APAC Salary Survey 2026'`, `'Michael Page Talent Trends 2026 Singapore'`, `'INSEAD GTCI 2026'`, `'ILO Asia-Pacific Employment 2026'`. Surface APAC regulatory/market context where it adds dimension."
+  - "With `region: global`, treat Tier 3 as supplementary and prioritize globally-applicable findings."
+- **The discovery directive (when `discover` is not `off`):** "During your searches, if you encounter 2026 HR research from a credible firm NOT in the catalog that adds new convergence to a theme you're surfacing, USE it and report it back so it can be added to the catalog. In APAC mode, weight discovery toward APAC-credible firms (e.g. Korn Ferry APAC, IBM IBV APAC, Egon Zehnder APAC, regional NUS / HKUST research centers). Apply the discovery rules in `.claude/skills/linkedin-post/sources.md`."
 - Reminder of environment limits: if WebFetch returns 403, fall back to search-indexed content and mark claims `[search-only]`.
 
 Wait for the scout to save `posts/drafts/best-practices-research-YYYY-MM-DD.md`.
 Sanity-check that the brief has ≥3 themes meeting the ≥2-Tier-1-firms bar.
+In APAC mode, also confirm at least 2 themes carry APAC-specific data (not
+just global averages).
 
 ## Step 3 — Persist any newly discovered sources
 
@@ -85,6 +91,12 @@ Voice rules:
 - No AI-tells: delve, tapestry, navigating the landscape, in conclusion, moreover, furthermore.
 - Reflective questions ("Where does X sit in your stack?") are fine; loaded ones are not.
 - 3-4 hashtags max.
+
+**APAC framing (when `region: apac`):**
+- Anchor at least one of the three options in an APAC-specific market reality where the brief supports it: Singapore/Hong Kong as regional hubs, ASEAN talent flows, India scaling, Japan/Korea workstyle reforms, Australia Fair Work, China labor law, or how global rules (EU Pay Transparency, US enforcement) reach APAC multinationals.
+- Cite APAC stats when both APAC and global versions of a number exist (e.g. APAC thriving rate over the global one).
+- Use APAC-leaning hashtags when relevant: `#APAC`, `#FutureOfWorkAsia`, `#ASEAN`, `#SingaporeHR`, `#AsiaCHRO` — alongside the global ones, not replacing them.
+- Avoid parochialism — posts should still read for a global LinkedIn feed; APAC context adds dimension, doesn't wall the audience off.
 
 **≤50 words per post body, including hashtags.** Hard cap. Verify each option's
 word count by running:

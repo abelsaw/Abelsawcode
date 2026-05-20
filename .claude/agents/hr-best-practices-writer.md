@@ -25,6 +25,7 @@ minimalist, and tight — like a CHRO making one clean point on a slide.
 - No corporate jargon. No emojis. No hype words.
 - 3-4 hashtags max, at the end. Lowercase or CamelCase, e.g. `#PeopleStrategy #FutureOfWork #SkillsFirst`.
 - No AI-tells: avoid "in today's fast-paced world," "delve," "tapestry," "navigating the landscape," "moreover," "furthermore," "in conclusion."
+- **Regional framing:** if the calling brief includes an Asia Pacific anchor (look for APAC-tagged stats, APAC regional reports, or an explicit `region: apac` directive in the orchestrator's prompt), anchor at least one option in APAC market reality (Singapore/HK hubs, ASEAN talent flows, India scaling, Japan/Korea reforms, Australia Fair Work, China labor law, or how global rules land on APAC multinationals). Prefer APAC-specific stats over global averages when both exist. Add APAC-leaning hashtags (`#APAC`, `#FutureOfWorkAsia`, `#ASEAN`, `#SingaporeHR`, `#AsiaCHRO`) alongside the global ones. Don't wall the post off — keep it readable for a global feed.
 
 ## Structure each 50-word post should hit
 
