@@ -1,87 +1,84 @@
-# Daily HR best-practices posts — 2026-05-19
+# Daily HR best-practices posts — 2026-05-19 (v2)
 
 Source brief: posts/drafts/best-practices-research-2026-05-19.md
-Themes covered: #1 (Human-AI work redesign, 6 firms), #2 (AI literacy/reskilling, 6 firms), #3 (Manager engagement, 3 firms).
+Themes covered: #4 (Wellbeing & FOBO, 4 firms), #5 (Internal mobility/skills, 3 firms), #7 (Pay transparency, 2 firms).
+
+Previous run (themes #1/#2/#3 — work design, reskill rate, managers) preserved in git at commit `c2400ef`.
 
 ---
 
-## Option 1 — ai-is-work-design
-- **Theme:** Human-AI work redesign as the central operating challenge
-- **Source reports:** BCG "AI Will Reshape More Jobs Than It Replaces" (2026); Mercer Global Talent Trends 2026; Deloitte 2026 Global Human Capital Trends
-- **Source URLs:** https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces · https://www.mercer.com/about/newsroom/mercer-s-global-talent-trends-2026-report/
-- **Image (single):** posts/drafts/images/2026-05-19-option-1.png
+## Option 1 — wellbeing-is-the-velocity-gate
+- **Theme:** Wellbeing, burnout and FOBO as productivity threat
+- **Source reports:** Mercer Global Talent Trends 2026; Gallup State of the Global Workplace 2026; Deloitte 2026 Global Human Capital Trends; WTW 2026 Global Medical Trends
+- **Source URLs:** https://www.mercer.com/about/newsroom/mercer-s-global-talent-trends-2026-report/ · https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx
 - **Carousel (5 slides):** posts/drafts/carousels/2026-05-19-option-1/
-  - slide-1 · Future of work · "AI isn't a tech project. It's a work-design project."
-  - slide-2 · The data — BCG 2026 · "50–55% of jobs will be significantly reshaped within three years."
-  - slide-3 · What's really happening · "The shift isn't from people to machines. It's in how the work itself is shaped."
-  - slide-4 · The CHRO read · "Firms making AI ROI in 2026 redesigned roles first, then deployed tools."
-  - slide-5 · Your move · "Where does work design sit in your AI stack?"
-- **Image alt:** Minimalist navy-accented card: "AI isn't a tech project. It's a work-design project."
+  - slide-1 · Wellbeing · "Wellbeing is the velocity gate on AI."
+  - slide-2 · The data — Mercer 2026 · "44% of employees report thriving at work. Down from 66% in 2024."
+  - slide-3 · The trend — Mercer 2026 · "AI job-loss fear: 28% in 2024. 40% in 2026."
+  - slide-4 · The CHRO read · "Depleted workforces don't ship the productivity AI promises."
+  - slide-5 · Your move · "Are we designing for human pace alongside compute pace?"
+- **Image alt:** Minimalist navy-accented card: "Wellbeing is the velocity gate on AI."
 - **Word count:** 49
 - **Status:** draft
 
 ---POST---
-AI value lives in work design.
+Wellbeing is now the velocity gate on AI.
 
-BCG 2026: 50-55% of jobs will be reshaped within three years. Not replaced. Reshaped.
+Mercer 2026: 44% of employees report thriving at work, down from 66% in 2024. AI job-loss fear climbed from 28% to 40%.
 
-The CHROs leading this year are co-architecting roles before tools land. That's where compounding returns come from.
+Depleted workforces don't ship AI's promised productivity. The opportunity: design for human pace alongside compute pace.
 
-The model was never the bottleneck. Work design is.
-
-#FutureOfWork #PeopleStrategy #AIatWork
+#Wellbeing #FutureOfWork #PeopleStrategy
 ---END---
 
 ---
 
-## Option 2 — ai-strategy-is-reskill-rate
-- **Theme:** AI literacy and reskilling at scale as the binding constraint
-- **Source reports:** Aon 2026 Human Capital Trends Study; WEF Reskilling Revolution update (Jan 2026); Mercer Global Talent Trends 2026
-- **Source URLs:** https://www.aon.com/en/insights/reports/human-capital-trends-study · https://www.weforum.org/press/2026/01/world-economic-forum-reskilling-revolution-on-track-to-reach-over-850-million-people/
-- **Image (single):** posts/drafts/images/2026-05-19-option-2.png
+## Option 2 — internal-mobility-is-the-asset
+- **Theme:** Skills-based workforce planning and internal mobility as the retention lever
+- **Source reports:** Deloitte 2026 Global Human Capital Trends; McKinsey State of Organizations 2026; Mercer 2025/2026 Skills Snapshot
+- **Source URLs:** https://www.deloitte.com/us/en/insights/topics/talent/internal-talent-marketplace.html · https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-state-of-organizations
 - **Carousel (5 slides):** posts/drafts/carousels/2026-05-19-option-2/
-  - slide-1 · Reskilling · "Your AI strategy is your reskill rate."
-  - slide-2 · The deploy rate — Aon 2026 · "73% of organizations have deployed or piloted AI programs."
-  - slide-3 · The reskill rate — Aon 2026 · "Only 18% reskilled most of their workforce in the past year."
-  - slide-4 · The CHRO read · "Tools deployed, capability missing. That's a gap, not a strategy."
-  - slide-5 · Your move · "What's your real reskill rate?"
-- **Image alt:** Minimalist rust-accented card: "Your AI strategy is your reskill rate."
-- **Word count:** 46
-- **Status:** draft
-
----POST---
-The strongest AI advantage in 2026 isn't the model. It's the reskill rate.
-
-Aon 2026: 73% of organizations deployed AI. Only 18% reskilled most of their workforce.
-
-The firms closing this gap first will compound the advantage. That's where capability turns into capacity.
-
-#AIatWork #Reskilling #HumanResources
----END---
-
----
-
-## Option 3 — managers-are-the-multiplier
-- **Theme:** Manager engagement collapse and leadership development as #1 CHRO priority
-- **Source reports:** Gallup State of the Global Workplace 2026; SHRM 2026 CHRO Priorities and Perspectives; Mercer Global Talent Trends 2026
-- **Source URLs:** https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx · https://www.shrm.org/topics-tools/research/2026-chro-priorities-and-perspectives
-- **Image (single):** posts/drafts/images/2026-05-19-option-3.png
-- **Carousel (5 slides):** posts/drafts/carousels/2026-05-19-option-3/
-  - slide-1 · Leadership · "Managers are the AI multiplier."
-  - slide-2 · The data — Gallup 2026 · "Employees whose manager backs AI use are 8.7× more likely to say work has transformed."
-  - slide-3 · The trend — Gallup 2026 · "Manager engagement: 31% in 2022. 22% in 2025."
-  - slide-4 · The CHRO read · "Manager development isn't soft investment. It's where AI ROI shows up — or doesn't."
-  - slide-5 · Your move · "What did you put behind your manager layer this quarter?"
-- **Image alt:** Minimalist moss-green-accented card: "Managers are the AI multiplier."
+  - slide-1 · Talent strategy · "The retention lever sits inside your own walls."
+  - slide-2 · The data — Deloitte 2026 · "Internal mobility nearly doubles tenure: 7.4 vs 4.1 years."
+  - slide-3 · The trend — McKinsey 2026 · "47% of leaders name limited career progression as the top culture barrier."
+  - slide-4 · The CHRO read · "External hiring is contracting. The career inside is the asset."
+  - slide-5 · Your move · "How fluid is the career inside your walls?"
+- **Image alt:** Minimalist rust-accented card: "The retention lever sits inside your own walls."
 - **Word count:** 49
 - **Status:** draft
 
 ---POST---
-The manager role is the lever of the decade.
+The retention lever sits inside your own walls.
 
-Gallup 2026: manager engagement dropped 9 points in three years. A layer built for industrial pace is being tested by AI's speed.
+Deloitte 2026: internal mobility nearly doubles tenure (7.4 vs 4.1 years). McKinsey 2026: 47% of leaders name limited career progression as the top barrier to high-performance culture.
 
-The opportunity isn't fewer managers. It's a redesigned role: fewer reporting lines, more leadership depth.
+External hiring is contracting. The career inside is now the asset.
 
-#Leadership #FutureOfWork #PeopleStrategy
+#Retention #InternalMobility #SkillsFirst
+---END---
+
+---
+
+## Option 3 — pay-transparency-is-a-strategy-test
+- **Theme:** Pay transparency execution and dynamic total rewards
+- **Source reports:** Aon 2026 Human Capital Outlook; WTW 2026 Salary Budget Planning Survey; WTW "Countering disruptions with dynamic total rewards strategies" (Jan 2026)
+- **Source URLs:** https://www.wtwco.com/en-us/insights/2026/01/countering-disruptions-with-dynamic-total-rewards-strategies-actions-for-2026 · https://www.aon.com/en/insights/articles/2026-human-capital-outlook-5-forces-to-act-on
+- **Carousel (5 slides):** posts/drafts/carousels/2026-05-19-option-3/
+  - slide-1 · Compensation · "Pay transparency is a strategy test."
+  - slide-2 · The deadline · "EU Pay Transparency Directive lands June 2026."
+  - slide-3 · The data — WTW 2026 · "US salary budgets stable at 3.4%. No extra cash to paper over gaps."
+  - slide-4 · The CHRO read · "Defend the criteria, not just the number."
+  - slide-5 · Your move · "Can you explain every band you're about to publish?"
+- **Image alt:** Minimalist moss-accented card: "Pay transparency is a strategy test."
+- **Word count:** 48
+- **Status:** draft
+
+---POST---
+Pay transparency is a strategy test, not a compliance one.
+
+EU Pay Transparency Directive: June 2026. WTW 2026: US budgets stable at 3.4% — no extra cash to paper over gaps.
+
+CHROs ready to defend the criteria, not just the number, will lead this cycle.
+
+#Compensation #PayTransparency #PeopleStrategy
 ---END---
