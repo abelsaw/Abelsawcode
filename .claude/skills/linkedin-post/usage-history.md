@@ -17,6 +17,20 @@ When excluding, match on **parent theme**, not slug — two slugs about "Human-A
 
 ## Used themes (most recent first)
 
+### Climate / heat as labor productivity issue
+- Slugs: climate-is-an-hr-variable
+- Source stats: ILO 2026 — 70% of global workforce (2.4B workers) exposed to excessive heat at work; by 2030, heat stress could cost 3.8% of global working hours; APAC and South Asia highest exposure
+- Commits: (pending this run)
+- Date(s): 2026-05-19
+- Distinct from #10 (Job quality & informality) — that one is informal-economy quality, this is heat-stress productivity loss, different mechanism
+
+### Scenario-based workforce planning under AI uncertainty
+- Slugs: plan-for-multiple-futures
+- Source stats: McKinsey 2026 — 75% of current jobs will need redesign, upskilling, or redeployment by 2030; BCG 2026 — future-built firms upskill 50%+ on AI vs 20% for laggards
+- Commits: (pending this run)
+- Date(s): 2026-05-19
+- Distinct from #11 (Skills-based workforce planning, HR capability gap) — that one is skills inventory/tool maturity, this is scenario modeling under uncertainty, different planning discipline
+
 ### AI productivity paradox / value-capture gap
 - Slugs: ai-value-is-a-measurement-problem
 - Source stats: PwC 2026 — 56% of CEOs got nothing from AI investments; BCG 2026 — only 5% capture substantial financial gains

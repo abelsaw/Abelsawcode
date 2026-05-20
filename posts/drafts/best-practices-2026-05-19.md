@@ -1,87 +1,63 @@
-# Daily HR best-practices posts — 2026-05-19 (v6, novel themes)
+# Daily HR best-practices posts — 2026-05-19 (v7, two genuinely-distant themes)
 
 Source brief: posts/drafts/best-practices-research-2026-05-19.md (novel-themes special run)
 Regional lens: APAC relevance filter, universal framing.
-Themes covered: AI value-capture paradox, AI governance in HR, Global mobility reinvention.
+Themes covered: climate/heat as HR variable, scenario-based workforce planning under AI uncertainty.
 
-All three themes confirmed distinct from the 11 entries in `.claude/skills/linkedin-post/usage-history.md`.
+**Note: 2 options instead of 3 this run.** The third-theme scout hit two consecutive 529 (server overload) errors and never executed. Rather than recycle an already-covered theme or accept adjacency to one of the 14 entries on the exclusion list, this run delivers two strong non-overlapping options. A third can be added with a follow-up scout when the API is stable.
 
-Prior runs preserved in git history (commits c2400ef, 1ffa92f, 9f2ad7b, f2dc9b0, d2aee45, 86fc0e4).
+Both themes verified distinct from all 14 prior entries in `.claude/skills/linkedin-post/usage-history.md` plus the Gen Z / workforce-data adjacencies flagged on the prior draft.
+
+Prior runs preserved in git history (commits c2400ef, 1ffa92f, 9f2ad7b, f2dc9b0, d2aee45, 86fc0e4, d0d5f57).
 
 ---
 
-## Option 1 — ai-value-is-a-measurement-problem
-- **Theme:** AI productivity paradox / value-capture gap (5 Tier-1 firms: PwC, McKinsey, BCG, Deloitte, Mercer)
-- **Source reports:** PwC 29th Global CEO Survey 2026; BCG "Making AI Productivity Deliver Real Value" 2026; McKinsey "AI productivity gains and the performance paradox" 2026
-- **Source URLs:** https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-global-ceo-survey.html · https://www.bcg.com/publications/2026/making-ai-productivity-deliver-real-value · https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/where-ai-will-create-value-and-where-it-wont
+## Option 1 — climate-is-an-hr-variable
+- **Theme:** Climate / heat as labor productivity issue (APAC-acute) — 3 multilateral sources: ILO, WEF, IFC
+- **Source reports:** ILO heat-stress and labour productivity data (updated 2026); WEF climate-workforce stories 2026; IFC "Hidden Potential: Inclusive Jobs in Green Transitions" 2026
+- **Source URLs:** https://www.ilo.org/resource/news/increase-heat-stress-predicted-bring-productivity-loss-equivalent-80 · https://www.ifc.org/content/dam/ifc/doc/2026/how-employers-can-accelerate-inclusive-jobs-in-green-transitions.pdf
 - **Carousel (5 slides):** posts/drafts/carousels/2026-05-19-option-1/
-  - slide-1 · Future of work · "AI investment without value capture is becoming the rule."
-  - slide-2 · PwC 2026 · "56% of CEOs got nothing from their AI investments."
-  - slide-3 · BCG 2026 · "Just 5% of firms capture substantial financial gains from AI."
-  - slide-4 · The CHRO read · "The 5% built a measurement discipline first — operating model, baseline, ROI cadence."
-  - slide-5 · Your move · "What's your AI value-capture cadence?"
-- **Image alt:** Minimalist navy-accented card: "AI investment without value capture is becoming the rule."
-- **Word count:** 48
+  - slide-1 · Climate risk · "Climate is becoming a measurable HR variable."
+  - slide-2 · ILO 2026 · "70% of the global workforce — 2.4B workers — is exposed to excessive heat at work."
+  - slide-3 · ILO 2026 · "By 2030, heat stress could cost 3.8% of global working hours."
+  - slide-4 · The CHRO read · "APAC and South Asia bear the highest exposure. Heat policy is HR policy."
+  - slide-5 · Your move · "Where does climate sit in your workforce planning?"
+- **Image alt:** Minimalist navy-accented card: "Climate is becoming a measurable HR variable."
+- **Word count:** 49
 - **Status:** draft
 
 ---POST---
-AI investment without value capture is becoming the rule.
+Climate is becoming a measurable HR variable.
 
-PwC 2026: 56% of CEOs say they got nothing from AI. BCG: just 5% capture substantial financial gains.
+ILO 2026: 70% of the global workforce (2.4B workers) is exposed to excessive heat at work. By 2030, heat stress could cost 3.8% of working hours. APAC and South Asia bear the highest exposure.
 
-The 5% built a measurement discipline first — operating model, baseline, ROI cadence — and bought tools second.
+Heat policy is HR policy.
 
-#FutureOfWork #AIatWork #PeopleStrategy
+#ClimateRisk #FutureOfWork #PeopleStrategy
 ---END---
 
 ---
 
-## Option 2 — hr-and-the-ai-governance-room
-- **Theme:** AI governance inside HR (decision rights, algorithmic accountability) — 4 firms: SHRM, Deloitte, IBM IBV, Aon
-- **Source reports:** SHRM State of AI in HR 2026 (May 2026); IBM IBV "Reshaping C-suite Roles for the AI Era" (May 2026); Deloitte 2026 Global Human Capital Trends; Aon 2026 Human Capital Outlook
-- **Source URLs:** https://www.shrm.org/topics-tools/research/state-of-ai-hr-2026/full-report · https://newsroom.ibm.com/2026-05-04-ibm-study-ceos-are-reshaping-c-suite-roles-for-the-ai-era
+## Option 2 — plan-for-multiple-futures
+- **Theme:** Scenario-based workforce planning under AI uncertainty — 2 Tier-1 firms (McKinsey, BCG) + Conference Board CHRO Confidence supporting
+- **Source reports:** McKinsey The State of Organizations 2026; McKinsey "The critical role of strategic workforce planning in the age of AI" 2026; BCG "AI Transformation Is a Workforce Transformation" 2026
+- **Source URLs:** https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-critical-role-of-strategic-workforce-planning-in-the-age-of-ai · https://www.bcg.com/publications/2026/ai-transformation-is-a-workforce-transformation
 - **Carousel (5 slides):** posts/drafts/carousels/2026-05-19-option-2/
-  - slide-1 · Governance · "AI makes people decisions. Who governs the policy?"
-  - slide-2 · SHRM 2026 · "49% of organizations have an AI policy. Only 25% trust it as clear and future-proof."
-  - slide-3 · SHRM 2026 · "52% of companies don't involve HR in their AI strategy."
-  - slide-4 · The CHRO read · "The AI committee needs HR's chair filled — by HR."
-  - slide-5 · Your move · "Where does HR sit in your AI governance architecture?"
-- **Image alt:** Minimalist rust-accented card: "AI makes people decisions. Who governs the policy?"
-- **Word count:** 48
+  - slide-1 · Workforce planning · "Annual headcount planning is breaking under AI uncertainty."
+  - slide-2 · McKinsey 2026 · "75% of current jobs will need redesign or redeployment by 2030."
+  - slide-3 · BCG 2026 · "Future-built firms plan to upskill 50%+ of employees on AI."
+  - slide-4 · The CHRO read · "Scenario-based planning replaces single-point forecasts."
+  - slide-5 · Your move · "How many futures does your workforce plan stress-test?"
+- **Image alt:** Minimalist rust-accented card: "Annual headcount planning is breaking under AI uncertainty."
+- **Word count:** 47
 - **Status:** draft
 
 ---POST---
-AI is making people decisions in your company. Who owns the policy?
+Annual headcount planning is breaking under AI uncertainty.
 
-SHRM 2026: 49% of organizations have AI policies, but only 25% find them clear and future-proof. 52% don't involve HR in AI strategy.
+McKinsey 2026: 75% of current jobs will need redesign, upskilling, or redeployment by 2030. BCG 2026: future-built firms plan to upskill 50%+ of employees on AI versus 20% for laggards.
 
-The AI committee needs HR's chair filled — by HR.
+Scenario-based workforce planning replaces single-point forecasts.
 
-#AIatWork #Governance #HumanResources
----END---
-
----
-
-## Option 3 — expat-package-retired
-- **Theme:** Global mobility reinvented (short-term/virtual replacing long-term expat) — 5 firms: Mercer, Deloitte, BCG, KPMG, EY
-- **Source reports:** BCG "Global Talent Mobility Is Slowing and Shifting" 2026; KPMG 2026 mobility data; EY 2026 Mobility Reimagined Survey; Mercer Talent Mobility 2026
-- **Source URLs:** https://www.bcg.com/publications/2025/global-talent-mobility-is-slowing-and-shifting · https://www.ey.com/en_gl/insights/workforce/mobility-reimagined-survey · https://www.mercer.com/solutions/talent-and-rewards/talent-mobility/
-- **Carousel (5 slides):** posts/drafts/carousels/2026-05-19-option-3/
-  - slide-1 · Global mobility · "The 3-year expat package is being quietly retired."
-  - slide-2 · BCG 2026 · "Cross-border mobility down 8.5% YoY. 220,000 fewer high-skill moves."
-  - slide-3 · KPMG 2026 · "70% of organizations now use short-term and rotational assignments."
-  - slide-4 · The CHRO read · "Short-term, hybrid, and virtual work is the new mobility default."
-  - slide-5 · Your move · "What's your mobility mix one year from now?"
-- **Image alt:** Minimalist moss-accented card: "The 3-year expat package is being quietly retired."
-- **Word count:** 48
-- **Status:** draft
-
----POST---
-The 3-year expat package is being quietly retired.
-
-BCG 2026: cross-border professional mobility is down 8.5% year over year — 220,000 fewer high-skill moves. KPMG: 70% of organizations now lean on short-term and rotational assignments.
-
-Short-term, hybrid, and virtual cross-border work is the new default.
-
-#GlobalMobility #FutureOfWork #PeopleStrategy
+#FutureOfWork #WorkforcePlanning #PeopleStrategy
 ---END---
