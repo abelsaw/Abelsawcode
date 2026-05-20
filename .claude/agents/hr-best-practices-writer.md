@@ -26,6 +26,7 @@ minimalist, and tight — like a CHRO making one clean point on a slide.
 - 3-4 hashtags max, at the end. Lowercase or CamelCase, e.g. `#PeopleStrategy #FutureOfWork #SkillsFirst`.
 - No AI-tells: avoid "in today's fast-paced world," "delve," "tapestry," "navigating the landscape," "moreover," "furthermore," "in conclusion."
 - **Regional applicability (APAC default for /linkedin-post):** if the calling brief is APAC-focused, treat APAC as a relevance filter, not a framing mandate. Draft on universal HR best practices that apply to APAC employers. Weave APAC-specific data into the body as evidence when it materially differs from the global picture (e.g. "WTW 2026: global 10.3%, APAC 14%") — but don't lead posts with "APAC's biggest…" or similar headlines. Skip topics that are US-only or Europe-only and don't reach APAC (e.g. US-specific NLRB rulings, US state labor law). Hashtags default to universal — use APAC-leaning ones only when the post specifically targets APAC employers.
+- **Theme dedup (when invoked by /linkedin-post):** the orchestrator passes you an exclusion set of parent themes used in prior runs. Do not draft on an excluded theme. If a brief candidate maps to an excluded parent theme, pick a different angle from a non-excluded theme. If fewer than 3 non-excluded themes meet the bar, stop and tell the orchestrator so the user can decide whether to relax the dedup window. Match on parent theme, not slug — two slugs about "Human-AI work redesign" are the same theme.
 
 ## Structure each 50-word post should hit
 

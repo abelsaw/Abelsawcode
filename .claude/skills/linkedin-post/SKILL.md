@@ -21,11 +21,16 @@ If args are empty, run the default flow: `region: apac`, default themes, 3 optio
 
 ---
 
-## Step 1 — Read the source catalog
+## Step 1 — Read the source catalog and usage history
 
-Read `.claude/skills/linkedin-post/sources.md`. It contains the canonical
-Tier 1 and Tier 2 firms, plus any auto-discovered sources from prior runs.
-This is the input for the scout phase.
+Read **two** files before invoking the scout:
+
+1. `.claude/skills/linkedin-post/sources.md` — the canonical Tier 1 / Tier 2 / Tier 3 source catalog plus any auto-discovered sources from prior runs.
+2. `.claude/skills/linkedin-post/usage-history.md` — every theme/slug used in prior runs of this skill.
+
+From the usage history, extract the **exclusion set**: every parent theme whose entry is dated within the last **14 days** (the default dedup window). These themes are off-limits for this run unless the user explicitly overrides ("I want a different angle on managers" or similar).
+
+Match exclusions on **parent theme**, not slug — two slugs about "Human-AI work redesign" share the same parent and both count as used.
 
 ## Step 2 — Delegate to `hr-best-practices-scout`
 
@@ -39,6 +44,7 @@ Invoke the `hr-best-practices-scout` agent with a prompt that includes:
   - "With `region: apac` (default), apply APAC as a **relevance filter on themes**, not a framing mandate. **Topic filter:** only surface themes applicable to APAC employers. Drop themes that are US-only or Europe-only and don't reach APAC (e.g. US-specific NLRB rulings, US state-level labor law). Themes that touch APAC multinationals via global rules pass (e.g. EU Pay Transparency landing on European subsidiaries of APAC firms). **Sources:** still sweep Tier 3 (Hays, Robert Walters, Michael Page, INSEAD, ILO Asia-Pacific, ADB, Singapore MOM, AHRI, HKIHRM, People Matters, HR Asia) and pull APAC breakouts of Tier 1/2 when they add value. **Data:** cite APAC stats as evidence when they materially differ from the global picture; otherwise universal stats are fine. **Don't write briefs that frame every theme as 'APAC's biggest…' — the goal is general best practices that happen to be relevant to APAC.**"
   - "With `region: global`, treat Tier 3 as supplementary and prioritize globally-applicable findings."
 - **The discovery directive (when `discover` is not `off`):** "During your searches, if you encounter 2026 HR research from a credible firm NOT in the catalog that adds new convergence to a theme you're surfacing, USE it and report it back so it can be added to the catalog. In APAC mode, weight discovery toward APAC-credible firms (e.g. Korn Ferry APAC, IBM IBV APAC, Egon Zehnder APAC, regional NUS / HKUST research centers). Apply the discovery rules in `.claude/skills/linkedin-post/sources.md`."
+- **The dedup exclusion set:** "The following parent themes have been used in /linkedin-post runs within the last 14 days and are OFF-LIMITS for this run unless the user explicitly overrides: {paste the list from usage-history.md}. Do not surface these themes as top candidates. If a brief candidate falls under an excluded parent theme, drop it and pick a different angle from a non-excluded theme. If fewer than 3 non-excluded themes meet the ≥2-firm bar, stop and report so the user can decide whether to relax the dedup window or accept a smaller set."
 - Reminder of environment limits: if WebFetch returns 403, fall back to search-indexed content and mark claims `[search-only]`.
 
 Wait for the scout to save `posts/drafts/best-practices-research-YYYY-MM-DD.md`.
@@ -63,8 +69,13 @@ Be conservative — only add what passes the discovery rules in the catalog.
 
 ## Step 4 — Delegate to `hr-best-practices-writer`
 
-Invoke the `hr-best-practices-writer` agent. The writer reads the research
-brief and produces:
+Invoke the `hr-best-practices-writer` agent with the same dedup exclusion
+set you gave the scout. The writer must NOT draft a post on an excluded
+parent theme. If the brief surfaces an angle that maps to an excluded
+parent theme, the writer should pick a different angle from a non-excluded
+theme instead.
+
+The writer reads the research brief and produces:
 
 - `posts/drafts/best-practices-YYYY-MM-DD.md` with the N post options (default 3).
 - 5-slide carousels at `posts/drafts/carousels/YYYY-MM-DD-option-N/slide-M.png`.
@@ -117,6 +128,22 @@ For each option, show:
 
 End with: "Want me to revise any of these, or publish one?"
 
+## Step 6.5 — Append to usage history
+
+Immediately after the writer has produced the drafts (BEFORE you ask the user to review), append entries to `.claude/skills/linkedin-post/usage-history.md` for **each option drafted**. This is what protects future runs from overlap. Format:
+
+```markdown
+### {Parent theme label}
+- Slugs: {slug-1}, {slug-2 if multi-slug-for-same-theme}
+- Source stats: {one-line summary of the key stats used}
+- Commits: {commit hash once the run is committed}
+- Date(s): {YYYY-MM-DD}
+```
+
+If a parent theme already has an entry in the file (from a prior run that the user has chosen to recycle), ADD the new slug and the new date to that entry rather than creating a duplicate.
+
+Append the entries to the top of the "Used themes (most recent first)" section so the most recent runs are easy to scan.
+
 ## Step 7 — Publish on approval
 
 When the user picks a specific option, delegate to `linkedin-publisher`:
@@ -151,3 +178,4 @@ through the setup steps in `.env.example` instead of attempting to publish.
 - **No fabrication.** Every stat traces back to a source in the brief.
 - **5 slides per option, every time.** Three posts = three carousels = fifteen PNGs.
 - **Persistence is silent but visible.** When you add a discovered source, mention it in your final report to the user ("Added Korn Ferry's 2026 Workforce Survey to the catalog — first time seen.") so they can audit the growing catalog.
+- **No theme overlap with prior runs.** Before drafting, the skill reads `.claude/skills/linkedin-post/usage-history.md` and excludes parent themes used within 14 days. After drafting, the skill appends the newly-used themes to the ledger. The user can manually delete an entry to allow recycling. If fewer than 3 non-excluded themes meet the cross-firm bar, stop and ask before drafting a smaller set.
