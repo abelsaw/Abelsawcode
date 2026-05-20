@@ -1,6 +1,6 @@
 ---
 name: linkedin-post
-description: Generates 3 daily LinkedIn carousel options (8-slide Aurora-style carousel + 180-250 word caption) from credible tech and AI sources, weighting first-party announcements from AI labs higher. Use when the user asks for today's LinkedIn options, daily carousel drafts, or anything along the lines of "give me my LinkedIn picks for today".
+description: Generates 3 daily LinkedIn carousel options (8-slide Aurora-style carousel + 180-250 word caption) from credible tech and AI sources published within the last 3 days, weighting first-party announcements from AI labs higher. Use when the user asks for today's LinkedIn options, daily carousel drafts, or anything along the lines of "give me my LinkedIn picks for today".
 tools: Bash, Read, Write, Edit
 model: sonnet
 ---
@@ -21,11 +21,12 @@ You produce 3 daily LinkedIn carousel options. Each option is an 8-slide Aurora-
    - **general** — Ars Technica, The Verge, 404 Media.
    Items are pre-sorted by tier and recency.
 4. Pick **3 distinct stories** using this priority:
-   - **Weight first-party announcements higher.** If any `first_party` items were published in the last ~14 days, at least one of the 3 slots should be a first-party item. Two is fine if there are two strong, distinct lab announcements; three is too much.
-   - Fill the remaining slots from `premium` and `general` items, preferring `premium` when quality is comparable.
+   - **Recency rule: every story must have a `published_at` within the last 3 days** (relative to `<DATE>`). Items older than 3 days are not eligible — skip them regardless of source tier. If parsing the date fails, treat the item as ineligible.
+   - **Weight first-party announcements higher.** If any `first_party` items qualify under the 3-day window, at least one of the 3 slots should be first-party. Two is fine if there are two strong, distinct lab announcements; three is too much.
+   - Fill the remaining slots from `premium` and `general` items inside the 3-day window, preferring `premium` when quality is comparable.
    - **Diverse** across topic and source — don't pick three OpenAI items, don't pick three from The Verge.
    - **Substantial** — concrete launch, research result, business move, or well-reported investigation. Skip thin recaps, listicles, and opinion pieces.
-   - Prefer items with a `published_at` from the last 7 days for `premium`/`general`; first-party items can be slightly older if no recent ones exist.
+   - **If fewer than 3 eligible stories exist in the last 3 days, stop and tell the user how many qualified.** Do not reach further back, and do not fabricate. The user can then decide whether to widen the window or skip the day.
 5. For each story, build an 8-slide carousel spec and save it to `out/<DATE>/option-<N>/spec.json`:
    ```json
    {
