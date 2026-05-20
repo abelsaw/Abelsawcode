@@ -35,8 +35,8 @@ Invoke the `hr-best-practices-scout` agent with a prompt that includes:
 - A 2026-only window directive.
 - The full source catalog content (Tier 1 + Tier 2 + Tier 3 + Auto-discovered).
 - The user's `theme:` override and any `+sources` / `-sources` adjustments.
-- **The regional lens directive (default `apac`):**
-  - "Apply the regional lens from `.claude/skills/linkedin-post/sources.md`. With `region: apac`, prioritize APAC regional breakouts of Tier 1/2 reports (e.g. Mercer Asia Talent Trends, McKinsey Asia, BCG Southeast Asia), sweep Tier 3 sources (Hays, Robert Walters, Michael Page, INSEAD, ILO Asia-Pacific, ADB, Singapore MOM, AHRI, HKIHRM, People Matters, HR Asia), and prefer APAC stats over global averages when both exist. Run queries like `'Mercer Asia Talent Trends 2026 findings'`, `'Hays Asia Salary Guide 2026'`, `'Robert Walters APAC Salary Survey 2026'`, `'Michael Page Talent Trends 2026 Singapore'`, `'INSEAD GTCI 2026'`, `'ILO Asia-Pacific Employment 2026'`. Surface APAC regulatory/market context where it adds dimension."
+- **The regional lens directive (default `apac` = relevance filter, not framing mandate):**
+  - "With `region: apac` (default), apply APAC as a **relevance filter on themes**, not a framing mandate. **Topic filter:** only surface themes applicable to APAC employers. Drop themes that are US-only or Europe-only and don't reach APAC (e.g. US-specific NLRB rulings, US state-level labor law). Themes that touch APAC multinationals via global rules pass (e.g. EU Pay Transparency landing on European subsidiaries of APAC firms). **Sources:** still sweep Tier 3 (Hays, Robert Walters, Michael Page, INSEAD, ILO Asia-Pacific, ADB, Singapore MOM, AHRI, HKIHRM, People Matters, HR Asia) and pull APAC breakouts of Tier 1/2 when they add value. **Data:** cite APAC stats as evidence when they materially differ from the global picture; otherwise universal stats are fine. **Don't write briefs that frame every theme as 'APAC's biggest…' — the goal is general best practices that happen to be relevant to APAC.**"
   - "With `region: global`, treat Tier 3 as supplementary and prioritize globally-applicable findings."
 - **The discovery directive (when `discover` is not `off`):** "During your searches, if you encounter 2026 HR research from a credible firm NOT in the catalog that adds new convergence to a theme you're surfacing, USE it and report it back so it can be added to the catalog. In APAC mode, weight discovery toward APAC-credible firms (e.g. Korn Ferry APAC, IBM IBV APAC, Egon Zehnder APAC, regional NUS / HKUST research centers). Apply the discovery rules in `.claude/skills/linkedin-post/sources.md`."
 - Reminder of environment limits: if WebFetch returns 403, fall back to search-indexed content and mark claims `[search-only]`.
@@ -93,10 +93,10 @@ Voice rules:
 - 3-4 hashtags max.
 
 **APAC framing (when `region: apac`):**
-- Anchor at least one of the three options in an APAC-specific market reality where the brief supports it: Singapore/Hong Kong as regional hubs, ASEAN talent flows, India scaling, Japan/Korea workstyle reforms, Australia Fair Work, China labor law, or how global rules (EU Pay Transparency, US enforcement) reach APAC multinationals.
-- Cite APAC stats when both APAC and global versions of a number exist (e.g. APAC thriving rate over the global one).
-- Use APAC-leaning hashtags when relevant: `#APAC`, `#FutureOfWorkAsia`, `#ASEAN`, `#SingaporeHR`, `#AsiaCHRO` — alongside the global ones, not replacing them.
-- Avoid parochialism — posts should still read for a global LinkedIn feed; APAC context adds dimension, doesn't wall the audience off.
+- **Universal best-practices framing is the default.** Don't open posts with "APAC's biggest..." or "APAC moved past..." style leads. Write as a senior CHRO sharing a general insight that happens to land in APAC.
+- **Weave APAC data into the body as evidence**, not as the headline. Example: instead of "APAC's medical trend is the highest in the world," write "Medical inflation is rewriting benefits strategy. WTW 2026: global 10.3%, with APAC leading at 14%."
+- **Filter, don't force.** If a topic doesn't apply to APAC employers (e.g. US-only NLRB rulings, US state labor law), don't draft a post on it. If a topic applies universally, treat it universally and only invoke APAC where the data adds material dimension.
+- **Hashtags default to universal.** `#APAC`, `#FutureOfWorkAsia`, `#ASEAN`, `#SingaporeHR`, `#AsiaCHRO` are optional — use only when the post specifically targets APAC employers (e.g. regional regulatory deadlines).
 
 **≤50 words per post body, including hashtags.** Hard cap. Verify each option's
 word count by running:

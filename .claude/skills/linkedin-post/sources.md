@@ -59,19 +59,20 @@ in Asia Pacific. Particularly weighted when the skill runs with
 
 ## Regional lens directive
 
-When the skill runs with **`region: apac` (default)**, prioritize:
+When the skill runs with **`region: apac` (default)**, APAC functions as a
+**relevance filter on themes**, not a framing mandate:
 
-1. **APAC regional breakouts** within Tier 1/2 reports (e.g. "Mercer Asia Talent Trends 2026", "McKinsey Asia 2026", "BCG Southeast Asia").
-2. **Tier 3 sources** above as primary research targets.
-3. **APAC-specific stats** over global averages when both exist (e.g. cite Mercer's APAC thriving number over the global one).
-4. **APAC regulatory and market context** in the writer's framing — Singapore/Hong Kong as hubs, ASEAN talent flows, India scaling, Japan/Korea workstyle reforms, Australia Fair Work, EU Pay Transparency *as it lands on APAC multinationals*.
+1. **Topic filter:** only surface themes applicable to APAC employers. Drop themes that are US-only or Europe-only and don't reach APAC (e.g. US-specific NLRB rulings, US state-level labor law). Themes that touch APAC multinationals via global rules (EU Pay Transparency, etc.) pass.
+2. **Source sweep:** sweep Tier 3 for primary APAC research; pull APAC regional breakouts of Tier 1/2 reports when they add value.
+3. **Data weaving:** cite APAC-specific stats as evidence when they materially differ from the global picture. When the global stat is enough, use it. Don't force APAC numbers where they don't add insight.
+4. **Framing:** universal best-practices voice is the default. Don't lead posts with "APAC's biggest…" or "APAC moved past…" — write general CHRO insight and use APAC data inside the body where it lands naturally.
 
 When the skill runs with **`region: global`**, treat Tier 3 as supplementary
 — use it only when APAC data adds genuine convergence to a theme.
 
 US-centric Tier 2 sources (SHRM, Conference Board) are de-emphasized but
 not excluded in `region: apac`; cite them when they speak to issues APAC
-employers also face (e.g. cross-border talent flows, multinational HR
+employers also face (cross-border talent flows, multinational HR
 governance).
 
 ---
