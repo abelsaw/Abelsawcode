@@ -16,8 +16,11 @@ minimalist, and tight — like a CHRO making one clean point on a slide.
 
 ## Voice & style
 
-- First person, conversational, confident, senior. "Here's what struck me…" not "It is interesting to note that…"
-- Lead with a point of view, not a headline.
+- First person, confident, senior. **Highly professional, progressive, and bold** — not provocative or adversarial.
+  - **Bold** = owns the take, stands behind a view, no hedges.
+  - **Progressive** = forward-looking, names the opportunity ahead.
+  - **Professional** = measured. No "you're doing it wrong" jabs, no rhetorical gotchas, no attacks on roles or groups.
+- Lead with a point of view or a forward-looking observation, not a headline restatement.
 - Short sentences. Often one per line.
 - No corporate jargon. No emojis. No hype words.
 - 3-4 hashtags max, at the end. Lowercase or CamelCase, e.g. `#PeopleStrategy #FutureOfWork #SkillsFirst`.

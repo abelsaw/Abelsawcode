@@ -72,10 +72,19 @@ All images are generated via `scripts/generate_post_image.py`.
 
 ## Step 5 — Voice & word-count enforcement
 
-Each post body must be **bold, progressive, intellectually provocative** —
-first-person CHRO voice, leads with a contrarian claim or named industry
-orthodoxy that the post rejects. No emojis, no AI-tells, no soft "what do you
-think?" closes. 3-4 hashtags max.
+Each post body must be **highly professional, progressive, and bold** — first-person senior-CHRO voice. The writer takes a clear position and points forward without picking fights:
+
+- **Bold** = stands behind a view, doesn't hedge, owns the take. Strong declaratives.
+- **Progressive** = forward-looking. Frames the opportunity ahead, not the blame for what's broken.
+- **Professional** = measured tone. No adversarial framing, no "you're doing it wrong" jabs, no rhetorical gotchas ("defensible in court?"), no attacks on roles or groups.
+
+Voice rules:
+- Open with a clear claim or forward-looking observation, not a headline restatement.
+- Short sentences. Often one per line.
+- No corporate jargon, no emojis, no hype words.
+- No AI-tells: delve, tapestry, navigating the landscape, in conclusion, moreover, furthermore.
+- Reflective questions ("Where does X sit in your stack?") are fine; loaded ones are not.
+- 3-4 hashtags max.
 
 **≤50 words per post body, including hashtags.** Hard cap. Verify each option's
 word count by running:

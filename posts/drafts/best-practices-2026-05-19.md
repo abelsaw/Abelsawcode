@@ -17,17 +17,17 @@ Themes covered: #1 (Human-AI work redesign, 6 firms), #2 (AI literacy/reskilling
   - slide-4 · The CHRO read · "Firms making AI ROI in 2026 redesigned roles first, then deployed tools."
   - slide-5 · Your move · "Where does work design sit in your AI stack?"
 - **Image alt:** Minimalist navy-accented card: "AI isn't a tech project. It's a work-design project."
-- **Word count:** 48
+- **Word count:** 49
 - **Status:** draft
 
 ---POST---
-Most AI rollouts are CIO projects. That's why most fail.
+AI value lives in work design.
 
-BCG 2026: 50-55% of jobs will be reshaped within three years. Not by IT. By work design.
+BCG 2026: 50-55% of jobs will be reshaped within three years. Not replaced. Reshaped.
 
-If your CHRO isn't co-leading AI deployment, you're optimizing the wrong layer.
+The CHROs leading this year are co-architecting roles before tools land. That's where compounding returns come from.
 
-The bottleneck was never the model.
+The model was never the bottleneck. Work design is.
 
 #FutureOfWork #PeopleStrategy #AIatWork
 ---END---
@@ -46,17 +46,15 @@ The bottleneck was never the model.
   - slide-4 · The CHRO read · "Tools deployed, capability missing. That's a gap, not a strategy."
   - slide-5 · Your move · "What's your real reskill rate?"
 - **Image alt:** Minimalist rust-accented card: "Your AI strategy is your reskill rate."
-- **Word count:** 49
+- **Word count:** 46
 - **Status:** draft
 
 ---POST---
-The AI labor crisis isn't coming. It's a choice you already made.
+The strongest AI advantage in 2026 isn't the model. It's the reskill rate.
 
-Aon 2026: 73% deployed AI. Only 18% reskilled most of their people.
+Aon 2026: 73% of organizations deployed AI. Only 18% reskilled most of their workforce.
 
-That's not a gap. It's a strategy: deploy fast, let employees absorb the cost.
-
-Defensible in court? Or just in the boardroom?
+The firms closing this gap first will compound the advantage. That's where capability turns into capacity.
 
 #AIatWork #Reskilling #HumanResources
 ---END---
@@ -79,11 +77,11 @@ Defensible in court? Or just in the boardroom?
 - **Status:** draft
 
 ---POST---
-We're told to develop managers. The data says: develop fewer.
+The manager role is the lever of the decade.
 
-Gallup 2026: manager engagement dropped 9 points in three years.
+Gallup 2026: manager engagement dropped 9 points in three years. A layer built for industrial pace is being tested by AI's speed.
 
-The middle layer was built for industrial pace. It's breaking under AI's. Promoting ICs into a role that no longer works is HR's most expensive habit.
+The opportunity isn't fewer managers. It's a redesigned role: fewer reporting lines, more leadership depth.
 
 #Leadership #FutureOfWork #PeopleStrategy
 ---END---
