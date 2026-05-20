@@ -1,56 +1,47 @@
 #!/usr/bin/env python3
-"""Fetch trending tech/business posts from Reddit + RSS feeds.
+"""Fetch tech/AI news from credible RSS feeds, tagged by tier.
 
-Prints a JSON object to stdout with a list of items. Each item has:
-  title, url, source, score (nullable), summary
+Tiers:
+  first_party — AI labs / companies announcing their own work (highest signal)
+  premium     — top-tier publishers and curated AI analysis
+  general     — solid mainstream tech reporting
+
+Outputs JSON to stdout. Each item:
+  {tier, source, title, url, summary, published_at}
+
+Items are sorted by tier (first_party first) and then by published_at desc.
 """
 import json
 import sys
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 
-USER_AGENT = "linkedin-post-agent/0.1 (by /u/anonymous)"
+USER_AGENT = "Mozilla/5.0 (compatible; linkedin-post-agent/0.2)"
 
-REDDIT_SUBS = ["popular", "news", "worldnews", "business", "technology"]
-RSS_FEEDS = [
-    ("BBC", "https://feeds.bbci.co.uk/news/rss.xml"),
-    ("NPR", "https://feeds.npr.org/1001/rss.xml"),
-    ("Google News", "https://news.google.com/rss"),
-    ("The Guardian", "https://www.theguardian.com/international/rss"),
-    ("Hacker News", "https://hnrss.org/frontpage"),
+SOURCES = [
+    ("first_party", "Anthropic",        "https://www.anthropic.com/news/rss.xml"),
+    ("first_party", "OpenAI",           "https://openai.com/blog/rss.xml"),
+    ("first_party", "DeepMind",         "https://deepmind.google/blog/rss.xml"),
+    ("first_party", "Meta AI",          "https://ai.meta.com/blog/rss/"),
+    ("first_party", "Hugging Face",     "https://huggingface.co/blog/feed.xml"),
+    ("premium",     "MIT Tech Review",  "https://www.technologyreview.com/feed/"),
+    ("premium",     "Reuters Tech",     "https://www.reutersagency.com/feed/?taxonomy=best-sectors&post_type=best&best-sectors=technology"),
+    ("premium",     "The Batch",        "https://www.deeplearning.ai/the-batch/feed/"),
+    ("general",     "Ars Technica",     "https://feeds.arstechnica.com/arstechnica/index"),
+    ("general",     "The Verge",        "https://www.theverge.com/rss/index.xml"),
+    ("general",     "404 Media",        "https://www.404media.co/rss/"),
 ]
 
 
 def http_get(url, timeout=15):
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    req = urllib.request.Request(url, headers={
+        "User-Agent": USER_AGENT,
+        "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, */*",
+    })
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read()
-
-
-def fetch_reddit(sub, limit=8):
-    url = f"https://www.reddit.com/r/{sub}/top.json?t=day&limit={limit}"
-    try:
-        data = json.loads(http_get(url))
-    except Exception as e:
-        print(f"warn: reddit {sub} failed: {e}", file=sys.stderr)
-        return []
-    items = []
-    for child in data.get("data", {}).get("children", []):
-        d = child.get("data", {})
-        if d.get("stickied") or d.get("over_18"):
-            continue
-        title = (d.get("title") or "").strip()
-        if not title:
-            continue
-        items.append({
-            "title": title,
-            "url": d.get("url_overridden_by_dest") or f"https://reddit.com{d.get('permalink', '')}",
-            "source": f"r/{sub}",
-            "score": d.get("score"),
-            "summary": (d.get("selftext") or "")[:400].strip(),
-        })
-    return items
 
 
 def _strip_ns(root):
@@ -59,32 +50,55 @@ def _strip_ns(root):
             el.tag = el.tag.split("}", 1)[1]
 
 
-def fetch_rss(name, url, limit=8):
+def parse_date(s):
+    if not s:
+        return None
+    s = s.strip()
+    if not s:
+        return None
+    try:
+        dt = parsedate_to_datetime(s)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc).isoformat()
+    except (TypeError, ValueError):
+        pass
+    try:
+        dt = datetime.fromisoformat(s.replace("Z", "+00:00"))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc).isoformat()
+    except ValueError:
+        return None
+
+
+def fetch_rss(tier, name, url, limit=8):
     try:
         body = http_get(url)
     except Exception as e:
-        print(f"warn: rss {name} failed: {e}", file=sys.stderr)
+        print(f"warn: {name} fetch failed: {e}", file=sys.stderr)
         return []
     try:
         root = ET.fromstring(body)
     except ET.ParseError as e:
-        print(f"warn: rss {name} parse failed: {e}", file=sys.stderr)
+        print(f"warn: {name} parse failed: {e}", file=sys.stderr)
         return []
-
     _strip_ns(root)
-    items = []
 
+    items = []
     for item in root.iter("item"):
         title = (item.findtext("title") or "").strip()
         link = (item.findtext("link") or "").strip()
         desc = (item.findtext("description") or "").strip()
+        pub = parse_date(item.findtext("pubDate") or "")
         if title:
             items.append({
+                "tier": tier,
+                "source": name,
                 "title": title,
                 "url": link,
-                "source": name,
-                "score": None,
-                "summary": desc[:400],
+                "summary": desc[:500],
+                "published_at": pub,
             })
         if len(items) >= limit:
             break
@@ -95,13 +109,15 @@ def fetch_rss(name, url, limit=8):
             link_el = entry.find("link")
             link = link_el.get("href") if link_el is not None else ""
             summary = (entry.findtext("summary") or entry.findtext("content") or "").strip()
+            pub = parse_date(entry.findtext("published") or entry.findtext("updated") or "")
             if title:
                 items.append({
+                    "tier": tier,
+                    "source": name,
                     "title": title,
                     "url": link,
-                    "source": name,
-                    "score": None,
-                    "summary": summary[:400],
+                    "summary": summary[:500],
+                    "published_at": pub,
                 })
             if len(items) >= limit:
                 break
@@ -109,12 +125,21 @@ def fetch_rss(name, url, limit=8):
     return items
 
 
+def _sort_key(item):
+    tier_rank = {"first_party": 0, "premium": 1, "general": 2}.get(item["tier"], 99)
+    if item.get("published_at"):
+        ts = datetime.fromisoformat(item["published_at"]).timestamp()
+    else:
+        ts = 0
+    return (tier_rank, -ts)
+
+
 def main():
     all_items = []
-    for sub in REDDIT_SUBS:
-        all_items.extend(fetch_reddit(sub))
-    for name, url in RSS_FEEDS:
-        all_items.extend(fetch_rss(name, url))
+    for tier, name, url in SOURCES:
+        all_items.extend(fetch_rss(tier, name, url))
+
+    all_items.sort(key=_sort_key)
 
     out = {
         "fetched_at": datetime.now(timezone.utc).isoformat(),
