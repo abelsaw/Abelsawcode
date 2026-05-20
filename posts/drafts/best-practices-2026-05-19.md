@@ -1,85 +1,87 @@
-# Daily HR best-practices posts — 2026-05-19 (v5, universal voice)
+# Daily HR best-practices posts — 2026-05-19 (v6, novel themes)
 
-Source brief: posts/drafts/best-practices-research-2026-05-19.md (APAC-focused, fresh today)
-Regional lens: APAC as relevance filter (universal framing default).
-Themes covered: #6 (Culture as AI bottleneck), #8 (Job quality & informality), #7 fresh angle (HR's skills-tool capability gap).
+Source brief: posts/drafts/best-practices-research-2026-05-19.md (novel-themes special run)
+Regional lens: APAC relevance filter, universal framing.
+Themes covered: AI value-capture paradox, AI governance in HR, Global mobility reinvention.
 
-Earlier runs preserved in git: morning provocative+recalibrated batches (`c2400ef`), wellbeing/mobility/pay transparency (`1ffa92f`), APAC-heavy (`9f2ad7b`), universal-framed APAC-evidence (`f2dc9b0`).
+All three themes confirmed distinct from the 11 entries in `.claude/skills/linkedin-post/usage-history.md`.
+
+Prior runs preserved in git history (commits c2400ef, 1ffa92f, 9f2ad7b, f2dc9b0, d2aee45, 86fc0e4).
 
 ---
 
-## Option 1 — culture-is-the-ai-bottleneck
-- **Theme:** Culture & adaptability as the AI-transformation bottleneck
-- **Source reports:** Deloitte 2026 Global Human Capital Trends (APAC release); McKinsey State of Organizations 2026
-- **Source URLs:** https://www.deloitte.com/global/en/issues/work/human-capital-trends-asia-pacific.html · https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-state-of-organizations
+## Option 1 — ai-value-is-a-measurement-problem
+- **Theme:** AI productivity paradox / value-capture gap (5 Tier-1 firms: PwC, McKinsey, BCG, Deloitte, Mercer)
+- **Source reports:** PwC 29th Global CEO Survey 2026; BCG "Making AI Productivity Deliver Real Value" 2026; McKinsey "AI productivity gains and the performance paradox" 2026
+- **Source URLs:** https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-global-ceo-survey.html · https://www.bcg.com/publications/2026/making-ai-productivity-deliver-real-value · https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/where-ai-will-create-value-and-where-it-wont
 - **Carousel (5 slides):** posts/drafts/carousels/2026-05-19-option-1/
-  - slide-1 · Culture · "Culture is now the bottleneck on AI transformation."
-  - slide-2 · Deloitte 2026 · "85% of leaders call adaptability critical. 7% say they excel at it."
-  - slide-3 · Deloitte 2026 · "34% report culture is actively inhibiting their AI work."
-  - slide-4 · The CHRO read · "The 2026 AI roadmap that ignores culture design will under-deliver by design."
-  - slide-5 · Your move · "What's the cultural prerequisite for your AI rollout?"
-- **Image alt:** Minimalist navy-accented card: "Culture is now the bottleneck on AI transformation."
-- **Word count:** 49
-- **Status:** draft
-
----POST---
-Culture is now the bottleneck on AI transformation.
-
-Deloitte 2026: 85% of leaders call workforce adaptability critical; only 7% say they excel at enabling it. 34% report culture is actively inhibiting their AI work.
-
-The 2026 AI roadmap that ignores culture design will under-deliver by design.
-
-#FutureOfWork #Culture #AIatWork
----END---
-
----
-
-## Option 2 — job-quality-stewardship
-- **Theme:** Job quality & informality risk under APAC's growth story (universal HR mandate)
-- **Source reports:** ILO Asia-Pacific Employment 2026; WEF Davos 2026; Singapore MOM Q1 2026 Labour Market Report
-- **Source URLs:** https://www.ilo.org/publications/major-publications/world-employment-and-social-outlook-trends-2026 · https://www.weforum.org/stories/2026/01/davos-here-s-what-to-know-about-jobs-and-skills-transformation/
-- **Carousel (5 slides):** posts/drafts/carousels/2026-05-19-option-2/
-  - slide-1 · Workforce · "Job-quality stewardship is the new HR mandate."
-  - slide-2 · ILO 2026 · "SEA wages declining 0.3% per year on trade costs."
-  - slide-3 · WEF Davos 2026 · "1.3 billion informal workers globally — and growing."
-  - slide-4 · Singapore MOM Q1 2026 · "Net hiring fell from +17,700 to +5,000."
-  - slide-5 · The CHRO read · "Headcount alone isn't the workforce anymore. Strategy needs to widen."
-- **Image alt:** Minimalist rust-accented card: "Job-quality stewardship is the new HR mandate."
-- **Word count:** 49
-- **Status:** draft
-
----POST---
-Job-quality stewardship is the new HR mandate.
-
-ILO 2026: SEA wages down 0.3% per year. WEF Davos 2026: 1.3B informal workers globally, growing with platform work. Singapore MOM Q1: net hiring fell from +17.7k to +5k.
-
-Headcount alone isn't the workforce anymore. Strategy needs to widen.
-
-#Workforce #FutureOfWork #HumanResources
----END---
-
----
-
-## Option 3 — hr-skills-blind-spot
-- **Theme:** Skills-based workforce planning — HR's own capability gap (fresh angle on Theme 7)
-- **Source reports:** Mercer 2025/2026 Skills Snapshot; Mercer Asia training findings
-- **Source URLs:** https://www.mercer.com/insights/talent-and-transformation/skill-based-talent-management/rebuilding-reward-and-career-frameworks-based-on-skills/
-- **Carousel (5 slides):** posts/drafts/carousels/2026-05-19-option-3/
-  - slide-1 · Talent strategy · "The skills tools HR needs sit in HR's blind spot."
-  - slide-2 · Mercer 2026 · "Under 5% of HR leaders are advanced on skills-based talent tools."
-  - slide-3 · Mercer 2026 · "60% of organisations offer training. Few measure what skills it built."
-  - slide-4 · The CHRO read · "The next HR capability isn't a hire. It's a system."
-  - slide-5 · Your move · "How do you measure skills built vs. training delivered?"
-- **Image alt:** Minimalist moss-accented card: "The skills tools HR needs sit in HR's blind spot."
+  - slide-1 · Future of work · "AI investment without value capture is becoming the rule."
+  - slide-2 · PwC 2026 · "56% of CEOs got nothing from their AI investments."
+  - slide-3 · BCG 2026 · "Just 5% of firms capture substantial financial gains from AI."
+  - slide-4 · The CHRO read · "The 5% built a measurement discipline first — operating model, baseline, ROI cadence."
+  - slide-5 · Your move · "What's your AI value-capture cadence?"
+- **Image alt:** Minimalist navy-accented card: "AI investment without value capture is becoming the rule."
 - **Word count:** 48
 - **Status:** draft
 
 ---POST---
-The skills tools HR needs sit in HR's blind spot.
+AI investment without value capture is becoming the rule.
 
-Mercer 2026: under 5% of HR leaders are advanced on skills-based talent tools. 60% offer training; few measure what skills it built.
+PwC 2026: 56% of CEOs say they got nothing from AI. BCG: just 5% capture substantial financial gains.
 
-The next HR capability isn't a hire. It's a system. And it's underbought.
+The 5% built a measurement discipline first — operating model, baseline, ROI cadence — and bought tools second.
 
-#HumanResources #SkillsFirst #PeopleStrategy
+#FutureOfWork #AIatWork #PeopleStrategy
+---END---
+
+---
+
+## Option 2 — hr-and-the-ai-governance-room
+- **Theme:** AI governance inside HR (decision rights, algorithmic accountability) — 4 firms: SHRM, Deloitte, IBM IBV, Aon
+- **Source reports:** SHRM State of AI in HR 2026 (May 2026); IBM IBV "Reshaping C-suite Roles for the AI Era" (May 2026); Deloitte 2026 Global Human Capital Trends; Aon 2026 Human Capital Outlook
+- **Source URLs:** https://www.shrm.org/topics-tools/research/state-of-ai-hr-2026/full-report · https://newsroom.ibm.com/2026-05-04-ibm-study-ceos-are-reshaping-c-suite-roles-for-the-ai-era
+- **Carousel (5 slides):** posts/drafts/carousels/2026-05-19-option-2/
+  - slide-1 · Governance · "AI makes people decisions. Who governs the policy?"
+  - slide-2 · SHRM 2026 · "49% of organizations have an AI policy. Only 25% trust it as clear and future-proof."
+  - slide-3 · SHRM 2026 · "52% of companies don't involve HR in their AI strategy."
+  - slide-4 · The CHRO read · "The AI committee needs HR's chair filled — by HR."
+  - slide-5 · Your move · "Where does HR sit in your AI governance architecture?"
+- **Image alt:** Minimalist rust-accented card: "AI makes people decisions. Who governs the policy?"
+- **Word count:** 48
+- **Status:** draft
+
+---POST---
+AI is making people decisions in your company. Who owns the policy?
+
+SHRM 2026: 49% of organizations have AI policies, but only 25% find them clear and future-proof. 52% don't involve HR in AI strategy.
+
+The AI committee needs HR's chair filled — by HR.
+
+#AIatWork #Governance #HumanResources
+---END---
+
+---
+
+## Option 3 — expat-package-retired
+- **Theme:** Global mobility reinvented (short-term/virtual replacing long-term expat) — 5 firms: Mercer, Deloitte, BCG, KPMG, EY
+- **Source reports:** BCG "Global Talent Mobility Is Slowing and Shifting" 2026; KPMG 2026 mobility data; EY 2026 Mobility Reimagined Survey; Mercer Talent Mobility 2026
+- **Source URLs:** https://www.bcg.com/publications/2025/global-talent-mobility-is-slowing-and-shifting · https://www.ey.com/en_gl/insights/workforce/mobility-reimagined-survey · https://www.mercer.com/solutions/talent-and-rewards/talent-mobility/
+- **Carousel (5 slides):** posts/drafts/carousels/2026-05-19-option-3/
+  - slide-1 · Global mobility · "The 3-year expat package is being quietly retired."
+  - slide-2 · BCG 2026 · "Cross-border mobility down 8.5% YoY. 220,000 fewer high-skill moves."
+  - slide-3 · KPMG 2026 · "70% of organizations now use short-term and rotational assignments."
+  - slide-4 · The CHRO read · "Short-term, hybrid, and virtual work is the new mobility default."
+  - slide-5 · Your move · "What's your mobility mix one year from now?"
+- **Image alt:** Minimalist moss-accented card: "The 3-year expat package is being quietly retired."
+- **Word count:** 48
+- **Status:** draft
+
+---POST---
+The 3-year expat package is being quietly retired.
+
+BCG 2026: cross-border professional mobility is down 8.5% year over year — 220,000 fewer high-skill moves. KPMG: 70% of organizations now lean on short-term and rotational assignments.
+
+Short-term, hybrid, and virtual cross-border work is the new default.
+
+#GlobalMobility #FutureOfWork #PeopleStrategy
 ---END---

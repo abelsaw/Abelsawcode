@@ -17,6 +17,27 @@ When excluding, match on **parent theme**, not slug — two slugs about "Human-A
 
 ## Used themes (most recent first)
 
+### AI productivity paradox / value-capture gap
+- Slugs: ai-value-is-a-measurement-problem
+- Source stats: PwC 2026 — 56% of CEOs got nothing from AI investments; BCG 2026 — only 5% capture substantial financial gains
+- Commits: (pending this run)
+- Date(s): 2026-05-19
+- Distinct from #7 (Human-AI work redesign) — this is about value capture and measurement discipline, not work-redesign mechanics
+
+### AI governance inside HR (decision rights & oversight)
+- Slugs: hr-and-the-ai-governance-room
+- Source stats: SHRM 2026 — 49% have AI policies / 25% trust them / 52% don't involve HR; IBM IBV May 2026 — 76% of orgs have CAIO
+- Commits: (pending this run)
+- Date(s): 2026-05-19
+- Distinct from #9 (Culture as AI bottleneck) — this is formal governance architecture, not cultural readiness
+
+### Global mobility reinvention (short-term/virtual replacing long-term expat)
+- Slugs: expat-package-retired
+- Source stats: BCG 2026 — cross-border mobility down 8.5% YoY (220k fewer high-skill moves); KPMG 2026 — 70% leverage short-term assignments; Mercer — 18% expect long-term assignment increase, 53% expect flat
+- Commits: (pending this run)
+- Date(s): 2026-05-19
+- Distinct from all 11 prior exclusions
+
 ### Culture as AI-transformation bottleneck
 - Slugs: culture-is-the-ai-bottleneck
 - Source stats: Deloitte 2026 — 85% of leaders call adaptability critical, only 7% excel; 34% report culture is inhibiting AI work

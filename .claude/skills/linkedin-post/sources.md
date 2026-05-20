@@ -112,3 +112,27 @@ context.
 - Contributed to theme: Human-AI work redesign (APAC adoption lead)
 - Discovered: 2026-05-19
 - Tier: Tier 3 (APAC-focused)
+
+### IBM Institute for Business Value — CEO Study, "Reshaping C-suite Roles for the AI Era" (May 2026)
+- URL: https://newsroom.ibm.com/2026-05-04-ibm-study-ceos-are-reshaping-c-suite-roles-for-the-ai-era
+- Contributed to theme: AI governance in HR (76% of organizations now have a CAIO, up from 26%)
+- Discovered: 2026-05-19
+- Tier: Tier 2 (global, primary research with disclosed methodology)
+
+### EY People Advisory — 2026 Mobility Reimagined Survey
+- URL: https://www.ey.com/en_gl/insights/workforce/mobility-reimagined-survey
+- Contributed to theme: Global mobility reinvented (short-term/virtual replacing long-term expat)
+- Discovered: 2026-05-19
+- Tier: Tier 2 (global, primary research)
+
+### IFC — "Hidden Potential: Inclusive Jobs in Green Transitions" (2026)
+- URL: https://www.ifc.org/content/dam/ifc/doc/2026/how-employers-can-accelerate-inclusive-jobs-in-green-transitions.pdf
+- Contributed to theme: Climate/heat as labor productivity issue (supporting)
+- Discovered: 2026-05-19
+- Tier: Tier 3 (multilateral, climate-labor)
+
+### ManpowerGroup — Global Talent Barometer 2026
+- URL: https://www.manpowergroup.com/insights/global-talent-barometer
+- Contributed to theme: Gen Z stability shift (AI-confidence + generational signal)
+- Discovered: 2026-05-19
+- Tier: Tier 3 (primary survey research)
