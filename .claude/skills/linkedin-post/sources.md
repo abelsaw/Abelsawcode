@@ -106,4 +106,8 @@ context.
 <!-- - Contributed to theme: {short theme label} -->
 <!-- - Discovered: {YYYY-MM-DD} -->
 
-*(empty — populated by the scout over time)*
+### Korn Ferry — Talent Trends 2026: Human-AI Power Couple (APAC edition)
+- URL: https://www.kornferry.com/about-us/events-webinars/talent-acquisition-trends-2026-apac
+- Contributed to theme: Human-AI work redesign (APAC adoption lead)
+- Discovered: 2026-05-19
+- Tier: Tier 3 (APAC-focused)

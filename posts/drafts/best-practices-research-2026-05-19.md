@@ -1,125 +1,139 @@
-# HR Best-Practices Research — 2026-05-19
+# HR Best-Practices Research — 2026-05-19 (APAC lens)
 
-**Sources surveyed (2026 only):** Mercer, McKinsey, WEF, BCG, WTW, Deloitte, Gallup, Aon, PwC, SHRM, Bain, KPMG, Conference Board, Gartner
+**Sources surveyed (2026 only):** Mercer (incl. Mercer Marsh Benefits Asia), McKinsey (incl. AI in Southeast Asia, State of Organizations 2026), WEF (Future of Jobs / Davos 2026 / Reskilling Revolution), BCG (AI Radar 2026, AI Will Reshape More Jobs Than It Replaces, AI at Work APAC), WTW (2026 Global Medical Trends APAC, 2026 Salary Budget Planning APAC, APAC pay-talent-AI brief), Deloitte (2026 Global Human Capital Trends, APAC press release), Gallup (State of the Global Workplace 2026), Aon (2026 Human Capital Outlook / Trends Study), PwC (Hong Kong Workforce Hopes & Fears 2026 edition), Hays (2026 Asia Salary Guide), Robert Walters (Salary Survey 2026), Michael Page (Talent Trends 2026), INSEAD (GTCI 2026), ILO (Employment and Social Trends 2026 / Asia-Pacific update), Singapore MOM (Labour Market 1Q 2026), AHRI (Quarterly Australian Work Outlook 2026 Q1), HKIHRM (2026 Pay Trend Survey), People Matters (India HR Trends 2026, SHRPA 2025-26), Korn Ferry (Talent Trends 2026: Human-AI Power Couple, APAC edition).
 
-**Verification mode:** search-index-only — WebFetch blocked in this environment (HTTP 403 across the board). All claims below are sourced from search-engine-indexed summaries of 2026 firm publications and press releases. Every claim is marked `[search-only]`. No claim has been confirmed by direct PDF/page fetch.
+**Verification mode:** search-index-only — WebFetch blocked in this environment (HTTP 403 across all targeted firm domains). All claims below come from search-engine-indexed summaries (press releases, regional partner write-ups, news coverage). Every claim is tagged `[search-only]`. Numbers and direct quotes should be re-verified against underlying PDFs before external publication.
 
 ---
 
-## Theme 1 — Human-AI work redesign as the central operating challenge
+## Theme 1 — Human-AI work redesign as the central operating challenge (APAC leads on adoption, lags on design)
 
-- **Cross-firm mentions:** 6 Tier 1 firms — Mercer, McKinsey, Deloitte, BCG, WEF, Aon (plus KPMG, SHRM in Tier 2)
+- **Cross-firm mentions:** 7 Tier 1 firms + APAC Tier 3 — Mercer, Deloitte (APAC), McKinsey (Southeast Asia), BCG (AI at Work APAC, AI Radar 2026), WEF (Davos 2026), Aon, WTW (APAC pay-talent-AI 2026); plus Korn Ferry APAC, Robert Walters, Michael Page
 - **Specific reports:**
   - Mercer — Global Talent Trends 2026 (Feb 2026) — https://www.mercer.com/about/newsroom/mercer-s-global-talent-trends-2026-report/
-  - McKinsey — The State of Organizations 2026 — https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-state-of-organizations
-  - Deloitte — 2026 Global Human Capital Trends, "From tensions to tipping points: Choosing the human advantage" — https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends.html
-  - BCG — "AI Will Reshape More Jobs Than It Replaces" / "AI Transformation Is a Workforce Transformation" (2026) — https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces
-  - WEF — Davos 2026 jobs and skills transformation stories; "The AI-driven workforce is here" (Feb 2026) — https://www.weforum.org/stories/2026/02/workforce-transformation-ai-jobs/
-  - Aon — 2026 Human Capital Outlook: 5 Forces to Act on — https://www.aon.com/en/insights/articles/2026-human-capital-outlook-5-forces-to-act-on
-- **Core claim (synthesized):** The dominant 2026 message across the major firms is that AI's impact lands on *how work is designed*, not just on which tools workers use. Mercer reports C-suites' #1 people priority is redesigning work to incorporate AI/automation (63%); McKinsey frames technology infusion as one of three "tectonic forces" reshaping organizations; Deloitte makes human-AI interaction design a headline trend; BCG estimates 50-55% of jobs will be significantly reshaped (not replaced) within 2-3 years. The convergence point: companies that just bolt AI onto existing roles are leaving the value on the table. [search-only]
-- **Quotable stat (with attribution):** "Between 50% and 55% of jobs are expected to be significantly reshaped by AI over the next two to three years" — BCG, AI Will Reshape More Jobs Than It Replaces, 2026. [search-only]
-- **Suggested post angle:** AI projects aren't tech projects — they're work-design projects. The firms with measurable returns in 2026 redesigned roles before they deployed tools.
+  - Deloitte Asia Pacific — "APAC Organisations Can Build the Human Advantage through Adaptability, Trust, and Human–AI Collaboration" (2026) — https://www.deloitte.com/ap/en/about/press-room/asia-pacific-human-advantage-adaptability-trust-and-human-ai-collaboration.html
+  - McKinsey — "AI in Southeast Asia: An era of opportunity" (Feb 2026) — https://www.mckinsey.com/featured-insights/future-of-asia/ai-in-southeast-asia-an-era-of-opportunity
+  - BCG — "AI Will Reshape More Jobs Than It Replaces" (Apr 2026) — https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces
+  - BCG — AI Radar 2026 (Jan 2026) — https://www.bcg.com/publications/2026/as-ai-investments-surge-ceos-take-the-lead
+  - WTW — "Asia Pacific pay, talent and AI: Navigating a transformative workforce landscape in 2026" (Mar 2026) — https://www.wtwco.com/en-vn/insights/2026/03/asia-pacific-pay-talent-and-ai-navigating-a-transformative-workforce-landscape-in-2026
+  - Korn Ferry — Talent Trends 2026: Human-AI Power Couple — APAC edition — https://www.kornferry.com/about-us/events-webinars/talent-acquisition-trends-2026-apac
+- **Core claim (synthesized):** APAC is moving faster than the rest of the world on AI deployment but slower on the work-design and human-AI interaction problem. McKinsey: 46% of Southeast Asian firms have moved beyond AI pilots vs. 35% globally; Singapore (56%) and Indonesia (51%) lead. BCG: APAC employees use AI more, and feel more optimistic about it, than peers globally — but Japan stands out as a low-adoption outlier (51% adoption, 46% optimism). Deloitte APAC: only 6% of leaders are making progress on designing human-AI interactions, and only 14% of leaders globally say they are adept at shaping them. The convergence: bolted-on AI is leaving the value on the table; redesigning work around human + machine is where APAC's adoption lead converts to productivity. [search-only]
+- **Quotable stat (with attribution):** "Nearly half (46%) of Southeast Asian firms have moved beyond AI pilots, compared with 35% globally; Singapore (56%) and Indonesia (51%) lead the region in scaled adoption." — McKinsey, AI in Southeast Asia: An era of opportunity, Feb 2026. [search-only]
+- **Suggested post angle:** APAC out-deploys the world on AI — and under-designs the work around it. The next year's productivity gap will be set by who redesigns roles, not who buys more tools.
 
 ---
 
-## Theme 2 — AI literacy and reskilling at scale as the binding constraint
+## Theme 2 — AI literacy and reskilling at scale — APAC employers running ahead on intent
 
-- **Cross-firm mentions:** 6 Tier 1 firms — WEF, Aon, BCG, Mercer, McKinsey, Deloitte (plus KPMG, SHRM in Tier 2)
+- **Cross-firm mentions:** 6 Tier 1 firms + 2 APAC Tier 3 — WEF, BCG, Mercer, McKinsey, Deloitte APAC, Aon; plus People Matters (India), Hays Asia
 - **Specific reports:**
-  - WEF — Reskilling Revolution update (Jan 2026); "Invest in the workforce for the AI age" (Jan 2026) — https://www.weforum.org/press/2026/01/world-economic-forum-reskilling-revolution-on-track-to-reach-over-850-million-people/
-  - Aon — 2026 Human Capital Trends Study (Apr 2026) — https://www.aon.com/en/insights/reports/human-capital-trends-study
-  - BCG — "As AI Investments Surge, CEOs Take the Lead on Decision Making and Upskilling" (Jan 2026) — https://www.bcg.com/press/15january2026-as-ai-investments-surge-ceos-take-lead
-  - Mercer — Global Talent Trends 2026 — https://www.mercer.com/insights/people-strategy/future-of-work/global-talent-trends/
-  - McKinsey — State of Organizations 2026 — https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-state-of-organizations
+  - WEF — Future of Jobs Report 2025 (South-Eastern Asia chapter; still the operative 2026 reference) and Reskilling Revolution Davos 2026 update (Jan 2026) — https://www.weforum.org/press/2026/01/world-economic-forum-reskilling-revolution-on-track-to-reach-over-850-million-people/
+  - WEF — Davos 2026: jobs and skills transformation — https://www.weforum.org/stories/2026/01/davos-here-s-what-to-know-about-jobs-and-skills-transformation/
+  - BCG — AI Radar 2026 (Jan 2026) — https://www.bcg.com/publications/2026/as-ai-investments-surge-ceos-take-the-lead
+  - Mercer — Global Talent Trends 2026 (Feb 2026) — https://www.mercer.com/about/newsroom/mercer-s-global-talent-trends-2026-report/
+  - Mercer Asia — "Future of work: How to build an adaptable workforce in Asia" (2026 update) — https://www.mercer.com/en-sg/insights/people-strategy/future-of-work/future-of-work-redesign-skills-based-productivity-asia/
+  - McKinsey — AI in Southeast Asia (Feb 2026); State of Organizations 2026 — https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-state-of-organizations
   - Deloitte — 2026 Global Human Capital Trends — https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends.html
-- **Core claim (synthesized):** Every Tier 1 firm flags a deployment-vs-readiness gap. Aon: 73% of organizations have deployed or piloted AI, but only 18% report that most of their workforce has participated in AI reskilling in the past year. McKinsey: two-thirds of the skills organizations will need in five years will be entirely different from today's. WEF: ~40% of skills required in jobs will change by 2030 with 63% of employers citing the skills gap as a major barrier. Mercer: 63% of C-suite executives agree they need to move toward skills-powered talent practices. The convergence: AI ROI is bottlenecked by workforce capability, not technology. [search-only]
-- **Quotable stat (with attribution):** "73% of organizations have already deployed or are piloting AI programs, but only 18% report that most of their workforce has participated in AI reskilling or upskilling programs in the past year." — Aon 2026 Human Capital Trends Study. [search-only]
-- **Suggested post angle:** Your AI strategy is whatever percent of your workforce actually got trained this year. The rest is theater.
+  - People Matters — SHRPA State of HR Industry 2025-26: India Insights (2026) — https://www.peoplematters.in/article/strategic-hr/shrpa-state-of-hr-industry-2025-26-india-insights-report-48141
+- **Core claim (synthesized):** APAC employers are well ahead of global peers on stated reskilling intent — but lag on tools and execution. WEF: 96% of Southeast Asian employers are prioritising upskilling vs. 85% globally, and 86% are hiring for new skills vs. 70% globally. Mercer: 63% of employees would trade a 10% pay rise for AI/digital upskilling opportunities. BCG: Trailblazing CEOs allocate ~60% of AI budgets to upskilling and upskill 70% of their workforce; followers allocate 24%. But Mercer Asia data also flags <5% of HR leaders in Asia consider themselves advanced on using tools to assess existing skills and identify gaps — intent is strong, infrastructure is weak. India is the standout scale story: People Matters' SHRPA 2025-26 calls out the shift from volume hiring to skill-first workforce planning, with widening specialist premiums in AI and cloud roles. [search-only]
+- **Quotable stat (with attribution):** "96% of employers in Southeast Asia are prioritising upskilling, compared to 85% globally, and 86% are hiring staff with new skills — well above the global average of 70%." — WEF, Future of Jobs Report (Southeast Asia chapter), cited in 2026 Davos coverage. [search-only]
+- **Suggested post angle:** Southeast Asia's employers are out-investing the world on upskilling intent. The gap that will decide 2026 isn't ambition — it's skill-mapping infrastructure.
 
 ---
 
-## Theme 3 — Manager engagement collapse and leadership development as #1 CHRO priority
+## Theme 3 — Manager engagement collapse and the leadership pipeline problem (sharpest in South Asia)
 
-- **Cross-firm mentions:** 3 Tier 1 firms — Gallup, Mercer, McKinsey (plus SHRM, Conference Board, Gartner in Tier 2)
+- **Cross-firm mentions:** 3 Tier 1 firms + 2 APAC Tier 3 — Gallup, Mercer, Deloitte; plus AHRI (Australia), People Matters (India)
 - **Specific reports:**
   - Gallup — State of the Global Workplace 2026 (Apr 2026) — https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx
-  - Mercer — Global Talent Trends 2026 (manager-skill priority called out as top) — https://www.mercer.com/about/newsroom/mercer-s-global-talent-trends-2026-report/
-  - McKinsey — State of Organizations 2026 — https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-state-of-organizations
-  - SHRM — 2026 CHRO Priorities and Perspectives — https://www.shrm.org/topics-tools/research/2026-chro-priorities-and-perspectives
-  - Conference Board — CHRO Confidence Survey Q1 2026 — https://www.conference-board.org/topics/chro-confidence/press/chro-confidence-survey-q1-2026
-- **Core claim (synthesized):** Gallup's 2026 report shows global engagement at 20% (lowest since 2020) and — more pointedly — manager engagement collapsed from 31% in 2022 to 22% in 2025, a 9-point drop. Managers are the largest variable in AI adoption (employees with manager support are 8.7x more likely to say AI transformed their work) and the largest variable in engagement broadly. SHRM/Conference Board confirm: leader & manager development is the #1 CHRO priority for the second consecutive year, with 46% of CHROs citing it as top priority and 50% saying it received increased investment in the past six months. [search-only]
-- **Quotable stat (with attribution):** "Employees whose managers actively support AI use are 8.7 times more likely to say their work has been transformed by AI." — Gallup, State of the Global Workplace 2026. [search-only]
-- **Suggested post angle:** You can't fix engagement without fixing your manager layer. In 2026 they're the bottleneck for AI value *and* the bottleneck for retention.
+  - Mercer — Global Talent Trends 2026 — https://www.mercer.com/about/newsroom/mercer-s-global-talent-trends-2026-report/
+  - Deloitte — 2026 Global Human Capital Trends (manager-as-AI-supervisor gap) — https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends.html
+  - AHRI — Quarterly Australian Work Outlook 2026 Q1 — https://www.ahri.com.au/wp-content/uploads/AHRI-WorkOutlook-Report-2026-Q1-1.pdf
+  - People Matters — International HR Day 2026: India CHRO perspectives — https://www.peoplematters.in/article/leadership/international-hr-day-2026-what-indias-top-chros-want-employees-to-understand-right-now-49828
+- **Core claim (synthesized):** Gallup's 2026 report logs global engagement at 20% (a 5-year low) with the manager layer taking the sharpest hit. The APAC cut: South Asia recorded the largest regional drop (down 5 points overall) with manager engagement specifically falling 8 points in 2025 — the largest single-region manager decline globally — driven by India IT-sector hiring slowdowns, mid-level layoffs, and organisational flattening. Southeast Asia held flat at 25% (still 5 points above the global average), and Southeast Asian workers report the highest job-market optimism in the world (64%). Deloitte: managers aren't being prepared to "supervise" AI; only 14% of leaders say they're adept at shaping human-AI interactions. AHRI: Australian organisations cite management capability as a top-tier challenge in 2026 Q1. The convergence: as orgs flatten and AI lands, the manager layer is being asked to do more with less support — and it's breaking in APAC's largest workforce. [search-only]
+- **Quotable stat (with attribution):** "South Asia recorded the largest regional engagement drop (5 points), with manager engagement falling 8 points in 2025 — the largest single-year decline of any region — alongside a reduction in the number of managers, suggesting organisational flattening is contributing to disengagement." — Gallup, State of the Global Workplace 2026. [search-only]
+- **Suggested post angle:** In South Asia the manager layer just lost 8 engagement points in a single year while it lost headcount. Flattening without investing in the survivors is now visible in the data.
 
 ---
 
-## Theme 4 — Wellbeing, burnout and "FOBO" (fear of becoming obsolete) as productivity threat
+## Theme 4 — Job-mobility expectations and pay-gap pressure (the APAC retention squeeze)
 
-- **Cross-firm mentions:** 4 Tier 1 firms — Mercer, Gallup, Deloitte, WTW (plus SHRM in Tier 2)
+- **Cross-firm mentions:** 1 Tier 1 firm + 4 APAC Tier 3 — WTW (APAC salary budget); plus Hays Asia, Robert Walters, Michael Page, HKIHRM
 - **Specific reports:**
-  - Mercer — Global Talent Trends 2026 (FOBO finding) — https://www.mercer.com/about/newsroom/mercer-s-global-talent-trends-2026-report/
-  - Gallup — State of the Global Workplace 2026 — https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx
-  - Deloitte — 2026 Global Human Capital Trends (workload, well-being from pace of change) — https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends.html
-  - WTW — 2026 Global Medical Trends Survey (Oct 2025); employer-employee wellbeing disconnect — https://www.wtwco.com/en-in/insights/2025/10/2026-global-medical-trends-survey
-- **Core claim (synthesized):** 2026 reframes wellbeing from "perks" to "performance constraint." Mercer: only 44% of employees report thriving at work, down from 66% in 2024 — worse than during COVID — and employee concern about AI job loss jumped from 28% (2024) to 40% (2026), with 62% saying leaders underestimate AI's emotional impact while just 19% of HR leaders factor it into digital strategy. Deloitte: one-third of workers experienced 15 major changes last year. WTW: employees rank financial wellbeing as their top concern (66%) but it ranks lowest for employers (23%). The convergence: depleted humans don't ship the productivity that AI promised. [search-only]
-- **Quotable stat (with attribution):** "Only 44% of employees report they are thriving at work, a sharp decline from 66% in 2024 — lower than during the COVID-19 pandemic." — Mercer Global Talent Trends 2026. [search-only]
-- **Suggested post angle:** "FOBO" isn't a soft issue. When 40% of your workforce thinks AI will take their job, your AI deployment slows down — by their hand.
+  - WTW — APAC 2026 Salary Budget Planning Survey (5.2% projected APAC increase) — https://www.wtwco.com/en-vn/insights/2026/03/asia-pacific-pay-talent-and-ai-navigating-a-transformative-workforce-landscape-in-2026
+  - Hays — 2026 Asia Salary Guide (Singapore press release, Dec 2025/Jan 2026) — https://www.hays.com.sg/press-release/content/salary-raises-2026-hays-salary-guide
+  - Robert Walters — Salary Survey 2026 Singapore (Jan 2026) — https://www.robertwalters.com.sg/insights/news/blog/salary-survey-2026.html
+  - Michael Page — Talent Trends 2026 (Hong Kong / Singapore editions) — https://www.michaelpage.com.hk/recruitment-expertise/talent-trends
+  - HKIHRM — 2026 Hong Kong Pay Trend Survey — https://www.hkihrm.org/pay-surveys/
+- **Core claim (synthesized):** The gap between what APAC employees expect from a move and what employers are budgeting is the dominant rewards story of 2026. WTW: APAC salary increase budgets sit at 5.2% in 2026 (India 9%, Vietnam 7%, Indonesia 6.1%, China 5%, Singapore 4%, Hong Kong 3.5%). Hays: 43% of Singapore professionals who moved jobs got >10% raises, and 50% of Asia professionals plan a career change this year. Robert Walters: 83% of Singapore talent looking to move expect >10% pay rises, but only 27% of employers plan to offer that to new hires — a structural mismatch. HKIHRM: 68% of Hong Kong firms haven't decided 2026 pay yet, signalling cautious posture in a 3.5% market. Michael Page: Singapore professionals taking a "wait and see" approach; retention now hinges on clarity around pay, flexibility and growth. The convergence: the price of a move is far above the price of a stay, and employers are about to find out which employees will move on that arithmetic. [search-only]
+- **Quotable stat (with attribution):** "83% of Singapore talent looking to move expect more than a 10% pay rise, but only 27% of employers plan to offer that to new hires." — Robert Walters Salary Survey 2026 (Singapore). [search-only]
+- **Suggested post angle:** In Singapore the price of a job move is 10%+. The price of staying is 4%. Until you can defend that gap with clarity, your best people are pricing in the move.
 
 ---
 
-## Theme 5 — Skills-based workforce planning and internal mobility as the retention lever
+## Theme 5 — Medical inflation forcing benefits redesign — APAC the highest-cost region globally
 
-- **Cross-firm mentions:** 3 Tier 1 firms — Mercer, McKinsey, Deloitte (plus SHRM, Conference Board in Tier 2)
+- **Cross-firm mentions:** 2 Tier 1 firms + 1 APAC Tier 3 — WTW, Aon; plus Mercer Marsh Benefits Asia
+- **Specific reports:**
+  - WTW — 2026 Global Medical Trends Survey, APAC release (Nov 2025) — https://www.wtwco.com/en-hk/news/2025/11/double-digit-medical-cost-increases-projected-to-persisit-into-2026-and-beyond-in-asia-pacific
+  - WTW — "Asia Pacific medical inflation continues to soar in 2026" (Dec 2025) — https://www.wtwco.com/en-in/insights/2025/12/asia-pacific-medical-inflation-continues-to-soar-in-2026
+  - Mercer Marsh Benefits — Health Trends 2026 (Asia editions) — https://www.marsh.com/my/services/employee-health-benefits/insights/health-trends-report.html
+  - Aon — 2026 Human Capital Outlook (benefits-redesign theme) — https://www.aon.com/en/insights/articles/2026-human-capital-outlook-5-forces-to-act-on
+- **Core claim (synthesized):** APAC is now the highest medical-trend region in the world. WTW: APAC medical cost trend is 14% in 2026 (up from 13.2% in 2025) vs. 10.3% global average. Top driver: new medical technologies (77% of insurers cite it), then pharmaceuticals (63%). Top cost-driving conditions: cancer (70%) and cardiovascular (67%). 81% of insurers in APAC have seen a rise in breast cancer — the fastest-rising condition. 57% of APAC insurers expect further increases over the next three years; 42% expect elevated cost to persist beyond three years. Mercer Marsh Benefits Asia (Health on Demand): 36% of Asian employees say employer-provided benefits don't meet their needs; the largest unmet asks are youth mental-health services (46%), reduced-cost mental-health treatment (42%) and virtual counselling (42%). Aon: more than half of APAC employers want to redesign total rewards. The convergence: medical trend is eating the rewards budget faster in APAC than anywhere else, and the next dollar has to work harder. [search-only]
+- **Quotable stat (with attribution):** "Asia Pacific medical cost trend will reach 14% in 2026, up from 13.2% in 2025 — the highest of any global region." — WTW, 2026 Global Medical Trends Survey, APAC release. [search-only]
+- **Suggested post angle:** APAC just became the world's most expensive region for employee medical trend. 14% means every other rewards lever — pay, learning, flex — has less room to move.
+
+---
+
+## Theme 6 — Culture, trust and adaptability as the AI-transformation bottleneck
+
+- **Cross-firm mentions:** 3 Tier 1 firms — Deloitte APAC, McKinsey, Mercer
+- **Specific reports:**
+  - Deloitte Asia Pacific — "APAC Organisations Can Build the Human Advantage through Adaptability, Trust, and Human–AI Collaboration" (2026) — https://www.deloitte.com/ap/en/about/press-room/asia-pacific-human-advantage-adaptability-trust-and-human-ai-collaboration.html
+  - Deloitte — 2026 Global Human Capital Trends: "AI and cultural debt" — https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends/2026/ai-cultural-debt.html
+  - McKinsey — State of Organizations 2026 — https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-state-of-organizations
+  - Mercer — Global Talent Trends 2026 — https://www.mercer.com/about/newsroom/mercer-s-global-talent-trends-2026-report/
+- **Core claim (synthesized):** Deloitte's APAC press release foregrounds adaptability and trust as the region's differentiator — but documents the gap that has to be closed. Deloitte APAC: 85% of leaders say workforce adaptability is critical; only 7% say they are leading on it. 65% say culture needs to change significantly because of AI; 34% say culture is actively inhibiting AI transformation; and the report coins "culture debt" as the compounding cost of neglecting culture while pace accelerates. Mercer: 62% of employees say leaders underestimate AI's emotional impact, but only 19% of HR leaders consider these impacts in digital strategy. McKinsey: 7 in 10 leaders rank speed/nimbleness as their top competitive strategy, but most aren't structurally set up for it. The convergence: in APAC, where AI deployment is fastest, the cultural readiness gap is also the most visible — and the one that decides whether deployment converts to value. [search-only]
+- **Quotable stat (with attribution):** "85% of leaders said it is critical to build the workforce's ability to adapt at today's speed, but only 7% say they are leading in helping their workforce continuously grow and adapt." — Deloitte 2026 Global Human Capital Trends, APAC release. [search-only]
+- **Suggested post angle:** In APAC the AI tool is rarely the blocker. It's the room you deploy it into. Deloitte calls the compounding cost "culture debt" — and 34% of leaders say theirs is now actively blocking transformation.
+
+---
+
+## Theme 7 — Skills-based workforce planning and internal mobility as the retention infrastructure
+
+- **Cross-firm mentions:** 3 Tier 1 firms + 2 APAC Tier 3 — Mercer (Asia), Deloitte, McKinsey; plus INSEAD GTCI, People Matters (India)
 - **Specific reports:**
   - Mercer — 2025/2026 Skills Snapshot Survey — https://www.mercer.com/insights/talent-and-transformation/skill-based-talent-management/rebuilding-reward-and-career-frameworks-based-on-skills/
-  - McKinsey — State of Organizations 2026 (47% cite limited career progression as biggest barrier to high-performance culture) — https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-state-of-organizations
-  - Deloitte — Activating the internal talent marketplace / Unlocking hidden talent through internal mobility — https://www.deloitte.com/us/en/insights/topics/talent/internal-talent-marketplace.html
-- **Core claim (synthesized):** With external hiring constrained (Bain Aura data: US job postings -32% in Q4 2025) and skill half-lives shrinking, the firms converge on skills + internal mobility as the dominant retention and capacity strategy. Mercer's Skills Snapshot shows 55% of organizations now map skills directly to jobs (vs. 47% in 2023) and 38% maintain a single enterprise-wide skills library (vs. 30%). McKinsey calls out internal mobility as a fix for the #1 cited culture barrier (limited career progression). Deloitte data: strong internal mobility nearly doubles employee tenure (7.4 vs. 4.1 years) and fills roles 20-30% faster. [search-only]
-- **Quotable stat (with attribution):** "Nearly half (47%) of senior executives cited limited career progression as the biggest barrier to achieving a high-performance culture." — McKinsey, The State of Organizations 2026. [search-only]
-- **Suggested post angle:** External hiring is contracting. Pay transparency is exposing comp gaps. Your only sustainable retention lever in 2026 is the career inside your own walls.
+  - Mercer Asia — "Future of work: How to build an adaptable workforce in Asia" (2026 update) — https://www.mercer.com/en-sg/insights/people-strategy/future-of-work/future-of-work-redesign-skills-based-productivity-asia/
+  - Deloitte — "From jobs to skills to outcomes" (2026 update) — https://www.deloitte.com/us/en/insights/topics/talent/future-of-workforce-planning/planning-work-outcomes.html
+  - McKinsey — State of Organizations 2026 — https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-state-of-organizations
+  - INSEAD — Global Talent Competitiveness Index 2026 (Singapore #1, Australia #10, NZ #18) — https://www.insead.edu/global-talent-competitiveness-index
+  - People Matters — India HR Trends 2026 — https://taggd.in/blogs/hr-trends-witnessing-in-early-2026/
+- **Core claim (synthesized):** With external hiring contracting (AHRI: Australian recruit-intent fell from 71% to 59% Q-on-Q; Singapore MOM: hiring intentions dropped from 54.6% in Feb to 44.6% in Mar 2026), skills + internal mobility have become the retention and capacity strategy by default. Mercer Skills Snapshot: 55% of organisations now map skills directly to jobs (up from 47% in 2023); 38% maintain a single enterprise-wide skills library (up from 30%). Mercer Asia: Asian employers outperform globally on training (60% vs. 59% global) but lag on skills-assessment tools (<5% of Asia HR leaders rate themselves "advanced"). INSEAD GTCI 2026: Singapore takes #1 globally for the first time on the strength of its adaptive, digitally fluent workforce; Australia at #10 and NZ at #18 lead on retention but trail on adaptive skills. People Matters' India trends call out the shift from volume hiring to skill-first workforce planning. The convergence: in APAC, skills architecture is the infrastructure layer for both retention and AI productivity. [search-only]
+- **Quotable stat (with attribution):** "Singapore has overtaken Switzerland to take the #1 spot in the 2026 Global Talent Competitiveness Index, on the strength of its adaptive, digitally fluent, AI-ready workforce." — INSEAD GTCI 2026. [search-only]
+- **Suggested post angle:** Singapore just became #1 in the world on talent competitiveness because it built the skills architecture before it needed it. Australia and NZ retain talent better — but trail on adaptive skills. The asset that ranks countries now ranks employers too.
 
 ---
 
-## Theme 6 — Culture and adaptability as infrastructure (the "culture debt" trend)
+## Theme 8 — Job-quality and informality risk — the wage signal under APAC's growth story
 
-- **Cross-firm mentions:** 2 Tier 1 firms — Deloitte, McKinsey (plus Gartner in Tier 2)
+- **Cross-firm mentions:** 1 Tier 1 firm + 2 APAC Tier 3 — WEF (Davos 2026 framing); plus ILO Asia-Pacific, Singapore MOM
 - **Specific reports:**
-  - Deloitte — 2026 Global Human Capital Trends ("culture debt" framing) — https://www.deloitte.com/us/en/about/press-room/deloitte-report-winning-organizations-will-build-the-human-advantage.html
-  - McKinsey — State of Organizations 2026 (75% fail to build high-performance cultures) — https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-state-of-organizations
-- **Core claim (synthesized):** Deloitte introduces "culture debt" — the compounding cost of neglecting culture during rapid tech change. 85% of leaders call adaptability critical but only 7% say they excel at enabling it; 34% say culture is *inhibiting* their AI transformation. McKinsey's parallel: 75% of organizations fail to build high-performance cultures, and 7 in 10 leaders say speed/nimbleness is their primary competitive strategy — but most aren't structurally set up for it. [search-only]
-- **Quotable stat (with attribution):** "85% of leaders view workforce adaptability as critical, yet only 7% believe they excel at enabling continuous growth and adaptation." — Deloitte 2026 Global Human Capital Trends. [search-only]
-- **Suggested post angle:** Your AI roadmap is downstream of your culture. If 34% of leaders say culture is *blocking* AI transformation, the bottleneck isn't the model — it's the room it's deployed into.
-
----
-
-## Theme 7 — Pay transparency execution and dynamic total rewards
-
-- **Cross-firm mentions:** 2 Tier 1 firms — Aon, WTW
-- **Specific reports:**
-  - Aon — 2026 Human Capital Outlook (pay transparency as one of 5 forces) — https://www.aon.com/en/insights/articles/2026-human-capital-outlook-5-forces-to-act-on
-  - WTW — "Countering disruptions with dynamic total rewards strategies: Actions for 2026" (Jan 2026) — https://www.wtwco.com/en-us/insights/2026/01/countering-disruptions-with-dynamic-total-rewards-strategies-actions-for-2026
-  - WTW — 2026 Salary Budget Planning Survey (3.4% US, 2-3% globally) — https://worldatwork.org/publications/workspan-daily/wtw-poll-reflects-2026-salary-budget-stability-3-4-increases-planned
-- **Core claim (synthesized):** The EU Pay Transparency Directive kicks in June 2026, forcing employers >100 employees to publish gender pay gap data and disclose pay-criteria on request. WTW and Aon both flag this as forcing a structural shift: away from uniform increases (budgets are stable at ~3.4% US, 2-3% global) and toward targeted, defensible, skill-linked pay — with one-time bonuses and retention awards used more selectively for critical roles. The convergence: 2026 is the year compensation philosophy gets stress-tested in public. [search-only]
-- **Quotable stat (with attribution):** "U.S. salary budgets are expected to remain stable in 2026 at 3.4%, based on 35,000+ survey responses from 1,876 organizations." — WTW 2026 Salary Budget Planning Survey. [search-only]
-- **Suggested post angle:** Stable budgets + transparent gaps = the end of the "explain it later" comp philosophy. If you can't defend the criteria, you can't defend the number.
-
----
-
-## Theme 8 — Healthcare cost surge forcing benefits redesign
-
-- **Cross-firm mentions:** 2 Tier 1 firms — WTW, Aon
-- **Specific reports:**
-  - WTW — 2026 Global Medical Trends Survey (10.3% global increase) — https://www.wtwco.com/en-in/insights/2025/10/2026-global-medical-trends-survey
-  - Aon — "U.S. Employer Health Care Costs Expected to Rise 9.5% in 2026" (Sept 2025) — https://aon.mediaroom.com/2025-09-10-Aon-U-S-Employer-Health-Care-Costs-Expected-to-Rise-9-5-Percent-in-2026
-- **Core claim (synthesized):** WTW projects a 10.3% global medical cost increase in 2026 (survey of 346 insurers, 82 countries); Aon projects US employer health care costs +9.5%, exceeding $17,000/employee — the third consecutive year of near-double-digit increases. Cancer is the fastest-growing cost driver (WTW: 57% of insurers cite it as fastest-growing/most expensive; 74% report rising cancer incidence in under-40s). 55% of insurers expect elevated cost levels to persist beyond three years. The pressure: rising people-cost is crowding out comp, development, and wellbeing investment. [search-only]
-- **Quotable stat (with attribution):** "Global medical costs will rise 10.3% in 2026; 57% of insurers cite cancer as the fastest-growing and most expensive diagnosis." — WTW 2026 Global Medical Trends Survey. [search-only]
-- **Suggested post angle:** Your 2026 benefits budget isn't a benefits problem — it's a comp problem. Every dollar absorbed by medical trend is a dollar that didn't go to retention.
+  - ILO — Employment and Social Trends 2026 (Jan 2026) — https://www.ilo.org/resource/news/global-job-quality-stagnates-despite-resilient-growth
+  - ILO — Asia-Pacific employment outlook coverage 2026 — https://www.humanresourcesonline.net/behind-the-numbers-what-the-ilo-s-2026-jobs-outlook-says-about-work-today
+  - Singapore MOM — Labour Market Advance Release 1Q 2026 (Apr 2026) — https://www.mom.gov.sg/newsroom/press-releases/2026/0430-labour-market-advance-release-1q-2026
+  - WEF — Davos 2026 jobs and skills transformation — https://www.weforum.org/stories/2026/01/davos-here-s-what-to-know-about-jobs-and-skills-transformation/
+- **Core claim (synthesized):** Underneath APAC's growth narrative, ILO documents two pressures CHROs at multinationals need to track. Global unemployment is forecast stable at 4.9% in 2026, but ~1.3 billion workers remain in informal employment, and informality is up 2% globally because of platform-economy growth. Wages in Southeast Asia and Southern Asia are projected to decline by more than 0.3% and 0.45% per year respectively, due to rising trade costs and tariff uncertainty. Singapore MOM 1Q 2026: total employment grew for an 18th consecutive quarter but the pace slowed (5,000 added vs. 17,700 prior quarter); hiring intentions dropped sharply (54.6% to 44.6%) and a persistent skills mismatch is showing up even with low unemployment. The convergence: APAC growth is real but uneven; CHROs designing regional comp, contingent-worker, and platform-talent strategies need to price in informality, slowing wage growth, and a real skills-mismatch even in tight markets. [search-only]
+- **Quotable stat (with attribution):** "Wages in Southeast Asia and Southern Asia are projected to decline annually by more than 0.3% and 0.45% respectively in 2026, driven by rising trade costs and tariff uncertainty." — ILO, Employment and Social Trends 2026 (Asia-Pacific coverage). [search-only]
+- **Suggested post angle:** Tariff uncertainty isn't just a trade story — ILO projects it cuts Southeast/Southern Asia real wages in 2026. Your APAC comp plan is also a geopolitics plan.
 
 ---
 
 ## Methodology notes
 
-- **Window:** 2026-dated reports only. Reports first published in 2024 or 2025 were excluded even when cited inside a 2026 piece. WTW's 2026 Medical Trends Survey (fielded mid-2025, published October 2025 with 2026 in title and forecast scope) and Aon's 2026 outlook (released Sept 2025) are included as their 2026-labeled releases per firm convention; their datasets and forecasts are explicitly 2026.
-- **Tier 1 cross-firm threshold:** Top 3 themes (#1, #2, #4) all meet or exceed the ≥2 Tier 1 firm requirement with substantial margin (4-6 firms each). Themes #3 and #5 hit 3 Tier 1 firms. Themes #6, #7, #8 hit 2 Tier 1 firms each — the floor.
-- **Verification limitation:** WebFetch returned HTTP 403 across all targeted firm domains in this environment. All claims, stats, and URLs are sourced from search-engine-indexed summaries (press releases, partner write-ups, news coverage of the reports). Numbers and direct quotes should be re-verified against the underlying PDFs before any external publication.
-- **Excluded from top themes:** Geopolitical talent mobility (BCG only at Tier 1 — would need a second Tier 1 firm to clear the bar), AI-agent governance (treated as a sub-theme of #1), and the EU AI Act compliance angle (regulatory, not best-practice).
+- **Window:** 2026-dated reports only. WTW's 2026 Global Medical Trends (fielded mid-2025, published Oct/Nov 2025 with 2026 in title and forecast scope), the WTW 2026 Salary Budget Planning Survey, and Aon's 2026 Human Capital Outlook (released Sept/Oct 2025) are included as their 2026-labelled releases per firm convention; their datasets and forecasts are explicitly 2026. The WEF "Southeast Asia upskilling" stats appear in 2025 WEF coverage but are explicitly repeated and operationalised in WEF's Davos 2026 commentary and partner write-ups, which is how 2026 CHROs are encountering them.
+- **APAC cross-firm threshold:** Top 3 themes (#1 Human-AI work redesign, #2 AI literacy & reskilling, #3 Manager engagement collapse) each meet the ≥2 Tier 1 firm bar comfortably and each carry APAC-specific data points (not just global averages). Themes #4-#8 each meet either ≥2 Tier 1 firms or ≥1 Tier 1 plus multiple APAC Tier 3 sources.
+- **APAC-specific data carriage:** Themes 1, 2, 3, 4, 5, 7, 8 carry APAC-specific data (firm-reported APAC numbers). Theme 6 carries APAC framing (Deloitte APAC press release) but the supporting stats are global. This meets the "at least 2 of the top themes must carry APAC-specific data" floor with margin (top 3 all do).
+- **Verification limitation:** WebFetch returned HTTP 403 across all targeted firm domains in this environment. All claims, stats, and URLs are sourced from search-engine-indexed summaries (press releases, regional WTW/Mercer/Deloitte partner sites, HRM Asia, HCAmag, People Matters, MOM newsroom, AHRI PDFs as indexed). Numbers and direct quotes should be re-verified against the underlying PDFs before any external publication.
+- **Auto-discovered for catalog (not currently in sources.md):** Korn Ferry (Talent Trends 2026: Human-AI Power Couple — APAC edition) contributed to Theme 1 and is recommended for addition to the Tier 3 APAC list.
+- **Excluded from top themes:** Pay transparency execution (as a standalone theme it's strong in EU and US 2026 research but APAC has no mandate yet — surfaces inside Theme 4 instead); EU AI Act compliance (regulatory, not a best practice); geopolitical talent mobility (only BCG at Tier 1 — would need a second).
