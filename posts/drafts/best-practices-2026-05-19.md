@@ -1,85 +1,85 @@
-# Daily HR best-practices posts — 2026-05-19 (v3, APAC)
+# Daily HR best-practices posts — 2026-05-19 (v5, universal voice)
 
-Source brief: posts/drafts/best-practices-research-2026-05-19.md (APAC-focused)
-Regional lens: **APAC** (default for /linkedin-post skill)
-Themes covered: #4 (Pay/mobility expectation gap), #5 (APAC medical inflation), #1 (AI past-pilots → work-design gap).
+Source brief: posts/drafts/best-practices-research-2026-05-19.md (APAC-focused, fresh today)
+Regional lens: APAC as relevance filter (universal framing default).
+Themes covered: #6 (Culture as AI bottleneck), #8 (Job quality & informality), #7 fresh angle (HR's skills-tool capability gap).
 
-Previous runs preserved in git: morning provocative batch (`c2400ef`), midday recalibrated batch (`c2400ef`), afternoon v2 (`1ffa92f`).
+Earlier runs preserved in git: morning provocative+recalibrated batches (`c2400ef`), wellbeing/mobility/pay transparency (`1ffa92f`), APAC-heavy (`9f2ad7b`), universal-framed APAC-evidence (`f2dc9b0`).
 
 ---
 
-## Option 1 — retention-is-the-expectation-gap
-- **Theme:** Job-mobility expectations and pay-gap pressure (APAC-applicable retention story)
-- **Source reports:** Robert Walters 2026 Salary Survey (APAC volumes); WTW 2026 Salary Budget Planning Survey; Hays Asia Salary Guide 2026
-- **Source URLs:** https://www.robertwalters.com.sg/insights/career-advice/salary-survey-2026.html · https://www.wtwco.com/en-us/insights/2026/01/countering-disruptions-with-dynamic-total-rewards-strategies-actions-for-2026
+## Option 1 — culture-is-the-ai-bottleneck
+- **Theme:** Culture & adaptability as the AI-transformation bottleneck
+- **Source reports:** Deloitte 2026 Global Human Capital Trends (APAC release); McKinsey State of Organizations 2026
+- **Source URLs:** https://www.deloitte.com/global/en/issues/work/human-capital-trends-asia-pacific.html · https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-state-of-organizations
 - **Carousel (5 slides):** posts/drafts/carousels/2026-05-19-option-1/
-  - slide-1 · Compensation · "The 2026 retention squeeze isn't budget. It's the expectation gap."
-  - slide-2 · Robert Walters 2026 · "83% of employees expect pay rises above 10%. 27% of employers can offer it."
-  - slide-3 · WTW 2026 · "Salary budgets stable in single digits across most markets."
-  - slide-4 · The CHRO read · "The CHROs winning this year will fund retention beyond cash."
-  - slide-5 · Your move · "What's in your non-cash retention stack?"
-- **Image alt:** Minimalist navy-accented card: "The 2026 retention squeeze isn't budget. It's the expectation gap."
-- **Word count:** 48
+  - slide-1 · Culture · "Culture is now the bottleneck on AI transformation."
+  - slide-2 · Deloitte 2026 · "85% of leaders call adaptability critical. 7% say they excel at it."
+  - slide-3 · Deloitte 2026 · "34% report culture is actively inhibiting their AI work."
+  - slide-4 · The CHRO read · "The 2026 AI roadmap that ignores culture design will under-deliver by design."
+  - slide-5 · Your move · "What's the cultural prerequisite for your AI rollout?"
+- **Image alt:** Minimalist navy-accented card: "Culture is now the bottleneck on AI transformation."
+- **Word count:** 49
 - **Status:** draft
 
 ---POST---
-The 2026 retention squeeze isn't budget. It's the expectation gap.
+Culture is now the bottleneck on AI transformation.
 
-Robert Walters 2026: 83% of employees expect pay rises over 10%. Only 27% of employers can offer it. WTW 2026: budgets stay in single digits.
+Deloitte 2026: 85% of leaders call workforce adaptability critical; only 7% say they excel at enabling it. 34% report culture is actively inhibiting their AI work.
 
-The CHROs winning this year will fund retention beyond cash.
+The 2026 AI roadmap that ignores culture design will under-deliver by design.
 
-#Compensation #Retention #PeopleStrategy
+#FutureOfWork #Culture #AIatWork
 ---END---
 
 ---
 
-## Option 2 — medical-inflation-rewrites-benefits
-- **Theme:** Medical inflation forcing benefits redesign (universal trend with APAC as evidence)
-- **Source reports:** WTW 2026 Global Medical Trends Survey (global + APAC breakouts); Mercer Marsh Benefits Asia 2026
-- **Source URLs:** https://www.wtwco.com/en-in/insights/2025/10/2026-global-medical-trends-survey · https://www.mercer.com/insights/total-rewards/employee-benefits-strategy/health-on-demand-asia/
+## Option 2 — job-quality-stewardship
+- **Theme:** Job quality & informality risk under APAC's growth story (universal HR mandate)
+- **Source reports:** ILO Asia-Pacific Employment 2026; WEF Davos 2026; Singapore MOM Q1 2026 Labour Market Report
+- **Source URLs:** https://www.ilo.org/publications/major-publications/world-employment-and-social-outlook-trends-2026 · https://www.weforum.org/stories/2026/01/davos-here-s-what-to-know-about-jobs-and-skills-transformation/
 - **Carousel (5 slides):** posts/drafts/carousels/2026-05-19-option-2/
-  - slide-1 · Benefits · "Medical inflation is rewriting benefits strategy."
-  - slide-2 · WTW 2026 · "Global medical trend: 10.3%. APAC: 14% — highest of any region."
-  - slide-3 · The drivers · "Cancer drives ~70% of cost. Cardiovascular ~67%. Both rising."
-  - slide-4 · The CHRO read · "The 2026 benefits conversation moved from 'what does it cost' to 'what does it retain.'"
-  - slide-5 · Your move · "When did you last test benefits against employee needs?"
-- **Image alt:** Minimalist rust-accented card: "Medical inflation is rewriting benefits strategy."
-- **Word count:** 48
+  - slide-1 · Workforce · "Job-quality stewardship is the new HR mandate."
+  - slide-2 · ILO 2026 · "SEA wages declining 0.3% per year on trade costs."
+  - slide-3 · WEF Davos 2026 · "1.3 billion informal workers globally — and growing."
+  - slide-4 · Singapore MOM Q1 2026 · "Net hiring fell from +17,700 to +5,000."
+  - slide-5 · The CHRO read · "Headcount alone isn't the workforce anymore. Strategy needs to widen."
+- **Image alt:** Minimalist rust-accented card: "Job-quality stewardship is the new HR mandate."
+- **Word count:** 49
 - **Status:** draft
 
 ---POST---
-Medical inflation is rewriting benefits strategy.
+Job-quality stewardship is the new HR mandate.
 
-WTW 2026: global medical trend at 10.3%, with APAC leading at 14% (highest of any region). Cancer drives ~70% of cost; cardiovascular ~67%.
+ILO 2026: SEA wages down 0.3% per year. WEF Davos 2026: 1.3B informal workers globally, growing with platform work. Singapore MOM Q1: net hiring fell from +17.7k to +5k.
 
-The 2026 benefits conversation has moved from "what does it cost" to "what does it retain."
+Headcount alone isn't the workforce anymore. Strategy needs to widen.
 
-#Benefits #Wellbeing #PeopleStrategy
+#Workforce #FutureOfWork #HumanResources
 ---END---
 
 ---
 
-## Option 3 — adoption-is-racing-design-isnt
-- **Theme:** Human-AI work redesign (universal — AI adoption is global, design discipline is the differentiator)
-- **Source reports:** McKinsey "AI in Southeast Asia" 2026; Deloitte 2026 Global Human Capital Trends (APAC release); BCG AI / Workforce 2026; Korn Ferry Talent Trends 2026 APAC
-- **Source URLs:** https://www.mckinsey.com/featured-insights/asia-pacific/the-state-of-ai-in-southeast-asia · https://www.deloitte.com/global/en/issues/work/human-capital-trends-asia-pacific.html
+## Option 3 — hr-skills-blind-spot
+- **Theme:** Skills-based workforce planning — HR's own capability gap (fresh angle on Theme 7)
+- **Source reports:** Mercer 2025/2026 Skills Snapshot; Mercer Asia training findings
+- **Source URLs:** https://www.mercer.com/insights/talent-and-transformation/skill-based-talent-management/rebuilding-reward-and-career-frameworks-based-on-skills/
 - **Carousel (5 slides):** posts/drafts/carousels/2026-05-19-option-3/
-  - slide-1 · Future of work · "AI adoption is racing. Work design isn't."
-  - slide-2 · McKinsey 2026 · "46% of Southeast Asia firms past piloting. 35% globally."
-  - slide-3 · Deloitte 2026 · "Only 6% of leaders confident in human-AI interaction design."
-  - slide-4 · The CHRO read · "The race that decides 2027 ROI isn't deployment. It's redesign."
-  - slide-5 · Your move · "Where does work design sit in your AI roadmap?"
-- **Image alt:** Minimalist moss-accented card: "AI adoption is racing. Work design isn't."
-- **Word count:** 47
+  - slide-1 · Talent strategy · "The skills tools HR needs sit in HR's blind spot."
+  - slide-2 · Mercer 2026 · "Under 5% of HR leaders are advanced on skills-based talent tools."
+  - slide-3 · Mercer 2026 · "60% of organisations offer training. Few measure what skills it built."
+  - slide-4 · The CHRO read · "The next HR capability isn't a hire. It's a system."
+  - slide-5 · Your move · "How do you measure skills built vs. training delivered?"
+- **Image alt:** Minimalist moss-accented card: "The skills tools HR needs sit in HR's blind spot."
+- **Word count:** 48
 - **Status:** draft
 
 ---POST---
-AI adoption is racing. Work-design discipline isn't keeping up.
+The skills tools HR needs sit in HR's blind spot.
 
-McKinsey 2026: 46% of Southeast Asia firms past piloting vs. 35% globally — and only 6% of APAC leaders are confident in human-AI interaction design.
+Mercer 2026: under 5% of HR leaders are advanced on skills-based talent tools. 60% offer training; few measure what skills it built.
 
-The race that decides 2027 ROI isn't deployment. It's redesign.
+The next HR capability isn't a hire. It's a system. And it's underbought.
 
-#FutureOfWork #AIatWork #PeopleStrategy
+#HumanResources #SkillsFirst #PeopleStrategy
 ---END---
