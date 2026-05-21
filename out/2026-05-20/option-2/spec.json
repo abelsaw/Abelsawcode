@@ -1,0 +1,65 @@
+{
+  "style": "aurora",
+  "source": "TECHCRUNCH",
+  "url": "https://techcrunch.com/2026/05/20/meta-job-cuts-10-percent-8000-employees/",
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "Meta cut 8,000 people and raised spend by $30B — same day",
+      "body": "This is what the AI capex era looks like from the inside."
+    },
+    {
+      "type": "point",
+      "kicker": "the setup",
+      "headline": "Big Tech has a new capital allocation formula",
+      "body": "For most of the last decade, tech companies grew headcount alongside revenue and treated both as signs of health. AI infrastructure has broken that logic. The cost of building at the frontier is rising so fast that even the most profitable companies in history have to make hard choices about where capital goes — and labor is increasingly on the losing side of that equation."
+    },
+    {
+      "type": "point",
+      "kicker": "the story",
+      "headline": "8,000 jobs cut; capex raised $30B — on the same SEC filing",
+      "body": "Meta began its 10% workforce reduction on May 20, 2026, covering roughly 8,000 employees. The company simultaneously filed an SEC 8-K raising its 2026 capital-expenditure guidance from a range of $115-135B to $125-145B. The stated purpose: AI compute and data-center infrastructure. This is not a struggling company cutting costs — Meta is profitable and growing. It is a deliberate reallocation from human labor to compute at a scale that has no real precedent."
+    },
+    {
+      "type": "stat",
+      "kicker": "the numbers",
+      "headline": "$145B",
+      "body": "META 2026 CAPEX CEILING"
+    },
+    {
+      "type": "point",
+      "kicker": "why it matters",
+      "headline": "The most concrete fewer-humans, more-compute trade yet",
+      "body": "Every major lab has talked about AI changing labor. Meta just filed the paperwork. An SEC 8-K makes the trade explicit in a way a CEO quote or earnings call hedge never does. Other profitable tech companies watching this filing now have a data point for what the reallocation looks like in practice — and investors watching margins will draw their own conclusions about whether every large tech employer should be running the same math."
+    },
+    {
+      "type": "point",
+      "kicker": "what most miss",
+      "headline": "The capex raise is the bigger story, not the layoffs",
+      "body": "Media attention will concentrate on 8,000 job losses because human displacement is concrete and legible. But the $30B capex increase is the structural signal. It tells you Meta's leadership believes AI infrastructure spending at this scale will compound into competitive advantage — not in two years, but in five. Companies that read this as a cost-cutting story will miss the strategic intent entirely. This is an investment announcement wearing a layoff press release."
+    },
+    {
+      "type": "list",
+      "kicker": "the playbook",
+      "items": [
+        {
+          "title": "Read SEC filings, not just headlines",
+          "body": "The 8-K pairs the headcount cut with the capex raise — that context is the whole story."
+        },
+        {
+          "title": "Audit your org's compute-to-headcount ratio",
+          "body": "Meta just made this a strategic KPI. Others will follow within 12 months."
+        },
+        {
+          "title": "Separate cost moves from investment moves",
+          "body": "Not every layoff is distress — some are capital redeployment at scale."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "headline": "Is this the template other companies will copy in 2026?",
+      "body": "Share your read in the comments — especially if you work in tech.\nFollow for daily AI and business breakdowns worth your time."
+    }
+  ]
+}

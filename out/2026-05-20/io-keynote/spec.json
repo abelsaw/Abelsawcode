@@ -1,0 +1,56 @@
+{
+  "style": "aurora",
+  "source": "GOOGLE I/O '26",
+  "url": "https://www.youtube.com/watch?v=wYSncx9zLIU",
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "Google just compressed a year of AI launches into 90 minutes",
+      "body": "I/O 2026 was not a product event. It was a pacing signal."
+    },
+    {
+      "type": "point",
+      "kicker": "the setup",
+      "headline": "Six months of catch-up rumors. One day to bury them.",
+      "body": "Heading into I/O, the narrative on Google was clear: ChatGPT eats Search, Sora wins video, Meta owns smart glasses. On May 19, Google answered all three at once and opened two more competitive flanks no one was tracking."
+    },
+    {
+      "type": "point",
+      "kicker": "the story",
+      "headline": "Five competitive responses, one keynote",
+      "body": "Gemini Omni for AI video, going at Sora. Gemini Spark, an agentic personal assistant, going at ChatGPT. Gemini 3.5 Flash as the default in Search, going at Perplexity. Pics, an AI design app for Workspace, going at Canva. And AI glasses with Warby Parker and Gentle Monster, going at Meta Ray-Ban."
+    },
+    {
+      "type": "stat",
+      "kicker": "the numbers",
+      "headline": "1B+",
+      "body": "DAILY LOGINS NOW DEFAULT TO GEMINI"
+    },
+    {
+      "type": "point",
+      "kicker": "why it matters",
+      "headline": "Default placement is the moat",
+      "body": "Standalone AI apps need users to open them. Google is making every existing Google product Gemini-powered by default. Hundreds of millions of people now interact with frontier AI without ever choosing to. That advantage compounds in a way no competitor can match."
+    },
+    {
+      "type": "point",
+      "kicker": "what most miss",
+      "headline": "OpenAI ships better models. Google ships into a billion logins.",
+      "body": "Most analysis grades labs on benchmarks. But model quality is converging — the real divergence is distribution. The lab that delivers the most capable model is no longer guaranteed the most users. That decoupling reshapes how labs raise capital, recruit talent, and prioritize what to build next."
+    },
+    {
+      "type": "list",
+      "kicker": "the playbook",
+      "items": [
+        {"title": "Audit your AI surface", "body": "Map where Google AI now appears by default — Search, Docs, Gmail, YouTube. Each is a competitor channel."},
+        {"title": "Rethink discovery", "body": "If Search shifts from finding to doing, your SEO strategy needs an agent layer."},
+        {"title": "Update authenticity policies", "body": "SynthID is baked into every Gemini video. Your verification flow should match."}
+      ]
+    },
+    {
+      "type": "cta",
+      "headline": "Watch the 90-minute keynote",
+      "body": "Link is in the post. Then tell me which announcement actually changes your roadmap this quarter."
+    }
+  ]
+}

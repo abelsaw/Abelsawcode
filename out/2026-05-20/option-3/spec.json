@@ -1,0 +1,65 @@
+{
+  "style": "aurora",
+  "source": "GOOGLE DEEPMIND",
+  "url": "https://blog.google/products-and-platforms/products/search/search-io-2026/",
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "Google just redrew the search box — after 25 years",
+      "body": "Gemini 3.5 Flash is now the default for everyone, globally."
+    },
+    {
+      "type": "point",
+      "kicker": "the setup",
+      "headline": "Search hasn't fundamentally changed since 1998",
+      "body": "The text box and ten blue links have outlasted every attempt to replace them. Voice search, rich snippets, Knowledge Graph, featured snippets — each iteration kept the same basic contract: you type a query, Google returns a ranked list. The interface survived because it was fast, predictable, and universal. What Google announced at I/O 2026 is the first change to that contract that does not merely add a layer on top of the box."
+    },
+    {
+      "type": "point",
+      "kicker": "the story",
+      "headline": "AI Mode goes global; the search box becomes an agent launchpad",
+      "body": "Google made Gemini 3.5 Flash the default model inside AI Mode and rolled it out globally on May 19. Alongside that, Google revealed a redesigned search entry point described as the biggest change to the search interface in over 25 years. Users can now create and manage multiple AI agents directly inside Search — turning the box from a query input into a persistent task surface. The change affects billions of daily active users immediately."
+    },
+    {
+      "type": "stat",
+      "kicker": "the numbers",
+      "headline": "25+ years",
+      "body": "SINCE LAST FUNDAMENTAL SEARCH REDESIGN"
+    },
+    {
+      "type": "point",
+      "kicker": "why it matters",
+      "headline": "The default model change is the distribution moat",
+      "body": "Making Gemini 3.5 Flash the global default for AI Mode is not a product launch — it is a distribution event. Every person who opens Google Search now interacts with Gemini whether or not they chose to. That scale of default placement is something no standalone AI product, including ChatGPT, can replicate without a search engine behind it. Google is using its existing moat to make the AI transition nearly frictionless for its existing user base."
+    },
+    {
+      "type": "point",
+      "kicker": "what most miss",
+      "headline": "Agents inside Search redefine what 'search intent' means",
+      "body": "Letting users build and manage agents inside the search interface collapses the distinction between querying and doing. Right now, search answers questions. With persistent agents embedded in Search, the same interface can book a restaurant, monitor a price, or draft a reply — without the user leaving the box. That shift from 'find information' to 'accomplish tasks' rewrites the value proposition of Search and, by extension, the entire advertising model that sits on top of it."
+    },
+    {
+      "type": "list",
+      "kicker": "the playbook",
+      "items": [
+        {
+          "title": "Rebuild your SEO assumptions from scratch",
+          "body": "AI Mode as global default means query behavior and result surfaces are both shifting fast."
+        },
+        {
+          "title": "Treat Search as an agent platform now",
+          "body": "Content and products optimized for agentic queries will outperform static pages within a year."
+        },
+        {
+          "title": "Watch how Google monetizes agent tasks",
+          "body": "The ad model for 'accomplish this task' looks nothing like cost-per-click — that transition is the defining business story of 2026-2027."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "headline": "Does this finally end the ten blue links era?",
+      "body": "Tell me your take in the comments — especially if you work in SEO or product.\nFollow for daily breakdowns of the platform shifts that reshape how business gets done online."
+    }
+  ]
+}
