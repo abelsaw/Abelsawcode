@@ -2,11 +2,12 @@
 
 Audience: broad knowledge workers (PMs, engineers, designers, ops, HR, etc.)
 
-> **Note on real-meme URLs:** Each option below now also lists a recognizable
-> meme template that fits the joke. These are copyrighted images hosted by
-> third parties (Wikimedia Commons / Know Your Meme); LinkedIn business use
-> is at your own legal risk. URLs were sourced via web search and could not
-> be HEAD-verified from this sandbox — confirm in a browser before posting.
+> **Note on real-meme templates:** Each option now also has a blank meme
+> template downloaded locally from the open-source `jacebrowning/memegen`
+> repository. These are widely-reused popular meme templates. LinkedIn
+> business use of recognizable meme images carries some copyright risk
+> (the underlying photos belong to their original creators) — your call
+> whether to use them or the generated text cards.
 
 ## Option 1 — five-minute-gap
 - **Topic well:** Calendars
@@ -14,8 +15,9 @@ Audience: broad knowledge workers (PMs, engineers, designers, ops, HR, etc.)
 - **Palette:** lemon
 - **Image (generated):** posts/drafts/memes/2026-05-21-option-1/meme.png
 - **Real-meme match:** "This Is Fine" dog (calendar's on fire, I'm sitting in it)
-  - Wikimedia: https://commons.wikimedia.org/wiki/File:This_Is_Fine_(meme).png
-  - Know Your Meme: https://knowyourmeme.com/memes/this-is-fine
+  - Local template: posts/drafts/memes-real/2026-05-21/option-1-this-is-fine.png
+  - Source: https://github.com/jacebrowning/memegen `templates/fine/default.png`
+  - Reference: https://knowyourmeme.com/memes/this-is-fine
 - **Image alt:** A bright yellow card with the tag "CALENDAR" and the setup line "I blocked a 5-minute gap on my calendar." above the bold punchline "Someone booked over it."
 - **Word count:** 43
 - **Status:** draft
@@ -36,8 +38,9 @@ Then someone booked over it.
 - **Palette:** electric
 - **Image (generated):** posts/drafts/memes/2026-05-21-option-2/meme.png
 - **Real-meme match:** "Expanding Brain" / "Galaxy Brain" (escalating absurdity — write email → use AI → 247-word prompt for AI)
-  - Know Your Meme entry: https://knowyourmeme.com/memes/galaxy-brain
-  - Template gallery: https://knowyourmeme.com/memes/expanding-brain/photos/templates
+  - Local template: posts/drafts/memes-real/2026-05-21/option-2-expanding-brain.png
+  - Source: https://github.com/tbroadley/auto-expanding-brain `template.png`
+  - Reference: https://knowyourmeme.com/memes/galaxy-brain
 - **Image alt:** An electric blue two-panel card tagged "AI AT WORK." Top panel labelled "My prompt" reads "247 words." Bottom panel labelled "The email" reads "Sounds good, Thursday works."
 - **Word count:** 33
 - **Status:** draft
@@ -55,9 +58,10 @@ The email said: "Sounds good, let's do Thursday."
 - **Image style:** caption
 - **Palette:** coral
 - **Image (generated):** posts/drafts/memes/2026-05-21-option-3/meme.png
-- **Real-meme match:** "Drake Hotline Bling" (top panel "rehearsed counter-arguments" — rejected; bottom panel "👍" — approved)
-  - Know Your Meme entry: https://knowyourmeme.com/memes/hotline-bling
-  - Drakeposting template: https://knowyourmeme.com/photos/1434725-drakeposting
+- **Real-meme match:** "Drake Hotline Bling" (top panel "rehearsed counter-arguments" — rejected; bottom panel "thumbs up" — approved)
+  - Local template: posts/drafts/memes-real/2026-05-21/option-3-drake.png
+  - Source: https://github.com/jacebrowning/memegen `templates/drake/default.png`
+  - Reference: https://knowyourmeme.com/memes/hotline-bling
 - **Image alt:** A coral pink card with the tag "SLACK" and the setup "They typed for four minutes." above the bold punchline "They sent a thumbs up."
 - **Word count:** 35
 - **Status:** draft
