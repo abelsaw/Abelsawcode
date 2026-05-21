@@ -2,23 +2,19 @@
 
 Audience: broad knowledge workers (PMs, engineers, designers, ops, HR, etc.)
 
-> **Note on real-meme templates:** Each option now also has a blank meme
-> template downloaded locally from the open-source `jacebrowning/memegen`
-> repository. These are widely-reused popular meme templates. LinkedIn
-> business use of recognizable meme images carries some copyright risk
-> (the underlying photos belong to their original creators) — your call
-> whether to use them or the generated text cards.
+> **Note on visuals:** Each option now has a LinkedIn-native UI mockup
+> as its primary image — a calendar screenshot, a Slack chat, or a bar
+> chart. These are original, copyright-safe, and visually professional
+> (think Marketing Brew / Sarah Cooper aesthetic, not Reddit memes).
+> The earlier text-cards (`memes/`) and downloaded meme templates
+> (`memes-real/`) remain in the repo as fallbacks.
 
 ## Option 1 — five-minute-gap
 - **Topic well:** Calendars
-- **Image style:** caption
-- **Palette:** lemon
-- **Image (generated):** posts/drafts/memes/2026-05-21-option-1/meme.png
-- **Real-meme match:** "This Is Fine" dog (calendar's on fire, I'm sitting in it)
-  - Local template: posts/drafts/memes-real/2026-05-21/option-1-this-is-fine.png
-  - Source: https://github.com/jacebrowning/memegen `templates/fine/default.png`
-  - Reference: https://knowyourmeme.com/memes/this-is-fine
-- **Image alt:** A bright yellow card with the tag "CALENDAR" and the setup line "I blocked a 5-minute gap on my calendar." above the bold punchline "Someone booked over it."
+- **Primary image (mockup):** posts/drafts/mockups/2026-05-21/option-1.png — fake Outlook-style calendar for Tuesday May 21 with 8 absurd events; the 11:55 AM "5-MIN GAP — DO NOT BOOK" entry is highlighted in yellow as the punchline.
+- **Image alt:** A clean white calendar mockup showing eight back-to-back meetings on Tuesday May 21; the 11:55 AM slot is a highlighted yellow block labelled "5-MIN GAP — DO NOT BOOK."
+- **Fallback (text card):** posts/drafts/memes/2026-05-21-option-1/meme.png
+- **Fallback (meme template):** posts/drafts/memes-real/2026-05-21/option-1-this-is-fine.png ("This Is Fine" dog — copyright risk)
 - **Word count:** 43
 - **Status:** draft
 
@@ -34,14 +30,10 @@ Then someone booked over it.
 
 ## Option 2 — 247-word-prompt
 - **Topic well:** AI at work
-- **Image style:** two-panel
-- **Palette:** electric
-- **Image (generated):** posts/drafts/memes/2026-05-21-option-2/meme.png
-- **Real-meme match:** "Expanding Brain" / "Galaxy Brain" (escalating absurdity — write email → use AI → 247-word prompt for AI)
-  - Local template: posts/drafts/memes-real/2026-05-21/option-2-expanding-brain.png
-  - Source: https://github.com/tbroadley/auto-expanding-brain `template.png`
-  - Reference: https://knowyourmeme.com/memes/galaxy-brain
-- **Image alt:** An electric blue two-panel card tagged "AI AT WORK." Top panel labelled "My prompt" reads "247 words." Bottom panel labelled "The email" reads "Sounds good, Thursday works."
+- **Primary image (mockup):** posts/drafts/mockups/2026-05-21/option-2.png — bar chart "Words used to send a 38-word email." Three bars: The email (38), AI output (96), My prompt (247, highlighted in red). Footer: "Yes, I trimmed the AI output back down to 38."
+- **Image alt:** A clean horizontal bar chart titled "Words used to send a 38-word email." showing three bars escalating in length: 38 words (the email), 96 words (AI output), 247 words (the prompt) — the prompt bar highlighted in red.
+- **Fallback (text card):** posts/drafts/memes/2026-05-21-option-2/meme.png
+- **Fallback (meme template):** posts/drafts/memes-real/2026-05-21/option-2-expanding-brain.png ("Expanding Brain" — copyright risk)
 - **Word count:** 33
 - **Status:** draft
 
@@ -55,14 +47,10 @@ The email said: "Sounds good, let's do Thursday."
 
 ## Option 3 — typing-indicator
 - **Topic well:** Slack
-- **Image style:** caption
-- **Palette:** coral
-- **Image (generated):** posts/drafts/memes/2026-05-21-option-3/meme.png
-- **Real-meme match:** "Drake Hotline Bling" (top panel "rehearsed counter-arguments" — rejected; bottom panel "thumbs up" — approved)
-  - Local template: posts/drafts/memes-real/2026-05-21/option-3-drake.png
-  - Source: https://github.com/jacebrowning/memegen `templates/drake/default.png`
-  - Reference: https://knowyourmeme.com/memes/hotline-bling
-- **Image alt:** A coral pink card with the tag "SLACK" and the setup "They typed for four minutes." above the bold punchline "They sent a thumbs up."
+- **Primary image (mockup):** posts/drafts/mockups/2026-05-21/option-3.png — fake Slack channel #project-x showing four messages: question at 4:53 PM, "sure, what's up?" at 4:54 PM, "(typing… for 4 minutes)", then a single thumbs-up emoji at 4:58 PM. Composer bar at the bottom for authenticity.
+- **Image alt:** A clean Slack-style chat mockup of the #project-x channel: a back-and-forth ending with Alex typing for four minutes and then sending a single thumbs-up emoji.
+- **Fallback (text card):** posts/drafts/memes/2026-05-21-option-3/meme.png
+- **Fallback (meme template):** posts/drafts/memes-real/2026-05-21/option-3-drake.png ("Drake Hotline Bling" — copyright risk)
 - **Word count:** 35
 - **Status:** draft
 
