@@ -21,12 +21,13 @@ If args are empty, run the default flow: `region: apac`, default themes, 3 optio
 
 ---
 
-## Step 1 — Read the source catalog and usage history
+## Step 1 — Read the source catalog, usage history, and attached PDFs
 
-Read **two** files before invoking the scout:
+Read **three** inputs before invoking the scout:
 
 1. `.claude/skills/linkedin-post/sources.md` — the canonical Tier 1 / Tier 2 / Tier 3 source catalog plus any auto-discovered sources from prior runs.
 2. `.claude/skills/linkedin-post/usage-history.md` — every theme/slug used in prior runs of this skill.
+3. `reports/2026/` — any user-attached full PDFs of 2026 research reports. List the directory recursively; note which firms have a PDF present. The scout uses these as primary sources, tagging extracted claims `[PDF: {filename}, p.{n}]` instead of `[search-only]`. A parent theme on the dedup ledger CAN recycle when a PDF surfaces a fresh sub-angle (cite page/exhibit).
 
 From the usage history, extract the **exclusion set**: every parent theme whose entry is dated within the last **14 days** (the default dedup window). These themes are off-limits for this run unless the user explicitly overrides ("I want a different angle on managers" or similar).
 

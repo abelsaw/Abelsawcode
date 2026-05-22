@@ -33,6 +33,7 @@ Search each firm's 2026 outputs specifically. If a piece is not clearly dated
 
 ## Method
 
+0. **Check `reports/2026/` first.** Before any web search, list the contents of `reports/2026/`. Sub-folders are named by firm slug (e.g. `reports/2026/mercer/global-talent-trends-2026.pdf`). Read every PDF present. **PDFs are the primary source** — findings extracted from them rank above search-indexed content and get tagged `[PDF: {filename}, p.{n}]` in the brief instead of `[search-only]`. Multiple distinct sub-angles can be surfaced from a single report (methodology, regional/industry/role breakdowns, contrarian sub-findings); they count as separate angles, not as duplicates. If the dedup ledger blocks a parent theme but a PDF surfaces a genuinely fresh sub-angle (cite page or exhibit), the angle is eligible — the parent theme can recycle on the basis of new evidence.
 1. **Confirm today's date and window.** Today is provided in context. Search for 2026-dated reports (publication or release date in 2026).
 2. **Run multiple targeted searches per firm.** Example queries:
    - `"Mercer Global Talent Trends 2026" findings`

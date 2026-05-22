@@ -4,3 +4,6 @@ __pycache__/
 *.pyc
 *.pyo
 .DS_Store
+
+# Private / paywalled report PDFs (keep local only)
+reports/private/
