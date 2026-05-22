@@ -17,6 +17,27 @@ When excluding, match on **parent theme**, not slug — two slugs about "Human-A
 
 ## Used themes (most recent first)
 
+### AI value-capture / 12% vanguard (PDF-recycle on theme #12)
+- Slugs: the-twelve-percent-vanguard
+- Source stats: PwC 29th Global CEO Survey 2026 — 12% of CEOs capture both AI revenue and cost gains; 56% see neither; vanguard apply AI across multiple business areas 44% vs 17% [PDF: pwc/29th-global-ceo-survey-2026.pdf]
+- Recycle basis: fresh PDF segmentation reveals the 12% vanguard practice; earlier theme #12 post focused on the failure mode (56% see nothing). New angle focuses on what winners do differently.
+- Commits: (pending this run)
+- Date(s): 2026-05-22
+
+### CHRO ambition vs. AI execution capability (NEW parent theme)
+- Slugs: the-ambition-execution-gap
+- Source stats: CHRO Association 2026 — 91% of CHROs rank AI as #1 priority [PDF: chro-association/chro-survey-key-findings-2026.pdf]; Deloitte HCT 2026 — 66% of leaders recognize need for human-AI interaction design, only 6% making great progress [PDF: deloitte/global-human-capital-trends-2026.pdf]
+- Distinct from theme #9 (Culture as AI bottleneck — about cultural readiness) and theme #13 (AI governance — about formal committees/decision rights). This theme is specifically about the gap between CHRO-level priority and leader-level execution discipline.
+- Commits: (pending this run)
+- Date(s): 2026-05-22
+
+### Climate / heat as labor productivity (PDF-recycle on theme #15)
+- Slugs: climate-is-already-here
+- Source stats: IFC Hidden Potential 2026 — 370 million workers (10% of global workforce) already see tasks shifting due to climate [PDF: ifc/employers-accelerate-inclusive-jobs-green-transitions-2026.pdf]; ILO heat-stress baseline — 2.4 billion workers exposed [PDF: ilo/heat-stress-labour-productivity.pdf]
+- Recycle basis: earlier theme #15 post used 2030 projections (70% workforce, 3.8% hours lost). New angle uses IFC's already-shifted finding (370M workers, present tense) — materially different evidence and frame.
+- Commits: (pending this run)
+- Date(s): 2026-05-22
+
 ### Climate / heat as labor productivity issue
 - Slugs: climate-is-an-hr-variable
 - Source stats: ILO 2026 — 70% of global workforce (2.4B workers) exposed to excessive heat at work; by 2030, heat stress could cost 3.8% of global working hours; APAC and South Asia highest exposure
