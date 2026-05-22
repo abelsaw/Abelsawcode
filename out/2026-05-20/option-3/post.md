@@ -21,4 +21,6 @@ Three things to plan around in the next 6 to 12 months:
 
 Does your AI buying decision still go through IT, or has it quietly moved to your advisory firm?
 
+Announcement: https://www.anthropic.com/news/anthropic-kpmg
+
 #AI #EnterpriseAI #Claude #Anthropic #ProfessionalServices

@@ -68,12 +68,16 @@ The Information is also accepted for cross-source verification when surfaced via
 
 ---
 
-<LinkedIn caption, 180-220 words, professional + progressive tone. Paste directly into LinkedIn.>
+<LinkedIn caption, 180-220 words, professional + progressive tone>
+
+<closing question on its own line>
+
+<short prefix + ONE URL on its own line — e.g. `Watch the keynote: https://...`, `Announcement: https://...`, `Read the analyst note: https://...`. This URL is what LinkedIn renders as the link-card preview when the body is pasted. Choose the Watch/follow URL when it makes a strong card (YouTube replay, X thread); otherwise use the Source URL.>
 
 #hashtag1 #hashtag2 #hashtag3 #hashtag4
 ```
 
-Both URL fields are mandatory and must be on their own lines so they are easy to copy. The user reads the post.md and clicks through to verify the source before posting.
+The metadata block above the `---` divider is for the user's reference — they verify the story before posting. The body below the divider is what gets pasted into LinkedIn. **Embed exactly one URL inline in the body.** LinkedIn only renders a link card for one URL per post; two embedded URLs either confuse the preview or are both skipped.
 
 ## Tone — professional and progressive
 

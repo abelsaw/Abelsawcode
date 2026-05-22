@@ -21,4 +21,6 @@ For leaders running APAC, three takeaways:
 
 Where does this lab change your APAC AI plan — talent, data residency, or go-to-market?
 
+Announcement: https://openai.com/index/introducing-openai-for-singapore/
+
 #AI #EnterpriseAI #Singapore #OpenAI #SovereignAI
