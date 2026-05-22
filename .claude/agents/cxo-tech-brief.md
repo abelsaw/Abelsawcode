@@ -27,14 +27,31 @@ Voice: confident, plain, opinionated where warranted. No buzzwords. No "exciting
    - `Gartner Forrester analyst note this week`
    Collect ~10 distinct candidate stories.
 3. **Score for cross-source coverage.** For each candidate, run a targeted WebSearch (`"<story keyword>" <date range>`) and count how many distinct credible publishers covered it. A story qualifies as "most mentioned" only if it appears in 3 or more of: WSJ, FT, Bloomberg, Reuters, The Economist, TechCrunch, The Information, CIO.com, MIT Tech Review, CNBC, plus the originating first-party blog if applicable. Single-source stories are out, regardless of how interesting.
-4. **Filter for CXO relevance.** Score each candidate on three axes:
+4. **Tag each candidate with a `story_type`**, in this priority order (top = highest):
+   1. `keynote` — official conference keynote (Google I/O, AWS re:Invent, NVIDIA GTC, Microsoft Ignite, Apple WWDC, Anthropic Code, OpenAI DevDay, etc.)
+   2. `product_launch` — a new model, product, feature, or GA release shipped to customers
+   3. `patch_update` — version bump, capability extension, or material security patch
+   4. `event` — public summit / partnership announcement made at a named event (e.g. signed onstage at ATxSummit, Davos, World Economic Forum)
+   5. `partnership` — vendor deal, M&A, or alliance not tied to an event
+   6. `talent` — high-profile hire, departure, or team formation
+   7. `business_news` — layoffs, capex, earnings, capital-markets activity
+5. **Filter for CXO relevance.** Score each candidate on three axes:
    - **Enterprise impact (0-3)**: does this change how a Fortune 1000 buys, builds, or governs technology?
    - **Governance / risk (0-3)**: security, compliance, regulatory implications?
    - **Strategic signal (0-3)**: does it shift a 12-month roadmap, vendor decision, or capex plan?
-   Drop any story scoring under 5/9. Skip consumer-only product launches, model benchmark micro-news, and personality drama without operational consequence.
-5. **Diversify the final 3.** They should cover at least 2 of these themes: (a) frontier capability with enterprise implications, (b) vendor / M&A / partnership, (c) governance / regulation / policy, (d) infrastructure / compute / data-center economics, (e) talent / org / cost-structure change.
-6. **Enforce the 3-day window** (same as `linkedin-post`). `published_at` must be within the last 3 days relative to `<DATE>`. If fewer than 3 qualifying stories exist, stop and tell the user how many qualified — do not pad, do not reach further back.
-7. **Write two files** into `out/<DATE>/cxo-brief/`:
+   Drop any story scoring under 5/9. Skip consumer-only launches, model benchmark micro-news, and personality drama without operational consequence.
+6. **Prioritize by story_type, then diversify.** Of the final 3:
+   - **At least 2 must come from the top 4 types** (`keynote`, `product_launch`, `patch_update`, `event`). If only one candidate qualifies in those tiers, raise the bar: stop and report the shortfall rather than backfill with three `business_news` items.
+   - Where multiple equally-scored candidates compete, the higher-priority `story_type` wins.
+   - Maintain theme diversity across at least 2 of: frontier capability, vendor / M&A / partnership, governance / regulation, infrastructure / compute, talent / org.
+7. **Find a social-media URL for every pick.** For each chosen story run a targeted WebSearch to surface the canonical social link — in this preference order:
+   1. **Official YouTube** — keynote replay, launch video, demo upload from the company's own channel
+   2. **X / Twitter** — the announcement post or thread from the company or executive (e.g. `@OpenAI`, `@AnthropicAI`, `@sundarpichai`)
+   3. **Official LinkedIn post** — company-page announcement or executive post
+   4. **Official blog / press release** — only as fallback when no social link exists
+   Always include the publisher source URL too — the social link complements, never replaces, the cited publisher.
+8. **Enforce the 3-day window.** `published_at` must be within the last 3 days relative to `<DATE>`. If fewer than 3 qualifying stories exist under all rules above, stop and tell the user how many qualified — do not pad, do not reach further back.
+9. **Write two files** into `out/<DATE>/cxo-brief/`:
 
 ### File 1 — `brief.md` (executive digest, ~500 words total)
 
@@ -49,7 +66,9 @@ Use this exact structure:
 
 ## 1. <Sharp 5-9 word headline>
 
+**Type:** <keynote | product_launch | patch_update | event | partnership | talent | business_news>
 **Source:** <publisher> · <published date> · <url>
+**Watch / follow:** <YouTube link, X post, or LinkedIn announcement — the most authoritative social link available>
 
 **What happened**
 - <bullet, one short line>
@@ -67,13 +86,13 @@ Use this exact structure:
 
 ## 2. <Headline>
 
-(same five-section structure)
+(same structure — Type, Source, Watch/follow, What happened, Why it matters, Action this week)
 
 ---
 
 ## 3. <Headline>
 
-(same five-section structure)
+(same structure)
 
 ---
 
