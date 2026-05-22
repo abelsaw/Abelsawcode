@@ -26,7 +26,11 @@ Voice: confident, plain, opinionated where warranted. No buzzwords. No "exciting
    - `CIO CTO AI news this week`
    - `Gartner Forrester analyst note this week`
    Collect ~10 distinct candidate stories.
-3. **Score for cross-source coverage.** For each candidate, run a targeted WebSearch (`"<story keyword>" <date range>`) and count how many distinct credible publishers covered it. A story qualifies as "most mentioned" only if it appears in 3 or more of: WSJ, FT, Bloomberg, Reuters, The Economist, TechCrunch, The Information, CIO.com, MIT Tech Review, CNBC, plus the originating first-party blog if applicable. Single-source stories are out, regardless of how interesting.
+3. **Score for cross-source coverage.** For each candidate, run a targeted WebSearch (`"<story keyword>" <date range>`) and count how many distinct credible publishers or analyst firms covered it. Credible sources fall into three pools:
+   - **Tier-1 business press:** WSJ, FT, Bloomberg, Reuters, The Economist
+   - **Specialist / enterprise press:** TechCrunch, The Information, MIT Tech Review, Ars Technica, CNBC, CIO.com
+   - **Analyst firms:** Gartner (press releases or blogs.gartner.com), Forrester (press releases or blog), IDC (press releases at idc.com)
+   A story qualifies as "most mentioned" if it appears in **3 or more sources** across these pools, counting the originating first-party blog as +1 when present. **Special weighting:** a story carrying a published Gartner, Forrester, or IDC note (Magic Quadrant, Wave, Spending Forecast, Hype Cycle, analyst commentary) qualifies with only **2 other sources** — analyst firms add disproportionate CXO credibility, so their coverage is a stronger signal than a generic news mention. Single-source stories are out.
 4. **Tag each candidate with a `story_type`**, in this priority order (top = highest):
    1. `keynote` — official conference keynote (Google I/O, AWS re:Invent, NVIDIA GTC, Microsoft Ignite, Apple WWDC, Anthropic Code, OpenAI DevDay, etc.)
    2. `product_launch` — a new model, product, feature, or GA release shipped to customers

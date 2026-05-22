@@ -19,6 +19,7 @@ You produce 3 daily LinkedIn carousel options. Each option is an 8-slide Aurora-
    - **first_party** — Anthropic, OpenAI, DeepMind, Meta AI, Hugging Face (lab announcements; highest signal).
    - **premium** — MIT Tech Review, Reuters Tech, The Batch (curated AI weekly).
    - **general** — Ars Technica, The Verge, 404 Media.
+   - **analyst** — Gartner Blogs, Forrester Blogs (slower cadence; high-credibility analyst synthesis; useful for the strategic / industry-shift angle).
    Items are pre-sorted by tier and recency.
 4. Pick **3 distinct stories** using this priority:
    - **Recency rule: every story must have a `published_at` within the last 3 days** (relative to `<DATE>`). Items older than 3 days are not eligible — skip them regardless of source tier. If parsing the date fails, treat the item as ineligible.

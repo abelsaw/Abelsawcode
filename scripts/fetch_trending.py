@@ -32,6 +32,11 @@ SOURCES = [
     ("general",     "Ars Technica",     "https://feeds.arstechnica.com/arstechnica/index"),
     ("general",     "The Verge",        "https://www.theverge.com/rss/index.xml"),
     ("general",     "404 Media",        "https://www.404media.co/rss/"),
+    # Analyst notes: slower cadence, high CXO credibility, often synthesise
+    # multiple stories into a single take. IDC has no public RSS — surface
+    # via WebSearch in the cxo-tech-brief agent instead.
+    ("analyst",     "Gartner Blogs",    "https://blogs.gartner.com/feed/"),
+    ("analyst",     "Forrester Blogs",  "https://go.forrester.com/blogs/feed/"),
 ]
 
 
