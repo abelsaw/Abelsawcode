@@ -292,7 +292,7 @@ The skill's research brief will pull from this `pdf-findings-2026-05-22.md` file
 6. **Gen Z stability shift** — Deloitte data confirms 55% Gen Zs / 52% millennials delaying life decisions; 74% use AI at work (up from 57% prior year); 47% live paycheck to paycheck (down from 52%).
 7. **Medical trend regional split (WTW)** — APAC 14%, LAC 11.9%, MEA 11.3%, NAm 9.2%, EU 8.2%.
 
-## What's still search-only
+## What's still search-only (after batch 3)
 
 Sources NOT in this PDF set (still snippet-grade):
 - BCG — multiple 2026 publications
@@ -305,3 +305,252 @@ Sources NOT in this PDF set (still snippet-grade):
 - IBM IBV, EY People Advisory, IFC, ManpowerGroup (auto-discovered this session)
 
 The next batch of attached PDFs will reduce this gap.
+
+---
+---
+
+# Appendix — Batches 4 and 5 (8 more reports)
+
+Added 2026-05-22 after the user attached batches 4 (5 PDFs) and 5 (3 PDFs).
+
+**New reports read directly:**
+11. PwC — 29th Global CEO Survey 2026 (`pwc/29th-global-ceo-survey-2026.pdf`)
+12. Gartner — 2026 Top Priorities for CHROs (`gartner/chro-top-priorities-2026.pdf`)
+13. CHRO Association — 2026 CHRO Survey Key Findings (`chro-association/chro-survey-key-findings-2026.pdf`) **— newly discovered source, added to Tier 2**
+14. KPMG — 2025 Global Mobility Benchmarking Report (`kpmg/global-mobility-benchmarking-2025.pdf`)
+15. PwC — Global Workforce Hopes and Fears Survey 2025 — Malaysia highlights (`pwc/workforce-hopes-and-fears-2025.pdf`) — 3-page brief, not full survey
+16. ILO — Employment and Social Trends 2026 (`ilo/employment-and-social-trends-2026.pdf`)
+17. IFC — Hidden Potential: How Employers Can Accelerate Inclusive Jobs in Green Transitions (Jan 2026) (`ifc/employers-accelerate-inclusive-jobs-green-transitions-2026.pdf`)
+18. ILO — Working on a Warmer Planet: Impact of Heat Stress on Labour Productivity (2019 foundational study, still the primary referenced source for 2026 heat-labor stats) (`ilo/heat-stress-labour-productivity.pdf`)
+
+---
+
+## 11. PwC — 29th Global CEO Survey 2026
+
+**Methodology:** 4,454 CEOs surveyed in 95 countries/territories, Sept 30 2025–Jan 2026. Theme: "Leading through uncertainty in the age of AI."
+
+**Headline findings:**
+- **56%** of CEOs say their AI investments have produced neither revenue growth nor cost reduction.
+- **30%** report increased revenue from AI; **26%** report lower costs.
+- Only **12%** report BOTH revenue growth and cost savings from AI — the "vanguard."
+- Vanguard companies apply AI broadly across business areas (**44%**) vs only **17%** of others.
+- CEO revenue-growth confidence: **30%** very/extremely confident (down from **38%** prior year and peak **56%** in 2022).
+- **84%** of CEOs say their company is at least moderately affected by geopolitical risk.
+- **66%** experienced stakeholder trust concerns in past 12 months.
+- Trust concerns include data privacy (**38%**), demands for transparency (**38%**), responsible AI (**37%**), AI-related decisions (**36%**).
+- **42%** competing in new sectors over past 5 years; **44%** plan deals outside existing sector in next 3 years.
+- **47%** of CEO time spent on <1-year horizons; only **16%** on >5-year horizons.
+- Private equity-backed CEOs spend **57%** of time on short-term issues; public-company CEOs only **39%**.
+- **29%** expect tariffs to reduce profit margins; **60%** expect little to no change.
+- **31%** highly/extremely exposed to cyber risk in year ahead (up from **24%** prior year, **21%** two years ago).
+- **20%** of CEOs say their company is highly/extremely exposed to climate-related risks.
+- Only **1 in 4** CEOs incorporate AI into supply chain (24%), product design (24%), or M&A (20%) decisions to a large or very large extent.
+- US tops international investment destinations (**35%**); India jumped from **7%** to **13%** year-over-year.
+- "Dynamic" companies (the ~85% that plan major moves) growing faster than "cautious" companies (~15% planning no major acquisitions).
+
+## 12. Gartner — 2026 Top Priorities for CHROs
+
+**Methodology:** 426 CHROs across 23 industries and 4 global regions. Also draws on Gartner 2025 CEO Survey, HR Leader/Employee Surveys, and CHRO interviews.
+
+**Four 2026 CHRO priorities (in Gartner's framing):**
+1. **Transform HR through AI** — craft HR-focused AI strategy aligned with enterprise objectives.
+2. **Shape work in the human-machine era.**
+3. **Mobilize leaders for growth in an uncertain world.**
+4. **Address culture atrophy to power performance.**
+
+**Trends behind the priorities:**
+- "AI triggers questions about the future of HR."
+- "AI is seen as a viable alternative to human talent."
+- "Organizations walk a growth-efficiency tightrope."
+- "The employment deal shifts to 'give more, expect less.'"
+
+**Key stats:**
+- **29%** of CHROs cite AI productivity gains predicted impact.
+- Organizations that integrate change "in the normal course of work" achieve **3x higher probability** of healthy change adoption.
+- Intentional AI-redesigned work yields up to **34% productivity gain**.
+
+## 13. CHRO Association — 2026 CHRO Survey Key Findings
+
+**Methodology:** ~150 CHROs at major corporations, conducted with University of South Carolina's Darla Moore School of Business. **Newly discovered source — added to Tier 2.**
+
+**Headline findings:**
+- **91% of CHROs** identify **AI and workplace digitization** as their #1 immediate priority — far ahead of organizational change (**46%**), business/financial performance (**38%**), workplace culture (**37%**), employee engagement (**27%**).
+- Top external forces shaping company performance: **geopolitical instability (46%)**, inflation (**42%**), legal/regulatory uncertainty (**39%**), tariffs (**35%**), AI productivity gains (**30%**), reduced regulations (**3%**).
+- AI use areas: development (**~17%**), HR ops efficiency / process automation (**~14% / ~13%**), AI strategy/governance teams (**~10%**).
+- Top barriers to AI implementation: **employee fear of job loss (~19%)**, budget constraints (**~17%**), data security/legal/compliance (**~17%**), organizational inertia (**~15%**), skills gaps (**~13%**), tech infrastructure (**~11%**), ROI justification (**~8%**).
+- **47%** have no formal AI measurement system; **39%** use qualitative assessments; **37%** track adoption rates and user satisfaction.
+- **48%** have skills-based competency framework "on the roadmap but not yet implemented"; **30%** emphasize adaptability and continuous learning; **28%** use skills as competencies.
+- **40%** taking gradual transition approach; **20%** reactive rather than proactive reskilling.
+- **26%** identify "AI literacy and adaptability" as critical skill.
+- **17%** report mid-level managers who see AI as threatening their roles.
+- Healthcare strategies: **86%** offer high-deductible health plans (HDHPs) with HSAs; **62%** increased employee cost-sharing; **57%** use specialty pharmacy management; **47%** step therapy/prior authorization; **28%** value-based care arrangements; **20%** direct pharmaceutical negotiation; **12%** moving to self-funding.
+- **59%** offer GLP-1 coverage today; **46%** plan to add coverage; only **4%** have strict eligibility criteria.
+
+## 14. KPMG — 2025 Global Mobility Benchmarking Report
+
+**Methodology:** Global survey across mobility leaders. Europe **41%** of respondents, North America **30%**, Asia third, Oceania **3%**.
+
+**Headline findings:**
+- Mobility leaders expect program value to grow from **6.0 to 7.1 out of 10** in next 12 months.
+- **68%** of CEOs say mobility pressure has increased since 2021 (per KPMG 2025 CEO Outlook).
+- Nearly **3 in 4 CEOs** say pressure for mobility innovation is rising.
+- Top mobility priorities: justifying value (#1), **39%** cite costs as priority, **30%** cite enhancing team skills.
+- **34%** of mobility strategies are widely shared; only **20%** are both widely communicated AND understood — "strategic intent" remains a gap.
+- **62%** of mobility programs rated moderately effective.
+- **42%** of businesses conducted full policy review in past year; **32%** plan to update policies in next 12 months.
+- AI adoption: **59%** anticipate using AI for mobility within 1 year; **47%** for data analytics; **46%** for administrative tasks; **39%** for cost calculations; **27%** as virtual assistant for mobile employees; **12%** don't anticipate using AI at all.
+- **72%** of mobility data still spreadsheet-driven; only ~**1 in 5** use vendor analytics solutions.
+- **31%** of organizations track employee satisfaction "consistently"; **67%** sometimes; **20%** never.
+- Only **13%** believe their current mobility approach is highly future-ready.
+- Internal vendor collaboration: **79%** describe relationships as collaborative; only **20%** highly so.
+- Top policy review priorities (2024): **56%** short-term assignments, **55%** virtual cross-border work, **53%** workation, **43%** assignment scope, **32%** assignee selection criteria.
+- ~**52%** of organizations offering short-term/workation arrangements; **29%** offering "less than 60 days per year" workation policies.
+
+## 15. PwC Workforce Hopes & Fears 2025 — Malaysia highlights (brief)
+
+**Methodology:** Malaysian sub-sample of **1,291 workers**; full global survey covered **~50,000 workers**.
+
+**Headline findings (Malaysia):**
+- **19%** of Malaysian employees use GenAI daily — significantly higher than **14%** global average.
+- AI sentiment: **71%** curious, **57%** excited, **35%** worried — net positive.
+- **64%** of workers have already adopted AI; **87%** report improved work quality; **81%** report higher productivity.
+- **49%** of Malaysian workers report feeling fatigued at least once a week; **24%** feel overwhelmed.
+- Financial pressure: **53%** of households either "just making ends meet" (44%) or actively struggling to pay bills (8%).
+- **43%** expect a pay raise in the next year.
+- **61%** feel extremely or very confident about job security.
+- **26%** likely to apply for a new job.
+- **76%** rank "being rewarded for performance" as defining a good job (tied with job security at **76%**).
+- **57%** expect AI to significantly impact their job in next 5 years.
+- **63%** feel ready for AI changes.
+- **1 in 4** Malaysian workers think their current skills will be irrelevant within 5 years.
+
+## 16. ILO — Employment and Social Trends 2026
+
+**Methodology:** ILO World of Work Series flagship, 96 pages. Covers global, regional, and country-level labor market projections to 2026/2027.
+
+**Global headline findings:**
+- Global unemployment projected at **4.9%** in 2026 (stable from 2025) — **186 million unemployed**.
+- **Jobs gap (broader underutilization measure): 408 million** in 2026, up from ~403 million in 2025.
+- **2.1 billion workers globally in informal employment** in 2026.
+- **284 million workers in extreme poverty** (less than US$3/day).
+- Working poverty improvement has slowed to half the pace of the previous decade (3.1 percentage points over 10 years vs. 6.2 prior decade).
+- Gender employment gap: **14.3 percentage points** — women's labor force participation lags men by this margin globally.
+- Gender jobs gap rate: **4.3 percentage points** in 2026.
+- Youth unemployment: **12.3%** globally, having stabilized after declining since 2020.
+- **465 million jobs in 80 countries** were linked to global trade in 2024 — trade is **34.1%** of manufacturing employment and **22.9%** of market services employment.
+- Global trade uncertainty index reached **unprecedented levels** in first half of 2025.
+- Real services trade grew **85% since 2005** (vs **33%** for goods).
+- Remittances: US$685 billion to developing countries in 2024 (now larger than FDI + ODA combined).
+
+**Asia and Pacific findings:**
+- Asia/Pacific employed: ~**1.85 billion** people in 2025; ~**56%** of global employed population by 2030.
+- Regional unemployment: **4.1%** in 2025 (stable).
+- **65.4% of employment in Asia/Pacific is informal** — ~330 million informal workers.
+- **48.6%** services employment share in Asia (2022), up from **35.9%** in 1995.
+- China: ~**15 million manufacturing jobs lost** in past decade.
+- China: gig economy workers reach up to **80%** of workforce in some industries during peak seasons.
+- **78%** of Asia/Pacific wealth derived from natural capital.
+- Asia/Pacific accounts for ~**60% of global greenhouse gas emissions**.
+- Asia/Pacific generates **46%** of world's solar/wind energy.
+- LinkedIn data shows green-jobs hiring share rising in Asia.
+- **278 million** trade-linked jobs in Asia/Pacific — the largest share globally.
+- **Trade cost shock simulation** (ILO): SEA wages projected to fall **0.3% per year**; Southern Asia wages fall **0.45% per year**; both lasting 5 years.
+
+**Other regional notes:**
+- Sub-Saharan Africa: **46% of population** lives on less than US$3/day (2024); **140 million** food-insecure.
+- Africa labor force projected to grow from ~**230 million** (1995) to **610 million** (2030) — biggest growth globally.
+- Working poverty in Africa: still **31%** extreme poverty rate of employed population.
+- Sectoral employment shifts globally **halved** over past decade — economic restructuring slowing.
+
+## 17. IFC — Hidden Potential: Inclusive Jobs in Green Transitions (Jan 2026)
+
+**Methodology:** IFC + World Bank Group action guide for private-sector employers; case studies from emerging markets. IFC committed **$71.7 billion** in fiscal year 2025.
+
+**Headline findings:**
+- **370 million people (~10% of global workforce)** are already seeing tasks shift due to climate-related developments.
+- **85%** of recently surveyed employers anticipate increasing investment to reduce carbon emissions.
+- Skills gaps in online learning could add **$14 billion to market by 2026** plus create new jobs.
+- Pakistan + Bangladesh face up to **$65.8 billion in lost export earnings by 2030** without climate adaptation.
+- ~**2.4 billion workers** globally are exposed to excessive heat (confirms ILO Heat Stress baseline).
+- Workers lose **~10 workdays per year** to heat stress conditions in some occupational surveys.
+- Iberdrola (clean-energy/electricity, global): **43% women** in workforce.
+- Suzano (Brazil, pulp/paper): **100% women** workforce at Três Lagoas facility.
+- Fondation Sonatel + WePOWER: women's progression in West African energy sector.
+- India: Tata Power Skill Development Institute trained **over 15 million farmers** since 2015.
+- **Eight priority action areas** for inclusive green jobs: stronger talent pipelines, inclusive recruitment, climate-resilient workplaces, diverse leadership pipelines, resilient supply chains, plus others.
+
+## 18. ILO — Working on a Warmer Planet (foundational 2019 study; still primary referenced source)
+
+**Methodology:** ILO global modeling using HadGEM2 + GFDL-ESM2M climate models under RCP2.6 (limiting warming to 1.5°C). Country-level projections for 1995, 2025, 2030. **Note: published 2019 but still the primary cited source for 2026-era heat-labor productivity stats.**
+
+**Headline findings:**
+- By 2030, **2.2% of total working hours globally lost to heat stress** = equivalent of **80 million full-time jobs**.
+- Under pessimistic scenario, hours lost rise to **3.8%** = **136 million full-time jobs**.
+- Estimated economic loss from heat stress at work: **US$280 billion in 1995 → US$2,400 billion in 2030**.
+- ~**2.4 billion workers globally** exposed to excessive heat at work.
+- **60% of working hours lost** projected to be in agriculture (subsistence agriculture especially).
+- **90%+** of working hours lost in Central/Eastern Africa = agricultural.
+- **Southern Asia: 5.3%** of working hours lost (43M full-time jobs equivalent) — highest globally.
+- **Western Africa: 4.8%** working hours lost.
+- **India alone: equivalent of 34 million full-time jobs lost** in 2030.
+- Most heat-affected countries (Asia/Pacific top 10): India, Pakistan, Bangladesh, Vietnam, Cambodia, Philippines, Indonesia, Myanmar, Nepal, Sri Lanka.
+- **Australia: equivalent of 147,000 full-time jobs lost** in 2030 (small % but high absolute).
+- Cabo Verde, Mauritania, Burkina Faso, Niger, Mali among highest impacted in Africa.
+- Heatwaves projected to double in frequency between 2000 and 2030 in many regions.
+- **Heat-related migration:** Southern Asia projected net out-migration; high-heat-stress regions losing population to cooler ones.
+- One-degree (1°C) temperature increase causes **~2% productivity loss** in brickmaking (India study).
+- Construction = **40% of total Arab States working hours lost** to heat (driven by GCC).
+- Urban Heat Island effect adds further losses (up to ~5.6% city GDP by end of century in some studies).
+- ILO Hygiene Convention No. 120 and OSH frameworks discussed as policy levers.
+
+---
+
+## Updated source-catalog status (after batches 4 + 5)
+
+| Firm | PDF read this session? | Notes |
+|---|---|---|
+| **Tier 1** | | |
+| Mercer | **Yes** (×2) | GTT + Skills Snapshot |
+| Aon | **Yes** (×2) | HCT + Medical Trend Rates |
+| McKinsey | **Yes** (×2) | State of Orgs + AI in SEA |
+| WEF | Not yet | Future of Jobs / Reskilling Revolution still search-only |
+| BCG | Not yet | All 2026 publications still search-only |
+| WTW | **Yes** (×1) | Global Medical Trends |
+| Deloitte | **Yes** (×3) | HCT + Gen Z & Millennial + Beyond Productivity |
+| Gallup | Not yet | State of the Global Workplace still search-only |
+| **Tier 2** | | |
+| PwC | **Yes** (×2) | 29th Global CEO Survey + Workforce Hopes & Fears 2025 brief |
+| SHRM | Not yet | CHRO Priorities + State of AI in HR still search-only |
+| Bain | Not yet | Aura data still search-only |
+| KPMG | **Yes** (×1) | Global Mobility Benchmarking 2025 |
+| Conference Board | Not yet | CHRO Confidence still search-only |
+| Gartner | **Yes** (×1) | CHRO Top Priorities |
+| IBM IBV (auto) | Not yet | CEO Study still search-only |
+| EY People Advisory (auto) | Not yet | Mobility Reimagined still search-only |
+| **CHRO Association** (newly auto-discovered) | **Yes** (×1) | 2026 CHRO Survey Key Findings — added to catalog this session |
+| **Tier 3** | | |
+| ILO | **Yes** (×2) | Employment and Social Trends 2026 + Heat Stress (2019 foundational) |
+| IFC (auto) | **Yes** (×1) | Hidden Potential: Inclusive Jobs in Green Transitions (Jan 2026) |
+| Hays, Robert Walters, Michael Page, INSEAD, ADB, Singapore MOM, AHRI, HKIHRM, People Matters, HR Asia, ManpowerGroup, Korn Ferry | Not yet | All still search-only |
+
+**Running totals:**
+- 18 PDFs read directly so far
+- 8 firms still pending PDFs (notably: WEF, BCG, Gallup, SHRM, all 11 Tier 3 APAC sources)
+
+---
+
+## Notable corrections / refinements added in batches 4 + 5
+
+1. **PwC AI ROI breakdown is more granular than search snippets suggested.** Actual: 56% see nothing, 30% revenue only, 26% costs only, **12% see both**. Earlier search-only posts cited "56% of CEOs say they got nothing from AI" — this is correct, but the more interesting structure (only 12% capture full value) was missing.
+
+2. **Gartner CHRO priorities labeled differently than search-only briefs suggested.** Gartner's official 2026 framing is: (1) Transform HR through AI, (2) Shape work in the human-machine era, (3) Mobilize leaders for growth in an uncertain world, (4) Address culture atrophy. Earlier briefs had the priorities labeled slightly differently — these are the exact official titles.
+
+3. **CHRO Association data is far stronger than search would suggest.** 91% of CHROs identify AI/digitization as top priority — that's a sharper convergence point than any other CHRO research we've cited. Plus the AI implementation barrier ranking (employee fear of job loss #1) is a finding that doesn't surface in other reports.
+
+4. **KPMG Global Mobility benchmarking confirms our earlier mobility post stats** — short-term/rotational adoption growing, ~70% leveraging short-term, 18% expect long-term assignment growth.
+
+5. **ILO Heat Stress numbers confirmed precisely.** Earlier posts cited "3.8% of working hours by 2030 = 136 million FTE jobs" and "2.4 billion exposed" — these are confirmed verbatim. Southern Asia at 5.3% and India at 34M FTE are the most powerful sub-numbers.
+
+6. **ILO Employment 2026 adds new convergent findings** for the "Job quality & informality" theme (already on the dedup ledger): 2.1 billion informal workers globally, 408M jobs gap, services trade growing 85% since 2005, Asia/Pacific 65.4% informal. These warrant a "fresh angle" recycling exception if we want to write a second post on informality.
+
+7. **PwC Workforce Hopes & Fears 2025 (Malaysia)** is a country-specific brief — not the full global survey. The global figures (~50,000 workers) need the parent PDF for full data. The Malaysia cut alone is enough to anchor an APAC post (19% daily GenAI use, 49% weekly fatigue, 53% financial strain).

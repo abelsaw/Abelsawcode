@@ -136,3 +136,9 @@ context.
 - Contributed to theme: Gen Z stability shift (AI-confidence + generational signal)
 - Discovered: 2026-05-19
 - Tier: Tier 3 (primary survey research)
+
+### CHRO Association — 2026 CHRO Survey Key Findings
+- URL: (PDF attached by user 2026-05-22; published in partnership with University of South Carolina Darla Moore School of Business)
+- Contributed to theme: CHRO agenda convergence (AI and workplace digitization as #1 priority for 91% of CHROs; geopolitical/inflation/regulatory as top external concerns)
+- Discovered: 2026-05-22
+- Tier: Tier 2 (national CHRO research body; ~150 CHROs surveyed)
