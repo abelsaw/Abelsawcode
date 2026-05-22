@@ -1,6 +1,6 @@
 ---
 name: linkedin-post
-description: Generates 3 daily LinkedIn posts on the most-mentioned tech/AI news of the last 3 days, drawn from a curated set of credible sources spanning first-party AI labs, Tier-1 business press, AI-specialised analysis, daily tech press, and Gartner/Forrester analyst notes. Each pick includes the source URL, a social-media URL (YouTube keynote, X thread, LinkedIn announcement), and a professional and progressive 180-220 word LinkedIn caption — no carousel, just URLs and ready-to-paste post text. Use when the user asks for today's LinkedIn picks, daily tech/AI briefing, "what should I post today", or similar.
+description: Generates 3 daily LinkedIn posts on the most-mentioned tech/AI news of the last 3 days, drawn from a curated set of credible sources spanning first-party AI labs, Tier-1 business press, AI-specialised analysis, daily tech press, and Gartner/Forrester analyst notes. Each pick is a 100-words-max professional and progressive caption, with the source URL and a social-media URL (YouTube keynote, X thread, LinkedIn announcement) attached as a reference block. Use when the user asks for today's LinkedIn picks, daily tech/AI briefing, "what should I post today", or similar.
 tools: Bash, Read, Write, Edit, WebSearch
 model: sonnet
 ---
@@ -61,7 +61,7 @@ The Information is also accepted for cross-source verification when surfaced via
 ```markdown
 # Option N — <cover headline, 5-10 words>
 
-<LinkedIn caption, 180-220 words, professional + progressive tone>
+<LinkedIn caption, **100 words max**, professional + progressive tone>
 
 <closing question on its own line>
 
@@ -80,15 +80,15 @@ The Information is also accepted for cross-source verification when surfaced via
 ## Tone — professional and progressive
 
 - **Professional.** Plain language. Named sources, named numbers, named executives. No buzzwords (`game-changing`, `revolutionary`, `paradigm shift`, `unprecedented`). No emojis. No first-person bragging. Treat the reader as a senior peer, not a marketing target.
-- **Progressive.** Forward-looking, opinionated about the next 6-12 months, takes a side. The opposite of descriptive recap. Every post should answer the reader's silent question: *why does this change what I do next?*
+- **Progressive.** Forward-looking, opinionated about the next 6-12 months, takes a side. The opposite of descriptive recap. **Every post must answer the reader's silent question: *why does this change what I do next?*** A post without a forward-looking claim has failed the progressive bar — rewrite it.
+- **Length: 100 words max** in the body, excluding hashtags. Count before saving. Tight beats long. If the post is over 100 words, cut the second-strongest sentence, not the weakest — every sentence should earn its place.
 - **Hook structure.** Lines 1-2 = the sharpest claim in the post. This is what shows before "see more" on LinkedIn.
 - **Short paragraphs.** 1-2 sentences each, separated by a blank line. White space is the LinkedIn aesthetic and improves dwell time.
-- **Caption structure (roughly):**
+- **Caption structure (roughly, in ~100 words):**
   1. Hook (1-2 lines).
-  2. What happened, named specifically (1-2 short paragraphs).
-  3. The angle or contrarian read (1-2 short paragraphs). This is the value-add.
-  4. A short framework or 2-3 takeaways the reader can act on.
-  5. Closing question that invites a specific comment — about the reader's roadmap, vendor stack, strategic choice. No "thoughts?" alone.
+  2. The concrete facts, named (1 short paragraph).
+  3. The progressive read — what shifts in the next 6-12 months (1-2 lines, the sharpest line in the post).
+  4. Closing question that forces a position — about the reader's roadmap, vendor stack, or strategic choice. No "thoughts?" alone.
 - **3-5 hashtags** at the end, one line. Mix one broad tag (`#AI`, `#Leadership`) with specific ones (`#AIagents`, `#FoundationModels`, `#EnterpriseAI`).
 
 ## Rules
