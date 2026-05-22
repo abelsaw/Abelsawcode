@@ -21,6 +21,7 @@ For the next 6 to 12 months, three things to plan around:
 
 Which Gemini surface forces the biggest change to your roadmap this quarter — Search, Workspace, or Antigravity?
 
+Source: https://blog.google/innovation-and-ai/sundar-pichai-io-2026/
 Watch the keynote: https://www.youtube.com/watch?v=wYSncx9zLIU
 
 #AI #GoogleIO #Gemini #AIagents #EnterpriseAI

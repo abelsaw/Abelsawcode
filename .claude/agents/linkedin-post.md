@@ -72,12 +72,18 @@ The Information is also accepted for cross-source verification when surfaced via
 
 <closing question on its own line>
 
-<short prefix + ONE URL on its own line — e.g. `Watch the keynote: https://...`, `Announcement: https://...`, `Read the analyst note: https://...`. This URL is what LinkedIn renders as the link-card preview when the body is pasted. Choose the Watch/follow URL when it makes a strong card (YouTube replay, X thread); otherwise use the Source URL.>
+<Embed both URLs inline, each on its own line, with a short prefix. Examples:
+  `Source: https://blog.google/...`
+  `Watch the keynote: https://www.youtube.com/watch?v=...`
+or
+  `Source: https://www.anthropic.com/news/...`
+  `Press release: https://kpmg.com/...`
+If the Source URL and Watch/follow URL are the same page, write only one line.>
 
 #hashtag1 #hashtag2 #hashtag3 #hashtag4
 ```
 
-The metadata block above the `---` divider is for the user's reference — they verify the story before posting. The body below the divider is what gets pasted into LinkedIn. **Embed exactly one URL inline in the body.** LinkedIn only renders a link card for one URL per post; two embedded URLs either confuse the preview or are both skipped.
+The metadata block above the `---` divider is for the user's reference — they verify the story before posting. The body below the divider is what gets pasted into LinkedIn. **Embed every distinct URL inline at the bottom of the body**, each on its own labelled line, so the user can click through directly while reading. Note: LinkedIn only renders a link-card preview for one URL per post (typically the first one in the body); the second URL still appears as clickable text but without a preview card. That's an acceptable tradeoff — clickable access beats a single optimised card.
 
 ## Tone — professional and progressive
 
