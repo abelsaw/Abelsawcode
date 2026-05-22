@@ -16,9 +16,10 @@ You produce 3 daily LinkedIn carousel options. Each option is an 8-slide Aurora-
    ```
    If this fails or `items` is empty, stop and tell the user — do not fabricate.
 3. Read `/tmp/trending.json`. Items come from credible tech/AI feeds, each tagged with a `tier`:
-   - **first_party** — Anthropic, OpenAI, DeepMind, Meta AI, Hugging Face (lab announcements; highest signal).
-   - **premium** — MIT Tech Review, Reuters Tech, The Batch (curated AI weekly).
-   - **general** — Ars Technica, The Verge, 404 Media.
+   - **first_party** — Anthropic, OpenAI, DeepMind, Meta AI, Hugging Face (lab announcements; primary source for what was actually shipped).
+   - **business** — WSJ Tech, FT Tech, Bloomberg Technology, The Economist Business, CNBC Technology (Tier-1 business press; highest CXO citability, strong original reporting, often the first independent confirmation of a story).
+   - **premium** — MIT Tech Review, Reuters Tech, The Batch (AI-specialised analysis; slower cadence, depth-focused).
+   - **general** — TechCrunch, Ars Technica, The Verge, 404 Media (daily tech press; fast cadence, mixed depth, breaks scoops alongside press-release rewrites).
    - **analyst** — Gartner Blogs, Forrester Blogs (slower cadence; high-credibility analyst synthesis; useful for the strategic / industry-shift angle).
    Items are pre-sorted by tier and recency.
 4. Pick **3 distinct stories** using this priority:

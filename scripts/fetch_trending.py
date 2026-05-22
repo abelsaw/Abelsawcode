@@ -26,9 +26,18 @@ SOURCES = [
     ("first_party", "DeepMind",         "https://deepmind.google/blog/rss.xml"),
     ("first_party", "Meta AI",          "https://ai.meta.com/blog/rss/"),
     ("first_party", "Hugging Face",     "https://huggingface.co/blog/feed.xml"),
+    # Tier-1 business press: highest CXO citability, strict editorial standards.
+    ("business",    "Wall Street Journal Tech", "https://feeds.a.dj.com/rss/RSSWSJD.xml"),
+    ("business",    "Financial Times Tech",     "https://www.ft.com/technology?format=rss"),
+    ("business",    "Bloomberg Technology",     "https://feeds.bloomberg.com/technology/news.rss"),
+    ("business",    "The Economist Business",   "https://www.economist.com/business/rss.xml"),
+    ("business",    "CNBC Technology",          "https://www.cnbc.com/id/19854910/device/rss/rss.html"),
+    # AI-specialised analysis: slower cadence, deep takes.
     ("premium",     "MIT Tech Review",  "https://www.technologyreview.com/feed/"),
     ("premium",     "Reuters Tech",     "https://www.reutersagency.com/feed/?taxonomy=best-sectors&post_type=best&best-sectors=technology"),
     ("premium",     "The Batch",        "https://www.deeplearning.ai/the-batch/feed/"),
+    # Daily tech press: fast cadence, mixed depth.
+    ("general",     "TechCrunch",       "https://techcrunch.com/feed/"),
     ("general",     "Ars Technica",     "https://feeds.arstechnica.com/arstechnica/index"),
     ("general",     "The Verge",        "https://www.theverge.com/rss/index.xml"),
     ("general",     "404 Media",        "https://www.404media.co/rss/"),
@@ -37,6 +46,8 @@ SOURCES = [
     # via WebSearch in the cxo-tech-brief agent instead.
     ("analyst",     "Gartner Blogs",    "https://blogs.gartner.com/feed/"),
     ("analyst",     "Forrester Blogs",  "https://go.forrester.com/blogs/feed/"),
+    # The Information is intentionally omitted: paywalled, limited public RSS.
+    # It remains in the cxo-tech-brief publisher allowlist for WebSearch hits.
 ]
 
 
