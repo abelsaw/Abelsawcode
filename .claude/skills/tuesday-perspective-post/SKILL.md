@@ -1,6 +1,6 @@
 ---
 name: tuesday-perspective-post
-description: Generate 2 LinkedIn post options (≤200 words each, text-only) sharing the user's personal perspective on the intersection of AI, HR, and technology — pegged to a recent (last 7 days) news story from top-tier business press or management/strategy publications, with an Asian-market lens. Each option follows a News → Implication → Action structure, uses emojis sparingly, and closes with 5–7 hashtags including the fixed #myperspective. Use when the user invokes /tuesday-perspective-post.
+description: Surface 3 fresh news pegs from the last 7 days at the intersection of AI, HR, and technology (Asian-market lens, top-tier business press or management/strategy publications), present them as a menu, and on the user's pick draft 2 LinkedIn post options (≤200 words each, text-only) following a News → Implication → Action structure with 5–7 topical hashtags. Use when the user invokes /tuesday-perspective-post.
 ---
 
 # Tuesday Perspective Post — on-demand
@@ -60,15 +60,44 @@ broader topic coverage that doesn't fit this skill).
    shift — not opinion pieces or evergreen think pieces.
 5. **WebFetch to verify.** Never reference a story you haven't actually read.
 
-Pick **the single strongest story**. If you have two close finalists, pick the
-one with the sharpest CHRO/transformation-leader implication and note the
-runner-up in your final report.
+Pick **the three strongest stories** from the window — distinct angles, not
+three slices of the same news. Each candidate must pass all five selection
+rules independently. Rank them by sharpest CHRO/transformation-leader
+implication.
 
-If no qualifying story exists in the 7-day window, **stop and report** —
-ask whether to widen to 14 days or to write an evergreen perspective instead.
-Do not fabricate a peg.
+If fewer than three qualifying stories exist in the 7-day window, **stop and
+report** — ask whether to widen to 14 days, drop to fewer options, or write
+an evergreen perspective instead. Do not fabricate a peg.
 
-## Step 2 — Draft the two post options
+## Step 2 — Present the 3 news pegs as a menu
+
+Before drafting any posts, surface the three candidates in chat as a menu so
+the user can pick which one they want drafted. Render this shape:
+
+```
+## News options (pick one)
+
+### Option 1 — {Short label}
+- **Headline:** {Headline} — {Outlet}, {publication date}
+- **URL:** {link}
+- **Asia angle:** {one line on the regional stake}
+- **Why this works:** {one line on the sharpest CHRO/transformation-leader implication}
+
+### Option 2 — {Short label}
+- ...
+
+### Option 3 — {Short label}
+- ...
+```
+
+Close with: **"Reply with 1, 2, or 3 and I will draft both takes for that
+story. Say 'all three' if you want one draft per story instead of two takes
+on one."**
+
+**Stop here and wait for the user to pick.** Do not draft post bodies in the
+same turn as surfacing the menu.
+
+## Step 3 — Draft the two post options (after the user picks)
 
 Both options share the same structure but differ in stance and energy.
 
@@ -84,7 +113,7 @@ Both options share the same structure but differ in stance and energy.
    its work.
 3. **Action (the close).** 1–2 sentences pointing to a concrete next move a
    leader can take this week, this quarter. Specific over abstract.
-4. **Hashtags.** 5–7 total, on the final line. **Always include `#myperspective`**.
+4. **Hashtags.** 5–7 topical hashtags, on the final line. No mandatory tag — match the content.
 
 ### Voice (locked)
 
@@ -124,14 +153,14 @@ in the post copy.** Voice cues only:
 ### Hashtag rules
 
 - **5–7 hashtags total**, single line at the end.
-- **`#myperspective` is mandatory** — it goes first or last, your call for
-  rhythm.
-- Topical tags should reflect the actual content. Useful pool:
+- **No mandatory hashtag.** Tags should reflect the actual content of the
+  post. Useful pool:
   `#AI`, `#GenAI`, `#FutureOfWork`, `#HR`, `#HRTech`, `#Leadership`,
   `#DigitalTransformation`, `#WorkforceStrategy`, `#TalentStrategy`,
   `#Asia`, `#APAC`, `#FutureOfWorkAsia`, `#AsiaCHRO`, `#Singapore`,
-  `#India`, `#TechLeadership`, `#AIstrategy`.
-- Use Asia-tagged hashtags only when the post is meaningfully Asia-specific.
+  `#India`, `#Malaysia`, `#TechLeadership`, `#AIstrategy`.
+- Use country/region-tagged hashtags only when the post is meaningfully
+  specific to that market.
 
 ### Word count
 
@@ -149,12 +178,12 @@ in the post copy.** Voice cues only:
   prediction, a call to retire an old assumption). It still respects every
   professionalism rule above.
 
-## Step 3 — Present compactly in chat (no files saved)
+## Step 4 — Present compactly in chat (no files saved)
 
 Output destination is **chat only.** Do not write to `posts/drafts/` or any
 other path.
 
-For the user, render this exact shape:
+For the user's chosen peg, render this exact shape:
 
 ```
 **News peg:** {Headline} — {Outlet}, {publication date}
@@ -175,6 +204,10 @@ For the user, render this exact shape:
 Close with: **"Want me to revise either of these, sharpen the bolder one
 further, or swap to a different story?"**
 
+If the user picked "all three", instead draft **one** post per story
+(your call on measured or bolder per peg) and present them as Option 1 /
+Option 2 / Option 3 with the same word-count discipline.
+
 ---
 
 ## Hard rules
@@ -183,8 +216,8 @@ further, or swap to a different story?"**
 - **No fabrication.** The headline, outlet, date, and any stat must come from
   a source you actually fetched.
 - **≤200 words per option, including hashtags.**
-- **`#myperspective` is mandatory** on both options.
+- **No mandatory hashtag.** 5–7 topical tags.
 - **No images, no carousels, no files written.** Chat output only.
 - **Voice, not role.** Do not name the user's title in the post body.
-- **One post peg, two takes.** Both options anchor to the same news story
-  unless the user explicitly asks for two different stories.
+- **Surface 3 news pegs as a menu first, then draft on the picked peg.**
+  Do not draft post bodies in the same turn as surfacing the menu.
