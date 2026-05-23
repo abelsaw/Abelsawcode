@@ -1,17 +1,18 @@
 ---
 name: competitor-comparison
-description: Generate 3 LinkedIn post options (≤50 words each) comparing the top 1 and top 2 players in a user-named industry, each with a generated head-to-head VS image (1080x1080). Sourced from 2026 research reports and the last 8-12 weeks of press. Voice = founder/CEO — punchy, opinionated, first-person. The three options take the same comparison angle but use different hooks (question, stat, contrarian take). Use when the user wants competitor comparison content — phrases like "compare top 2 in [industry]", "do a versus post on [industry]", "competitor comparison for [industry]", or invokes /competitor-comparison.
+description: Generate 3 LinkedIn post options (≤50 words each) comparing the top 1 and top 2 players in a user-named industry, each with a generated side-by-side comparison image (1080x1080) showing both logos on top and 5-7 labelled comparison rows below. Logos are fetched at runtime via Clearbit. Sourced from 2026 research reports and the last 8-12 weeks of press. Voice = founder/CEO — punchy, opinionated, first-person. The three options take the same comparison angle but use different hooks (question, stat, contrarian take). Use when the user wants competitor comparison content — phrases like "compare top 2 in [industry]", "do a versus post on [industry]", "competitor comparison for [industry]", or invokes /competitor-comparison.
 ---
 
-# Competitor comparison — head-to-head LinkedIn posts
+# Competitor comparison — side-by-side LinkedIn posts
 
 You are running the `competitor-comparison` skill. The user names an
 industry; you identify the top 1 and top 2 players, pick ONE strong
 business-strategy angle that genuinely separates them in 2026, and draft
 **3 LinkedIn post options (each ≤50 words)** in a founder/CEO voice. Each
 option uses the SAME angle but a DIFFERENT hook (question, stat,
-contrarian take). Each option gets a matching **head-to-head VS image**
-(1080×1080 PNG).
+contrarian take). Each option gets a matching **side-by-side comparison
+card** (1080×1080 PNG) with both logos on top and 5-7 labelled
+comparison rows beneath.
 
 ## Arguments (parsed from the skill `args` string)
 
@@ -59,22 +60,36 @@ Pull two streams in parallel via `WebSearch` and `WebFetch`:
 - **2026 research reports.** McKinsey, BCG, Bain, Deloitte, PwC, Gartner, Forrester, IDC, Goldman Sachs sector notes, Morgan Stanley, etc. — whichever firm covers the industry well. Look for the latest 2026 industry outlook or sector deep-dive that names both companies. Filings (10-Ks, annual reports, investor day decks) count when freshly released in 2026.
 - **Recent news & press (last 8-12 weeks).** Earnings calls, strategic announcements, executive moves, M&A, regulatory filings, major product launches. Reuters, Bloomberg, FT, WSJ, The Information, sector trade press.
 
-For each company, capture 3-5 concrete data points across:
-- Strategy / positioning shifts in 2026
-- Financials (revenue growth, margin, capital return)
-- Product or platform moves
-- AI / tech bets where relevant
-- Major risks or controversies
+For each company, extract **5-7 comparable data points** across the same
+dimensions (so the comparison card can show them side by side on the same
+rows). Pick dimensions that genuinely separate the two players in 2026.
+Suggested dimensions:
+
+- Revenue (latest fiscal year / TTM)
+- Growth (YoY %, or segment growth)
+- Operating margin (or other margin metric relevant to the industry)
+- AI / tech bet (one short phrase, e.g. "On-device" vs "Hyperscale cloud")
+- Capital allocation (buybacks, capex, dividends, M&A)
+- Customer position / moat (one short phrase, e.g. "Hardware lock-in" vs "Enterprise stack")
+- Strategic risk or controversy in 2026
+
+Use the same 5-7 dimensions for both companies. The values can be
+numbers, short phrases, or short labels (≤22 characters fits best on the
+card).
+
+Also capture each company's primary web domain (e.g. `apple.com`,
+`microsoft.com`) — the image generator uses these to fetch logos via
+Clearbit at draft time.
 
 **Hard rules on research:**
-- **No fabrication.** Every stat in a post must trace back to a real source you found. If you can't verify a number, don't use it.
+- **No fabrication.** Every stat in a post AND every value on the comparison card must trace back to a real source you found. If you can't verify a number, don't use it — use a short qualitative descriptor instead (e.g. "On-device" rather than a made-up dollar figure).
 - **2026 first.** Cite 2026 reports and 8-12 week-old news. A 2025 stat is acceptable ONLY if no 2026 equivalent exists and you flag it as 2025.
-- **Both sides.** Don't write a hit piece. Get comparable evidence on both companies.
+- **Both sides.** Don't write a hit piece. Get comparable evidence on both companies — every dimension you put on the card must have a value for both sides.
 
 Save a one-page research note to
 `posts/drafts/competitor-comparison-research-YYYY-MM-DD-<industry-slug>.md`
-with the two companies, their 3-5 data points each, and 3-5 candidate
-comparison angles ranked by sharpness.
+with the two companies (names + domains), the 5-7 dimensions and values
+for each side, and 3-5 candidate comparison angles ranked by sharpness.
 
 ## Step 4 — Pick the angle
 
@@ -128,28 +143,37 @@ All three posts argue the SAME comparison angle. They differ only in the
 - Pick a side where the evidence supports one. "Both are winning" is the laziest take.
 - Don't fabricate. Don't cite a 2024 figure as 2026.
 
-## Step 6 — Generate the head-to-head VS image for each post
+## Step 6 — Generate the side-by-side comparison card for each post
 
-One 1080×1080 VS card per option. Accent color rotates: option 1 = navy,
-option 2 = rust, option 3 = moss. Use `scripts/generate_vs_image.py`:
+One 1080×1080 comparison card per option. Accent color rotates: option
+1 = navy, option 2 = rust, option 3 = moss. The card shows both logos
+on top (fetched at runtime via Clearbit), company names below, then 5-7
+labelled comparison rows. Use `scripts/generate_vs_image.py`:
 
 ```bash
 python3 scripts/generate_vs_image.py \
   --left "<Company A>" \
   --right "<Company B>" \
-  --left-stat "<one-line 2026 stat or descriptor for A>" \
-  --right-stat "<one-line 2026 stat or descriptor for B>" \
+  --left-domain <a-primary-domain> \
+  --right-domain <b-primary-domain> \
+  --row "<Dimension 1>|<A value>|<B value>" \
+  --row "<Dimension 2>|<A value>|<B value>" \
+  --row "<Dimension 3>|<A value>|<B value>" \
+  --row "<Dimension 4>|<A value>|<B value>" \
+  --row "<Dimension 5>|<A value>|<B value>" \
   --tag "<industry tag, e.g. 'Big Tech 2026'>" \
   --option "Option <N>" \
   --tagline "<the post's hook line, ≤80 chars>" \
   --accent <navy|rust|moss> \
-  --output posts/drafts/vs-cards/YYYY-MM-DD-<industry-slug>-option-<N>.png
+  --output posts/drafts/comparison-cards/YYYY-MM-DD-<industry-slug>-option-<N>.png
 ```
 
-You can run all three options in parallel via `&` and `wait`. Keep the
-`--left-stat` / `--right-stat` lines short (≤60 chars each) — they sit
-under the company names and auto-shrink, but short looks best. The
-`--tagline` is the bottom anchor line — usually the post's hook.
+Notes:
+- Pass **5-7 `--row` entries**. The same dimensions and rows are reused across the three options for visual consistency — only the accent, option label, and tagline change between options.
+- Each row format is `Label|Value A|Value B` (pipe-delimited). Keep values short — **≤22 characters** fits comfortably; longer values auto-shrink but lose visual weight.
+- Logos are fetched from `https://logo.clearbit.com/<domain>` and cached under `.cache/logos/`. If a fetch fails (no network, 404, blocked), the card falls back to an accent-colored disc with the company's first letter — usable but less polished. If you see fallback discs in your first render, double-check the domain you passed.
+- You can run all three options in parallel via `&` and `wait`.
+- The `--tagline` is the bottom anchor line — usually the post's hook in shortened form.
 
 ## Step 7 — Save drafts
 
@@ -166,7 +190,7 @@ Angle: {the single comparison angle, one sentence}
 Source research: posts/drafts/competitor-comparison-research-{YYYY-MM-DD}-{industry-slug}.md
 
 ## Option 1 — stat hook
-- **VS card:** posts/drafts/vs-cards/{YYYY-MM-DD}-{industry-slug}-option-1.png
+- **Comparison card:** posts/drafts/comparison-cards/{YYYY-MM-DD}-{industry-slug}-option-1.png
 - **Sources:** {source 1; source 2}
 - **Word count:** {N}
 
@@ -185,10 +209,12 @@ Source research: posts/drafts/competitor-comparison-research-{YYYY-MM-DD}-{indus
 
 Show:
 - The pair, the selection basis, the angle (one line each)
-- For each option: hook type, word count, VS card path, the post body in a blockquote
+- The 5-7 comparison dimensions used on the cards (so the user can sanity-check before publish)
+- For each option: hook type, word count, comparison card path, the post body in a blockquote
 - An **engagement-likelihood note** ranking the three options for LinkedIn (which hook is most likely to drive comments / saves / shares and why)
+- If any logo fetch failed, flag it explicitly so the user knows to either drop a manual logo into `.cache/logos/<domain>.png` or accept the letter-disc fallback
 
-End with: "Want me to revise any of these, swap the angle, or publish one?"
+End with: "Want me to revise any of these, swap the angle, change a row on the card, or publish one?"
 
 ## Step 9 — Append to usage history
 
@@ -207,9 +233,9 @@ Append to the top of the "Used pairs (most recent first)" section.
 ## Step 10 — Publish on approval
 
 When the user picks an option, delegate to `linkedin-publisher` using
-`scripts/linkedin_post.py` with the chosen slug. Use the VS card as the
-single image. Always dry-run first; never publish without an explicit
-"yes" / "publish" from the user.
+`scripts/linkedin_post.py` with the chosen slug. Use the comparison
+card as the single image. Always dry-run first; never publish without
+an explicit "yes" / "publish" from the user.
 
 ---
 
@@ -217,7 +243,8 @@ single image. Always dry-run first; never publish without an explicit
 
 - Research note: `posts/drafts/competitor-comparison-research-YYYY-MM-DD-<industry-slug>.md`
 - Drafts: `posts/drafts/competitor-comparison-YYYY-MM-DD-<industry-slug>.md`
-- VS cards: `posts/drafts/vs-cards/YYYY-MM-DD-<industry-slug>-option-N.png`
+- Comparison cards: `posts/drafts/comparison-cards/YYYY-MM-DD-<industry-slug>-option-N.png`
+- Logo cache: `.cache/logos/<domain>.png`
 - Usage history: `.claude/skills/competitor-comparison/usage-history.md`
 
 ## Hard rules (recap)
@@ -226,6 +253,6 @@ single image. Always dry-run first; never publish without an explicit
 - **≤50 words per post**, including hashtags.
 - **Same angle, different hooks** across the three options.
 - **Founder/CEO voice.** First-person, opinionated, short sentences. Pick a side where the evidence supports one.
-- **No fabrication.** Every stat traces to a real source in the research note.
+- **No fabrication.** Every stat — in the post body AND on the card rows — traces to a real source in the research note.
 - **30-day pair dedup.** Don't recompare the same pair within 30 days unless the user explicitly overrides.
-- **VS card per option.** Three posts = three head-to-head PNGs. Navy / rust / moss accents.
+- **One comparison card per option.** Three posts = three side-by-side PNGs. Navy / rust / moss accents. Logos on top, 5-7 labelled rows below, small "vs" between, tagline at bottom.
