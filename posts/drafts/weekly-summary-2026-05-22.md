@@ -1,6 +1,6 @@
 # Weekly summary — 2026-05-22
 
-## Option 1 — synthesis (capability-control-consequence)
+## Option 1 — capability-control-consequence (synthesis)
 - **Theme:** This was the week the agent stack and the workforce conversation finally collided in the open: capability shipped, enterprise control shipped, and a CEO said the quiet part out loud (then walked it back).
 - **Stories:** gemini-3-5-flash, anthropic-managed-agents, stanchart-lower-value-human-capital
 - **Framing:** synthesis
@@ -27,7 +27,7 @@ Winters had the right plan. He just had the wrong sentence.
 #FutureOfWork #AgenticAI #Transformation #AILeadership
 ---END---
 
-## Option 2 — question (who-owns-the-language)
+## Option 2 — who-owns-the-language (question)
 - **Theme:** Same through-line, framed as the question the week put on my desk: when capability and control are engineered, who engineers the words a CEO uses about the people in the redesign?
 - **Stories:** gemini-3-5-flash, anthropic-managed-agents, stanchart-lower-value-human-capital
 - **Framing:** question
@@ -58,7 +58,7 @@ That's the bit I'm working on this week.
 #FutureOfWork #AILeadership #Transformation #AgenticAI
 ---END---
 
-## Option 3 — learning (what-shifted-me)
+## Option 3 — what-shifted-me (learning)
 - **Theme:** Same through-line, framed as a personal update: until Tuesday I was reading Flash and Managed Agents as model news; the StanChart sequence reframed them as org-design news with a new return-on-investment table.
 - **Stories:** gemini-3-5-flash, anthropic-managed-agents, stanchart-lower-value-human-capital
 - **Framing:** learning

@@ -130,7 +130,7 @@ Use this file template (the `---POST---` / `---END---` markers matter — `linke
 ```markdown
 # Weekly summary — {Friday YYYY-MM-DD}
 
-## Option 1 — synthesis ({slug-1})
+## Option 1 — {slug-1} (synthesis)
 - **Theme:** {through-line}
 - **Stories:** {story-1-slug}, {story-2-slug}, {story-3-slug}
 - **Framing:** synthesis
@@ -143,10 +143,10 @@ Use this file template (the `---POST---` / `---END---` markers matter — `linke
 #Hashtag1 #Hashtag2 #Hashtag3
 ---END---
 
-## Option 2 — question ({slug-2})
+## Option 2 — {slug-2} (question)
 ...
 
-## Option 3 — learning ({slug-3})
+## Option 3 — {slug-3} (learning)
 ...
 ```
 
