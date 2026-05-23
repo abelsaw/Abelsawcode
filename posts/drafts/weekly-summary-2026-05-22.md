@@ -31,7 +31,8 @@ Winters had the right plan. He just had the wrong sentence.
 - **Theme:** Same through-line, framed as the question the week put on my desk: when capability and control are engineered, who engineers the words a CEO uses about the people in the redesign?
 - **Stories:** gemini-3-5-flash, anthropic-managed-agents, stanchart-lower-value-human-capital
 - **Framing:** question
-- **Word count:** 236
+- **Word count:** 234 (excl. hashtags) / 238 (incl. hashtags)
+- **Source URLs in body:** removed per user request — citations remain in `posts/drafts/weekly-research-2026-05-22.md`
 - **Status:** draft
 
 ---POST---
@@ -39,11 +40,11 @@ The question I'm carrying into Monday: who owns the language?
 
 Three things happened this week. None of them in isolation answer it.
 
-Google launched Gemini 3.5 Flash on Tuesday. The cheap tier now outperforms last year's flagship on agentic work at four times the speed, and Pichai pitched it as a billion dollars of annual savings for enterprises that move 80% of workloads onto it. Macquarie, Shopify and Salesforce queued up the same day. https://techcrunch.com/2026/05/19/with-gemini-3-5-flash-google-bets-its-next-ai-wave-on-agents-not-chatbots/
+Google launched Gemini 3.5 Flash on Tuesday. The cheap tier now outperforms last year's flagship on agentic work at four times the speed, and Pichai pitched it as a billion dollars of annual savings for enterprises that move 80% of workloads onto it. Macquarie, Shopify and Salesforce queued up the same day.
 
-Anthropic shipped self-hosted sandboxes and MCP tunnels for Claude Managed Agents on the same day. Enterprises can now run agents inside their own security perimeter. The infrastructure conversation just collapsed by a sprint. https://www.infoq.com/news/2026/05/code-with-claude/
+Anthropic shipped self-hosted sandboxes and MCP tunnels for Claude Managed Agents on the same day. Enterprises can now run agents inside their own security perimeter. The infrastructure conversation just collapsed by a sprint.
 
-Then Standard Chartered's CEO Bill Winters told reporters the bank would replace "lower-value human capital" with AI and trim 7,000 roles. The phrase didn't survive the news cycle. He walked it back the next day, kept the strategy. https://www.bloomberg.com/news/articles/2026-05-19/stanchart-ceo-says-ai-to-replace-lower-value-human-capital
+Then Standard Chartered's CEO Bill Winters told reporters the bank would replace "lower-value human capital" with AI and trim 7,000 roles. The phrase didn't survive the news cycle. He walked it back the next day, kept the strategy.
 
 So the question.
 
