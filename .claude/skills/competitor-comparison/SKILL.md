@@ -1,27 +1,94 @@
 ---
 name: competitor-comparison
-description: Generate 3 LinkedIn post options (≤50 words each) comparing the top 1 and top 2 players in a user-named industry, each with a generated side-by-side comparison image (1080x1080) showing both logos on top and 5-7 labelled comparison rows below. Logos are fetched at runtime via Clearbit. Sourced from 2026 research reports and the last 8-12 weeks of press. Voice = founder/CEO — punchy, opinionated, first-person. The three options take the same comparison angle but use different hooks (question, stat, contrarian take). Use when the user wants competitor comparison content — phrases like "compare top 2 in [industry]", "do a versus post on [industry]", "competitor comparison for [industry]", or invokes /competitor-comparison.
+description: Generate 3 LinkedIn post options (≤50 words each) comparing the top 1 and top 2 players in an industry, each with a generated side-by-side comparison image (1080x1080) showing both logos on top and 5-7 labelled comparison rows below. When the user doesn't name an industry or a specific pair, the skill runs a discovery sweep across credible sources (Reuters, Bloomberg, FT, WSJ, CNBC, The Information, SEC filings, McKinsey/BCG/Bain) and suggests 5-7 currently-newsworthy rival pairs to pick from. Logos are fetched at runtime via Clearbit. Voice = founder/CEO — punchy, opinionated, first-person. The three options take the same comparison angle but use different hooks (question, stat, contrarian take). Use when the user wants competitor comparison content — phrases like "compare top 2 in [industry]", "suggest a rivalry to post about", "do a versus post", "competitor comparison", or invokes /competitor-comparison.
 ---
 
 # Competitor comparison — side-by-side LinkedIn posts
 
-You are running the `competitor-comparison` skill. The user names an
-industry; you identify the top 1 and top 2 players, pick ONE strong
-business-strategy angle that genuinely separates them in 2026, and draft
-**3 LinkedIn post options (each ≤50 words)** in a founder/CEO voice. Each
-option uses the SAME angle but a DIFFERENT hook (question, stat,
-contrarian take). Each option gets a matching **side-by-side comparison
-card** (1080×1080 PNG) with both logos on top and 5-7 labelled
-comparison rows beneath.
+You are running the `competitor-comparison` skill. There are three entry
+points:
+
+1. **User names a pair** (`competitors: "Apple vs Microsoft"`) — jump straight to research.
+2. **User names an industry** (`industry: big tech`) — pick the top 1 and top 2, then research.
+3. **User gives no industry or pair** — run a **discovery sweep** across credible sources to surface 5-7 currently-newsworthy rival pairs, present them as a menu, and let the user pick.
+
+Whichever entry point is used, the skill picks ONE strong
+business-strategy angle that genuinely separates the two players in
+2026, drafts **3 LinkedIn post options (each ≤50 words)** in a
+founder/CEO voice (same angle, different hooks: stat, question,
+contrarian), and renders a **side-by-side comparison card** (1080×1080
+PNG, logos on top + 5-7 labelled comparison rows beneath) per option.
 
 ## Arguments (parsed from the skill `args` string)
 
-- `industry: <name>` — the industry/category to compare. Required for the default flow (e.g. `industry: big tech`, `industry: streaming`, `industry: ride-hailing`).
-- `competitors: "<A> vs <B>"` — skip the leader-selection step and use this exact pair (e.g. `competitors: "Apple vs Microsoft"`).
-- `angle: <topic>` — lock the comparison angle (e.g. `angle: AI strategy`, `angle: margin trajectory`, `angle: capital allocation`). Default: skill picks the sharpest cross-cutting angle from the research.
+- `industry: <name>` — the industry/category to compare (e.g. `industry: big tech`, `industry: streaming`, `industry: ride-hailing`). Skips discovery.
+- `competitors: "<A> vs <B>"` — skip both discovery and leader-selection and use this exact pair (e.g. `competitors: "Apple vs Microsoft"`).
+- `discover: <industries|within>` — explicitly trigger discovery. `discover: industries` = cross-industry sweep (the default when no other args are given). `discover: within` paired with `industry: <name>` = surface rival pairs inside that specific industry instead of just picking the top 1/2.
+- `angle: <topic>` — lock the comparison angle (e.g. `angle: AI strategy`, `angle: margin trajectory`). Default: skill picks the sharpest cross-cutting angle from the research.
 - `count: N` — produce N post options instead of the default 3 (cap at 5).
 
-If neither `industry` nor `competitors` is supplied, ask the user which industry to cover before doing anything else.
+If no `industry` and no `competitors` are supplied, default to **discovery mode** (Step 0). Don't ask the user which industry to cover — surface candidates and let them pick.
+
+---
+
+## Step 0 — Discovery mode (run when no industry or pair is specified)
+
+Goal: surface **5-7 currently-newsworthy rival pairs** from the last 8-12 weeks of credible coverage, so the user can pick one without having to think of an industry first.
+
+### What "credible" means here
+
+Lean on these sources for discovery (use `WebSearch` to find recent articles, `WebFetch` for any source page worth reading in full):
+
+- **Financial press:** Reuters, Bloomberg, FT, WSJ, CNBC, Barron's, The Economist, Nikkei Asia.
+- **Tech / business trade press:** The Information, Axios, TechCrunch, The Verge, Wired, Fortune, Forbes.
+- **Earnings & filings:** SEC EDGAR 8-Ks and 10-Ks, investor-day decks, quarterly earnings calls. These reveal the rivalry framing companies use about themselves.
+- **Consulting & analyst notes:** McKinsey, BCG, Bain, Deloitte, PwC, Gartner, Forrester, IDC, Statista. Cite sector outlooks and market-share tables.
+- **Sector-specific outlets** where they dominate coverage (e.g. STAT News for pharma, FlightGlobal for aerospace, Variety for media, Modern Healthcare for healthcare, AdAge for marketing, GlobeSt for real estate, etc.).
+
+### How to run the sweep
+
+Run a parallel batch of `WebSearch` queries hitting different lenses:
+
+1. `biggest corporate rivalry 2026 head to head competition industry leaders`
+2. `"vs" 2026 Q1 earnings comparison rival companies`
+3. `2026 market share leaders [chips|cloud|EVs|streaming|pharma|retail|airlines]` (run a few sector variants)
+4. `2026 [industry] consolidation merger acquisition rival`
+5. `top corporate rivalries to watch 2026`
+
+From the results, extract pair candidates. For each pair, gather:
+- Both company names + primary domains
+- Industry / category label
+- **"Why now"** — the 1-2 line news hook from the last 8-12 weeks that makes this pair worth a post right this week (a market-share flip, an earnings miss, a strategic pivot, an executive shake-up, an M&A move, a regulatory ruling).
+- 2-3 source URLs
+
+### Ranking criteria for the candidate menu
+
+Rank pairs by, in order:
+
+1. **News velocity** — how much coverage in the last 8-12 weeks. A market-share crossover or earnings surprise outranks a long-running stable rivalry.
+2. **Business significance** — large markets, named leaders, real strategic stakes. A $100B market beats a $5B niche.
+3. **Audience interest** — would a LinkedIn business audience care? Big tech / AI / EVs / pharma / streaming / retail / airlines tend to over-index; obscure B2B niches under-index unless the news hook is huge.
+4. **Diversity** — across the final 5-7, avoid stacking three big-tech pairs. Spread across sectors.
+
+### Apply the dedup ledger
+
+Before showing the menu, read `.claude/skills/competitor-comparison/usage-history.md` and **drop any pair used within the last 30 days** (order-independent — Apple vs Microsoft = Microsoft vs Apple). If a top candidate is excluded, replace it with the next-best pair so the menu still shows 5-7 options.
+
+### Present the menu
+
+Show a numbered list. For each candidate:
+
+```
+N. {Company A} vs {Company B} — {Industry}
+   Why now: {1-2 line news hook with dates / numbers}
+   Sources: {short labels — e.g. Reuters 2026-04-15, Bloomberg 2026-05-02, Q1 26 earnings}
+```
+
+End with: "Which pair should I run? Reply with the number (or name a different pair / industry)."
+
+Wait for the user to pick. Once they pick:
+- If they chose a pair from the menu, treat that as `competitors: "<A> vs <B>"` and skip to Step 3.
+- If they reply with a different pair or industry, switch into the matching entry path (Step 2 for industry, Step 3 for pair).
 
 ---
 
@@ -249,6 +316,9 @@ an explicit "yes" / "publish" from the user.
 
 ## Hard rules (recap)
 
+- **Discovery is the default entry point.** No `industry:`, no `competitors:` → run the cross-industry sweep and present a menu. Don't ask the user to pick an industry blindly.
+- **Discovery uses credible sources only.** Reuters, Bloomberg, FT, WSJ, CNBC, The Information, SEC EDGAR filings, McKinsey / BCG / Bain / Gartner / Statista, plus sector-specific trade press. No social-media-only signals, no aggregator-only sources.
+- **Discovery applies the 30-day dedup ledger** before presenting the menu, so the user never sees a pair already covered recently.
 - **2026-first sources.** Reports and news from 2026 or the last 8-12 weeks. 2025 only as fallback, flagged.
 - **≤50 words per post**, including hashtags.
 - **Same angle, different hooks** across the three options.
