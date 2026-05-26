@@ -165,9 +165,9 @@ def main() -> int:
 
     rows = [parse_row(r) for r in args.row]
     if len(rows) < 3:
-        sys.exit("ERROR: provide at least 3 --row entries (5-7 recommended).")
-    if len(rows) > 7:
-        sys.exit("ERROR: at most 7 --row entries supported.")
+        sys.exit("ERROR: provide at least 3 --row entries (5-9 recommended).")
+    if len(rows) > 9:
+        sys.exit("ERROR: at most 9 --row entries supported.")
 
     img = Image.new("RGB", (CANVAS, CANVAS), BG)
     draw = ImageDraw.Draw(img)
@@ -232,7 +232,11 @@ def main() -> int:
     value_b_x = value_a_x + value_a_w + 20
     value_b_w = value_a_w
 
-    label_font = load_font(FONT_REG_CANDIDATES, 22)
+    # Tighten row typography as the row count grows so 8-9 rows still fit cleanly.
+    label_pt = 22 if len(rows) <= 7 else 18
+    value_start = 34 if len(rows) <= 7 else 28
+    value_floor = 18 if len(rows) <= 7 else 16
+    label_font = load_font(FONT_REG_CANDIDATES, label_pt)
     for i, (label, val_a, val_b) in enumerate(rows):
         y = rows_top + i * row_h
         # Row separator (top of each row except the first)
@@ -245,12 +249,12 @@ def main() -> int:
         lh = lbbox[3] - lbbox[1]
         draw.text((label_col_x, cy - lh // 2 - 4), label.upper(), font=label_font, fill=MUTED)
         # Value A
-        a_font = fit_text(draw, val_a, FONT_BOLD_CANDIDATES, value_a_w, start=34, floor=18)
+        a_font = fit_text(draw, val_a, FONT_BOLD_CANDIDATES, value_a_w, start=value_start, floor=value_floor)
         abbox = draw.textbbox((0, 0), val_a, font=a_font)
         ah = abbox[3] - abbox[1]
         draw.text((value_a_x, cy - ah // 2 - 4), val_a, font=a_font, fill=INK)
         # Value B
-        b_font = fit_text(draw, val_b, FONT_BOLD_CANDIDATES, value_b_w, start=34, floor=18)
+        b_font = fit_text(draw, val_b, FONT_BOLD_CANDIDATES, value_b_w, start=value_start, floor=value_floor)
         bbbox = draw.textbbox((0, 0), val_b, font=b_font)
         bh = bbbox[3] - bbbox[1]
         draw.text((value_b_x, cy - bh // 2 - 4), val_b, font=b_font, fill=INK)

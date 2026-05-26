@@ -1,6 +1,6 @@
 ---
 name: competitor-comparison
-description: Generate 3 LinkedIn post options (≤50 words each) comparing the top 1 and top 2 players in an industry, each with a generated side-by-side comparison image (1080x1080) showing both logos on top and 5-7 labelled comparison rows below. When the user doesn't name an industry or a specific pair, the skill runs a discovery sweep across credible sources (Reuters, Bloomberg, FT, WSJ, CNBC, The Information, SEC filings, McKinsey/BCG/Bain) and suggests 5-7 currently-newsworthy rival pairs to pick from. Logos are fetched at runtime via Clearbit. Voice = founder/CEO — punchy, opinionated, first-person. The three options take the same comparison angle but use different hooks (question, stat, contrarian take). Use when the user wants competitor comparison content — phrases like "compare top 2 in [industry]", "suggest a rivalry to post about", "do a versus post", "competitor comparison", or invokes /competitor-comparison.
+description: Generate 3 LinkedIn post options (≤50 words each) comparing the top 1 and top 2 players in an industry, each with a generated side-by-side comparison image (1080x1080) showing both logos on top and 5-9 labelled comparison rows below. When the user doesn't name an industry or a specific pair, the skill runs a discovery sweep across credible sources (Reuters, Bloomberg, FT, WSJ, CNBC, The Information, SEC filings, McKinsey/BCG/Bain) and suggests 5-7 currently-newsworthy rival pairs to pick from. Logos are fetched at runtime via Clearbit. Voice = founder/CEO — punchy, opinionated, first-person. The three options take the same comparison angle but use different hooks (question, stat, contrarian take). Use when the user wants competitor comparison content — phrases like "compare top 2 in [industry]", "suggest a rivalry to post about", "do a versus post", "competitor comparison", or invokes /competitor-comparison.
 ---
 
 # Competitor comparison — side-by-side LinkedIn posts
@@ -17,7 +17,7 @@ business-strategy angle that genuinely separates the two players in
 2026, drafts **3 LinkedIn post options (each ≤50 words)** in a
 founder/CEO voice (same angle, different hooks: stat, question,
 contrarian), and renders a **side-by-side comparison card** (1080×1080
-PNG, logos on top + 5-7 labelled comparison rows beneath) per option.
+PNG, logos on top + 5-9 labelled comparison rows beneath) per option.
 
 ## Arguments (parsed from the skill `args` string)
 
@@ -127,9 +127,12 @@ Pull two streams in parallel via `WebSearch` and `WebFetch`:
 - **2026 research reports.** McKinsey, BCG, Bain, Deloitte, PwC, Gartner, Forrester, IDC, Goldman Sachs sector notes, Morgan Stanley, etc. — whichever firm covers the industry well. Look for the latest 2026 industry outlook or sector deep-dive that names both companies. Filings (10-Ks, annual reports, investor day decks) count when freshly released in 2026.
 - **Recent news & press (last 8-12 weeks).** Earnings calls, strategic announcements, executive moves, M&A, regulatory filings, major product launches. Reuters, Bloomberg, FT, WSJ, The Information, sector trade press.
 
-For each company, extract **5-7 comparable data points** across the same
+For each company, extract **5-9 comparable data points** across the same
 dimensions (so the comparison card can show them side by side on the same
-rows). Pick dimensions that genuinely separate the two players in 2026.
+rows). Aim for 5-7 by default; expand to 8-9 when the rivalry has more
+dimensions that genuinely matter (e.g. for the biggest, most-covered
+pairs of the year). Pick dimensions that genuinely separate the two
+players in 2026.
 Suggested dimensions:
 
 - Revenue (latest fiscal year / TTM)
