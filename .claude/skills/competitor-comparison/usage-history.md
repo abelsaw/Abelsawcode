@@ -9,6 +9,14 @@ To allow recycling, delete the relevant entry below.
 
 ## Used pairs (most recent first)
 
+### OpenAI vs Claude (Anthropic) — Frontier AI
+- Date: 2026-05-26
+- Angle: OpenAI is winning the headlines. Anthropic is winning the codebase.
+- Slugs: option-1 (stat), option-2 (question), option-3 (contrarian)
+- Rows: 7 non-financial developments since Jan 2026 (flagship model, capability bet, big launch, compute partner, legal/governance, defense posture, enterprise signal)
+- Draft: posts/drafts/competitor-comparison-2026-05-26-openai-vs-claude.md
+- Trigger: user-specified pair with "since Jan 2026, non-financial" constraint
+
 ### Nvidia vs AMD — AI chips
 - Date: 2026-05-26
 - Angle: Nvidia owns the spend. AMD owns the upside.
