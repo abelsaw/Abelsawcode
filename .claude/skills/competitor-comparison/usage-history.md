@@ -9,6 +9,15 @@ To allow recycling, delete the relevant entry below.
 
 ## Used pairs (most recent first)
 
+### Claude (Opus 4.8) vs OpenAI — Frontier AI (model vs harness lens)
+- Date: 2026-05-29
+- Angle: Anthropic doubled down on the model. OpenAI doubled down on the harness.
+- Slugs: option-1 (stat), option-2 (question), option-3 (contrarian)
+- Rows: 7 (strategy bet, May ship, progress lever, coding marker, orchestration, head-to-head, quality lever)
+- Draft: posts/drafts/competitor-comparison-2026-05-29-model-vs-harness.md
+- Trigger: user-specified — Opus 4.8 launch (May 28) + "big model vs big harness" angle
+- Dedup note: pair was used 2026-05-26 on a different angle ("headlines vs codebase"); this is an explicit user-driven fresh-angle override of the 30-day window
+
 ### OpenAI vs Claude (Anthropic) — Frontier AI
 - Date: 2026-05-26
 - Angle: OpenAI is winning the headlines. Anthropic is winning the codebase.
