@@ -3,16 +3,14 @@
 - **Theme:** Cancer as the fastest-growing claim category
 - **Accent:** slate
 - **Sources:** WTW 2026 Global Medical Trends [PDF]
-- **Word count:** 45
+- **Word count:** 49
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-Cancer is the fastest-growing claim category — and rising fastest in younger workers.
+The hardest pattern in WTW's 2026 medical data isn't a number — it's a generational shift in who's diagnosed.
 
-WTW 2026: 57% of insurers cite cancer as the fastest-growing diagnosis globally. Three in four have seen rising incidence in workers under 40.
-
-Benefits design has to follow demographics.
+Cancer incidence in workers under 40 is no longer a fringe trend. Screening, early detection, and EAP access for younger employees have to move up the stack.
 
 #Benefits #Wellbeing #PeopleStrategy
 ```

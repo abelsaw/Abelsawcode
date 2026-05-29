@@ -3,16 +3,14 @@
 - **Theme:** APAC medical trend hits 14% — highest globally
 - **Accent:** moss
 - **Sources:** WTW 2026 Global Medical Trends [PDF]; Aon Global Medical Trend Rates 2026 [PDF]
-- **Word count:** 44
+- **Word count:** 47
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-Medical inflation is rewriting benefits strategy.
+Anyone doing benefits planning in APAC knows the math: every flat year of comp budget gets eaten by medical trend.
 
-WTW 2026: global medical trend at 10.3%, with APAC leading at 14% — highest of any region. 55% of insurers expect elevated cost levels to persist beyond three years.
-
-Benefits redesign isn't a CFO project.
+WTW's 2026 read makes the trajectory clear. The structural pressure is regional, durable, and shifting how forward-looking employers think about plan design and risk.
 
 #Benefits #Wellbeing #PeopleStrategy
 ```

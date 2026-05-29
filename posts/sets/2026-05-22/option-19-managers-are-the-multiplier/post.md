@@ -8,11 +8,9 @@
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-Your managers are the bottleneck and the multiplier.
+Look at almost any AI value-capture analysis and the same factor keeps showing up: the manager who either unlocks adoption or quietly stalls it.
 
-Gallup 2026: employees whose manager backs AI use are 8.7× more likely to say work has transformed. Mercer 2026: only 8% of C-suite see HR as embedded in strategic decisions.
-
-Manager development is where AI ROI shows up.
+Gallup's 2026 read on AI-supportive managers is striking. Mercer adds the structural piece — HR rarely sits where those decisions get shaped.
 
 #Leadership #ManagerDevelopment #PeopleStrategy
 ```

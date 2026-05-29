@@ -3,16 +3,14 @@
 - **Theme:** Skills-based workforce planning maturity
 - **Accent:** rust
 - **Sources:** Mercer 2025/2026 Skills Snapshot [PDF]
-- **Word count:** 48
+- **Word count:** 47
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-Skills-based talent management is no longer rare. Mature is.
+Five years into the skills-first conversation, we're great at making lists. We're less great at running them.
 
-Mercer 2026: 55% of organizations now map skills to jobs — nearly double the 28% in 2022. But 53% still don't manage skill proficiencies at all.
-
-Mapping is the easy half. Managing is the hard half.
+Mercer 2025/2026 Skills Snapshot makes the maturity gap visible: most map skills to jobs, but proficiency, currency, and reward differentiation still feel ahead of where we are.
 
 #SkillsFirst #TalentStrategy #HumanResources
 ```

@@ -3,16 +3,14 @@
 - **Theme:** HR exclusion from enterprise AI strategy
 - **Accent:** plum
 - **Sources:** CHRO Association 2026 [PDF]; Deloitte HCT 2026 [PDF]; Mercer GTT 2026 [PDF]
-- **Word count:** 50
+- **Word count:** 48
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-The function that owns people is often the one left out of AI.
+HR's biggest AI risk isn't the technology. It's exclusion from the room where decisions get made.
 
-Mercer 2026: 52% of companies don't involve HR in their AI strategy. CHRO Association 2026: 91% of CHROs rank AI as their #1 priority.
-
-AI without HR is a deployment, not a people plan.
+The data is striking when you stack two recent studies together — CHRO Association on priority, Mercer on involvement. The mismatch is the real problem to solve in 2026.
 
 #AIatWork #HumanResources #Leadership
 ```

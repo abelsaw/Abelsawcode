@@ -3,16 +3,14 @@
 - **Theme:** Stress as Gen Z's barrier to leadership
 - **Accent:** moss
 - **Sources:** Deloitte 2026 Gen Z and Millennial Survey [PDF]
-- **Word count:** 48
+- **Word count:** 47
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-Gen Z still wants to lead. They're not sure they can survive it.
+There's a quiet succession problem brewing.
 
-Deloitte 2026: 50% of Gen Zs cite stress and burnout as the top barrier to leadership. 76% are still interested in executive leadership eventually.
-
-Redesign leadership work, or lose the next leaders.
+Deloitte's 2026 Gen Z and Millennial Survey shows the ambition is still there — but the perception of the leadership role has shifted from 'aspiration' to 'cost.' Redesigning the day-to-day of senior roles is now a pipeline strategy.
 
 #Leadership #FutureOfWork #PeopleStrategy
 ```

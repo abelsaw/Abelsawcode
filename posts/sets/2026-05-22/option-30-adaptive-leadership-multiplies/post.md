@@ -3,16 +3,14 @@
 - **Theme:** Reflective / adaptive leaders multiply organizational adaptability
 - **Accent:** slate
 - **Sources:** McKinsey State of Organizations 2026 [PDF]; Gartner 2026 [PDF]
-- **Word count:** 49
+- **Word count:** 47
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-Reflective leaders see their organizations adapt — at almost double the rate.
+There's a quiet finding inside McKinsey's 2026 leadership data that doesn't get enough air time.
 
-McKinsey 2026 (10,000 leaders, 16 countries): 30% of reflective leaders believe their org adapts quickly to change. Only 17% of non-reflective leaders say the same.
-
-Reflection is a leverage point, not a soft skill.
+Leaders who build a regular reflective habit are nearly twice as likely to say their organization adapts well. Reflection isn't a wellbeing perk — it's a hard performance variable.
 
 #Leadership #FutureOfWork #PeopleStrategy
 ```

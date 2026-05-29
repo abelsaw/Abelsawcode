@@ -3,16 +3,16 @@
 - **Theme:** AI workflow redesign as the value lever
 - **Accent:** rust
 - **Sources:** Deloitte 2026 Global Human Capital Trends [PDF]; BCG 2026; McKinsey 2026
-- **Word count:** 44
+- **Word count:** 49
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-AI ROI isn't about the model. It's about the workflow around it.
+The most expensive AI rollouts share a pattern: the tool comes first, the workflow stays the same.
 
-Deloitte 2026 (European telco case): 90% of AI budget on redesign produced a 30% productivity gain. 5% on tools alone produced 5%.
+Deloitte 2026 puts the trade in dollars — where the budget goes is a more honest signal of where the value lands than what the tool does.
 
-The work changes before the tool does.
+Sequence matters.
 
 #FutureOfWork #AIatWork #PeopleStrategy
 ```

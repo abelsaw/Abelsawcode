@@ -3,16 +3,16 @@
 - **Theme:** Tariff exposure cascading into people decisions
 - **Accent:** plum
 - **Sources:** PwC 29th Global CEO Survey 2026 [PDF]; CHRO Association 2026 [PDF]
-- **Word count:** 49
+- **Word count:** 47
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-Tariffs aren't only a margin problem. They're a workforce problem.
+Margin pressure has a way of becoming headcount pressure fast. And headcount pressure rarely produces the cleanest decisions.
 
-PwC 2026: 29% of CEOs expect tariffs to reduce net profit margin in the year ahead. CHRO Association 2026: 35% of CHROs cite tariffs as a top external force.
+PwC and CHRO Association data converge — the workforce moves taken under tariff pressure deserve more deliberation than the timeline allows.
 
-Tariff-pressure headcount decisions are the most-regretted ones.
+Pre-decision discipline is the lever.
 
 #Risk #PeopleStrategy #Leadership
 ```

@@ -3,16 +3,14 @@
 - **Theme:** Gen Z + millennial AI adoption acceleration
 - **Accent:** navy
 - **Sources:** Deloitte 2026 Gen Z and Millennial Survey [PDF]
-- **Word count:** 43
+- **Word count:** 48
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-The Gen Z AI adoption curve is now vertical.
+Worth pausing on the year-over-year jump in Deloitte's 2026 cohort data: the question of whether younger employees will use AI is over.
 
-Deloitte 2026 (22,500 respondents): 74% of Gen Zs and millennials use AI in day-to-day work, up sharply from ~57% in 2025.
-
-Adoption is no longer the question. Governance and capability are.
+The new ones: how they're using it, what they're sharing with it, and whether org policy gives them rails to do it well.
 
 #GenZ #AIatWork #FutureOfWork
 ```

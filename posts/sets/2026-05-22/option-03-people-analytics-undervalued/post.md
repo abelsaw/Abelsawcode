@@ -3,16 +3,16 @@
 - **Theme:** People analytics underused vs. its own potential
 - **Accent:** moss
 - **Sources:** WTW 2026 Global Medical Trends [PDF]; Mercer Global Talent Trends 2026 [PDF]
-- **Word count:** 44
+- **Word count:** 45
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-Most HR functions sit on data they don't use.
+The biggest people analytics problem isn't access. It's nerve.
 
-Mercer 2026: 55% of executives say their organization underutilizes the workforce intelligence it already has. Only 27% believe HR effectively analyzes data for talent decisions.
+Mercer 2026: executives describe their workforce data as underused. Confidence in HR's analytic muscle is thin.
 
-The data isn't the problem. Discipline is.
+The next move isn't another dashboard. It's the willingness to act on what the data already says.
 
 #PeopleAnalytics #HumanResources #PeopleStrategy
 ```

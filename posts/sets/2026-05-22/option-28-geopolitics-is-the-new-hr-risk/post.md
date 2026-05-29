@@ -3,16 +3,14 @@
 - **Theme:** Geopolitical instability as a CHRO concern
 - **Accent:** moss
 - **Sources:** CHRO Association 2026 [PDF]; PwC 29th Global CEO Survey 2026 [PDF]
-- **Word count:** 49
+- **Word count:** 46
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-Geopolitics has moved from boardroom briefing to people strategy.
+Workforce planning used to be a smooth-curve exercise. In 2026 it's a scenarios exercise.
 
-CHRO Association 2026: 46% of CHROs cite geopolitical instability as the top external force on their business. PwC 2026: 84% of CEOs say their company has been moderately or significantly affected.
-
-People strategy needs scenario plans now.
+CHRO Association and PwC together describe a year where political volatility is felt directly inside people decisions. The HR function that plans for one future is planning for none.
 
 #Risk #PeopleStrategy #Leadership
 ```

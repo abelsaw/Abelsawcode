@@ -3,16 +3,14 @@
 - **Theme:** Workforce data trust gap (AI + analytics)
 - **Accent:** slate
 - **Sources:** Deloitte 2026 Global Human Capital Trends [PDF]; Deloitte Beyond Productivity [PDF]
-- **Word count:** 46
+- **Word count:** 48
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-The data you collect to predict attrition can become the reason for it.
+There's a quiet paradox in HR's AI rollouts: the very data we collect to keep people can be why they leave.
 
-Deloitte 2026: 60% of workers say turnover rose after their employer fused worker data into AI. Only 28% strongly agree leadership uses data responsibly.
-
-Worker data needs a trust strategy.
+Deloitte's 2026 research surfaced it sharply. Worker trust is the hidden currency in any predictive model. Privacy policies handle compliance; trust strategies handle attrition.
 
 #PeopleAnalytics #DataPrivacy #HumanResources
 ```

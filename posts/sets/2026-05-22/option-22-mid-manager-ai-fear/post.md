@@ -8,11 +8,11 @@
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-The AI fear that matters most sits in the middle of your org chart.
+AI strategy decks usually skip a slide — what the mid-layer is feeling.
 
-CHRO Association 2026: 17% of CHROs report mid-level managers see AI as a threat. Mercer 2026: 62% of employees say leaders underestimate AI's emotional impact.
+CHRO Association and Mercer surface the same risk: when middle managers see AI as a threat, transformation slows to the speed of their hesitation.
 
-If middle managers stall, AI value stalls.
+Sell the rollout to them, not just through them.
 
 #Leadership #AIatWork #PeopleStrategy
 ```

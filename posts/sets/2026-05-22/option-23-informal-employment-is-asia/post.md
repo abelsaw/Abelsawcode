@@ -3,16 +3,16 @@
 - **Theme:** Informal employment dominates Asia-Pacific
 - **Accent:** moss
 - **Sources:** ILO Employment and Social Trends 2026 [PDF]
-- **Word count:** 40
+- **Word count:** 47
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-Two-thirds of Asia-Pacific employment lives outside the formal sector.
+Multinational workforce strategy in APAC has a structural reality most boardroom slides ignore.
 
-ILO 2026: 65.4% of Asia-Pacific employment is informal — around 330 million workers. Globally, 2.1 billion workers are in informal employment.
+ILO 2026 puts the regional informality picture in numbers. For organizations operating across multiple Asian markets, formal-employment policies cover only part of the real workforce footprint.
 
-Workforce strategy has to widen beyond headcount.
+The rest needs different tools.
 
 #Workforce #FutureOfWork #APAC
 ```

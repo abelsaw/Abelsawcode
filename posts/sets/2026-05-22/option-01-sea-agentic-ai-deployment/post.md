@@ -3,16 +3,14 @@
 - **Theme:** Agentic AI deployment in Southeast Asia
 - **Accent:** navy
 - **Sources:** McKinsey AI in Southeast Asia 2026 [PDF]
-- **Word count:** 45
+- **Word count:** 49
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-Agentic AI moved from concept to deployment in 2026.
+Southeast Asia is quietly leading the world into the agent era.
 
-McKinsey 2026 (Southeast Asia): nearly 90% of SEA firms now use AI agents in IT functions. Customer-facing adoption lags — trust and accuracy are the bottlenecks.
-
-Agentic capacity is the new capability gap.
+McKinsey's 2026 SEA AI study tracked nearly 90% adoption in IT functions — but a much smaller share where customers actually feel it. Back-office automation is easy. Customer-facing trust is where 2026 ROI is decided.
 
 #AIatWork #FutureOfWork #APAC
 ```

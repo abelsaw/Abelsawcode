@@ -3,16 +3,16 @@
 - **Theme:** Gen Z + millennials delaying major life decisions
 - **Accent:** rust
 - **Sources:** Deloitte 2026 Gen Z and Millennial Survey [PDF]
-- **Word count:** 46
+- **Word count:** 47
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-Gen Z and millennials are delaying their own lives.
+The EVP that worked for Gen Z in 2022 isn't landing now.
 
-Deloitte 2026 (22,500 respondents, 44 countries): 55% of Gen Zs and 52% of millennials are delaying major life decisions due to financial pressure. 47% are living paycheck to paycheck.
+Deloitte 2026 shows a generation pausing — on marriage, family, homeownership, business. What they ask from employers has quietly shifted from purpose to stability.
 
-Stability is the new aspiration.
+The story we tell candidates has to follow.
 
 #GenZ #TalentStrategy #PeopleStrategy
 ```

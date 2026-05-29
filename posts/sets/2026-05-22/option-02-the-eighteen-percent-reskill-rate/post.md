@@ -3,16 +3,16 @@
 - **Theme:** AI reskilling gap (18% reskill rate)
 - **Accent:** rust
 - **Sources:** Aon 2026 Human Capital Trends [PDF]
-- **Word count:** 44
+- **Word count:** 45
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-AI deployment is racing. Reskilling isn't.
+Every AI deployment is a bet on what your workforce can absorb.
 
-Aon 2026 (Human Capital Trends Study): 44% of organizations have deployed AI; another 29% are piloting. Only 18% report most of their workforce has participated in AI reskilling.
+Aon 2026: most organisations have moved AI into production. The share that have actually reskilled most of their people is a small minority.
 
-Deployment without reskilling is theatre at scale.
+That gap is the 2026 capability ceiling.
 
 #Reskilling #AIatWork #HumanResources
 ```

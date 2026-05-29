@@ -3,16 +3,16 @@
 - **Theme:** Work orchestration — moving beyond jobs to mission
 - **Accent:** navy
 - **Sources:** Deloitte 2026 Global Human Capital Trends [PDF]
-- **Word count:** 42
+- **Word count:** 43
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-Knowledge work is moving from jobs to missions.
+The question isn't 'what's your job?' anymore. It's 'what's the work, and who's the best team for it?'
 
-Deloitte 2026: 88% of leaders say orchestrating people, skills, and resources is critical. Only 7% say they are making great progress.
+Deloitte 2026: leaders are nearly unanimous on this shift. Very few are far along the curve.
 
-Job architecture is a constraint when the work is fluid.
+The next leadership skill is orchestration.
 
 #FutureOfWork #PeopleStrategy #HumanResources
 ```

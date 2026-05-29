@@ -3,16 +3,14 @@
 - **Theme:** Trade-cost shock and APAC wage decline
 - **Accent:** plum
 - **Sources:** ILO Employment and Social Trends 2026 [PDF]
-- **Word count:** 42
+- **Word count:** 46
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-Trade tensions are quietly compressing Asian wages.
+Comp benchmarking in Asia in 2026 needs a layer it didn't have in 2024 — geopolitical risk.
 
-ILO 2026: SEA wages are projected to decline 0.3% per year on rising trade costs; Southern Asia 0.45% per year over five years.
-
-Comp benchmarks have to absorb a geopolitical risk premium.
+ILO's 2026 modeling traces a quiet wage-compression effect from rising trade costs across SEA and Southern Asia. Historical benchmarks alone won't price the next two-year window.
 
 #Compensation #APAC #PeopleStrategy
 ```

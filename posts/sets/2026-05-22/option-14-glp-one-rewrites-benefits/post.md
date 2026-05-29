@@ -3,16 +3,16 @@
 - **Theme:** GLP-1 drugs are rewriting benefits architecture
 - **Accent:** plum
 - **Sources:** WTW 2026 Global Medical Trends [PDF]; CHRO Association 2026 [PDF]
-- **Word count:** 47
+- **Word count:** 49
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-GLP-1 drugs are quietly rewriting the benefits architecture.
+A single drug class is reshaping more 2026 benefits conversations than any policy memo.
 
-WTW 2026: 68% of insurers expect usage to increase (78% in the Americas). 64% still exclude obesity GLP-1 coverage. CHRO Association 2026: 46% of CHROs plan to add coverage.
+WTW shows insurers braced for higher uptake even as standard plans still exclude obesity coverage. CHRO Association adds a clue: coverage is moving onto the roadmap.
 
-The decision isn't if — it's how.
+The question isn't whether. It's design.
 
 #Benefits #Wellbeing #PeopleStrategy
 ```

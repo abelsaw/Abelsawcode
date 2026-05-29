@@ -3,16 +3,14 @@
 - **Theme:** Stable salary budgets are the structural reality
 - **Accent:** slate
 - **Sources:** WTW 2026 Salary Budget Planning [search-only]; Aon Human Capital Trends 2026 [PDF]
-- **Word count:** 45
+- **Word count:** 48
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-Salary budgets are entering a third year of single-digit normal.
+Pay budgets won't do the heavy lifting in 2026.
 
-WTW 2026: global salary budgets stable in single digits. Aon 2026: 86% of employers agree AI will require new skills and new pay structures.
-
-If budgets won't grow, pay design has to.
+The combination of stable budgets (WTW) and the AI-driven skill shift (Aon) means the win isn't bigger increases — it's smarter architecture. Skill differentials, faster pay-band reviews, and targeted critical-role moves do the work levels can't.
 
 #Compensation #PayStrategy #PeopleStrategy
 ```

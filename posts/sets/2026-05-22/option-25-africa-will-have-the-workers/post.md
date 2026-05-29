@@ -3,16 +3,14 @@
 - **Theme:** Demographic dividend in Africa, talent shrinkage elsewhere
 - **Accent:** slate
 - **Sources:** ILO Employment and Social Trends 2026 [PDF]
-- **Word count:** 44
+- **Word count:** 47
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-The labor force of 2030 lives in different markets.
+Global talent strategies built in 2018 assumed a labor pool that doesn't exist anymore.
 
-ILO 2026: Africa's labor force will grow from 230 million (1995) to 610 million (2030). High-income country labor forces are flat or shrinking.
-
-Global talent strategy now has to be locally specific.
+ILO 2026 describes a reshuffling — Africa's share grows fast while many advanced markets shrink. Org charts, TA footprints, and capability hubs will feel that shift before the decade ends.
 
 #TalentStrategy #FutureOfWork #PeopleStrategy
 ```

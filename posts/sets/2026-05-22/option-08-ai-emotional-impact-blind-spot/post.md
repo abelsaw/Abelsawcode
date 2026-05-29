@@ -3,16 +3,16 @@
 - **Theme:** Leaders underestimate AI's emotional impact on workforce
 - **Accent:** moss
 - **Sources:** Mercer Global Talent Trends 2026 [PDF]
-- **Word count:** 44
+- **Word count:** 45
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-Leaders track AI's productivity gains. Not its emotional gains and losses.
+There's a missing column in most AI business cases: how it feels from inside.
 
-Mercer 2026: 62% of employees believe leaders underestimate AI's emotional impact. Only 19% of HR leaders factor it into digital strategy.
+Mercer 2026 shows the gap between what leaders track and what employees feel. Productivity dashboards measure the gain. Workforce sentiment shows the cost.
 
-If employees feel unseen, AI deployment slows itself down.
+The two have to meet.
 
 #Wellbeing #AIatWork #PeopleStrategy
 ```

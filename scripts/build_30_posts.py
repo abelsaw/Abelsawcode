@@ -36,7 +36,7 @@ POSTS = [
             ("The CHRO read", "Agentic capacity is the new capability gap."),
             ("Your move", "Where are AI agents replacing process — and where are they replacing trust?"),
         ],
-        "Agentic AI moved from concept to deployment in 2026.\n\nMcKinsey 2026 (Southeast Asia): nearly 90% of SEA firms now use AI agents in IT functions. Customer-facing adoption lags — trust and accuracy are the bottlenecks.\n\nAgentic capacity is the new capability gap.\n\n#AIatWork #FutureOfWork #APAC",
+        "Southeast Asia is quietly leading the world into the agent era.\n\nMcKinsey's 2026 SEA AI study tracked nearly 90% adoption in IT functions — but a much smaller share where customers actually feel it. Back-office automation is easy. Customer-facing trust is where 2026 ROI is decided.\n\n#AIatWork #FutureOfWork #APAC",
     ),
     (
         "the-eighteen-percent-reskill-rate",
@@ -50,7 +50,7 @@ POSTS = [
             ("The CHRO read", "Deployment without reskilling is theatre at scale."),
             ("Your move", "What is your real reskill rate this quarter?"),
         ],
-        "AI deployment is racing. Reskilling isn't.\n\nAon 2026 (Human Capital Trends Study): 44% of organizations have deployed AI; another 29% are piloting. Only 18% report most of their workforce has participated in AI reskilling.\n\nDeployment without reskilling is theatre at scale.\n\n#Reskilling #AIatWork #HumanResources",
+        "Every AI deployment is a bet on what your workforce can absorb.\n\nAon 2026: most organisations have moved AI into production. The share that have actually reskilled most of their people is a small minority.\n\nThat gap is the 2026 capability ceiling.\n\n#Reskilling #AIatWork #HumanResources",
     ),
     (
         "people-analytics-undervalued",
@@ -64,7 +64,7 @@ POSTS = [
             ("The CHRO read", "The data was never the problem. The discipline was."),
             ("Your move", "What workforce question is your data already answering?"),
         ],
-        "Most HR functions sit on data they don't use.\n\nMercer 2026: 55% of executives say their organization underutilizes the workforce intelligence it already has. Only 27% believe HR effectively analyzes data for talent decisions.\n\nThe data isn't the problem. Discipline is.\n\n#PeopleAnalytics #HumanResources #PeopleStrategy",
+        "The biggest people analytics problem isn't access. It's nerve.\n\nMercer 2026: executives describe their workforce data as underused. Confidence in HR's analytic muscle is thin.\n\nThe next move isn't another dashboard. It's the willingness to act on what the data already says.\n\n#PeopleAnalytics #HumanResources #PeopleStrategy",
     ),
     (
         "fifty-two-percent-no-hr-in-ai",
@@ -78,7 +78,7 @@ POSTS = [
             ("The CHRO read", "An AI strategy without HR is a deployment plan, not a people plan."),
             ("Your move", "Is HR at the table when your AI roadmap is set?"),
         ],
-        "The function that owns people is often the one left out of AI.\n\nMercer 2026: 52% of companies don't involve HR in their AI strategy. CHRO Association 2026: 91% of CHROs rank AI as their #1 priority.\n\nAI without HR is a deployment, not a people plan.\n\n#AIatWork #HumanResources #Leadership",
+        "HR's biggest AI risk isn't the technology. It's exclusion from the room where decisions get made.\n\nThe data is striking when you stack two recent studies together — CHRO Association on priority, Mercer on involvement. The mismatch is the real problem to solve in 2026.\n\n#AIatWork #HumanResources #Leadership",
     ),
     (
         "data-that-predicts-attrition-causes-it",
@@ -92,7 +92,7 @@ POSTS = [
             ("The CHRO read", "Worker data needs a trust strategy, not just a privacy policy."),
             ("Your move", "Have you asked employees what data is fair to use?"),
         ],
-        "The data you collect to predict attrition can become the reason for it.\n\nDeloitte 2026: 60% of workers say turnover rose after their employer fused worker data into AI. Only 28% strongly agree leadership uses data responsibly.\n\nWorker data needs a trust strategy.\n\n#PeopleAnalytics #DataPrivacy #HumanResources",
+        "There's a quiet paradox in HR's AI rollouts: the very data we collect to keep people can be why they leave.\n\nDeloitte's 2026 research surfaced it sharply. Worker trust is the hidden currency in any predictive model. Privacy policies handle compliance; trust strategies handle attrition.\n\n#PeopleAnalytics #DataPrivacy #HumanResources",
     ),
     (
         "knowledge-work-needs-orchestration",
@@ -106,7 +106,7 @@ POSTS = [
             ("The CHRO read", "Job architecture is a constraint when work is fluid."),
             ("Your move", "How fluidly does work move across your organization today?"),
         ],
-        "Knowledge work is moving from jobs to missions.\n\nDeloitte 2026: 88% of leaders say orchestrating people, skills, and resources is critical. Only 7% say they are making great progress.\n\nJob architecture is a constraint when the work is fluid.\n\n#FutureOfWork #PeopleStrategy #HumanResources",
+        "The question isn't 'what's your job?' anymore. It's 'what's the work, and who's the best team for it?'\n\nDeloitte 2026: leaders are nearly unanimous on this shift. Very few are far along the curve.\n\nThe next leadership skill is orchestration.\n\n#FutureOfWork #PeopleStrategy #HumanResources",
     ),
     (
         "ai-roi-is-a-workflow-problem",
@@ -120,7 +120,7 @@ POSTS = [
             ("The CHRO read", "The work changes before the tool does."),
             ("Your move", "What workflow did you redesign before your last AI rollout?"),
         ],
-        "AI ROI isn't about the model. It's about the workflow around it.\n\nDeloitte 2026 (European telco case): 90% of AI budget on redesign produced a 30% productivity gain. 5% on tools alone produced 5%.\n\nThe work changes before the tool does.\n\n#FutureOfWork #AIatWork #PeopleStrategy",
+        "The most expensive AI rollouts share a pattern: the tool comes first, the workflow stays the same.\n\nDeloitte 2026 puts the trade in dollars — where the budget goes is a more honest signal of where the value lands than what the tool does.\n\nSequence matters.\n\n#FutureOfWork #AIatWork #PeopleStrategy",
     ),
     (
         "ai-emotional-impact-blind-spot",
@@ -134,7 +134,7 @@ POSTS = [
             ("The CHRO read", "If employees feel unseen, AI deployment slows itself down."),
             ("Your move", "How do you measure how your workforce feels about AI?"),
         ],
-        "Leaders track AI's productivity gains. Not its emotional gains and losses.\n\nMercer 2026: 62% of employees believe leaders underestimate AI's emotional impact. Only 19% of HR leaders factor it into digital strategy.\n\nIf employees feel unseen, AI deployment slows itself down.\n\n#Wellbeing #AIatWork #PeopleStrategy",
+        "There's a missing column in most AI business cases: how it feels from inside.\n\nMercer 2026 shows the gap between what leaders track and what employees feel. Productivity dashboards measure the gain. Workforce sentiment shows the cost.\n\nThe two have to meet.\n\n#Wellbeing #AIatWork #PeopleStrategy",
     ),
 
     # ============================================================
@@ -152,7 +152,7 @@ POSTS = [
             ("The CHRO read", "Retention now turns on what you fund beyond cash."),
             ("Your move", "What's in your non-cash retention stack?"),
         ],
-        "The 2026 retention squeeze is the expectation gap.\n\nRobert Walters 2026: 83% of employees expect pay rises above 10%. Only 27% of employers can offer it. WTW: salary budgets stay in single digits across most markets.\n\nRetention turns on what you fund beyond cash.\n\n#Compensation #Retention #PeopleStrategy",
+        "Comp conversations in 2026 keep landing in the same place — the cash isn't there to close the gap employees feel.\n\nRobert Walters and WTW read the same script: high expectation, tight budgets. The leverage moves to growth, flexibility, and learning.\n\nThat's where retention compounds.\n\n#Compensation #Retention #PeopleStrategy",
     ),
     (
         "single-digit-pay-decade",
@@ -166,7 +166,7 @@ POSTS = [
             ("The CHRO read", "If budgets won't grow, pay design has to."),
             ("Your move", "Where are you investing in pay design, not just pay levels?"),
         ],
-        "Salary budgets are entering a third year of single-digit normal.\n\nWTW 2026: global salary budgets stable in single digits. Aon 2026: 86% of employers agree AI will require new skills and new pay structures.\n\nIf budgets won't grow, pay design has to.\n\n#Compensation #PayStrategy #PeopleStrategy",
+        "Pay budgets won't do the heavy lifting in 2026.\n\nThe combination of stable budgets (WTW) and the AI-driven skill shift (Aon) means the win isn't bigger increases — it's smarter architecture. Skill differentials, faster pay-band reviews, and targeted critical-role moves do the work levels can't.\n\n#Compensation #PayStrategy #PeopleStrategy",
     ),
     (
         "internal-mobility-doubles-tenure",
@@ -180,7 +180,7 @@ POSTS = [
             ("The CHRO read", "External hiring is contracting. The career inside is the asset."),
             ("Your move", "How fluid is the career inside your walls?"),
         ],
-        "The retention lever sits inside your own walls.\n\nDeloitte 2026: internal mobility nearly doubles tenure (7.4 vs 4.1 years). McKinsey 2026: 47% of leaders name limited career progression as the top barrier to high-performance culture.\n\nThe career inside is now the asset.\n\n#Retention #InternalMobility #SkillsFirst",
+        "The cheapest retention strategy in 2026 is already in the building.\n\nDeloitte and McKinsey converge on the same finding: internal moves materially extend tenure. The absence of a visible next step is the loudest reason people quietly start interviewing.\n\nTalent marketplaces deserve a fresh budget line.\n\n#Retention #InternalMobility #SkillsFirst",
     ),
     (
         "skills-mapping-still-the-minority",
@@ -194,7 +194,7 @@ POSTS = [
             ("The CHRO read", "Mapping is the easy half. Managing is the hard half."),
             ("Your move", "Are skills a label in your system, or a layer?"),
         ],
-        "Skills-based talent management is no longer rare. Mature is.\n\nMercer 2026: 55% of organizations now map skills to jobs — nearly double the 28% in 2022. But 53% still don't manage skill proficiencies at all.\n\nMapping is the easy half. Managing is the hard half.\n\n#SkillsFirst #TalentStrategy #HumanResources",
+        "Five years into the skills-first conversation, we're great at making lists. We're less great at running them.\n\nMercer 2025/2026 Skills Snapshot makes the maturity gap visible: most map skills to jobs, but proficiency, currency, and reward differentiation still feel ahead of where we are.\n\n#SkillsFirst #TalentStrategy #HumanResources",
     ),
     (
         "apac-medical-fourteen",
@@ -208,7 +208,7 @@ POSTS = [
             ("The CHRO read", "Benefits redesign isn't a CFO project. It's a retention strategy."),
             ("Your move", "When did you last test benefits against employee needs?"),
         ],
-        "Medical inflation is rewriting benefits strategy.\n\nWTW 2026: global medical trend at 10.3%, with APAC leading at 14% — highest of any region. 55% of insurers expect elevated cost levels to persist beyond three years.\n\nBenefits redesign isn't a CFO project.\n\n#Benefits #Wellbeing #PeopleStrategy",
+        "Anyone doing benefits planning in APAC knows the math: every flat year of comp budget gets eaten by medical trend.\n\nWTW's 2026 read makes the trajectory clear. The structural pressure is regional, durable, and shifting how forward-looking employers think about plan design and risk.\n\n#Benefits #Wellbeing #PeopleStrategy",
     ),
     (
         "glp-one-rewrites-benefits",
@@ -222,7 +222,7 @@ POSTS = [
             ("The CHRO read", "The coverage decision is no longer 'if' — it's 'who pays, how, and when.'"),
             ("Your move", "What's your GLP-1 policy this open enrollment?"),
         ],
-        "GLP-1 drugs are quietly rewriting the benefits architecture.\n\nWTW 2026: 68% of insurers expect usage to increase (78% in the Americas). 64% still exclude obesity GLP-1 coverage. CHRO Association 2026: 46% of CHROs plan to add coverage.\n\nThe decision isn't if — it's how.\n\n#Benefits #Wellbeing #PeopleStrategy",
+        "A single drug class is reshaping more 2026 benefits conversations than any policy memo.\n\nWTW shows insurers braced for higher uptake even as standard plans still exclude obesity coverage. CHRO Association adds a clue: coverage is moving onto the roadmap.\n\nThe question isn't whether. It's design.\n\n#Benefits #Wellbeing #PeopleStrategy",
     ),
     (
         "cancer-is-the-new-cost-driver",
@@ -236,7 +236,7 @@ POSTS = [
             ("The CHRO read", "Benefits design has to follow demographics, not stand alone from them."),
             ("Your move", "Does your benefits design reflect a younger cancer-risk profile?"),
         ],
-        "Cancer is the fastest-growing claim category — and rising fastest in younger workers.\n\nWTW 2026: 57% of insurers cite cancer as the fastest-growing diagnosis globally. Three in four have seen rising incidence in workers under 40.\n\nBenefits design has to follow demographics.\n\n#Benefits #Wellbeing #PeopleStrategy",
+        "The hardest pattern in WTW's 2026 medical data isn't a number — it's a generational shift in who's diagnosed.\n\nCancer incidence in workers under 40 is no longer a fringe trend. Screening, early detection, and EAP access for younger employees have to move up the stack.\n\n#Benefits #Wellbeing #PeopleStrategy",
     ),
     (
         "hdhps-are-now-standard",
@@ -250,7 +250,7 @@ POSTS = [
             ("The CHRO read", "Cost-shifting solves the budget. It doesn't solve retention."),
             ("Your move", "Does your benefits architecture still feel like a recruit-and-retain tool?"),
         ],
-        "High-deductible plans are no longer the alternative. They are the default.\n\nCHRO Association 2026: 86% of US CHROs offer high-deductible health plans with HSAs. 62% increased employee cost-sharing this year.\n\nCost-shifting solves the budget. It doesn't solve retention.\n\n#Benefits #PeopleStrategy #HumanResources",
+        "Benefits used to be a recruiting story. For many US employers it's quietly become a cost-management one.\n\nCHRO Association 2026 makes the shift visible — most CHROs are managing budgets through deductibles and cost-sharing. The retention question is whether employees still feel valued by the plan.\n\n#Benefits #PeopleStrategy #HumanResources",
     ),
 
     # ============================================================
@@ -268,7 +268,7 @@ POSTS = [
             ("The CHRO read", "Stability is the new aspiration. Build EVP for it."),
             ("Your move", "Does your EVP speak to stability, or to ambition?"),
         ],
-        "Gen Z and millennials are delaying their own lives.\n\nDeloitte 2026 (22,500 respondents, 44 countries): 55% of Gen Zs and 52% of millennials are delaying major life decisions due to financial pressure. 47% are living paycheck to paycheck.\n\nStability is the new aspiration.\n\n#GenZ #TalentStrategy #PeopleStrategy",
+        "The EVP that worked for Gen Z in 2022 isn't landing now.\n\nDeloitte 2026 shows a generation pausing — on marriage, family, homeownership, business. What they ask from employers has quietly shifted from purpose to stability.\n\nThe story we tell candidates has to follow.\n\n#GenZ #TalentStrategy #PeopleStrategy",
     ),
     (
         "burnout-blocks-the-leadership-pipeline",
@@ -282,7 +282,7 @@ POSTS = [
             ("The CHRO read", "If we don't redesign leadership work, we lose the next leaders."),
             ("Your move", "What does leadership cost in your organization — and is it sustainable?"),
         ],
-        "Gen Z still wants to lead. They're not sure they can survive it.\n\nDeloitte 2026: 50% of Gen Zs cite stress and burnout as the top barrier to leadership. 76% are still interested in executive leadership eventually.\n\nRedesign leadership work, or lose the next leaders.\n\n#Leadership #FutureOfWork #PeopleStrategy",
+        "There's a quiet succession problem brewing.\n\nDeloitte's 2026 Gen Z and Millennial Survey shows the ambition is still there — but the perception of the leadership role has shifted from 'aspiration' to 'cost.' Redesigning the day-to-day of senior roles is now a pipeline strategy.\n\n#Leadership #FutureOfWork #PeopleStrategy",
     ),
     (
         "managers-are-the-multiplier",
@@ -296,7 +296,7 @@ POSTS = [
             ("The CHRO read", "Manager development isn't a soft investment. It's where AI ROI shows up."),
             ("Your move", "What did you put behind your manager layer this quarter?"),
         ],
-        "Your managers are the bottleneck and the multiplier.\n\nGallup 2026: employees whose manager backs AI use are 8.7× more likely to say work has transformed. Mercer 2026: only 8% of C-suite see HR as embedded in strategic decisions.\n\nManager development is where AI ROI shows up.\n\n#Leadership #ManagerDevelopment #PeopleStrategy",
+        "Look at almost any AI value-capture analysis and the same factor keeps showing up: the manager who either unlocks adoption or quietly stalls it.\n\nGallup's 2026 read on AI-supportive managers is striking. Mercer adds the structural piece — HR rarely sits where those decisions get shaped.\n\n#Leadership #ManagerDevelopment #PeopleStrategy",
     ),
     (
         "forty-four-percent-thriving",
@@ -310,7 +310,7 @@ POSTS = [
             ("The CHRO read", "Depleted workforces don't ship the productivity AI promises."),
             ("Your move", "Where is wellbeing measured in your operating model?"),
         ],
-        "Employee thriving has collapsed.\n\nMercer 2026: 44% of employees report thriving at work — down sharply from 66% in 2024 (worse than pandemic levels). AI job-loss concern climbed from 28% to 40% in two years.\n\nDepleted workforces don't ship the productivity AI promises.\n\n#Wellbeing #FutureOfWork #PeopleStrategy",
+        "Thriving used to be the wellbeing metric on the appendix slide. It belongs on the cover now.\n\nMercer 2026 describes a workforce more depleted than during the pandemic — with AI uncertainty layered on top. Wellbeing has moved from a perk to a productivity precondition.\n\n#Wellbeing #FutureOfWork #PeopleStrategy",
     ),
     (
         "gen-z-now-uses-ai-daily",
@@ -324,7 +324,7 @@ POSTS = [
             ("The CHRO read", "Adoption is no longer the question. Governance and capability are."),
             ("Your move", "Is your AI policy keeping pace with how employees already use AI?"),
         ],
-        "The Gen Z AI adoption curve is now vertical.\n\nDeloitte 2026 (22,500 respondents): 74% of Gen Zs and millennials use AI in day-to-day work, up sharply from ~57% in 2025.\n\nAdoption is no longer the question. Governance and capability are.\n\n#GenZ #AIatWork #FutureOfWork",
+        "Worth pausing on the year-over-year jump in Deloitte's 2026 cohort data: the question of whether younger employees will use AI is over.\n\nThe new ones: how they're using it, what they're sharing with it, and whether org policy gives them rails to do it well.\n\n#GenZ #AIatWork #FutureOfWork",
     ),
     (
         "mid-manager-ai-fear",
@@ -338,7 +338,7 @@ POSTS = [
             ("The CHRO read", "If middle managers stall, AI value stalls."),
             ("Your move", "What does your AI rollout look like from the middle layer?"),
         ],
-        "The AI fear that matters most sits in the middle of your org chart.\n\nCHRO Association 2026: 17% of CHROs report mid-level managers see AI as a threat. Mercer 2026: 62% of employees say leaders underestimate AI's emotional impact.\n\nIf middle managers stall, AI value stalls.\n\n#Leadership #AIatWork #PeopleStrategy",
+        "AI strategy decks usually skip a slide — what the mid-layer is feeling.\n\nCHRO Association and Mercer surface the same risk: when middle managers see AI as a threat, transformation slows to the speed of their hesitation.\n\nSell the rollout to them, not just through them.\n\n#Leadership #AIatWork #PeopleStrategy",
     ),
 
     # ============================================================
@@ -356,7 +356,7 @@ POSTS = [
             ("The CHRO read", "Workforce strategy has to widen beyond headcount."),
             ("Your move", "Where does informal and contingent work sit in your plan?"),
         ],
-        "Two-thirds of Asia-Pacific employment lives outside the formal sector.\n\nILO 2026: 65.4% of Asia-Pacific employment is informal — around 330 million workers. Globally, 2.1 billion workers are in informal employment.\n\nWorkforce strategy has to widen beyond headcount.\n\n#Workforce #FutureOfWork #APAC",
+        "Multinational workforce strategy in APAC has a structural reality most boardroom slides ignore.\n\nILO 2026 puts the regional informality picture in numbers. For organizations operating across multiple Asian markets, formal-employment policies cover only part of the real workforce footprint.\n\nThe rest needs different tools.\n\n#Workforce #FutureOfWork #APAC",
     ),
     (
         "trade-costs-shrink-asian-wages",
@@ -370,7 +370,7 @@ POSTS = [
             ("The CHRO read", "Comp benchmarks have to absorb a geopolitical risk premium."),
             ("Your move", "Have you stress-tested your APAC comp plan against trade scenarios?"),
         ],
-        "Trade tensions are quietly compressing Asian wages.\n\nILO 2026: SEA wages are projected to decline 0.3% per year on rising trade costs; Southern Asia 0.45% per year over five years.\n\nComp benchmarks have to absorb a geopolitical risk premium.\n\n#Compensation #APAC #PeopleStrategy",
+        "Comp benchmarking in Asia in 2026 needs a layer it didn't have in 2024 — geopolitical risk.\n\nILO's 2026 modeling traces a quiet wage-compression effect from rising trade costs across SEA and Southern Asia. Historical benchmarks alone won't price the next two-year window.\n\n#Compensation #APAC #PeopleStrategy",
     ),
     (
         "africa-will-have-the-workers",
@@ -384,7 +384,7 @@ POSTS = [
             ("The CHRO read", "Global talent strategy now has to be locally specific."),
             ("Your move", "Where does your talent plan reach the labor force of 2030?"),
         ],
-        "The labor force of 2030 lives in different markets.\n\nILO 2026: Africa's labor force will grow from 230 million (1995) to 610 million (2030). High-income country labor forces are flat or shrinking.\n\nGlobal talent strategy now has to be locally specific.\n\n#TalentStrategy #FutureOfWork #PeopleStrategy",
+        "Global talent strategies built in 2018 assumed a labor pool that doesn't exist anymore.\n\nILO 2026 describes a reshuffling — Africa's share grows fast while many advanced markets shrink. Org charts, TA footprints, and capability hubs will feel that shift before the decade ends.\n\n#TalentStrategy #FutureOfWork #PeopleStrategy",
     ),
     (
         "climate-shifts-export-economies",
@@ -398,7 +398,7 @@ POSTS = [
             ("The CHRO read", "Climate adaptation is workforce strategy, not just ESG."),
             ("Your move", "Where does climate sit in your APAC workforce plan?"),
         ],
-        "Climate is a payroll line in Asia's export economies.\n\nIFC 2026: Pakistan and Bangladesh could lose $65.8 billion in export earnings by 2030 without climate adaptation. ILO: 2.4 billion workers are exposed to excessive heat at work.\n\nClimate adaptation is workforce strategy, not just ESG.\n\n#ClimateRisk #APAC #PeopleStrategy",
+        "Workforce planning in APAC has a new variable most cycles haven't priced.\n\nIFC and ILO data show climate is already shifting where work can happen, when, and at what productivity. For supply chain and export-driven employers, climate resilience is a people decision, not a sustainability one.\n\n#ClimateRisk #APAC #PeopleStrategy",
     ),
     (
         "heat-will-cost-india-thirty-four-million-jobs",
@@ -412,7 +412,7 @@ POSTS = [
             ("The CHRO read", "Shift patterns, cooling, and heat policy belong in HR's strategy deck."),
             ("Your move", "Is heat a workforce risk in your operations today?"),
         ],
-        "India's heat exposure is a workforce planning issue, not a climate one.\n\nILO: India could lose the equivalent of 34 million full-time jobs to heat stress by 2030. Southern Asia projected to lose 5.3% of working hours — highest globally.\n\nHeat policy belongs in HR's strategy deck.\n\n#ClimateRisk #FutureOfWork #PeopleStrategy",
+        "The Indian operations of multinational employers are writing a new playbook for workforce risk.\n\nILO modeling makes the scale of the heat-related productivity hit concrete. Workforce planning has to absorb summer shift redesign, cooling investment, and heat-protocol training as core HR programs — not seasonal afterthoughts.\n\n#ClimateRisk #FutureOfWork #PeopleStrategy",
     ),
     (
         "geopolitics-is-the-new-hr-risk",
@@ -426,7 +426,7 @@ POSTS = [
             ("The CHRO read", "People strategy now needs scenario plans, not just succession plans."),
             ("Your move", "How does your workforce plan respond to a sudden trade shift?"),
         ],
-        "Geopolitics has moved from boardroom briefing to people strategy.\n\nCHRO Association 2026: 46% of CHROs cite geopolitical instability as the top external force on their business. PwC 2026: 84% of CEOs say their company has been moderately or significantly affected.\n\nPeople strategy needs scenario plans now.\n\n#Risk #PeopleStrategy #Leadership",
+        "Workforce planning used to be a smooth-curve exercise. In 2026 it's a scenarios exercise.\n\nCHRO Association and PwC together describe a year where political volatility is felt directly inside people decisions. The HR function that plans for one future is planning for none.\n\n#Risk #PeopleStrategy #Leadership",
     ),
     (
         "tariffs-meet-payroll",
@@ -440,7 +440,7 @@ POSTS = [
             ("The CHRO read", "Headcount decisions made under tariff pressure tend to be the ones most regretted later."),
             ("Your move", "Is your workforce plan tariff-pressure tested?"),
         ],
-        "Tariffs aren't only a margin problem. They're a workforce problem.\n\nPwC 2026: 29% of CEOs expect tariffs to reduce net profit margin in the year ahead. CHRO Association 2026: 35% of CHROs cite tariffs as a top external force.\n\nTariff-pressure headcount decisions are the most-regretted ones.\n\n#Risk #PeopleStrategy #Leadership",
+        "Margin pressure has a way of becoming headcount pressure fast. And headcount pressure rarely produces the cleanest decisions.\n\nPwC and CHRO Association data converge — the workforce moves taken under tariff pressure deserve more deliberation than the timeline allows.\n\nPre-decision discipline is the lever.\n\n#Risk #PeopleStrategy #Leadership",
     ),
     (
         "adaptive-leadership-multiplies",
@@ -454,7 +454,7 @@ POSTS = [
             ("The CHRO read", "Reflection isn't soft. It's a leverage point."),
             ("Your move", "Where does reflection live in your leadership operating rhythm?"),
         ],
-        "Reflective leaders see their organizations adapt — at almost double the rate.\n\nMcKinsey 2026 (10,000 leaders, 16 countries): 30% of reflective leaders believe their org adapts quickly to change. Only 17% of non-reflective leaders say the same.\n\nReflection is a leverage point, not a soft skill.\n\n#Leadership #FutureOfWork #PeopleStrategy",
+        "There's a quiet finding inside McKinsey's 2026 leadership data that doesn't get enough air time.\n\nLeaders who build a regular reflective habit are nearly twice as likely to say their organization adapts well. Reflection isn't a wellbeing perk — it's a hard performance variable.\n\n#Leadership #FutureOfWork #PeopleStrategy",
     ),
 ]
 

@@ -3,16 +3,16 @@
 - **Theme:** Internal mobility as retention infrastructure
 - **Accent:** navy
 - **Sources:** Deloitte 2026 Global Human Capital Trends [PDF]; McKinsey State of Organizations 2026 [PDF]
-- **Word count:** 45
+- **Word count:** 49
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-The retention lever sits inside your own walls.
+The cheapest retention strategy in 2026 is already in the building.
 
-Deloitte 2026: internal mobility nearly doubles tenure (7.4 vs 4.1 years). McKinsey 2026: 47% of leaders name limited career progression as the top barrier to high-performance culture.
+Deloitte and McKinsey converge on the same finding: internal moves materially extend tenure. The absence of a visible next step is the loudest reason people quietly start interviewing.
 
-The career inside is now the asset.
+Talent marketplaces deserve a fresh budget line.
 
 #Retention #InternalMobility #SkillsFirst
 ```

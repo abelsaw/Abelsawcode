@@ -3,16 +3,14 @@
 - **Theme:** India heat-stress productivity loss
 - **Accent:** rust
 - **Sources:** ILO Working on a Warmer Planet [PDF]
-- **Word count:** 50
+- **Word count:** 49
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-India's heat exposure is a workforce planning issue, not a climate one.
+The Indian operations of multinational employers are writing a new playbook for workforce risk.
 
-ILO: India could lose the equivalent of 34 million full-time jobs to heat stress by 2030. Southern Asia projected to lose 5.3% of working hours — highest globally.
-
-Heat policy belongs in HR's strategy deck.
+ILO modeling makes the scale of the heat-related productivity hit concrete. Workforce planning has to absorb summer shift redesign, cooling investment, and heat-protocol training as core HR programs — not seasonal afterthoughts.
 
 #ClimateRisk #FutureOfWork #PeopleStrategy
 ```

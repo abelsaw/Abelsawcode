@@ -3,16 +3,14 @@
 - **Theme:** Climate risk in APAC export economies
 - **Accent:** navy
 - **Sources:** IFC Hidden Potential 2026 [PDF]; ILO Heat Stress [PDF]
-- **Word count:** 48
+- **Word count:** 49
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-Climate is a payroll line in Asia's export economies.
+Workforce planning in APAC has a new variable most cycles haven't priced.
 
-IFC 2026: Pakistan and Bangladesh could lose $65.8 billion in export earnings by 2030 without climate adaptation. ILO: 2.4 billion workers are exposed to excessive heat at work.
-
-Climate adaptation is workforce strategy, not just ESG.
+IFC and ILO data show climate is already shifting where work can happen, when, and at what productivity. For supply chain and export-driven employers, climate resilience is a people decision, not a sustainability one.
 
 #ClimateRisk #APAC #PeopleStrategy
 ```

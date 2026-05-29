@@ -3,16 +3,14 @@
 - **Theme:** HDHPs as the new default benefits architecture
 - **Accent:** navy
 - **Sources:** CHRO Association 2026 [PDF]
-- **Word count:** 41
+- **Word count:** 49
 
 ## Post body (≤50 words — copy into LinkedIn as-is)
 
 ```
-High-deductible plans are no longer the alternative. They are the default.
+Benefits used to be a recruiting story. For many US employers it's quietly become a cost-management one.
 
-CHRO Association 2026: 86% of US CHROs offer high-deductible health plans with HSAs. 62% increased employee cost-sharing this year.
-
-Cost-shifting solves the budget. It doesn't solve retention.
+CHRO Association 2026 makes the shift visible — most CHROs are managing budgets through deductibles and cost-sharing. The retention question is whether employees still feel valued by the plan.
 
 #Benefits #PeopleStrategy #HumanResources
 ```
