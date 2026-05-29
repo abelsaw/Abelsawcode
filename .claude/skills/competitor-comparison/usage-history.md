@@ -9,6 +9,15 @@ To allow recycling, delete the relevant entry below.
 
 ## Used pairs (most recent first)
 
+### Claude Opus 4.8 vs GPT-5.5 — Frontier model head-to-head
+- Date: 2026-05-29
+- Angle: Opus 4.8 took the frontier — and the cheaper seat too.
+- Slugs: option-1 (stat), option-2 (question), option-3 (contrarian)
+- Rows: 7 model-spec dimensions (release date, context window, SWE-Bench Pro, GDPval-AA Elo, GraphWalks 256K, price, agent edge)
+- Draft: posts/drafts/competitor-comparison-2026-05-29-opus48-vs-gpt55.md
+- Trigger: user-specified — Opus 4.8 vs latest ChatGPT flagship model
+- Dedup note: 2nd same-day, same-pair run on a different angle. Today's earlier run was strategic (model vs harness); this run is model-spec only.
+
 ### Claude (Opus 4.8) vs OpenAI — Frontier AI (model vs harness lens)
 - Date: 2026-05-29
 - Angle: Anthropic doubled down on the model. OpenAI doubled down on the harness.
