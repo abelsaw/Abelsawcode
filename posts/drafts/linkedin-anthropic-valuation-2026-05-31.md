@@ -32,7 +32,7 @@ The moat isn't the model. It's simultaneous acceleration: capital, compute, prod
 
 Most enterprises run these as separate plans, on separate clocks. That's the gap.
 
-So we do the opposite. One roadmap per PLC, with strategy, AI, talent and capital sequenced as a single bet — funded, staffed and shipped together.
+So we do the opposite. One roadmap per PLC, with strategy, AI, talent and capital sequenced as a single bet: funded, staffed and shipped together.
 
 What would you put on one clock first?
 
