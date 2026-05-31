@@ -1,39 +1,39 @@
-# LinkedIn drafts — Anthropic $965B re-rating, Chief Transformation Officer lens (2026-05-31, 100w)
+# LinkedIn drafts — Anthropic $965B re-rating, Group CTO lens (2026-05-31, 100w, executable angle)
 
 Source: infographic "Why Anthropic Suddenly Reached a $965 Billion Valuation?"
 Figures anchored to the self-consistent set: $6.5B Series H, ARR $1B→$47B+, $965B valuation.
-Voice: Chief Transformation Officer — remit across strategy, IT, digital & AI, and HR; Exco of 6 PLCs; running 2 P&Ls (digital transformation, smart home). Both ≤100 words.
+Voice: Group Chief Transformation Officer (strategy, IT, digital & AI, HR; ExCo of 6 PLCs; 2 P&Ls — digital transformation, smart home). Bias: practical, executable. Both ≤100 words.
 
 ---
 
-## Option A — Measured (100 words)
+## Option A — Measured (99 words)
 
 Anthropic's $965B valuation is making headlines. The number isn't the lesson.
 
-Look at the operating model. ARR moved from $1B to $47B+ in under two years. A $6.5B Series H reinforced the balance sheet. Long-term compute is now locked in across AWS, Google and others.
+Look at the operating model. ARR moved from $1B to $47B+ in under two years. A $6.5B Series H reinforced the balance sheet. Long-term compute is locked in across AWS, Google and others.
 
 Three engines accelerating at once: revenue, capital, compute.
 
-That's a transformation pattern, not just a tech story. The organizations pulling ahead are aligning strategy, capital allocation, technology and talent on the same clock.
+That's a transformation pattern, not just a tech story. The takeaway for our PLCs is cadence: put strategy, capital, technology and talent on one operating clock, not four separate ones.
 
-The question for any board: are your functions compounding together, or still moving in silos?
+Where in your portfolio are those four still being planned apart?
 
-#Transformation #AI #Strategy #DigitalTransformation
+#Transformation #AI #Strategy #OperatingModel
 
 ---
 
-## Option B — Bold (100 words)
+## Option B — Bold (97 words)
 
 A $965B valuation. ARR from $1B to $47B+ in under two years. The market just re-rated what a company can be worth.
 
-I run transformation across strategy, technology, AI and people. Here's the part that matters.
+I lead transformation across strategy, technology, AI and people. Here's the operator's takeaway.
 
-The moat isn't the model. It's simultaneous acceleration: capital, compute, product and talent moving together. A $6.5B raise on one side, compute secured with AWS, Google and SpaceX on the other.
+The moat isn't the model. It's simultaneous acceleration: capital, compute, product and talent moving together.
 
-Operating models win the same way. Not one bet, every function compounding at once.
+Most enterprises run these as separate plans, on separate clocks. That's the gap.
 
-Most enterprises transform in years. This curve moves in months.
+So we do the opposite. One roadmap per PLC, with strategy, AI, talent and capital sequenced as a single bet — funded, staffed and shipped together.
 
-Where is your organization compounding?
+What would you put on one clock first?
 
-#Transformation #AI #DigitalTransformation #Strategy
+#Transformation #AI #DigitalTransformation #OperatingModel
