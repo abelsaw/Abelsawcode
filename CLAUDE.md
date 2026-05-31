@@ -1,33 +1,54 @@
-# Project memory — author persona & content rules
+# Project memory — author context & content rules
 
-## Author persona (applies to ALL content in this repo — do NOT default to a CHRO voice)
+## Work context
 
-Whenever you draft LinkedIn posts, carousels, or any first-person content for the
-owner of this repo, write in the voice of a **Chief Transformation Officer**, not
-a CHRO.
+Abel serves as **Group Chief Transformation Officer**, with oversight spanning the
+**Strategy, IT, Digital & AI, and HR** functions. In addition to his functional
+remit, he oversees **two P&L businesses** — one in **digital transformation** and
+one in **smart home** — and sits on the **ExCo of 6 PLCs**. His mandate is broad,
+operating at the intersection of enterprise strategy, technology, people, and
+commercial performance. Abel is known for a **progressive, professional, and bold**
+approach to leadership and transformation.
 
-- **Remit:** strategy, IT, digital & AI, and HR. HR is **one function among
-  several** under this person — never the whole frame.
-- **Seniority/scope:** sits on the **Exco of 6 PLCs**; runs **2 P&L businesses
-  (digital transformation and smart home)**.
-- **Altitude:** write as a board-level operator who owns enterprise outcomes —
-  connect talent to strategy, technology, AI, capital allocation and P&L, rather
-  than treating people topics in isolation.
-- Don't open posts with "as a CHRO" or "for those of us in people functions."
-- Even HR-sourced research should be framed through a **transformation lens**
-  (operating model, P&L, the tech-and-talent stack), not a pure people lens.
+His familiarity with cross-functional leadership priorities reflects the full
+breadth of his transformation mandate, which spans organisational, digital, and
+commercial dimensions at a senior executive level.
+
+## Top of mind
+
+Abel is actively exploring strategic priorities across his transformation office and
+ExCo responsibilities. His focus spans enterprise-wide transformation agendas —
+including the integration of AI and digital capabilities across functions, the
+evolution of operating models, and the alignment of strategy, technology, and people
+to drive organisational performance at scale. As an ExCo member across multiple
+PLCs, he is also attentive to board-level priorities, cross-entity governance, and
+how transformation can be a lever for commercial growth across his P&L businesses.
+
+Abel is keen on identifying **regional best practices across related industries**,
+with a strong orientation toward **practically implementing on-the-ground strategies**
+rather than purely theoretical or benchmarking exercises. The emphasis is on
+**translating insights into tangible, executable initiatives** within his
+organisations.
+
+## How to write for Abel (apply to ALL first-person content — do NOT default to a CHRO voice)
+
+- Write from the **Group Chief Transformation Officer** altitude. HR is **one
+  function among several** under him — never the whole frame.
+- Connect topics to **enterprise strategy, technology/AI, people, operating models,
+  governance, and P&L/commercial performance** — not people topics in isolation.
+- Voice is **progressive, professional, and bold**: takes a clear position, points
+  forward, owns the outcome. Board-level operator, not a sideline advisor.
+- Bias toward **practical, executable, on-the-ground** insight over theory or pure
+  benchmarking. Favor "here's how this lands as an initiative" over "here's a stat."
+- Don't open with "as a CHRO" or "for those of us in people functions."
 
 ## Default LinkedIn post format
 
-- Unless told otherwise, when asked for post "options," produce **two**: one
-  **measured**, one **bold**.
-- **Default length cap: 100 words** per post (this overrides the `linkedin-post`
-  skill's native ≤50-word cap — honor an explicit shorter cap when the user gives
-  one).
-- Voice rules still apply: bold/progressive/professional, short sentences (often
-  one per line), no corporate jargon, no emojis, no AI-tells (delve, tapestry,
-  navigating the landscape, in conclusion, moreover, furthermore), 3–4 hashtags,
-  reflective (not loaded) closing question.
-- No fabrication — every figure must trace to the provided source/infographic.
-  Flag internal inconsistencies in source material rather than asserting an exact
-  number.
+- When asked for post "options," produce **two**: one **measured**, one **bold**.
+- **Default length cap: 100 words** per post (overrides the `linkedin-post` skill's
+  native ≤50-word cap; honor an explicit shorter cap when given).
+- Short sentences (often one per line); no corporate jargon; no emojis; no AI-tells
+  (delve, tapestry, navigating the landscape, in conclusion, moreover, furthermore);
+  3–4 hashtags; reflective (not loaded) closing question.
+- **No fabrication** — every figure traces to the provided source/infographic. Flag
+  internal inconsistencies in source material rather than asserting an exact number.
