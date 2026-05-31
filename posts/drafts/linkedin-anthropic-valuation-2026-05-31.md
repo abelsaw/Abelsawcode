@@ -1,41 +1,35 @@
-# LinkedIn drafts — Anthropic $965B re-rating, CHRO lens (2026-05-31)
+# LinkedIn drafts — Anthropic $965B re-rating, CHRO lens (2026-05-31, rev. per SKILL.md ≤50w)
 
 Source: infographic "Why Anthropic Suddenly Reached a $965 Billion Valuation?"
 Figures anchored to the self-consistent set: $6.5B Series H, ARR $1B→$47B+, $965B valuation.
-Voice: regional (APAC) CHRO. Both ≤100 words.
+Voice: regional (APAC) CHRO. Both ≤50 words per SKILL.md hard cap.
 
 ---
 
-## Option A — Measured (88 words)
+## Option A — Measured (49 words)
 
-Anthropic's reported $965B valuation is making headlines. The number isn't the lesson.
+Anthropic's $965B valuation isn't the story.
 
-What stands out: ARR moving from $1B to $47B+ in under two years, a $6.5B raise, and long-term compute secured across AWS, Google and others.
+ARR went from $1B to $47B+ in under two years, backed by a $6.5B raise and long-term compute deals.
 
-Three engines accelerating at once — revenue, capital, compute.
+Revenue, capital, compute, accelerating together.
 
-For those of us leading people functions, the signal is speed. Capability is compounding faster than most workforce plans assume.
+For people leaders, the signal is speed. Capability now compounds faster than most workforce plans assume.
 
-The question isn't whether AI reshapes our teams. It's how quickly we build the skills to keep pace.
-
-#FutureOfWork #AI #Talent #CHRO
+#FutureOfWork #AI #Talent
 
 ---
 
-## Option B — Bold (91 words)
+## Option B — Bold (49 words)
 
-A $965B valuation. ARR from $1B to $47B+ in under two years. The market just re-rated what an AI company is worth.
+The moat isn't the model.
 
-Here's what I keep coming back to as a CHRO.
+Anthropic's $965B valuation runs on three engines at once: revenue, capital, compute. ARR jumped $1B to $47B+ in under two years.
 
-The moat isn't the model. It's simultaneous acceleration — revenue, capital, and compute moving together.
+Organizations compound the same way.
 
-Organizations win the same way. Not one bet, but capability, funding, and infrastructure compounding at once.
+Most workforce plans move in years. This curve moves in months.
 
-Most workforce strategies still plan in years. This curve moves in months.
+Where are you accelerating?
 
-If your people plan can't compound, it can't keep up.
-
-Where is your organization actually accelerating?
-
-#AI #FutureOfWork #Leadership #CHRO
+#AI #FutureOfWork #Leadership
