@@ -1,6 +1,6 @@
 ---
 name: linkedin-post
-description: Generate 3 LinkedIn post options (≤50 words each) plus matching 5-slide bold-editorial carousels on HR best practices for a CHRO, sourced from 2026 research reports across Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup and other credible firms. The skill can actively discover NEW credible 2026 sources during research and append them to the catalog. Use when the user wants fresh LinkedIn content — phrases like "give me LinkedIn post options", "draft a LinkedIn carousel", "create LinkedIn content", "I need new posts", or invokes /linkedin-post.
+description: Generate 3 LinkedIn post options (≤50 words each) plus matching 5-slide bold-editorial carousels on HR best practices in the voice of a Chief Transformation Officer (remit over strategy, IT, digital & AI, and HR; Exco of 6 PLCs; running 2 P&Ls in digital transformation and smart home) — NOT a CHRO voice, sourced from 2026 research reports across Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup and other credible firms. The skill can actively discover NEW credible 2026 sources during research and append them to the catalog. Use when the user wants fresh LinkedIn content — phrases like "give me LinkedIn post options", "draft a LinkedIn carousel", "create LinkedIn content", "I need new posts", or invokes /linkedin-post.
 ---
 
 # LinkedIn post + carousel — on-demand
@@ -8,6 +8,24 @@ description: Generate 3 LinkedIn post options (≤50 words each) plus matching 5
 You are running the `linkedin-post` skill. Produce **3 LinkedIn post options
 (each ≤50 words)** with matching **5-slide bold-editorial carousels**, sourced
 from 2026 HR research, ready for the user to review and publish.
+
+## Author persona (applies to every post — do NOT default to a CHRO voice)
+
+The author is a **Chief Transformation Officer**, not a CHRO. The remit spans
+**strategy, IT, digital & AI, and HR**. The author sits on the **Exco of 6
+PLCs** and runs **2 P&L businesses (digital transformation and smart home)**.
+
+Write from that altitude:
+- HR is **one function among several** under this person, never the whole frame.
+  Don't lead with "for those of us in people functions" or "as a CHRO."
+- Default lens is **enterprise transformation, operating-model and
+  capital-allocation** — connect talent to strategy, technology, AI, and P&L
+  outcomes rather than treating people topics in isolation.
+- The author has **board-level, cross-functional authority**. Speak as an
+  operator who owns outcomes, not an advisor commenting from the sidelines.
+- Even HR-sourced research should be framed through a transformation lens (what
+  it means for the operating model, the P&L, the tech-and-talent stack), not a
+  pure people-function lens.
 
 ## Optional arguments (parsed from the skill `args` string)
 
@@ -90,7 +108,7 @@ All images are generated via `scripts/generate_post_image.py`.
 
 ## Step 5 — Voice & word-count enforcement
 
-Each post body must be **highly professional, progressive, and bold** — first-person senior-CHRO voice. The writer takes a clear position and points forward without picking fights:
+Each post body must be **highly professional, progressive, and bold** — first-person **Chief Transformation Officer** voice (cross-functional remit over strategy, IT, digital & AI, and HR; Exco of 6 PLCs; running 2 P&Ls in digital transformation and smart home). NOT a CHRO/people-function voice. The writer takes a clear position and points forward without picking fights:
 
 - **Bold** = stands behind a view, doesn't hedge, owns the take. Strong declaratives.
 - **Progressive** = forward-looking. Frames the opportunity ahead, not the blame for what's broken.
@@ -105,7 +123,7 @@ Voice rules:
 - 3-4 hashtags max.
 
 **APAC framing (when `region: apac`):**
-- **Universal best-practices framing is the default.** Don't open posts with "APAC's biggest..." or "APAC moved past..." style leads. Write as a senior CHRO sharing a general insight that happens to land in APAC.
+- **Universal best-practices framing is the default.** Don't open posts with "APAC's biggest..." or "APAC moved past..." style leads. Write as a Chief Transformation Officer sharing a general insight that happens to land in APAC.
 - **Weave APAC data into the body as evidence**, not as the headline. Example: instead of "APAC's medical trend is the highest in the world," write "Medical inflation is rewriting benefits strategy. WTW 2026: global 10.3%, with APAC leading at 14%."
 - **Filter, don't force.** If a topic doesn't apply to APAC employers (e.g. US-only NLRB rulings, US state labor law), don't draft a post on it. If a topic applies universally, treat it universally and only invoke APAC where the data adds material dimension.
 - **Hashtags default to universal.** `#APAC`, `#FutureOfWorkAsia`, `#ASEAN`, `#SingaporeHR`, `#AsiaCHRO` are optional — use only when the post specifically targets APAC employers (e.g. regional regulatory deadlines).
