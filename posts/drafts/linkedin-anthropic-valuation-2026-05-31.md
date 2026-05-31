@@ -32,8 +32,8 @@ The moat isn't the model. It's simultaneous acceleration: capital, compute, prod
 
 Operating models win the same way. Not one bet, every function compounding at once.
 
-Most enterprises still transform in years. This curve moves in months.
+Most enterprises transform in years. This curve moves in months.
 
-Where is your organization actually compounding?
+Where is your organization compounding?
 
 #Transformation #AI #DigitalTransformation #Strategy
