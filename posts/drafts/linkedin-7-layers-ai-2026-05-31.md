@@ -1,9 +1,26 @@
-# LinkedIn draft — The 7 Layers of AI Systems (2026-05-31)
+# LinkedIn drafts — The 7 Layers of AI Systems (2026-05-31)
 
 Source: infographic "The 7 Layers of AI Systems" (by Anthropic).
-Word count: 97 (≤100 cap).
 
 ---
+
+## Option A — Measured (89 words)
+
+A useful way to think about modern AI: not one model, but seven layers.
+
+Token. Prompt. Context. Agent. Harness. MCP. Skills.
+
+Each builds on the one below it. A prompt becomes tokens. Tokens accumulate as context. An agent acts on that context. A harness keeps the process orderly. MCP connects it to outside tools. Skills let it work step by step.
+
+Read together, the pattern is clear. We've moved from systems that answer questions to systems that coordinate work.
+
+Worth asking where your own stack sits.
+
+#AI #AgenticAI #FutureOfWork #AIStrategy
+
+---
+
+## Option B — Bold (96 words)
 
 We keep talking about prompts. The real shift is underneath.
 
