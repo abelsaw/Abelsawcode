@@ -10,6 +10,15 @@ thread), manually delete its entry from the relevant week below.
 
 ## Past weeks (most recent first)
 
+### Week of 2026-05-29
+- Theme: The enterprise agent stack put a price on itself this week — orchestration, security, and foundation layers all moved within 48 hours, at three radically different price brackets.
+- Story URLs:
+  - asana-stackai: https://techcrunch.com/2026/05/28/asana-acquires-no-code-agent-builder-stack-ai/
+  - palo-alto-portkey: https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-portkey-to-secure-ai-agents
+  - anthropic-series-h-965b: https://www.cnbc.com/2026/05/28/anthropic-open-ai-startup-value.html
+- Option slugs: three-layers-one-week (synthesis), which-layers-are-still-builders (question), from-deployment-plan-to-stack-plan (learning)
+- Date: 2026-06-01
+
 ### Week of 2026-05-22
 - Theme: This was the week the agent stack and the workforce conversation finally collided in the open — capability shipped, enterprise control shipped, and a CEO said the quiet part out loud (then walked it back).
 - Story URLs:
