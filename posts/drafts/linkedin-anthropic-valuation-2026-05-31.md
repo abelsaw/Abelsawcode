@@ -1,39 +1,22 @@
-# LinkedIn drafts — Anthropic $965B re-rating, Group CTO lens (2026-05-31, 100w, neutral + aspirational)
+# LinkedIn draft (final) — Anthropic $965B re-rating, Group CTO lens (2026-05-31)
 
 Source: infographic "Why Anthropic Suddenly Reached a $965 Billion Valuation?"
-Figures anchored to the self-consistent set: $6.5B Series H, ARR $1B→$47B+, $965B valuation.
-Voice: Group Chief Transformation Officer. Tone: neutral, aspirational (no on-the-ground/operator specifics). Both ≤100 words.
+Figures from the infographic's self-consistent set: $6.5B Series H, ARR $1B→$47B+, $965B valuation.
+GIC backing: user-provided (not on the infographic).
+Voice: Group Chief Transformation Officer. ≤100 words.
 
 ---
 
-## Option A — Measured (96 words)
+## Final (100 words)
 
-Anthropic's $965B valuation is making headlines. The number isn't the real story.
+Anthropic's $965B valuation is making headlines. The number isn't the lesson.
 
-Look closer at the shape of it. ARR moved from $1B to $47B+ in under two years. A $6.5B Series H strengthened the balance sheet. Long-term compute secured across AWS, Google and others.
+Look at the operating model. ARR moved from $1B to $47B+ in under two years. A $6.5B Series H, backed by GIC, reinforced the balance sheet. Long-term compute is now locked in across AWS, Google and others.
 
 Three engines accelerating at once: revenue, capital, compute.
 
-This is what modern advantage looks like. Not a single breakthrough, but strategy, technology, capital and talent moving in concert.
+That's a transformation pattern, not just a tech story. The organizations pulling ahead are aligning strategy, capital allocation, technology and talent on the same clock.
 
-The organisations that thrive next won't optimise one function. They will align them all toward a shared ambition.
+The question for any board: are your functions compounding together, or still moving in silos?
 
-#Transformation #AI #Strategy #FutureOfWork
-
----
-
-## Option B — Bold (95 words)
-
-A $965B valuation. ARR from $1B to $47B+ in under two years. The market just redefined what a company can become.
-
-The lesson runs deeper than any model.
-
-Lasting advantage comes from simultaneous acceleration: capital, compute, product and talent rising together. Strategy and technology, people and performance, moving as one.
-
-This is the shape of transformation worth aspiring to. Not isolated wins, but an enterprise compounding across every dimension at once.
-
-The next decade will favour those bold enough to align it all.
-
-How far could your organisation go if every function moved together?
-
-#Transformation #AI #DigitalTransformation #Leadership
+#Transformation #AI #Strategy #DigitalTransformation
