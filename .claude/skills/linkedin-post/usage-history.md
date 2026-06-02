@@ -17,6 +17,27 @@ When excluding, match on **parent theme**, not slug — two slugs about "Human-A
 
 ## Used themes (most recent first)
 
+### Personalized EVP as competitive moat (NEW parent theme)
+- Slugs: evp-is-architecture
+- Source stats: Aon HCT 2026 — only 19% of orgs have a clearly defined EVP; EVP-clear orgs lead peers by 34pp on visible leadership wellbeing commitment, 21pp on retirement gender-gap action, 20pp on benefit personalization; 84% employers say wellbeing strategy works vs 72% employees still report high stress [PDF: aon/human-capital-trends-2026.pdf, p.7, p.26]; Deloitte Gen Z/Mill 2026 — 96/97% say purpose drives satisfaction [PDF: deloitte/gen-z-millennial-survey-2026.pdf, p.41]; WTW Dynamic Total Rewards 2026 + 2026 Global EX Market Study (search-only); Mercer GTT 2026 (search-only)
+- Distinct from theme #13 (Medical inflation & benefits redesign — about cost trend) and theme #18 (Pay transparency execution — about salary disclosure). This theme is about EVP as the architecture for rewards/benefits/career allocation, not the cost or comp pieces individually.
+- Commits: (pending this run)
+- Date(s): 2026-06-02
+
+### Knowledge continuity & the great workforce handoff (NEW parent theme)
+- Slugs: knowledge-on-a-clock
+- Source stats: Deloitte Gen Z/Mill 2026 — only 54% Gen Z / 60% millennials confident team holds performance if a key expert leaves; top barriers 32% no incentive, 29% no time, ~25% confidentiality [PDF: deloitte/gen-z-millennial-survey-2026.pdf, p.48]; McKinsey State of Organizations 2026 — workforce shifts named one of three tectonic forces [PDF: mckinsey/state-of-organizations-2026.pdf, p.2]; WEF Future of Jobs aging-workforce themes (search-only)
+- Distinct from all 18 prior exclusions — no parent theme has touched generational handoff / institutional-memory transfer. Closest adjacency: theme #16 manager engagement, but that one is about manager bench depth / engagement scores, not knowledge transfer.
+- Commits: (pending this run)
+- Date(s): 2026-06-02
+
+### Leadership redesign + Gen Z opt-out (NEW parent theme)
+- Slugs: leadership-the-job-not-the-pipeline
+- Source stats: Deloitte Gen Z/Mill 2026 — only 6% rank leadership as top career goal; 50% cite stress, 41-46% cite work-life; top draws comp 53/57%, flex 42/44%, clarity 36/35% [PDF: deloitte/gen-z-millennial-survey-2026.pdf, p.14, p.15]; McKinsey State of Organizations 2026 — 30% reflective leaders see orgs as adaptive vs 17% non-reflective [PDF: mckinsey/state-of-organizations-2026.pdf, p.5]; Aon HCT 2026 — leadership & people management ranked #2 critical workforce skill [PDF: aon/human-capital-trends-2026.pdf, p.23]; Gartner CHRO Priorities 2026 — Priority 3, routinize change [PDF: gartner/chro-top-priorities-2026.pdf]
+- Distinct from theme #16 (Manager engagement — about Gallup engagement scores) and theme #11 (Internal mobility — about retention via mobility). This theme is the redesign of the leadership ROLE itself + generational rejection of the legacy model.
+- Commits: (pending this run)
+- Date(s): 2026-06-02
+
 ### AI value-capture / 12% vanguard (PDF-recycle on theme #12)
 - Slugs: the-twelve-percent-vanguard
 - Source stats: PwC 29th Global CEO Survey 2026 — 12% of CEOs capture both AI revenue and cost gains; 56% see neither; vanguard apply AI across multiple business areas 44% vs 17% [PDF: pwc/29th-global-ceo-survey-2026.pdf]
