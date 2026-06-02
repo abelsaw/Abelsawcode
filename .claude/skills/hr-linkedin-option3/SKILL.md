@@ -1,6 +1,6 @@
 ---
 name: hr-linkedin-option3
-description: Render a 5-slide LinkedIn carousel in HR Option 3 — photo-driven cover with palette-matched word slides. The user supplies a photo; it fills the top 600px of slide 1 (center-cropped to fit) with a thin tan accent stripe separator and a warm cream typography band underneath carrying brand tag, bold sans charcoal title, italic serif subtitle, source + counter. Slides 2-5 drop the photo and carry its mood through a sampled palette (cream / charcoal / tan / muted gray-tan) — large tan slide # with thin charcoal rule, sans bold charcoal headline, two-part body (muted regular lead + charcoal bold payoff). Use when the user invokes /hr-linkedin-option3 or wants a photo-driven LinkedIn carousel.
+description: Render a 7-slide LinkedIn carousel in HR Option 3 — photo-driven cover with palette-matched word slides. The user supplies a photo; it fills the top 600px of slide 1 (center-cropped) with a thin tan accent stripe separator and a warm cream typography band carrying brand tag, bold sans charcoal title, italic serif subtitle. Slides 2-6 drop the photo and carry its mood through a sampled palette (cream / charcoal / tan / muted gray-tan) — large tan slide # with thin charcoal rule, sans bold charcoal headline, two-part body (muted regular lead + charcoal bold payoff). Slide 7 is the closing on a charcoal dark background — the only dark slide — same body structure inverted (cream text on charcoal with tan slide #). Use when the user invokes /hr-linkedin-option3 or wants a photo-driven LinkedIn carousel.
 ---
 
 # hr-linkedin-option3 — photo-driven cover, palette-matched content
@@ -36,7 +36,7 @@ through the rest of the carousel.
 └──────────────────────────────────────────────────┘
 ```
 
-### Slides 2-5 (content, photo-free)
+### Slides 2-6 (content, photo-free)
 
 ```
 ┌──────────────────────────────────────────────────┐
@@ -75,7 +75,8 @@ re-sampled (see "When the photo's mood is cool / cold" below).
 | Slide | Script |
 |---|---|
 | Slide 1 (photo cover) | `scripts/generate_post_image_photo_cover.py` |
-| Slides 2-5 (content) | `scripts/generate_post_image_photo_content.py` |
+| Slides 2-6 (content) | `scripts/generate_post_image_photo_content.py` |
+| Slide 7 (dark conclusion) | `scripts/generate_post_image_photo_dark_conclusion.py` |
 
 ### Cover CLI
 
@@ -86,7 +87,7 @@ python3 scripts/generate_post_image_photo_cover.py \
   --title    "Internal\nMobility" \
   --subtitle "The retention asset you already own." \
   --source   "Mercer Global Talent Trends 2026" \
-  --slide    "1/5" \
+  --slide    "1/7" \
   --output   posts/sets/<date>/<slug>/slide-01.png
 ```
 
@@ -108,7 +109,7 @@ python3 scripts/generate_post_image_photo_content.py \
   --lead     "The career inside" \
   --bold     "is the new retention asset." \
   --source   "Mercer 2026" \
-  --slide    "2/5" \
+  --slide    "2/7" \
   --output   posts/sets/<date>/<slug>/slide-02.png
 ```
 
@@ -130,13 +131,28 @@ Same two-part body shape as `hr-linkedin-option1` and `hr-linkedin-option2`:
 3. **Payoff** (charcoal sans bold) — completes the lead.
 4. **Source** — short attribution.
 
-### Action-list slide (slide 4 of 5)
+### Action-list slide (slide 6 of 7)
 
 Drop `--bold` and pass a multi-line `--lead`.
 
-### Closing slide (slide 5 of 5)
+### Closing slide (slide 7 of 7) — dark background
 
-Conclusion, not a question — same lead + bold structure.
+Use `scripts/generate_post_image_photo_dark_conclusion.py` — the ONLY
+dark slide in the carousel. Charcoal background, cream text, large tan
+slide # with thin cream rule, same lead + bold body structure.
+
+```bash
+python3 scripts/generate_post_image_photo_dark_conclusion.py \
+  --headline "Internal mobility is not a perk." \
+  --lead     "It is the cheapest, fastest" \
+  --bold     "retention strategy you already own." \
+  --source   "CHRO Read" \
+  --slide    "7/7" \
+  --output   posts/sets/<date>/<slug>/slide-07.png
+```
+
+CLI mirrors the content CLI minus the photo (`--headline / --lead /
+--bold / --source / --slide / --output`).
 
 ## Photo guidance
 

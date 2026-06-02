@@ -1,6 +1,6 @@
 ---
 name: hr-linkedin-option1
-description: Render a 5-slide LinkedIn carousel in HR Option 1 — playful-iconic with geometric chip icons. Cream / navy / coral / mustard palette. Slide 1 cover features a brand tag, big bold sans navy title, mustard accent rule, italic serif subtitle, and a row of 4 geometric chip icons (circle / square / triangle / diamond) with tracked-caps labels. Slides 2-5 keep sans throughout — a large coral slide number with a mustard wayfinder rule top-left, bold sans navy headline, two-part body (muted regular lead + navy bold payoff), source + counter at the bottom. Use when the user invokes /hr-linkedin-option1 or asks for "HR LinkedIn Option 1".
+description: Render a 7-slide LinkedIn carousel in HR Option 1 — playful-iconic with geometric chip icons. Cream / navy / coral / mustard palette. Slide 1 cover features a brand tag, big bold sans navy title, mustard accent rule, italic serif subtitle, and a row of 4 geometric chip icons (circle / square / triangle / diamond). Slides 2-6 keep sans throughout — a large coral slide number with a mustard wayfinder rule top-left, bold sans navy headline, two-part body (muted regular lead + navy bold payoff). Slide 7 is the closing on a navy dark background — the only dark slide — same body structure, inverted (cream text on navy with the coral slide #). Use when the user invokes /hr-linkedin-option1 or asks for "HR LinkedIn Option 1".
 ---
 
 # hr-linkedin-option1 — playful-iconic with geometric chips
@@ -32,7 +32,7 @@ as decorative anchors without veering into clip-art.
 └──────────────────────────────────────────────────┘
 ```
 
-### Slides 2-5 (content)
+### Slides 2-6 (content)
 
 ```
 ┌──────────────────────────────────────────────────┐
@@ -71,7 +71,8 @@ cover; everything else stays sans for a modern, crisp feel.
 | Slide | Script |
 |---|---|
 | Slide 1 (cover) | `scripts/generate_post_image_playful_cover.py` |
-| Slides 2-5 (content) | `scripts/generate_post_image_playful_content.py` |
+| Slides 2-6 (content) | `scripts/generate_post_image_playful_content.py` |
+| Slide 7 (dark conclusion) | `scripts/generate_post_image_playful_dark_conclusion.py` |
 
 ### Cover CLI
 
@@ -82,7 +83,7 @@ python3 scripts/generate_post_image_playful_cover.py \
   --subtitle "The retention asset\nyou already own." \
   --chips "HIRE,KEEP,GROW,MOVE" \
   --source "Mercer Global Talent Trends 2026" \
-  --slide "1/5" \
+  --slide "1/7" \
   --output posts/sets/<date>/<slug>/slide-01.png
 ```
 
@@ -104,7 +105,7 @@ python3 scripts/generate_post_image_playful_content.py \
   --lead     "The career inside" \
   --bold     "is the new retention asset." \
   --source   "Mercer 2026" \
-  --slide    "2/5" \
+  --slide    "2/7" \
   --output   posts/sets/<date>/<slug>/slide-02.png
 ```
 
@@ -127,15 +128,30 @@ content slides:
 3. **Payoff** (navy sans bold) — the punchline that completes the lead.
 4. **Source** — short attribution (firm + year is enough).
 
-### Action-list slide (slide 4 of 5)
+### Action-list slide (slide 6 of 7)
 
 Drop `--bold` and pass a multi-line `--lead` (use literal `\n` between
 items). Each item stays on its own line in muted sans regular.
 
-### Closing slide (slide 5 of 5)
+### Closing slide (slide 7 of 7) — dark background
 
-Must land as a **conclusion, not a question** — same lead + bold
-structure; the bold payoff is the screenshot-worthy takeaway.
+Use `scripts/generate_post_image_playful_dark_conclusion.py` — the
+ONLY dark slide in the carousel. Navy background, cream text, same
+lead + bold structure as content slides. The bold payoff is the
+screenshot-worthy takeaway.
+
+```bash
+python3 scripts/generate_post_image_playful_dark_conclusion.py \
+  --headline "Internal mobility is not a perk." \
+  --lead     "It is the cheapest, fastest" \
+  --bold     "retention strategy you already own." \
+  --source   "CHRO Read" \
+  --slide    "7/7" \
+  --output   posts/sets/<date>/<slug>/slide-07.png
+```
+
+The dark-conclusion CLI mirrors the content CLI (`--headline / --lead /
+--bold / --source / --slide / --output`) — no extra flags.
 
 ### Cover chip labels
 

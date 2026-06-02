@@ -1,6 +1,6 @@
 ---
 name: hr-linkedin-option2
-description: Render a 5-slide LinkedIn carousel in HR Option 2 — playful-iconic with numbered TOC tiles. Cream / navy / coral / mustard / dark-coral palette. Slide 1 cover features a brand tag, big bold sans navy title, italic serif subtitle, and a 2×2 grid of colored tiles (coral / navy / mustard / dark coral) — each tile carries a slide number + topic word as a TOC preview. Slides 2-5 open with a full-width colored wayfinder ribbon (matching the cover tile color for that position) carrying the slide # + topic label, then sans bold navy headline + two-part body. Use when the user invokes /hr-linkedin-option2 or asks for "HR LinkedIn Option 2" — best for framework / 4-part structured carousels.
+description: Render a 7-slide LinkedIn carousel in HR Option 2 — playful-iconic with numbered TOC tiles. Cream / navy / coral / mustard / dark-coral palette. Slide 1 cover features a brand tag, big bold sans navy title, italic serif subtitle, and a 2×2 grid of colored tiles (coral / navy / mustard / dark coral) — each tile carries a slide number + topic word as a TOC preview. Slides 2-6 open with a full-width colored wayfinder ribbon (the four cover-tile colors for slides 2-5, then a reused mustard ribbon for the slide 6 action takeaway), carrying the slide # + topic label, then sans bold navy headline + two-part body. Slide 7 is the closing on a navy dark background — the only dark slide — with a mustard "wayfinder residue" stripe at the top to bridge back to the content slides. Use when the user invokes /hr-linkedin-option2.
 ---
 
 # hr-linkedin-option2 — playful-iconic with TOC tiles
@@ -38,7 +38,7 @@ grid.
 └──────────────────────────────────────────────────┘
 ```
 
-### Slides 2-5 (content)
+### Slides 2-6 (content)
 
 ```
 ┌──────────────────────────────────────────────────┐
@@ -56,7 +56,8 @@ grid.
 └──────────────────────────────────────────────────┘
 ```
 
-Each content slide's ribbon color tracks the cover-tile color:
+Each content slide's ribbon color tracks the cover-tile color (with
+slide 6's ribbon reusing mustard for the action takeaway):
 
 | Slide | Ribbon color | Default topic |
 |---|---|---|
@@ -64,6 +65,8 @@ Each content slide's ribbon color tracks the cover-tile color:
 | 3 | navy | KEEP |
 | 4 | mustard | GROW |
 | 5 | dark coral | MOVE |
+| 6 | mustard | PLAY (action list) |
+| 7 | navy BG (dark conclusion) | — |
 
 ## Palette
 
@@ -86,7 +89,8 @@ Each content slide's ribbon color tracks the cover-tile color:
 | Slide | Script |
 |---|---|
 | Slide 1 (cover) | `scripts/generate_post_image_playful_v2_cover.py` |
-| Slides 2-5 (content) | `scripts/generate_post_image_playful_v2_content.py` |
+| Slides 2-6 (content) | `scripts/generate_post_image_playful_v2_content.py` |
+| Slide 7 (dark conclusion) | `scripts/generate_post_image_playful_v2_dark_conclusion.py` |
 
 ### Cover CLI
 
@@ -97,7 +101,7 @@ python3 scripts/generate_post_image_playful_v2_cover.py \
   --subtitle "The retention asset you already own." \
   --tiles    "01:HIRE,02:KEEP,03:GROW,04:MOVE" \
   --source   "Mercer Global Talent Trends 2026" \
-  --slide    "1/5" \
+  --slide    "1/7" \
   --output   posts/sets/<date>/<slug>/slide-01.png
 ```
 
@@ -122,7 +126,7 @@ python3 scripts/generate_post_image_playful_v2_content.py \
   --lead       "The career inside" \
   --bold       "is the new retention asset." \
   --source     "Mercer 2026" \
-  --slide      "2/5" \
+  --slide      "2/7" \
   --output     posts/sets/<date>/<slug>/slide-02.png
 ```
 
@@ -163,14 +167,30 @@ Don't reorder the colors — the carousel reads as a numbered framework,
 and the visual consistency between the cover grid and the content
 ribbons is the whole point.
 
-### Action-list slide (slide 4 of 5)
+### Action-list slide (slide 6 of 7)
 
-Mustard ribbon. Drop `--bold` and pass a multi-line `--lead`.
+Mustard ribbon (reused from the GROW tile). Drop `--bold` and pass a
+multi-line `--lead`.
 
-### Closing slide (slide 5 of 5)
+### Closing slide (slide 7 of 7) — dark background
 
-Dark-coral ribbon. Same lead + bold structure; the bold payoff is the
-takeaway.
+Use `scripts/generate_post_image_playful_v2_dark_conclusion.py` — the
+ONLY dark slide in the carousel. Navy background, cream text, mustard
+"wayfinder residue" stripe across the top to bridge back to the
+content slides, same lead + bold structure.
+
+```bash
+python3 scripts/generate_post_image_playful_v2_dark_conclusion.py \
+  --headline "Internal mobility is not a perk." \
+  --lead     "It is the cheapest, fastest" \
+  --bold     "retention strategy you already own." \
+  --source   "CHRO Read" \
+  --slide    "7/7" \
+  --output   posts/sets/<date>/<slug>/slide-07.png
+```
+
+The dark-conclusion CLI mirrors the content CLI minus the tile flags
+(`--headline / --lead / --bold / --source / --slide / --output`).
 
 ## When to use
 
