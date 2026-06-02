@@ -16,7 +16,7 @@ grid.
 
 ```
 ┌──────────────────────────────────────────────────┐
-│ ABEL SAW · CHRO                                  │ ← brand tag tracked caps
+│ CHRO                                  │ ← brand tag tracked caps
 │ ──                                                │   + coral mini-stripe
 │                                                  │
 │ Internal                                         │ ← bold sans navy title
@@ -92,7 +92,7 @@ Each content slide's ribbon color tracks the cover-tile color:
 
 ```bash
 python3 scripts/generate_post_image_playful_v2_cover.py \
-  --tag      "Abel Saw · CHRO" \
+  --tag      "CHRO" \
   --title    "Internal\nMobility" \
   --subtitle "The retention asset you already own." \
   --tiles    "01:HIRE,02:KEEP,03:GROW,04:MOVE" \
@@ -103,7 +103,7 @@ python3 scripts/generate_post_image_playful_v2_cover.py \
 
 | Flag | Required | Use |
 |---|---|---|
-| `--tag`      | no  | Brand tag tracked caps. Default `"ABEL SAW · CHRO"`. |
+| `--tag`      | no  | Brand tag tracked caps. Default `"CHRO"`. |
 | `--title`    | yes | Bold sans title. Supports `\n`. |
 | `--subtitle` | no  | Italic serif subtitle. Supports `\n`. |
 | `--tiles`    | no  | 4 comma-separated `NN:LABEL` pairs. Default `"01:HIRE,02:KEEP,03:GROW,04:MOVE"`. |

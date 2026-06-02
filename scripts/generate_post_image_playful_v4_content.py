@@ -108,7 +108,7 @@ def fit_headline(draw, text, max_w, max_h, size_hi=86, size_lo=40, step=2):
 
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--tag", default="ABEL SAW · CHRO")
+    p.add_argument("--tag", default="CHRO")
     p.add_argument("--headline", required=True)
     p.add_argument("--lead", default="")
     p.add_argument("--bold", default="")

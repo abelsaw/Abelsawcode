@@ -85,7 +85,7 @@ def fit_lines_ital(draw, text, max_w, max_h, size_hi=38, size_lo=20):
 
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--tag", default="ABEL SAW · CHRO")
+    p.add_argument("--tag", default="CHRO")
     p.add_argument("--title", required=True)
     p.add_argument("--subtitle", default="")
     p.add_argument("--source", default="")

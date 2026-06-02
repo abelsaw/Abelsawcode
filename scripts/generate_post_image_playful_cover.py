@@ -155,7 +155,7 @@ def chip_diamond(draw, cx, cy, r, color):
 
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--tag", default="ABEL SAW · CHRO")
+    p.add_argument("--tag", default="CHRO")
     p.add_argument("--title", required=True,
                    help="Bold sans title. Supports \\n.")
     p.add_argument("--subtitle", default="",

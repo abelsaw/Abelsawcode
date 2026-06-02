@@ -24,7 +24,7 @@ through the rest of the carousel.
 │                                                  │
 ├──────────────────────────────────────────────────┤ ← tan accent stripe (6px)
 │                                                  │
-│ ABEL SAW · CHRO                                  │ ← brand tag tracked caps
+│ CHRO                                  │ ← brand tag tracked caps
 │ ──                                                │   + tan mini-stripe
 │                                                  │
 │ Internal                                         │ ← bold sans charcoal title
@@ -82,7 +82,7 @@ re-sampled (see "When the photo's mood is cool / cold" below).
 ```bash
 python3 scripts/generate_post_image_photo_cover.py \
   --photo    path/to/photo.jpg \
-  --tag      "Abel Saw · CHRO" \
+  --tag      "CHRO" \
   --title    "Internal\nMobility" \
   --subtitle "The retention asset you already own." \
   --source   "Mercer Global Talent Trends 2026" \
@@ -93,7 +93,7 @@ python3 scripts/generate_post_image_photo_cover.py \
 | Flag | Required | Use |
 |---|---|---|
 | `--photo`    | yes | Path to the background photo (jpg/png). Any aspect — will be center-cropped to 1080×600. |
-| `--tag`      | no  | Brand tag tracked caps. Default `"ABEL SAW · CHRO"`. |
+| `--tag`      | no  | Brand tag tracked caps. Default `"CHRO"`. |
 | `--title`    | yes | Bold sans title. Supports `\n` for forced breaks. |
 | `--subtitle` | no  | Italic serif subtitle. Supports `\n`. |
 | `--source`   | no  | Em-dash + tracked small-caps source row. |
