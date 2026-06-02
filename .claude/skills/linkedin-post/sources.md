@@ -34,46 +34,25 @@ below with the URL, firm name, report title, and discovery date.
 | Conference Board | CHRO Confidence Survey Q1 2026 |
 | Gartner | CHRO Priorities 2026 |
 
-## Tier 3 — Asia Pacific–focused research
-
-Firms and institutions with primary HR research focused on or originating
-in Asia Pacific. Particularly weighted when the skill runs with
-`region: apac` (the default).
-
-| Source | Type | 2026 publications typically searched |
-|---|---|---|
-| Hays | Recruitment / pay research | Hays Asia Salary Guide 2026; Asia Workforce Trends |
-| Robert Walters | Recruitment / pay research | Salary Survey 2026 (Singapore, HK, China, Japan, Australia volumes) |
-| Michael Page | Recruitment / talent research | Talent Trends 2026 APAC |
-| INSEAD | Academic / business school | Global Talent Competitiveness Index 2026; INSEAD Knowledge HR pieces |
-| Mercer Asia | Regional consulting practice | APAC breakouts of Global Talent Trends 2026 |
-| WTW APAC | Regional consulting practice | APAC breakouts of Global Medical Trends; APAC Salary Budget Planning |
-| Deloitte APAC | Regional consulting practice | APAC Human Capital Trends |
-| ILO Asia–Pacific | Multilateral / labor research | World Employment and Social Outlook 2026; Asia-Pacific Employment and Social Outlook |
-| ADB (Asian Development Bank) | Multilateral | Asia Productivity / Work research |
-| Singapore MOM | Government / labor stats | Labour Market Report; Manpower Research |
-| AHRI (Australia HR Institute) | National HR professional body | Pulse Survey; HR research papers |
-| HKIHRM | National HR professional body | Industry surveys |
-| People Matters (India) | Trade publication with primary research | India HR Industry surveys; State of HR Tech |
-| HR Asia | Regional publication | Best Companies to Work for in Asia research |
-
 ## Regional lens directive
 
 When the skill runs with **`region: apac` (default)**, APAC functions as a
-**relevance filter on themes**, not a framing mandate:
+**relevance filter on themes**, not a separate tier of sources:
 
 1. **Topic filter:** only surface themes applicable to APAC employers. Drop themes that are US-only or Europe-only and don't reach APAC (e.g. US-specific NLRB rulings, US state-level labor law). Themes that touch APAC multinationals via global rules (EU Pay Transparency, etc.) pass.
-2. **Source sweep:** sweep Tier 3 for primary APAC research; pull APAC regional breakouts of Tier 1/2 reports when they add value.
+2. **APAC regional breakouts of Tier 1/2 reports:** Mercer Asia, McKinsey Asia, BCG Southeast Asia, Deloitte APAC, WTW APAC, KPMG APAC. These are regional cuts of catalog firms — not a separate tier.
 3. **Data weaving:** cite APAC-specific stats as evidence when they materially differ from the global picture. When the global stat is enough, use it. Don't force APAC numbers where they don't add insight.
 4. **Framing:** universal best-practices voice is the default. Don't lead posts with "APAC's biggest…" or "APAC moved past…" — write general CHRO insight and use APAC data inside the body where it lands naturally.
 
-When the skill runs with **`region: global`**, treat Tier 3 as supplementary
-— use it only when APAC data adds genuine convergence to a theme.
+When the skill runs with **`region: global`**, drop the regional filter
+entirely and surface globally-applicable findings.
 
 US-centric Tier 2 sources (SHRM, Conference Board) are de-emphasized but
 not excluded in `region: apac`; cite them when they speak to issues APAC
 employers also face (cross-border talent flows, multinational HR
 governance).
+
+**APAC-specific research firms outside the Tier 1/2 catalog (Hays, Robert Walters, Michael Page, INSEAD, ILO Asia-Pacific, ADB, Singapore MOM, AHRI, HKIHRM, People Matters, HR Asia, IFC, ManpowerGroup, Korn Ferry APAC) are out of scope as of 2026-05-22.** The user explicitly excluded a separate Tier 3 from the catalog. If a finding from one of those firms is necessary, the scout should flag it for the user rather than cite it directly.
 
 ---
 
@@ -82,20 +61,21 @@ governance).
 The scout may add NEW 2026 sources to the **Auto-discovered sources** section
 below when **all** of these are true:
 
-- The firm is recognized as credible — a major consulting firm (Korn Ferry, Heidrick & Struggles, Russell Reynolds, Spencer Stuart, Egon Zehnder, Oliver Wyman, IBM Institute for Business Value, Accenture Research, EY People Advisory, Roland Berger), an established research institution (Brookings, MIT Sloan, Wharton, NBER, Stanford), a government / multilateral body (ILO, OECD, BLS, EU-OSHA), or an established trade publication that produced primary research (HBR original surveys, MIT Sloan Management Review).
+- The firm is a credible **global** consulting / research firm (Heidrick & Struggles, Russell Reynolds, Spencer Stuart, Egon Zehnder, Oliver Wyman, IBM Institute for Business Value, Accenture Research, EY People Advisory, Roland Berger), an established research institution (Brookings, MIT Sloan, Wharton, NBER, Stanford), or an established global trade publication with primary research (HBR original surveys, MIT Sloan Management Review).
 - The publication is dated **2026** (release year, not just topic).
 - The finding adds new convergence to a theme — it's not just restating a Tier 1 firm's same point.
+- The source is **NOT** an APAC-only / regional / country-specific research firm. (Tier 3 is out of scope as of 2026-05-22.)
 
 **Do NOT add:**
+- APAC-only / country-specific research firms (the user excluded Tier 3)
 - Blog posts without primary data
 - Single-author opinion pieces
 - Press syndication of another firm's research
 - Marketing collateral or product launch posts
 - Vendor-sponsored "research" without disclosed methodology
 
-When the scout adds a source here, it should also note (briefly) which theme
-the source contributed to, so a human reviewing the catalog can see the
-context.
+When the scout adds a source here, note (briefly) which theme the source
+contributed to, so a human reviewing the catalog can see the context.
 
 ---
 
@@ -106,12 +86,6 @@ context.
 <!-- - URL: {url} -->
 <!-- - Contributed to theme: {short theme label} -->
 <!-- - Discovered: {YYYY-MM-DD} -->
-
-### Korn Ferry — Talent Trends 2026: Human-AI Power Couple (APAC edition)
-- URL: https://www.kornferry.com/about-us/events-webinars/talent-acquisition-trends-2026-apac
-- Contributed to theme: Human-AI work redesign (APAC adoption lead)
-- Discovered: 2026-05-19
-- Tier: Tier 3 (APAC-focused)
 
 ### IBM Institute for Business Value — CEO Study, "Reshaping C-suite Roles for the AI Era" (May 2026)
 - URL: https://newsroom.ibm.com/2026-05-04-ibm-study-ceos-are-reshaping-c-suite-roles-for-the-ai-era
@@ -125,20 +99,24 @@ context.
 - Discovered: 2026-05-19
 - Tier: Tier 2 (global, primary research)
 
-### IFC — "Hidden Potential: Inclusive Jobs in Green Transitions" (2026)
-- URL: https://www.ifc.org/content/dam/ifc/doc/2026/how-employers-can-accelerate-inclusive-jobs-in-green-transitions.pdf
-- Contributed to theme: Climate/heat as labor productivity issue (supporting)
-- Discovered: 2026-05-19
-- Tier: Tier 3 (multilateral, climate-labor)
-
-### ManpowerGroup — Global Talent Barometer 2026
-- URL: https://www.manpowergroup.com/insights/global-talent-barometer
-- Contributed to theme: Gen Z stability shift (AI-confidence + generational signal)
-- Discovered: 2026-05-19
-- Tier: Tier 3 (primary survey research)
-
 ### CHRO Association — 2026 CHRO Survey Key Findings
 - URL: (PDF attached by user 2026-05-22; published in partnership with University of South Carolina Darla Moore School of Business)
 - Contributed to theme: CHRO agenda convergence (AI and workplace digitization as #1 priority for 91% of CHROs; geopolitical/inflation/regulatory as top external concerns)
 - Discovered: 2026-05-22
 - Tier: Tier 2 (national CHRO research body; ~150 CHROs surveyed)
+
+---
+
+### Removed from catalog 2026-05-22 (Tier 3 exclusion)
+
+The following auto-discovered sources were Tier 3 (APAC-focused / regional /
+multilateral). The user excluded Tier 3 from the catalog on 2026-05-22, so
+these entries are archived here for reference only. They are **not** active
+sources going forward. To re-activate one, move it back into the auto-discovered
+list above and update its tier.
+
+- **Korn Ferry — Talent Trends 2026: APAC edition** (was Tier 3) — https://www.kornferry.com/about-us/events-webinars/talent-acquisition-trends-2026-apac
+- **IFC — Hidden Potential: Inclusive Jobs in Green Transitions (2026)** (was Tier 3) — https://www.ifc.org/content/dam/ifc/doc/2026/how-employers-can-accelerate-inclusive-jobs-in-green-transitions.pdf
+- **ManpowerGroup — Global Talent Barometer 2026** (was Tier 3) — https://www.manpowergroup.com/insights/global-talent-barometer
+
+The Tier 3 firms that were in the original catalog (Hays, Robert Walters, Michael Page, INSEAD, ILO Asia-Pacific, ADB, Singapore MOM, AHRI, HKIHRM, People Matters, HR Asia, and regional sub-practices Mercer Asia / WTW APAC / Deloitte APAC) are also out of scope as direct citation sources. The regional sub-practices remain accessible as APAC breakouts within their Tier 1 parent firms.
