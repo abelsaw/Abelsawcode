@@ -23,6 +23,15 @@ CREAM = (235, 225, 208)       # inverted text color
 TAN = (181, 143, 96)
 MUTED_CREAM = (175, 165, 148)
 
+# Cool palette — deep navy BG instead of charcoal, cool off-white text,
+# steel-blue accent. Match generate_post_image_photo_*.py --palette cool.
+_COOL_PALETTE = {
+    "BG": (22, 32, 46),
+    "CREAM": (232, 232, 230),
+    "TAN": (88, 130, 168),
+    "MUTED_CREAM": (170, 180, 190),
+}
+
 FONT_SANS_BOLD = [
     "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
     "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
@@ -111,6 +120,8 @@ def fit_headline(draw, text, max_w, max_h, size_hi=82, size_lo=38, step=2):
 
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--palette", default="warm", choices=["warm", "cool"],
+                   help="warm (default) or cool palette.")
     p.add_argument("--headline", required=True)
     p.add_argument("--lead", default="")
     p.add_argument("--bold", default="")
@@ -118,6 +129,13 @@ def main() -> int:
     p.add_argument("--slide", default="")
     p.add_argument("--output", required=True)
     args = p.parse_args()
+
+    global BG, CREAM, TAN, MUTED_CREAM
+    if args.palette == "cool":
+        BG = _COOL_PALETTE["BG"]
+        CREAM = _COOL_PALETTE["CREAM"]
+        TAN = _COOL_PALETTE["TAN"]
+        MUTED_CREAM = _COOL_PALETTE["MUTED_CREAM"]
 
     img = Image.new("RGB", (CANVAS, CANVAS), BG)
     draw = ImageDraw.Draw(img)
