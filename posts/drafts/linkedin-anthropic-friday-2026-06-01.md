@@ -19,7 +19,7 @@ Three engines moving at once: revenue, capital, compute.
 
 That's what transformation looks like when strategy, technology and capital finally share one clock.
 
-Something to mull over the weekend: where in your organisation are those three still running on separate ones?
+To mull over the weekend: where in your organisation are those three still running on separate ones?
 
 Rest well. See you Monday.
 
