@@ -1,28 +1,24 @@
 ---
 name: weekly-summary
-description: Generate 3 LinkedIn weekly-summary post options (200-300 words each, text only) for a Chief Transformation Officer reflecting on the week across AI, Technology, HR, and strategy. Picks the 3 most-cited stories of the Mon-Fri window across a curated set of AI labs, big tech, strategy firms, and tier-1 news, weaves them around a shared theme, and produces the same 3 stories in 3 different framings. Use when the user says "give me a weekly summary post", "draft my week-in-review", "wrap up the week", or invokes /weekly-summary.
+description: Generate a single LinkedIn weekly-summary post for a Chief Transformation Officer covering the 10 most-cited stories of the Mon-Fri window across AI, Technology, HR, and strategy — ranked most-mentioned to least across a curated set of AI labs, big tech, strategy firms, and tier-1 news. Use when the user says "give me a weekly summary post", "draft my week-in-review", "wrap up the week", or invokes /weekly-summary.
 ---
 
 # Weekly summary — Friday wrap on AI, Technology, HR, and strategy
 
-You are running the `weekly-summary` skill. Produce **3 LinkedIn post options
-(each 200-300 words, text only, no image)** that bundle **the same 3 stories
-of the week** into **3 different framings**, written in the first-person voice
-of a **Chief Transformation Officer** reflecting on what shifted this week
-across AI, Technology, HR, and strategy.
+You are running the `weekly-summary` skill. Produce **one LinkedIn post (text only, no image)** that surfaces the **10 most-cited stories of the Mon-Fri window**, ranked from most-mentioned to least-mentioned across the source catalog, written in the first-person voice of a **Chief Transformation Officer** reflecting on what shifted this week across AI, Technology, HR, and strategy.
 
-The skill is designed for a **Friday afternoon manual trigger** covering the
-**Monday-Friday window of the current week**.
+The skill is designed for a **Friday afternoon manual trigger** covering the **Monday-Friday window of the current week**.
 
 ## Optional arguments (parsed from the skill `args` string)
 
 - `week: previous` — cover Mon-Fri of the previous week instead of the current week. Default: current week.
 - `week: YYYY-MM-DD..YYYY-MM-DD` — explicit window override.
-- `theme: <topic>` — bias the picks toward a specific lens (e.g. `theme: agentic AI in HR`). Default: let the skill find the week's strongest cross-cutting theme.
+- `theme: <topic>` — bias the picks toward a specific lens (e.g. `theme: agentic AI in HR`). Default: pure cross-citation ranking, no theme filter.
 - `sources: +<Source1>, -<Source2>` — add or exclude sources beyond the catalog.
-- `count: N` — produce N options instead of 3 (cap at 5).
+- `count: N` — produce a ranked list of N stories instead of 10 (cap at 15).
+- `urls: on` — include source URLs inline in the post body. Default: off (URLs live in the research brief only).
 
-If args are empty, run defaults: current week Mon-Fri, theme discovered from the picks, 3 options.
+If args are empty, run defaults: current week Mon-Fri, no theme filter, 10 ranked stories, URLs off.
 
 ---
 
@@ -31,9 +27,9 @@ If args are empty, run defaults: current week Mon-Fri, theme discovered from the
 Read **two** inputs before researching:
 
 1. `.claude/skills/weekly-summary/sources.md` — the canonical AI / Tech / HR / strategy / news source catalog plus any auto-discovered sources from prior runs.
-2. `.claude/skills/weekly-summary/usage-history.md` — every story URL and theme used in prior weekly-summary runs. If the file does not exist yet, treat the history as empty (this is the first run).
+2. `.claude/skills/weekly-summary/usage-history.md` — every story URL and ranked list used in prior weekly-summary runs. If the file does not exist yet, treat the history as empty (this is the first run).
 
-From the usage history, extract the **exclusion set**: every story URL used in the **last 3 weekly-summary runs**. Stories on this list are off-limits for this run — pick the next-strongest story instead. Theme overlap across weeks is allowed (some topics are sustained); story duplication is not.
+From the usage history, extract the **exclusion set**: every story URL that appeared in the **last 3 weekly-summary runs**. Stories on this list are off-limits for this run — pick the next-strongest story instead. Theme overlap across weeks is allowed (some topics are sustained); story duplication is not.
 
 ## Step 2 — Compute the week window
 
@@ -55,22 +51,22 @@ Run WebSearch queries against the catalog, biasing toward:
 
 For each candidate, **WebFetch the source** to confirm date, claims, and that it falls inside the resolved week. Never include a story you have not actually read.
 
-**Ranking signal (most-cited across credible sources):** a story is more "popular" the more independent credible outlets covered it within the week. Cross-citation count is the primary signal; novelty and CTO relevance break ties.
+**Ranking signal (most-cited across credible sources):** a story is more "popular" the more independent credible outlets covered it within the week. **Cross-citation count is the primary ranking signal** — most-cited at rank 1, least-cited at rank 10. Use novelty and CTO relevance only to break ties when two stories have the same citation count.
 
-Aim to surface **6-10 ranked candidates** before selecting the final 3.
+Aim to surface **15-20 ranked candidates** so you can confidently identify the top 10 by citation count (with the next 5-10 visible for tie-breaks and audit).
 
-## Step 4 — Pick 3 stories that share a theme
+## Step 4 — Rank 10 stories by citation count
 
-From the ranked candidates, select **exactly 3** stories that share an underlying theme — a through-line the CTO can name in one sentence ("the friction between speed and trust this week", "the new shape of the human-AI seam", "what scale is doing to org design").
+From the candidate pool, select the **top 10 by cross-citation count**, ranked most-cited (rank 1) to least-cited (rank 10).
 
-If no 3 stories share a clean theme, widen to 4-5 candidates and look for a more abstract through-line, or pull a different mix of stories. **Do not pick 3 unrelated top stories** — the skill's value is the woven theme.
-
-Each picked story must:
+Each ranked story must:
 - Be inside the resolved week window.
 - Come from at least 2 credible sources in the catalog (cross-citation bar).
 - Not be on the exclusion set from the prior 3 runs.
 
-If you cannot meet the bar with 3 cohesive stories, stop and report back so the user can relax constraints.
+If fewer than 10 stories clear the ≥2-citation bar, fill to 10 with the next-strongest candidates and **flag in the brief** which entries cleared by a thinner margin. If fewer than 6 clear the bar, stop and report back so the user can relax constraints.
+
+A **shared theme is optional**, not required. If a clean through-line emerges from the top stories, name it in the brief and the post. If not, present the ranked list as a landscape view — the value is the ranking, not the synthesis.
 
 ## Step 5 — Save the research brief
 
@@ -80,120 +76,114 @@ Save to `posts/drafts/weekly-research-YYYY-MM-DD.md` (date = the resolved Friday
 # Weekly research brief — {Friday YYYY-MM-DD}
 Window: {Mon YYYY-MM-DD} to {Fri YYYY-MM-DD}
 
-## Theme (the through-line)
-{One-sentence statement of the connecting thread, e.g. "The seam between AI capability and human accountability tightened this week."}
+## Through-line (optional)
+{One-sentence statement of the connecting thread if one emerges, or "No single through-line this week — see ranked landscape below."}
 
-## Story 1 — {short slug}
+## Ranked top 10 (most-cited → least-cited)
+
+### 1. {short slug} — {citation count}
 - **Headline:** {original headline}
 - **Lead source:** {Outlet}, {date}, {URL}
 - **Also covered by:** {other outlets in the catalog, with dates}
-- **Citation count:** {N credible outlets}
 - **What happened:** {3-4 sentence factual summary, no interpretation}
-- **Why a CTO cares:** {2-3 sentences on the implication}
-- **Hook into the theme:** {one sentence connecting this story to the through-line}
+- **Why a CTO cares:** {1-2 sentences on the implication}
 
-## Story 2 — {short slug}
+### 2. {short slug} — {citation count}
 ...
 
-## Story 3 — {short slug}
+### 10. {short slug} — {citation count}
 ...
 
-## Candidates considered but not picked
-- {headline} — {reason dropped, e.g. "below cross-citation bar", "didn't fit theme"}
+## Candidates considered but not in the top 10
+- {headline} — {citation count} — {reason ranked below the cut}
 ```
 
 ## Step 6 — Persist any newly discovered sources
 
-If your searches surfaced credible new outlets/firms not yet in `sources.md` that you actually cited in the brief, append them to the **Auto-discovered sources** section using this format:
+If your searches surfaced credible new outlets/firms not yet in `sources.md` that you actually cited in the brief, append them to the **Auto-discovered sources** section using the format in `sources.md`. Be conservative — only add sources that meet the discovery rules in the catalog.
 
-```markdown
-### {Source} — {What it is} ({Month YYYY})
-- URL: {root URL}
-- Contributed to: {story slug}
-- Discovered: {YYYY-MM-DD}
-```
+## Step 7 — Draft one ranked-digest post
 
-Be conservative — only add sources that meet the discovery rules in `sources.md`.
+Save to `posts/drafts/weekly-summary-YYYY-MM-DD.md`. Produce **one post** with this shape:
 
-## Step 7 — Draft 3 post options (same 3 stories, 3 framings)
+- **Opening (50-80 words):** short CTO framing of the week — the through-line if one emerged, otherwise the landscape ("ten things landed this week; here they are in order of how loudly").
+- **Ranked items 1-10:** each entry is **2-3 sentences (~30-45 words)** — the headline as one line, then the CTO read on it. Numbered explicitly. No source URLs by default (set `urls: on` to include them).
+- **Closing (40-80 words):** the one move the CTO is making off the back of the week, or the open question they're carrying.
+- **3-5 hashtags** off the week's themes.
 
-Save to `posts/drafts/weekly-summary-YYYY-MM-DD.md`. Each option uses **all three stories** but with a different framing:
-
-- **Option 1 — Synthesis framing.** Lead with the through-line. State the pattern. Walk through the 3 stories as evidence. Close with where the pattern is heading.
-- **Option 2 — Question framing.** Lead with the unresolved question the week put on your desk. Walk the 3 stories as different angles on that question. Close with what you're still sitting with.
-- **Option 3 — Learning framing.** Lead with something you're rethinking this week. Walk the 3 stories as the inputs that shifted your thinking. Close with what you're testing differently.
-
-All three options stay within the **200-300 word body** (excluding hashtags). Hard cap at 320 to allow for hashtag overhead; hard floor at 180.
+Target body length: **400-600 words** excluding hashtags. **Hard cap: 2,900 characters** (LinkedIn's limit is 3,000).
 
 Use this file template (the `---POST---` / `---END---` markers matter — `linkedin-publisher` reads them to extract the publishable text):
 
 ```markdown
 # Weekly summary — {Friday YYYY-MM-DD}
 
-## Option 1 — {slug-1} (synthesis)
-- **Theme:** {through-line}
-- **Stories:** {story-1-slug}, {story-2-slug}, {story-3-slug}
-- **Framing:** synthesis
-- **Word count:** {N}
+## Post — {slug}
+- **Through-line:** {one-line if any, else "landscape view"}
+- **Stories ranked 1-10:** {comma-separated slugs in ranked order}
+- **Word count:** {N} (excl. hashtags)
+- **Character count:** {M}
+- **Source URLs in body:** {on|off}
 - **Status:** draft
 
 ---POST---
-{200-300 word post body in the CTO voice. Source URLs inside the body, one per story.}
+{Opening framing.}
+
+1. {Story 1 headline}. {1-2 sentence CTO read.}
+
+2. {Story 2 headline}. {1-2 sentence CTO read.}
+
+...
+
+10. {Story 10 headline}. {1-2 sentence CTO read.}
+
+{Closing — the move or the open question.}
 
 #Hashtag1 #Hashtag2 #Hashtag3
 ---END---
-
-## Option 2 — {slug-2} (question)
-...
-
-## Option 3 — {slug-3} (learning)
-...
 ```
 
-## Step 8 — Voice & word-count enforcement
+## Step 8 — Voice & length enforcement
 
-The CTO voice is **professional, progressive, bold, humble, and learning** — bold AND humble in the same breath. Take a position; show you're still figuring it out.
+The CTO voice is **professional, progressive, bold, humble, and learning** — bold AND humble in the same breath. Take a position on the landscape; show you're still figuring it out.
 
 Voice rules:
-- **First person.** "I sat with three stories this week." "I'm changing how I think about X." "I don't have the answer yet."
-- **Bold.** Stand behind a view. Strong declaratives where you do have conviction. No hedging the whole post.
+- **First person.** "I sat with ten stories this week." "What I'm watching." "I don't have the answer yet."
+- **Bold.** Stand behind the ranking. Strong declaratives in the CTO reads. No hedging the whole post.
 - **Progressive.** Forward-looking. Frame what's becoming possible, not what's broken.
-- **Humble.** Name what you don't know. "I'm not sure yet." "This is the question I'm carrying." Worn lightly — confidence and curiosity together.
-- **Learning.** Show the update. "Two weeks ago I would have said X; this week shifted me toward Y."
+- **Humble.** Name what you don't know. Worn lightly — confidence and curiosity together.
+- **Learning.** Show the update where it lands ("two weeks ago I would have said X").
 - **No corporate jargon, no hype words, no emojis.**
 - **No AI-tells:** delve, tapestry, navigating the landscape, in conclusion, moreover, furthermore, in today's fast-paced world.
-- **Short sentences. Often one per line.** LinkedIn rewards scannable.
-- **One source URL per story, inside the body.** Don't trail them at the end.
-- **3-5 hashtags max**, lowercase or CamelCase, off the themes of the week (e.g. `#FutureOfWork #AILeadership #Transformation`).
+- **Each ranked item is 2-3 sentences max.** Numbered prefix. The headline first, then the CTO read.
+- **3-5 hashtags max**, lowercase or CamelCase, off the themes of the week.
 
-Word-count enforcement: before presenting to the user, **count words in each `---POST---` block (excluding hashtags) and confirm each is between 200 and 300.** If any option is outside the range, revise it. Report the word count to the user for each option.
+Length enforcement: before presenting to the user, **count words in the `---POST---` block (excluding hashtags) and confirm it is between 400 and 600. Confirm character count is under 2,900.** If outside the range, revise. Report both counts to the user.
 
 ## Step 9 — Present compactly to the user
 
-For each option, show:
-- Slug, framing, word count
-- The first 120 characters of the post (the opening hook)
-- The file path
+Show, in this order:
 
-Then list:
-- The shared theme (the through-line)
-- The 3 story slugs and their lead sources
-- An **engagement-likelihood note** ranking the options (which framing is most likely to land on LinkedIn for a CTO audience and why).
+1. **Resolved window** and **through-line** (or "landscape view, no single through-line").
+2. **The ranked top 10** — slug, citation count, lead source, one-line headline. Most-cited at the top.
+3. **The drafted post** — slug, word count, character count, first 200 chars of the body.
+4. **Path to the draft file and research brief.**
 
-End with: "Want me to revise any of these, or publish one?"
+End with: "Want me to revise it, or publish?"
 
 ## Step 9.5 — Append to usage history
 
-Immediately after the drafts are written (BEFORE the user picks one), append to `.claude/skills/weekly-summary/usage-history.md`:
+Immediately after the draft is written (BEFORE the user picks publish), append to `.claude/skills/weekly-summary/usage-history.md`:
 
 ```markdown
 ### Week of {Friday YYYY-MM-DD}
-- Theme: {through-line}
-- Story URLs:
-  - {story-1-slug}: {URL}
-  - {story-2-slug}: {URL}
-  - {story-3-slug}: {URL}
-- Option slugs: {slug-1}, {slug-2}, {slug-3}
+- Through-line: {one-liner if any, else "landscape view"}
+- Ranked stories 1-10:
+  1. {slug-1}: {URL} — {citation count}
+  2. {slug-2}: {URL} — {citation count}
+  ...
+  10. {slug-10}: {URL} — {citation count}
+- Post slug: {post-slug}
 - Date: {YYYY-MM-DD}
 ```
 
@@ -201,7 +191,7 @@ Append to the top of the "Past weeks (most recent first)" section. Create the fi
 
 ## Step 10 — Publish on approval
 
-When the user picks a specific option, delegate to `linkedin-publisher`:
+When the user approves, delegate to `linkedin-publisher`:
 
 ```bash
 python3 scripts/linkedin_post.py posts/drafts/weekly-summary-YYYY-MM-DD.md \
@@ -218,17 +208,18 @@ If `LINKEDIN_ACCESS_TOKEN` or `LINKEDIN_AUTHOR_URN` are not set, walk the user t
 ## Output locations (recap)
 
 - Research brief: `posts/drafts/weekly-research-YYYY-MM-DD.md`
-- Post drafts: `posts/drafts/weekly-summary-YYYY-MM-DD.md`
+- Post draft: `posts/drafts/weekly-summary-YYYY-MM-DD.md`
 - Source catalog: `.claude/skills/weekly-summary/sources.md`
 - Usage history: `.claude/skills/weekly-summary/usage-history.md`
 
 ## Hard rules
 
 - **Mon-Fri window only.** Every story dates inside the resolved week. No older stories framed as this week's.
-- **3 stories, 1 shared theme.** Not a listicle of unrelated top stories.
-- **Each story cross-cited by ≥2 credible sources** in the catalog.
-- **200-300 words per option body** (excluding hashtags). Verify before presenting.
+- **Top 10 ranked by cross-citation count.** Most-mentioned at rank 1. Ties broken by novelty and CTO relevance.
+- **Each story cross-cited by ≥2 credible sources** in the catalog (flag any rank that clears by a thinner margin).
+- **400-600 words per post body** (excluding hashtags). **Under 2,900 characters total.** Verify before presenting.
 - **No story repeats across the last 3 weekly summaries.** The usage history is the ledger.
 - **No fabrication.** Every URL is one you actually fetched. Every claim traces to a source in the brief.
 - **No images, no carousel.** Weekly summary is text-only by design.
-- **Bold AND humble.** The voice takes positions and admits what it's still learning, in the same post.
+- **URLs default off** in post body — `urls: on` to include them. Citations always remain in the research brief.
+- **Bold AND humble.** The voice takes positions on the ranking and admits what it's still learning, in the same post.
