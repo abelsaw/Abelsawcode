@@ -1,11 +1,18 @@
 ---
 name: weekly-summary
-description: Generate a single LinkedIn weekly-summary post for a Chief Transformation Officer covering the 10 most-cited stories of the Mon-Fri window across AI, Technology, HR, and strategy — ranked most-mentioned to least across a curated set of AI labs, big tech, strategy firms, and tier-1 news. Use when the user says "give me a weekly summary post", "draft my week-in-review", "wrap up the week", or invokes /weekly-summary.
+description: Generate a single LinkedIn weekly-summary post for a Chief Transformation Officer who oversees Business Strategy, HR, and IT — covering the 10 most-cited stories of the Mon-Fri window ranked most-mentioned to least across a curated catalog (Tier-1 news US + global/APAC, AI labs, big tech, strategy firms, plus HR and IT specialty outlets). Use when the user says "give me a weekly summary post", "draft my week-in-review", "wrap up the week", or invokes /weekly-summary.
 ---
 
-# Weekly summary — Friday wrap on AI, Technology, HR, and strategy
+# Weekly summary — Friday wrap on Business Strategy, HR, and IT
 
-You are running the `weekly-summary` skill. Produce **one LinkedIn post (text only, no image)** that surfaces the **10 most-cited stories of the Mon-Fri window**, ranked from most-mentioned to least-mentioned across the source catalog, written in the first-person voice of a **Chief Transformation Officer** reflecting on what shifted this week across AI, Technology, HR, and strategy.
+You are running the `weekly-summary` skill. Produce **one LinkedIn post (text only, no image)** that surfaces the **10 most-cited stories of the Mon-Fri window**, ranked from most-mentioned to least-mentioned across the source catalog, written in the first-person voice of a **Chief Transformation Officer whose remit is Business Strategy, HR, and IT** — reflecting on what shifted this week.
+
+The three lenses to keep balanced across the top 10:
+- **Business strategy** — capital, M&A, market structure, regulation, big-firm research
+- **HR / people / workforce** — talent, work design, comp, culture, layoffs/restructures
+- **IT / technology / AI** — model and product launches, infra, security, enterprise deployment
+
+Not every week will have a 3-3-3 split. Rank by cross-citation first, then check for at least one story per lens — if a lens has zero entries in the top 10, name that in the brief.
 
 The skill is designed for a **Friday afternoon manual trigger** covering the **Monday-Friday window of the current week**.
 
@@ -39,21 +46,27 @@ From the usage history, extract the **exclusion set**: every story URL that appe
 - If `week: YYYY-MM-DD..YYYY-MM-DD` is passed, use that exact range.
 - Print the resolved window before researching: `Window: {start} to {end}`.
 
-## Step 3 — Research across AI, Technology, HR, and strategy
+## Step 3 — Research across Business Strategy, HR, and IT
 
-Run WebSearch queries against the catalog, biasing toward:
+Run WebSearch queries against the catalog in `sources.md`, sweeping all groups:
 
-- **AI labs:** Anthropic, OpenAI, Google DeepMind — model releases, research papers, policy/safety announcements, enterprise launches.
-- **Big tech research:** Microsoft, AWS, Google — enterprise AI, workforce-shaping product launches, infrastructure shifts.
-- **Strategy firms:** McKinsey, BCG, Deloitte, WTW, Mercer, Gallup, WEF, Aon, PwC — published research, surveys, executive briefings.
-- **Tier-1 news:** FT, WSJ, NYT, HBR, Bloomberg, Reuters, The Information, MIT Technology Review, MIT Sloan Management Review, The Economist — features and analyses on the above.
-- **HR / future-of-work outlets:** SHRM, HR Dive, HR Executive — only when a story is genuinely cross-cited there.
+- **Tier-1 news (US + global/APAC):** TechCrunch, FT, WSJ, NYT, Bloomberg, Reuters, The Information, CNBC, The Economist, Axios, BBC, Guardian, Nikkei Asia, SCMP, Straits Times — the citations that clear the bar.
+- **Tier-1 thought leadership:** HBR, MIT Sloan Management Review, MIT Technology Review, Stanford HAI, INSEAD Knowledge, Wharton Knowledge, Stratechery.
+- **AI labs:** Anthropic, OpenAI, Google DeepMind — model releases, research, policy/safety, enterprise launches.
+- **Big tech:** Microsoft, AWS, Google, NVIDIA, IBM, Intel.
+- **Strategy firms (business-strategy lens):** McKinsey, BCG, Bain, Deloitte, Mercer, WTW, Aon, Gallup, WEF, PwC, Korn Ferry, Oliver Wyman, EY, KPMG, Gartner.
+- **HR / people specialty (HR lens, supplies second citation):** SHRM, HR Dive, HR Executive, HR Brew, Personnel Today, People Matters, HR Asia, ETHRWorld, AHRI, HKIHRM, HR Reporter.
+- **IT / CIO specialty (IT lens, supplies second citation):** CIO.com, The Register, InfoQ, VentureBeat, SiliconANGLE, Cybersecurity Dive, SecurityWeek, Pragmatic Engineer, Latent Space, Import AI.
+
+**Excluded sources** (per `sources.md` "Do not count" list) MUST NOT contribute to the citation count. When a hype/aggregator/crypto outlet shows up in WebSearch, trace to the underlying primary source and cite that.
 
 For each candidate, **WebFetch the source** to confirm date, claims, and that it falls inside the resolved week. Never include a story you have not actually read.
 
-**Ranking signal (most-cited across credible sources):** a story is more "popular" the more independent credible outlets covered it within the week. **Cross-citation count is the primary ranking signal** — most-cited at rank 1, least-cited at rank 10. Use novelty and CTO relevance only to break ties when two stories have the same citation count.
+**Cross-citation rule (per `sources.md`):** a story qualifies for the top 10 only when it has **≥2 catalog citations AND at least one of those is from a Tier-1 group** (Tier-1 news US, Tier-1 news global/APAC, Tier-1 thought leadership, AI lab, or a strategy firm's own publication). HR and IT specialty outlets supply the second citation but cannot alone clear the bar.
 
-Aim to surface **15-20 ranked candidates** so you can confidently identify the top 10 by citation count (with the next 5-10 visible for tie-breaks and audit).
+**Ranking signal:** cross-citation count is the primary ranking — most-cited at rank 1, least-cited at rank 10. Use novelty and CTO relevance only to break ties.
+
+Aim to surface **15-20 ranked candidates** so you can confidently identify the top 10 by citation count (with the next 5-10 visible for tie-breaks and audit). After picking the top 10, check the **three-lens balance** (Business Strategy / HR / IT) — if any lens has zero entries, name that gap in the brief.
 
 ## Step 4 — Rank 10 stories by citation count
 
