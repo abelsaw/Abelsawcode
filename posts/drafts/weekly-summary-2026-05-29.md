@@ -1,97 +1,36 @@
 # Weekly summary — 2026-05-29
 
-## Option 1 — three-layers-one-week (synthesis)
-- **Theme:** The enterprise agent stack put a price on itself this week — orchestration, security, and foundation layers all moved within 48 hours, at three radically different price brackets.
-- **Stories:** asana-stackai, palo-alto-portkey, anthropic-series-h-965b
-- **Framing:** synthesis
-- **Word count:** 248 (excl. hashtags)
-- **Source URLs in body:** omitted by default (citations in `posts/drafts/weekly-research-2026-05-29.md`)
+## Post 1 — ten-things-i-tracked
+- **Through-line:** Thursday May 28 was the week's gravitational center — Anthropic flexed at $965B, Opus 4.8 shipped the same day, M&A clocked two more stack-layer deals, and earnings season started telling the AI revenue story aloud.
+- **Stories ranked 1-10:** anthropic-series-h-965b, claude-opus-4-8, asana-stackai, dell-fy27-q1-earnings, snowflake-q1-fy27-earnings, palo-alto-portkey, openai-frontier-governance-framework, salesforce-q1-earnings-pressure, ibm-project-lightwell-quantum, openai-rosalind-biodefense
+- **Word count:** 453 (excl. hashtags)
+- **Source URLs in body:** off (citations in `posts/drafts/weekly-research-2026-05-29.md`)
 - **Status:** draft
 
 ---POST---
-Three things happened this week, at three layers of the agent stack, in three different price brackets.
+Ten things I'm tracking from the week, ranked by how loudly the catalog cited them. Anthropic dominated Thursday. Earnings season dropped its AI tells. The M&A clock kept ticking at the agent stack's seams. Here's the order — most-mentioned at the top — and one line on what I'm taking from each.
 
-On Thursday, Asana paid $75 million for StackAI, a no-code agent-builder that orchestrates work across Salesforce, Oracle and AWS. CEO Dan Rogers framed Asana as "the operating system for human-agent teams." That's the execution layer.
+1. Anthropic closed a $65 billion Series H at a $965 billion valuation, briefly the most valuable AI startup on earth. The mark sets a floor for any in-house model bet for the next 18 months.
 
-On Friday, Palo Alto Networks closed its acquisition of Portkey, an AI gateway that processes trillions of tokens and lets enterprises govern agents as privileged insiders. Estimated price: $120 to $140 million. Folded into Prisma AIRS alongside CyberArk and Chronosphere. That's the security layer.
+2. Anthropic shipped Claude Opus 4.8 the same day. New dynamic workflows tool, fast mode three times cheaper. The 42-day Opus cadence is the new normal — every team needs an Opus-version review process.
 
-Also on Thursday, Anthropic closed a Series H at a $965 billion valuation, briefly making it the most valuable AI startup on earth. That's the foundation layer.
+3. Asana bought StackAI for $75M to own the no-code agent orchestration layer across Salesforce, Oracle and AWS. CEO Dan Rogers calls Asana "the operating system for human-agent teams." That's the execution layer leaving the build column.
 
-Three checks. Three layers. One week.
+4. Dell stock jumped 32% on its strongest revenue growth since the 2018 relisting, driven by AI server demand. The infrastructure side of the AI trade isn't slowing — CTO capex plans should reflect that.
 
-The pattern I'm taking from this: the enterprise agent stack isn't theoretical anymore. Buyers are writing capex into the layers — execution, gateway, foundation — at the same time. When the cadence syncs like this, buyers are signaling something to the rest of us.
+5. Snowflake surged 36% on agentic AI demand. The data layer is monetizing agents at a pace the market hadn't priced in. If your data warehouse is dormant in your AI architecture, this is the wakeup call.
 
-What they're signaling: the build-versus-buy conversation has a half-life now. The layers most CTOs were planning to build in 2026 are being acquired into someone else's roadmap before we ship.
+6. Palo Alto closed its Portkey acquisition at roughly $130M to put an AI gateway at the center of enterprise agent governance. The security layer of the agent stack is consolidating into incumbents you already pay.
 
-I'm not panicking. I'm calibrating.
+7. OpenAI published its Frontier Governance Framework, mapping its safety practices to the EU AI Code of Practice and California's Transparency in Frontier AI Act. AI compliance just moved from theory to procurement clause.
 
-What I want my team to read this week: the same three press releases, then a single page on which layers we still believe we can build cheaper or sharper than the buyers above. Anything else gets a vendor evaluation.
+8. Salesforce's earnings beat couldn't convince the market that legacy SaaS survives agents. The pressure on app-layer incumbents is now visible in their stock price. Watch how the next four quarters of guidance change.
 
-#FutureOfWork #AgenticAI #Transformation #AILeadership
----END---
+9. IBM committed $5 billion to Project Lightwell for open-source security and $10 billion over five years to quantum R&D. Two long bets in one week, in a year when everyone else is shortening their planning horizons.
 
-## Option 2 — which-layers-are-still-builders (question)
-- **Theme:** Same through-line, framed as the Q3-planning question: at which layers of the agent stack does the CTO still get to be a builder?
-- **Stories:** asana-stackai, palo-alto-portkey, anthropic-series-h-965b
-- **Framing:** question
-- **Word count:** 245 (excl. hashtags)
-- **Source URLs in body:** omitted by default (citations in `posts/drafts/weekly-research-2026-05-29.md`)
-- **Status:** draft
+10. OpenAI launched Rosalind Biodefense for vetted developers and US government partners on pandemic preparedness. Quieter than the funding headlines, but it tells you which markets the labs want to be procurement-ready in.
 
----POST---
-The question I'm carrying into Q3 planning: at which layers of the agent stack do we still get to be builders?
-
-Three deals this week put a sharp edge on it.
-
-On Thursday, Asana paid $75 million for StackAI, a no-code agent-builder. The pitch from CEO Dan Rogers: Asana is "the operating system for human-agent teams." That's a buyer taking the orchestration layer off the table.
-
-On Friday, Palo Alto Networks closed Portkey at an estimated $120 to $140 million. Portkey is an AI gateway that governs agents as privileged insiders, processing trillions of tokens. Folded straight into Prisma AIRS alongside CyberArk and Chronosphere. That's a buyer taking the gateway and security layer off the table.
-
-Also on Thursday, Anthropic closed a Series H at $965 billion — for an afternoon, the most valuable AI startup on earth. That's the foundation layer pricing itself out of any in-house ambition.
-
-So the question.
-
-We can't be builders at every layer. We couldn't last year either. What changed this week is the speed at which the choices got narrower. Three deals in 48 hours, at three different price brackets, in three different layers of the same stack.
-
-The CTO question stops being "are agents real?" and becomes "what is our defensible layer?"
-
-I don't have the full answer yet. I have a shorter list of candidates than I did on Monday.
-
-That's progress, I think. And it's also a forcing function I didn't expect to need this quarter.
+The single move I'm making off this week: rebuilding our AI vendor short-list against the new top three of the agent stack — Anthropic for foundation, the orchestrators that just sold, and the gateways that just consolidated. The decisions that need to be made next quarter are smaller than they were on Monday.
 
 #FutureOfWork #AgenticAI #AILeadership #Transformation
----END---
-
-## Option 3 — from-deployment-plan-to-stack-plan (learning)
-- **Theme:** Same through-line, framed as a personal update: came into the week with an agent-deployment plan, leaving it with a stack-and-layer plan.
-- **Stories:** asana-stackai, palo-alto-portkey, anthropic-series-h-965b
-- **Framing:** learning
-- **Word count:** 234 (excl. hashtags)
-- **Source URLs in body:** omitted by default (citations in `posts/drafts/weekly-research-2026-05-29.md`)
-- **Status:** draft
-
----POST---
-I came into the week with an agent-deployment plan. I'm leaving it with a different question.
-
-The plan, on Monday: which agent products do we put behind which teams next quarter.
-
-Then three deals landed.
-
-Thursday — Asana paid $75 million for StackAI, the no-code agent orchestration layer. CEO Dan Rogers calls Asana "the operating system for human-agent teams." Cross-system execution across Salesforce, Oracle and AWS, in one platform.
-
-Friday — Palo Alto Networks closed Portkey, an AI gateway that processes trillions of tokens and treats agents as privileged insiders. Estimated $120 to $140 million. Plugged straight into Prisma AIRS next to CyberArk and Chronosphere.
-
-Also Thursday — Anthropic closed a Series H at a $965 billion valuation. Briefly more valuable than OpenAI. The foundation layer wrote itself a thousand-billion-dollar ceiling.
-
-Three layers. Three buyers. Forty-eight hours.
-
-What shifted me: the agent stack stopped being a model conversation and became an M&A conversation. The thing I should be tracking this quarter isn't which agents to deploy. It's which layers are still up for grabs.
-
-I'm not flipping every plan on its head. I am rewriting the first slide of next month's leadership review. It used to read "AI agent priorities." It now reads "the stack we're betting on, layer by layer, build or buy."
-
-I'm less certain about the answer than I was on Monday. I'm clearer about the question.
-
-Sometimes that's the whole job this quarter.
-
-#FutureOfWork #Transformation #AgenticAI #AILeadership
 ---END---

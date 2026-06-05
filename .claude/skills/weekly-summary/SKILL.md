@@ -118,7 +118,7 @@ Use this file template (the `---POST---` / `---END---` markers matter — `linke
 ```markdown
 # Weekly summary — {Friday YYYY-MM-DD}
 
-## Post — {slug}
+## Post 1 — {slug}
 - **Through-line:** {one-line if any, else "landscape view"}
 - **Stories ranked 1-10:** {comma-separated slugs in ranked order}
 - **Word count:** {N} (excl. hashtags)
