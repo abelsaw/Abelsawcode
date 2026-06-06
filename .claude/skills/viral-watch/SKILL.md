@@ -1,6 +1,6 @@
 ---
 name: viral-watch
-description: On-demand research brief on viral news stories with implications for workforce/labor and/or culture/equity/values. Identifies stories that surged across ≥3 catalog news outlets within 48-72 hours, verifies the facts against primary sources, separates verified content from hype/distortion, and produces a 1-2 page analytical report per story (NOT for posting). Use when the user says "what's gone viral", "what's blowing up this week", "viral watch", "society pulse", or invokes /viral-watch.
+description: On-demand research brief on viral news stories with implications for workforce/labor and/or culture/equity/values, with a default focus on Southeast Asia (Singapore, Indonesia, Malaysia, Thailand, Philippines, Vietnam, Cambodia, Laos, Myanmar, Brunei). Identifies stories that surged across ≥3 catalog news outlets within 48-72 hours, verifies the facts against primary sources, separates verified content from hype/distortion, and produces a 1-2 page analytical report per story (NOT for posting). Use when the user says "what's gone viral", "what's blowing up this week", "viral watch", "society pulse", or invokes /viral-watch.
 ---
 
 # Viral watch — on-demand societal-implication brief
@@ -14,9 +14,9 @@ This skill is for **internal awareness and analysis** — NOT for LinkedIn publi
 - `window: <N>d` — look back N days from today (default: `7d`, max: `14d`). Viral signal degrades quickly past two weeks.
 - `lens: <workforce|culture|both>` — restrict the lens (default: `both`).
 - `count: <N>` — produce N deep-dive entries (default: `3`, cap: `5`).
-- `region: <us|global|apac|eu>` — bias toward stories landing in the named region (default: `global`).
+- `region: <sea|apac|us|global|eu>` — bias toward stories landing in the named region. **Default: `sea`** (Southeast Asia: Singapore, Indonesia, Malaysia, Thailand, Philippines, Vietnam, Cambodia, Laos, Myanmar, Brunei). Use `apac` to widen to all Asia-Pacific including India, Japan, Korea, China, Australia; `global` to remove regional anchoring; `us` or `eu` for those regions.
 
-If args are empty, run defaults: 7-day window, both lenses, 3 deep dives, global.
+If args are empty, run defaults: 7-day window, both lenses, 3 deep dives, **SEA region**.
 
 ---
 
@@ -49,7 +49,13 @@ Sweep WebSearch against the catalog. For candidates that look promising, **WebFe
 
 **Velocity boost (tiebreaker):** when two stories have the same outlet count, the one that surged in a tighter window (24-48h) ranks higher than the one that spread across the full 72h.
 
-Aim to identify **8-12 surge candidates** in the window, then pick the top `count:` (default 3) by surge magnitude × lens-fit weight.
+**Region weighting (default `sea`):**
+- **With `region: sea` (default),** apply SEA as a relevance and ranking weight. **Topic filter:** prioritize stories that originated in or materially affect at least one of the ten SEA countries (Singapore, Indonesia, Malaysia, Thailand, Philippines, Vietnam, Cambodia, Laos, Myanmar, Brunei). **Source weighting:** prefer the SEA Tier-1 outlets in `sources.md` (Straits Times, CNA, Jakarta Post, Bangkok Post, Inquirer, Rappler, The Star Malaysia, Malay Mail, VnExpress, etc.) as primary cross-citation sources; treat global Tier-1 (Reuters, BBC, AP, FT) as second citations when they cover the same SEA story. A story that's pure US/EU/non-SEA but is being amplified in SEA media still counts when it's clearly landing locally (e.g. a US tech layoff that hits regional staff). A pure US-domestic story without SEA resonance is dropped.
+- **With `region: apac`,** widen to all Asia-Pacific (include India, Japan, Korea, China, Australia, NZ, plus SEA).
+- **With `region: global`,** no regional anchoring; rank by raw surge magnitude across the full catalog.
+- **With `region: us` or `region: eu`,** focus on that geography.
+
+Aim to identify **8-12 surge candidates** in the window, then pick the top `count:` (default 3) by surge magnitude × lens-fit weight × region-fit weight.
 
 ## Step 4 — Verify and separate fact from hype
 

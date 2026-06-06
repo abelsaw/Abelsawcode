@@ -43,10 +43,57 @@ does NOT qualify. The surge window is what makes it viral.
 
 - **Nikkei Asia** — https://asia.nikkei.com/
 - **South China Morning Post** — https://www.scmp.com/
-- **Straits Times** — https://www.straitstimes.com/
 - **Times of India** — https://timesofindia.indiatimes.com/
-- **Channel News Asia** — https://www.channelnewsasia.com/
 - **ABC News Australia** — https://www.abc.net.au/news/
+
+## Tier-1 SEA — Southeast Asia (default region focus)
+
+The skill defaults to `region: sea`. These outlets are weighted highest for
+surge detection in the default run; English-language regional and country
+flagships are the primary citation sources.
+
+**Regional / Singapore-anchored (cover all of SEA):**
+- **The Straits Times** — https://www.straitstimes.com/
+- **Channel News Asia (CNA)** — https://www.channelnewsasia.com/
+- **The Business Times Singapore** — https://www.businesstimes.com.sg/
+- **The Diplomat** — https://thediplomat.com/ (Asia-Pacific analysis)
+- **Asia Times** — https://asiatimes.com/
+
+**Indonesia:**
+- **The Jakarta Post** — https://www.thejakartapost.com/
+- **Kompas (English / Indonesian)** — https://www.kompas.id/
+- **Tempo English** — https://en.tempo.co/
+- **Antara News** — https://en.antaranews.com/
+
+**Malaysia:**
+- **The Star Malaysia** — https://www.thestar.com.my/
+- **Malay Mail** — https://www.malaymail.com/
+- **New Straits Times** — https://www.nst.com.my/
+- **Free Malaysia Today** — https://www.freemalaysiatoday.com/
+
+**Thailand:**
+- **Bangkok Post** — https://www.bangkokpost.com/
+- **The Nation Thailand** — https://www.nationthailand.com/
+- **Thai PBS World** — https://www.thaipbsworld.com/
+
+**Philippines:**
+- **Philippine Daily Inquirer** — https://newsinfo.inquirer.net/
+- **Rappler** — https://www.rappler.com/
+- **GMA News Online** — https://www.gmanetwork.com/news/
+- **ABS-CBN News** — https://news.abs-cbn.com/
+
+**Vietnam:**
+- **VnExpress International** — https://e.vnexpress.net/
+- **Tuoi Tre News** — https://tuoitrenews.vn/
+- **Vietnam News (VNA)** — https://vietnamnews.vn/
+
+**Cambodia / Laos / Myanmar / Brunei:**
+- **Khmer Times (Cambodia)** — https://www.khmertimeskh.com/
+- **Phnom Penh Post (Cambodia)** — https://www.phnompenhpost.com/
+- **The Irrawaddy (Myanmar)** — https://www.irrawaddy.com/
+- **Myanmar Now** — https://myanmar-now.org/en/
+- **Vientiane Times (Laos)** — https://vientianetimes.org.la/
+- **Borneo Bulletin (Brunei)** — https://borneobulletin.com.bn/
 
 ## Tier-1 public / educational broadcasters
 
@@ -89,22 +136,43 @@ does NOT qualify. The surge window is what makes it viral.
 
 ## HR / labor specialty (supplies second citation, not Tier-1)
 
+**Global / US:**
 - **SHRM** — https://www.shrm.org/
 - **HR Dive** — https://www.hrdive.com/
 - **HR Executive** — https://hrexecutive.com/
 - **Personnel Today** — https://www.personneltoday.com/
-- **People Matters** — https://www.peoplemattersglobal.com/
-- **HR Asia** — https://hr.asia/
 - **Worker Center / Labor Notes** — https://labornotes.org/
+
+**SEA / APAC HR & labor:**
+- **People Matters Global** — https://www.peoplemattersglobal.com/
+- **HR Asia** — https://hr.asia/
+- **ETHRWorld Southeast Asia** — https://hrsea.economictimes.indiatimes.com/
+- **HRM Asia** — https://hrmasia.com/
+- **ASEAN Trade Union Council** — https://aseantuc.org/
+- **ILO Asia-Pacific** — https://www.ilo.org/asia/lang--en/index.htm
 
 ## Internet-native / culture trackers (supplies second citation, not Tier-1)
 
+**Global / US:**
 - **Know Your Meme** — https://knowyourmeme.com/ (verify primary source independently)
 - **Platformer (Casey Newton)** — https://www.platformer.news/
 - **The Verge — Decoder** — https://www.theverge.com/decoder
 - **Garbage Day (Ryan Broderick)** — https://www.garbageday.email/
 - **Embedded (Kate Lindsay & Nick Catucci)** — https://embedded.substack.com/
-- **Are.na annotations** — informal signal only, never a citation
+
+**SEA culture / internet-native:**
+- **Coconuts Media (Singapore, Bangkok, Jakarta, Manila, KL, Yangon, Bali)** — https://coconuts.co/
+- **Mothership (Singapore — explainer / internet culture)** — https://mothership.sg/
+- **AsiaOne (Singapore)** — https://www.asiaone.com/
+- **Vulcan Post (SEA tech + culture)** — https://vulcanpost.com/
+- **TODAY Online (Singapore)** — https://www.todayonline.com/
+- **Whataboutgalaxy / regional explainer accounts on X & TikTok** — leads only, never citations
+
+**SEA tech / startup specialty:**
+- **Tech in Asia** — https://www.techinasia.com/
+- **e27** — https://e27.co/
+- **DealStreetAsia** — https://www.dealstreetasia.com/
+- **KrAsia** — https://kr-asia.com/
 
 These can confirm surge velocity but cannot alone clear the Tier-1 bar.
 
@@ -159,6 +227,16 @@ story:
   (e.g. The 19th for women; Capital B for Black audiences; Documented for
   immigrant communities; NewsHour Indian Country for Indigenous; Them for
   LGBTQ+).
+- **SEA-specific framings** — when the story originates in or affects SEA,
+  capture the relevant national framing in the country's flagship outlet
+  (e.g. Inquirer for Filipino audience reads, Jakarta Post for Indonesian,
+  Bangkok Post for Thai, VnExpress for Vietnamese). Watch for divergence
+  between **ASEAN-government framing** (CNA, Straits Times, official press)
+  vs. **independent / migrant-worker / labor framing** (Tempo, Rappler, ILO
+  Asia-Pacific, ETHRWorld SEA). Religion (Islam in Indonesia/Malaysia/Brunei,
+  Buddhism in Thailand/Myanmar, Catholicism in the Philippines) and ethnic
+  identity often produce sharper local framings than the English-language
+  regional press surfaces.
 
 Capture framings as **observed facts**, not as the brief's positions. The
 brief is sober; the framings are what is happening around the story.
