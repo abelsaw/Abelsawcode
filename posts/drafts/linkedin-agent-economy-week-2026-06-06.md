@@ -39,7 +39,7 @@ Alphabet raised $85B, the biggest equity offering ever, to build AI infrastructu
 
 Foundation, execution, security. Capital is flowing at every layer of the stack.
 
-Buyers are writing the cheques. The sidelines just became the expensive seat.
+Buyers are writing the cheques. The sidelines became the expensive seat.
 
 Where are you placing yours?
 
