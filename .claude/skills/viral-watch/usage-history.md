@@ -8,6 +8,18 @@ run below.
 
 ## Past runs (most recent first)
 
+### Run of 2026-06-05 (SEA edition, run 3 / third-pass picks)
+- Window: 2026-05-29 to 2026-06-05
+- Lens(es): both (workforce + culture/equity)
+- Region: SEA (Southeast Asia)
+- Excluded from runs 1+2: thaksin-royal-pardon, meta-doj-sea-scam-compound-disruption, jinggoy-estrada-flood-control-arrest, indonesia-silmy-karim-kpk-prabowo-dismissal, malaysia-johor-snap-poll-dissolution, singapore-lqs-1800-cliff
+- Stories covered:
+  1. indonesia-disinformation-probe-foreign-agents: https://www.thejakartapost.com/indonesia/2026/06/04/media-probe-reveals-disinformation-behind-foreign-backed-2025-protests
+  2. ph-senate-flood-control-hearing-marines-testimony: https://www.gmanetwork.com/news/topstories/nation/990169/live-updates-alan-peter-cayetano-bloc-holds-flood-control-hearing-june-4-2026/story/ [adjacent to morning's Estrada arrest in same scandal cluster but materially distinct events]
+  3. laos-china-state-visit-32-agreements: https://www.thestar.com.my/aseanplus/aseanplus-news/2026/06/05/asean-news-headlines-as-of-10pm-on-friday-june-5 [marginal — SEA Tier-1 cross-citation thin]
+- Report path: reports/viral-watch/2026-06-05-run3.md
+- **Honest assessment included in report:** the candidate pool for this window is now substantially mined; recommend waiting for next surge cycle before next default-args run.
+
 ### Run of 2026-06-05 (SEA edition, run 2 / second-pass picks)
 - Window: 2026-05-29 to 2026-06-05
 - Lens(es): both (workforce + culture/equity)
