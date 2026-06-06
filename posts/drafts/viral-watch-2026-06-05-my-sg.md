@@ -1,43 +1,34 @@
-# Viral watch — top 10 viral Malaysia + Singapore news (week of Fri 2026-06-05) — RE-RANKED BY MENTIONS
+# Viral watch — top 9 viral Malaysia + Singapore news (week of Fri 2026-06-05) — VALIDATED, RINGGIT REMOVED
 
 ## Post 1 — top-10-viral-my-sg-2026-06-05
 - **Window:** 2026-05-29 to 2026-06-05
 - **Region focus:** Malaysia + Singapore
 - **Lens:** both (workforce + culture/equity)
-- **Ranking criterion (this run):** raw citation count across the catalog (most-mentioned → least-mentioned). Slow-burn coverage that accumulates wide mentions can outrank a tight surge cluster with fewer distinct outlets.
-- **Stories ranked 1-10 (post LinkedIn-worthiness gate):** malaysia-johor-snap-poll, singapore-lqs-1800-cliff, singapore-spf-disabling-directions-anti-indian, singapore-koh-poh-koon-resignation, singapore-hdb-bto-june-launch, sabah-sarawak-petronas-federalism, malaysia-ringgit-strongest-since-2018, sg-cambodia-tan-scam-arrest, anwar-energy-transition-federal-agenda, sg-my-cross-border-payments-fomo-axs
-- **Estimated citation counts:**
-  - #1 malaysia-johor-snap-poll: ~10+ outlets (Bloomberg, SCMP, US News, Arab News, Malay Mail x3, The Vibes, FMT, NST, Bernama, Malaysiakini, Modern Diplomacy, ISEAS)
-  - #2 singapore-lqs-1800-cliff: ~10 outlets (MOM primary, Asanify, Mavenside, RSM Stoneforest, ExcellenceSG, Singapore Employment Agency, Newland Chase, Robert Walters, Hays, HR Asia, ConsultancyCR) — **mostly specialty/employer-advisory, sustained coverage rather than tight surge**
-  - #3 singapore-spf-disabling-directions-anti-indian: ~7-8 outlets (Mothership SG, SCMP, FMT, Rozana Spokesman, Daily Excelsior, Pravasi Express, Singapore PMO/MHA, YouTube)
-  - #4 singapore-koh-poh-koon-resignation: ~6-7 outlets (PMO Singapore primary, Mothership, The Star Malaysia, HRD Asia, Online Citizen, Shorty News, Wikipedia)
-  - #5 singapore-hdb-bto-june-launch: ~5-6 outlets (HDB primary, ERA Singapore, 99co, PropertyGuru, StackedHomes, EdgeProp)
-  - #6 sabah-sarawak-petronas-federalism: ~4-5 outlets (NST, ISEAS commentary, The Edge Malaysia, Bernama, Sabah Oil and Gas)
-  - #7 malaysia-ringgit-strongest-since-2018: ~3-5 outlets (Trading Economics, Bloomberg references, Reuters wire backdrop)
-  - #8 sg-cambodia-tan-scam-arrest: ~3-4 outlets (The Star Malaysia, SPF Media Hub, MustShareNews, SCMP backdrop)
-  - #9 anwar-energy-transition-federal-agenda: ~3 outlets (Malay Mail Jun 4 + Jun 5, The Edge backdrop)
-  - #10 sg-my-cross-border-payments-fomo-axs: ~2-3 outlets (FintechNewsSG, mean.ceo blog, fintech specialty) — **thinnest count; backfill after gate dropped ASEAN U19**
-- **Three-lens balance:** Workforce 2 / Culture 4 / both 4
-- **Country split:** Malaysia 3 / Singapore 4 / cross-border 3
+- **Ranking criterion:** raw citation count across the catalog (most-mentioned → least-mentioned)
+- **Validation note:** Run 9 — full claim-by-claim validation pass. The original `malaysia-ringgit-strongest-since-2018` story (run 8 rank 7) is REMOVED. The "ringgit at highest since June 2018" framing was incorrect — actual USD/MYR was ~4.03 on Jun 5, not 3.97, and not at the post-2018 high. The other 9 stories were validated against primary sources and stand.
+- **Stories ranked 1-9 (post LinkedIn-worthiness gate + validation):** malaysia-johor-snap-poll, singapore-lqs-1800-cliff, singapore-spf-disabling-directions-anti-indian, singapore-koh-poh-koon-resignation, singapore-hdb-bto-june-launch, sabah-sarawak-petronas-federalism, sg-cambodia-tan-scam-arrest, anwar-energy-transition-federal-agenda, sg-my-cross-border-payments-fomo-axs
+- **Removed by validation (this run):** `malaysia-ringgit-strongest-since-2018` — factual claim "highest since June 2018" not verifiable; USD/MYR was ~4.03 on Jun 5, not 3.97
+- **Dropped by LinkedIn-worthiness gate (run 7):** `asean-u19-aqasha-kick` — 1/5 fail. Replaced by `sg-my-cross-border-payments-fomo-axs`.
+- **Three-lens balance:** Workforce 2 / Culture 4 / both 3
+- **Country split:** Malaysia 3 / Singapore 4 / cross-border 2
 - **Per-story LinkedIn-worthiness scores (criteria 1/2/3/4/5 → result):**
-  - malaysia-johor-snap-poll: Y/Y/Y/Y/Y → 5/5 pass
-  - singapore-lqs-1800-cliff: Y/Y/Y/Y/Y → 5/5 pass
-  - singapore-spf-disabling-directions-anti-indian: Y/Y/N/N/Y → 3/5 marginal
-  - singapore-koh-poh-koon-resignation: Y/Y/Y/Y/Y → 5/5 pass
-  - singapore-hdb-bto-june-launch: Y/Y/Y/Y/Y → 5/5 pass
-  - sabah-sarawak-petronas-federalism: Y/Y/Y/Y/Y → 5/5 pass
-  - malaysia-ringgit-strongest-since-2018: Y/Y/Y/Y/Y → 5/5 pass
-  - sg-cambodia-tan-scam-arrest: Y/Y/Y/Y/Y → 5/5 pass
-  - anwar-energy-transition-federal-agenda: Y/N/Y/Y/N → 3/5 marginal
-  - sg-my-cross-border-payments-fomo-axs: Y/Y/Y/Y/Y → 5/5 pass
-- **Dropped by LinkedIn-worthiness gate:** `asean-u19-aqasha-kick` — 1/5 fail. Backfilled by `sg-my-cross-border-payments-fomo-axs`.
-- **Word count:** 446 (per linkedin_post.py, incl. hashtags)
-- **Character count:** 2,882 (LinkedIn cap 3,000)
+  - malaysia-johor-snap-poll: 5/5 pass
+  - singapore-lqs-1800-cliff: 5/5 pass
+  - singapore-spf-disabling-directions-anti-indian: 3/5 marginal
+  - singapore-koh-poh-koon-resignation: 5/5 pass
+  - singapore-hdb-bto-june-launch: 5/5 pass
+  - sabah-sarawak-petronas-federalism: 5/5 pass
+  - sg-cambodia-tan-scam-arrest: 5/5 pass
+  - anwar-energy-transition-federal-agenda: 3/5 marginal
+  - sg-my-cross-border-payments-fomo-axs: 5/5 pass
+- **No-padding rule:** Per skill design, list presented at actual length (9 of 10 — one removed by validation). No backfill below the surge bar attempted.
+- **Word count:** 415 (per linkedin_post.py, incl. hashtags)
+- **Character count:** 2,670 (LinkedIn cap 3,000)
 - **Post-level LinkedIn-worthiness review:** pass
 - **Status:** draft
 
 ---POST---
-Ten stories from Singapore and Malaysia defined the week. Coalition stress in Johor. A wage-floor cliff coming July 1. An SPF anti-xenophobia takedown. A senior minister back to surgery. Plus Sarawak's federalism question and a new cross-border payments rail going live. Ranked by how widely they were cited, most to least.
+Nine stories from Singapore and Malaysia defined the week. Coalition stress in Johor. A wage-floor cliff coming July 1. An SPF anti-xenophobia takedown. A senior minister back to surgery. Plus Sarawak's federalism question and a new cross-border payments rail going live. Ranked by how widely they were cited, most to least.
 
 1. Johor Assembly dissolved June 1. Snap election within 60 days. Barisan Nasional contests all 56 seats without Pakatan Harapan. Anwar's Unity Government faces its first real coalition test; Negeri Sembilan signaling parallel polls.
 
@@ -51,15 +42,13 @@ Ten stories from Singapore and Malaysia defined the week. Coalition stress in Jo
 
 6. The Petronas–Sarawak question returned. Sabah's High Court win on revenue and Sarawak's Petros aggregator bid are reshaping Malaysian federalism. Not an oil story; a state-federal question.
 
-7. The ringgit strengthened to 3.97 per dollar, highest since June 2018, on optimism about Malaysia's AI supply chain role. Currency strength matters for anyone running regional payroll.
+7. Singaporean Francis Tan was handed over by Royal Malaysia Police to SPF June 5 over the Cambodia scam ring tied to 535 victims and S$53M losses. Thirty of 34 suspects still at large.
 
-8. Singaporean Francis Tan was handed over by Royal Malaysia Police to SPF June 5 over the Cambodia scam ring tied to 535 victims and S$53M losses. Thirty of 34 suspects still at large.
+8. PM Anwar told the Energy Transition Conference his federal government stays focused on its agenda, not Johor polls. Federal policy continues regardless of state weather. Read it as steadying the macro story.
 
-9. PM Anwar told the Energy Transition Conference his federal government stays focused on its agenda, not Johor polls. Federal policy continues regardless of state weather. Read it as steadying the macro story.
+9. FOMO Pay rolled out DuitNow QR acceptance in Singapore on June 5; same day, AXS and NTT DATA Japan announced a cross-border bill payment link starting with Singapore. The MY-SG payments rail just got two new lanes.
 
-10. FOMO Pay rolled out DuitNow QR acceptance in Singapore on June 5; same day, AXS and NTT DATA Japan announced a cross-border bill payment link starting with Singapore. The MY-SG payments rail just got two new lanes.
-
-What I am carrying into next week: the MY-SG operating stack is becoming an integrated planning surface. Payments rails (FOMO/AXS), talent floors (LQS July 1), housing pipelines (HDB BTO), and currency strength are all moving the same week. For leaders running operations across both countries, this is the moment to plan across the stack, not by silo. How are you sequencing yours?
+What I am carrying into next week: the MY-SG operating stack is becoming an integrated planning surface. Payments rails (FOMO/AXS), talent floors (LQS July 1), and housing pipelines (HDB BTO) all moved the same week. For leaders running operations across both countries, this is the moment to plan across the stack, not by silo. How are you sequencing yours?
 
 #Singapore #Malaysia #SGBusiness #MalaysiaLeadership
 ---END---
@@ -71,17 +60,18 @@ What I am carrying into next week: the MY-SG operating stack is becoming an inte
 4. singapore-koh-poh-koon-resignation: https://www.pmo.gov.sg/newsroom/statement-on-the-resignation-of-dr-koh-poh-koon-as-senior-minister-of-state/
 5. singapore-hdb-bto-june-launch: https://www.hdb.gov.sg/about-us/news-and-publications/press-releases
 6. sabah-sarawak-petronas-federalism: https://www.nst.com.my/amp/business/insight/2026/06/1452559/beyond-oil-petronas%E2%80%93sarawak-question-really-about-malaysias-future
-7. malaysia-ringgit-strongest-since-2018: https://tradingeconomics.com/malaysia/currency
-8. sg-cambodia-tan-scam-arrest: https://www.thestar.com.my/aseanplus/aseanplus-news/2026/06/06/another-singaporean-arrested-for-alleged-links-to-cambodia-based-scam-ring-30-men-still-at-large
-9. anwar-energy-transition-federal-agenda: https://www.malaymail.com/amp/news/malaysia/2026/06/04/pm-stays-focused-on-federal-agenda-amid-johor-election-buzz/222480
-10. sg-my-cross-border-payments-fomo-axs: https://fintechnews.sg/
+7. sg-cambodia-tan-scam-arrest: https://www.thestar.com.my/aseanplus/aseanplus-news/2026/06/06/another-singaporean-arrested-for-alleged-links-to-cambodia-based-scam-ring-30-men-still-at-large
+8. anwar-energy-transition-federal-agenda: https://www.malaymail.com/amp/news/malaysia/2026/06/04/pm-stays-focused-on-federal-agenda-amid-johor-election-buzz/222480
+9. sg-my-cross-border-payments-fomo-axs: https://fintechnews.sg/
 
-## Methodology note
-This run re-ranks by **total citation count** (most-mentioned → least-mentioned) per user request, rather than by surge magnitude × lens-fit × region-fit (the skill's default ranking). The LQS S$1,800 cliff moves up to rank 2 because it accumulates the second-highest mention count (mostly via employer-advisory specialty press), even though the cluster is slow-burn rather than a tight 48-72h surge. The skill's default ranking would have placed LQS lower; this run prioritizes raw virality count over surge-cluster intensity.
-
-## Step 6 — Post-level LinkedIn-worthiness review notes
-- **A. Voice and tone:** First person, bold AND humble, no AI-tells, no hype, no emojis. ✓
-- **B. Engagement:** Specific opening hook (now naming LQS in second position to match the new ranking), each entry has a CTO take, local specificity, engaging closing, MY+SG-aimed hashtags. ✓
-- **C. Length and format:** Verify via dry-run. Uniform 1-10. ✓
-- **D. Truth and verification:** All claims traceable to Sources block; hedged where appropriate. ✓
-- **E. Decision:** Pending dry-run verification of length. Pass expected.
+## Validation log (run 9)
+- **#1 Johor**: Onn Hafiz Ghazi announced Jun 1 dissolution with Johor Regent consent — confirmed across Bloomberg, SCMP, Malay Mail, The Vibes, FMT. Election within 60 days; BN contesting 56 seats independently of PH confirmed via The Vibes + FMT. ✓
+- **#2 LQS**: S$1,800 effective Jul 1, S$1,600 → S$1,800 transition, PWCS co-fund 30% in 2026 (raised from 20%), extended through 2028 — confirmed via MOM official + multiple specialty. ✓
+- **#3 SPF**: 14 posts blocked under OCHA 2023, content traced to China-based platform per MHA investigation, narratives targeted Indian community — confirmed via Mothership SG primary + SCMP + FMT. ✓
+- **#4 Koh Poh Koon**: PMO statement May 22; effective Jun 1; relinquished SMOS Manpower + SMOS Health; continues as Tampines GRC MP; returns to surgery — confirmed via PMO Singapore primary + Mothership Jun 1 follow-up. ✓
+- **#5 HDB BTO**: 6,860 flats across 7 projects; Lakeview + Shunfu noted as first new BTO in 40+ years; full BTO list in HDB press release — confirmed via HDB press release + ERA Singapore. ✓
+- **#6 Sabah-Sarawak**: Sabah High Court ordered recalculation of federal revenue owed (1974-2021); Sarawak's Petros pushing for natural-gas aggregator role; NST framed as MA63 / federalism question — confirmed via NST + ISEAS commentary. ✓
+- **#7 ringgit (REMOVED)**: Original claim "highest since June 2018" not verifiable; actual USD/MYR ~4.03 on Jun 5 (search-confirmed); ringgit was NOT at post-2018 high in window. **Dropped.**
+- **#8 Tan / Cambodia scam**: Tan arrested in Perlis Mar 10, handed over to SPF Jun 5, to be charged Jun 6; 535 victims, ~S$53M losses; 30 of 34 original suspects still at large per SPF — confirmed via The Star Malaysia + SPF Media Hub. ✓
+- **#9 Anwar Energy Transition**: ETCon26 keynote Jun 4; federal-agenda-focused framing — confirmed via Malay Mail Jun 4. ✓
+- **#10 FOMO/AXS**: FOMO Pay DuitNow QR acceptance announced Jun 5; AXS + NTT DATA Japan cross-border bill payment announced Jun 5; both via FintechNewsSG roundup — confirmed via FintechNewsSG. ✓
