@@ -10,6 +10,23 @@ thread), manually delete its entry from the relevant week below.
 
 ## Past weeks (most recent first)
 
+### Week of 2026-06-05 (user-specified window May 30 – June 5)
+- Through-line: Capital markets did the talking — Alphabet ($85B), Meta (FT exclusive), HPE, CrowdStrike and Anthropic all moved at the funding layer. Microsoft Build set Windows up as an OS for agents. Washington narrowed its AI EO. The HR lens stayed quiet.
+- Ranked stories 1-10:
+  1. alphabet-85b-equity-raise: https://www.bloomberg.com/news/articles/2026-06-01/alphabet-to-raise-80-billion-in-equity-capital-for-ai-spending — 10+
+  2. microsoft-build-autopilots: https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html — 10+
+  3. trump-ai-executive-order-voluntary: https://techcrunch.com/2026/06/02/trump-signs-narrower-executive-order-on-ai-oversight-after-industry-objections/ — 7+
+  4. meta-equity-raise-ft-exclusive: https://www.cnbc.com/2026/06/05/meta-stock-sinks-on-report-company-could-raise-tens-of-billions-for-ai.html — 8+
+  5. openai-codex-enterprise: https://techcrunch.com/2026/06/02/openai-launches-new-codex-tools-for-white-collar-work/ — 6+
+  6. nvidia-rtx-spark-mediatek: https://www.cnbc.com/2026/06/02/nvidias-new-pc-chips-are-ceos-bid-to-own-every-part-of-ai-stack.html — 5+
+  7. hpe-q2-fy26-earnings: https://www.sec.gov/Archives/edgar/data/0001645590/000164559026000052/ex-991x612026x8k.htm — 6+
+  8. morgan-stanley-wealth-ai-agents: https://www.cnbc.com/2026/06/03/ai-agents-morgan-stanley-wealth-management-funnel.html — 5+
+  9. crowdstrike-q1-charlotte-quiltworks: https://www.sec.gov/Archives/edgar/data/0001535527/000153552726000022/crwd-20260603xex991.htm — 4+ [thinner Tier-1]
+  10. anthropic-confidential-ipo-filing: https://www.buildfastwithai.com/blogs/ai-news-today-june-1-2026 — 3+ [thinner Tier-1]
+- Three-lens balance: Business Strategy 5 / IT 6 / HR 0 (HR gap named in post closing)
+- Post slug: capital-and-the-quiet-hr-shelf
+- Date: 2026-06-05
+
 ### Week of 2026-05-29 (ranked-top-10 re-run)
 - Through-line: Thursday May 28 was the week's gravitational center — Anthropic flexed at $965B, Opus 4.8 shipped the same day, M&A clocked two more stack-layer deals, and earnings season started telling the AI revenue story aloud.
 - Ranked stories 1-10:
