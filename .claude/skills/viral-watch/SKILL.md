@@ -1,6 +1,6 @@
 ---
 name: viral-watch
-description: Generate a single LinkedIn post for a Chief Transformation Officer (Business Strategy + HR + IT remit) covering the top 10 viral Malaysia and Singapore news stories of the window, ranked most-cited → least-cited and presented in a uniform flat list with one CTO take per story. Default region: Malaysia + Singapore (no SEA-wide reports by default). Surge bar: ≥3 catalog outlets in 48-72h, ≥1 Tier-1 anchor, workforce/labor or culture/equity/values lens. Output goes through a LinkedIn-worthiness review before saving. Use when the user says "what's gone viral in Malaysia/Singapore", "top 10 viral MY SG", "viral watch", or invokes /viral-watch.
+description: Generate a single LinkedIn post for a Chief Transformation Officer (Business Strategy + HR + IT remit) covering the top 10 viral Malaysia and Singapore news stories of the window, ranked most-cited → least-cited and presented in a uniform flat list with one CTO take per story. Default region: Malaysia + Singapore (no SEA-wide reports by default). Two LinkedIn-worthiness gates: (1) per-story gate scores each ranked story on 5 criteria (business relevance / comment-worthy / reshareable / avoids partisan harm / clear business implication); stories scoring ≤2/5 are dropped. (2) Post-level review checks voice, engagement, length before save. Surge bar: ≥3 catalog outlets in 48-72h, ≥1 Tier-1 anchor, workforce/labor or culture/equity/values lens. Use when the user says "what's gone viral in Malaysia/Singapore", "top 10 viral MY SG", "viral watch", or invokes /viral-watch.
 ---
 
 # Viral watch — LinkedIn post on top 10 viral Malaysia + Singapore news
@@ -8,6 +8,10 @@ description: Generate a single LinkedIn post for a Chief Transformation Officer 
 You are running the `viral-watch` skill. Produce **one LinkedIn post (text only, no image)** that lists the **top 10 viral Malaysia and Singapore news stories** of the resolved window — ranked most-cited → least-cited — each carrying implications for **workforce/labor** and/or **culture/equity/values**, written in the first-person voice of a **Chief Transformation Officer whose remit spans Business Strategy, HR, and IT**.
 
 This is **LinkedIn-publishable output**, not internal research. The voice is first-person, bold-and-humble CTO — professional, progressive, measured, and engaging for a Malaysia + Singapore professional audience.
+
+Two gates protect quality:
+- **Step 4.5 — Per-story LinkedIn-worthiness gate** scores each ranked story on 5 criteria (business relevance / comment-worthy / reshareable / avoids partisan harm / clear business implication). Stories that fail are dropped from the publishable list.
+- **Step 6 — Post-level LinkedIn-worthiness review** checks the assembled post for voice, engagement, length, and verification before save.
 
 ## Optional arguments (parsed from the skill `args` string)
 
@@ -83,6 +87,48 @@ When using translated sources, **preserve original-language quotes inline** alon
 
 When a region override widens scope (e.g. `region: sea`), the broader translation language set from the prior skill version applies (Indonesian, Thai, Vietnamese, Filipino, Khmer, Burmese, Lao).
 
+## Step 4.5 — Per-story LinkedIn-worthiness gate
+
+Before writing the post, **score each ranked story against 5 LinkedIn-worthiness criteria**. This is a separate filter from the surge bar in Step 3 — a story may be highly viral but unsuitable for a professional LinkedIn audience (pure entertainment, sports gossip, celebrity scandal, partisan flashpoint without a business angle).
+
+### The 5 criteria (each scored Yes/No)
+
+For each story, ask:
+
+1. **Business / strategic relevance** — does the story inform a business or organizational decision a CTO of Strategy + HR + IT in Malaysia or Singapore would actually act on? (Hiring, regulation, capex, currency, supply chain, talent, vendor strategy, market entry, M&A, public-policy compliance.)
+
+2. **Comment-worthy for a professional audience** — would a thoughtful LinkedIn reader (CEO / CFO / CHRO / CIO / CTO peer) have a substantive take they would want to share or respond to publicly?
+
+3. **Reshareable without reputational risk** — would the LinkedIn audience member be comfortable being seen sharing this story to their network, vs. worried about reactions from clients, employees, board members, or family?
+
+4. **Avoids partisan / divisive harm** — does the framing handle a politically or culturally polarizing topic in a way that does not alienate half the professional audience? Factual reporting on a divisive event can pass; one-sided take cannot. Sensitive topics (race, religion, geopolitics) require especially careful framing.
+
+5. **Has clear business implication, not just news / gossip / entertainment** — does the story connect to an operational, strategic, or workforce decision a reader can act on? Pure sports incidents, celebrity scandals, viral-meme moments, and stranger-than-fiction one-offs typically fail this criterion.
+
+### Decision rule
+
+- **Pass (≥4 of 5 criteria met):** Story stays in the ranked top 10 and gets written into the post body.
+- **Marginal (3 of 5 met):** Story stays but is flagged in metadata. Closing should not lean heavily on a marginal story.
+- **Fail (≤2 of 5 met):** Story is **dropped** from the publishable top 10. If a non-recurring stronger candidate sits just below the surge bar, it can be promoted to backfill. Otherwise the ranked list shrinks — present at actual length per the no-padding rule.
+
+### Edge cases
+
+- **Politically sensitive stories that fail criterion 4 but otherwise pass** (e.g. major government scandal, civil-rights moment): keep them if the CTO take can stay factual and non-partisan. The framing matters more than the topic.
+- **Workforce-only stories that look "boring" but are operationally significant** (wage cliffs, employment law changes, housing policy): pass criterion 1 strongly even if they would not feel "viral" to a casual reader. These are LinkedIn gold for HR/CHRO audiences.
+- **Cross-border culture/sport moments** (regional rivalries, festivals, identity politics): typically fail criterion 5 unless there is a clear workforce or DEI dimension a CTO can act on.
+
+### Output
+
+Record the per-story scores in the post's metadata block as a small table:
+
+```markdown
+- **Per-story LinkedIn-worthiness scores (criteria 1/2/3/4/5):**
+  - {slug-1}: {Y/N/Y/Y/Y} → 4/5 pass
+  - {slug-2}: ...
+  ...
+- **Dropped from ranking by LinkedIn-worthiness gate:** {slug + reason}, {slug + reason}, ...
+```
+
 ## Step 5 — Write the LinkedIn post
 
 Save to `posts/drafts/viral-watch-YYYY-MM-DD.md` using this template (matches the `linkedin-publisher` slug-extraction format):
@@ -97,6 +143,11 @@ Save to `posts/drafts/viral-watch-YYYY-MM-DD.md` using this template (matches th
 - **Stories ranked 1-10:** {slug-1}, {slug-2}, ..., {slug-10} [note any `[recurring from {prior-date}]`]
 - **Three-lens balance:** Workforce {N} / Culture {N} / both {N}
 - **Country split:** Malaysia {N} / Singapore {N} / cross-border (both) {N}
+- **Per-story LinkedIn-worthiness scores (criteria 1/2/3/4/5 → result):**
+  - {slug-1}: Y/Y/Y/Y/Y → 5/5 pass
+  - {slug-2}: Y/Y/Y/N/Y → 4/5 pass
+  - ...
+- **Dropped by LinkedIn-worthiness gate (if any):** {slug — reason}, ...
 - **Word count:** {N} (excl. hashtags)
 - **Character count:** {M}
 - **LinkedIn-worthiness review:** pass | revise — see Step 6 notes
@@ -195,9 +246,9 @@ Show, in this order:
 
 1. **Resolved window**, **lens(es)**, and **region**.
 2. **The ranked top 10** as a short table (rank, slug, headline, outlets, lens, recurring-from if applicable).
-3. **Three-lens balance** and **Malaysia/Singapore country split** counts.
+3. **Three-lens balance**, **Malaysia/Singapore country split**, and **per-story LinkedIn-worthiness scores** (with any dropped stories named).
 4. **The post body** (the full text between `---POST---` and `---END---`).
-5. **LinkedIn-worthiness review result** — pass/revise iterations.
+5. **Post-level LinkedIn-worthiness review result** (Step 6) — pass/revise iterations.
 6. **Sources block path** (`posts/drafts/viral-watch-YYYY-MM-DD.md`).
 7. **Recurring stories noted** (if any).
 
@@ -233,7 +284,8 @@ Dry-run preview first; on explicit "yes" / "publish," re-run without `--dry-run`
 - **Dedup RELAXED** — recurring stories from prior runs MAY appear in the current top 10 if they remain demonstrably viral inside the resolved window. Note recurrence in the metadata but do not exclude.
 - **First-person CTO voice** (Business Strategy + HR + IT remit). Bold AND humble. Progressive. Professional. No AI-tells, no hype, no emojis.
 - **400-600 words / under 2,900 characters** in the post body. Verified before save.
-- **LinkedIn-worthiness review (Step 6) must pass** before save. The review explicitly checks engagement for a SEA professional audience.
+- **Per-story LinkedIn-worthiness gate (Step 4.5) runs before writing.** Stories scoring ≤2/5 on the 5 LinkedIn-worthiness criteria are dropped from the ranked list. Stories scoring 3/5 stay but are flagged as marginal. The ranked list may shrink — no padding.
+- **Post-level LinkedIn-worthiness review (Step 6) must pass** before save. The review explicitly checks voice, engagement, length, and verification for a Malaysia + Singapore professional audience.
 - **Sources block kept in the file for audit** but does NOT appear in the publishable body (unless `urls: on` is set).
 - **No fabrication.** Every claim traces to a named source.
 - **Default region is Malaysia + Singapore only.** Stories must originate in or materially affect Malaysia or Singapore. Use `region: sea` / `region: apac` / `region: global` to widen.
