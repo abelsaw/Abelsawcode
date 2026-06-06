@@ -46,6 +46,7 @@ Invoke the `hr-best-practices-scout` agent with a prompt that includes:
   - "With `region: global`, drop the regional filter entirely and surface globally-applicable Tier 1/2 findings."
 - **The discovery directive (when `discover` is not `off`):** "During your searches, if you encounter 2026 HR research from a credible **global** firm NOT in the catalog that adds new convergence to a theme you're surfacing, USE it and report it back so it can be added to the catalog. Acceptable discovery candidates: major global consulting firms (Heidrick & Struggles, Russell Reynolds, Spencer Stuart, Egon Zehnder, Oliver Wyman, Accenture Research, Roland Berger), global research institutions (Brookings, MIT Sloan, Wharton, NBER, Stanford), or established global trade publications with primary research (HBR original surveys, MIT Sloan Management Review). **Do NOT propose APAC-only or country-specific firms** — the user excluded Tier 3 on 2026-05-22. Apply the discovery rules in `.claude/skills/linkedin-post/sources.md`."
 - **The dedup exclusion set:** "The following parent themes have been used in /linkedin-post runs within the last 14 days and are OFF-LIMITS for this run unless the user explicitly overrides: {paste the list from usage-history.md}. Do not surface these themes as top candidates. If a brief candidate falls under an excluded parent theme, drop it and pick a different angle from a non-excluded theme. If fewer than 3 non-excluded themes meet the ≥2-firm bar, stop and report so the user can decide whether to relax the dedup window or accept a smaller set."
+- **The source-balance directive (lead-firm rotation + coverage minimum):** "Read the **Lead-firm utilization** section of `.claude/skills/linkedin-post/sources.md` before proposing themes. **Rule 1 — Lead-firm rotation:** each of the N posts in this run must designate ONE lead firm (the firm whose stat anchors the headline of slide 2). Lead firms MUST be distinct across the N posts; the Big-3 firms (McKinsey, Deloitte, Aon) may not lead more than 1 post per 3-post run unless there is no other firm with a credible cross-firm corroborated stat for that theme. Supporting/corroborating firms may repeat across posts. **Rule 2 — 9-post coverage minimum:** in the rolling 9-post window covered by the utilization tracker, every Tier 1 firm must appear at least once, and at least 2 Tier 1 firms outside the Big 3 (Mercer / WTW / Gartner / WEF / Gallup) must lead at least one post. If today's run would leave any Tier 1 firm at zero appearances in the rolling window, prioritize themes that surface a stat from that firm. **Rule 3 — Underused-firm priority:** when two themes meet the ≥2-firm bar with similar evidence strength, prefer the one led by an under-represented firm. Specifically prioritize PwC (Workforce Hopes & Fears 2025/26 PDF is unused), Gallup (State of Global Workplace 2026), BCG, KPMG, and Tier 2 firms (SHRM, Bain, Conference Board, Gartner). Report the lead firm for each surfaced theme in the brief so the writer can verify rotation."
 - Reminder of environment limits: if WebFetch returns 403, fall back to search-indexed content and mark claims `[search-only]`.
 
 Wait for the scout to save `posts/drafts/best-practices-research-YYYY-MM-DD.md`.
@@ -145,6 +146,18 @@ If a parent theme already has an entry in the file (from a prior run that the us
 
 Append the entries to the top of the "Used themes (most recent first)" section so the most recent runs are easy to scan.
 
+## Step 6.6 — Update the lead-firm utilization tracker
+
+After the writer has produced the drafts, update the **Lead-firm utilization (last 9 posts)** section of `.claude/skills/linkedin-post/sources.md`. For each post drafted, append one row to the rolling tally:
+
+```markdown
+| YYYY-MM-DD | slug-here | Lead firm | Supporting firms |
+```
+
+After appending, prune the tracker to the **most recent 9 rows** — older rows roll off so the table always reflects the rolling 9-post window. The next run's scout reads this section to enforce the rotation + coverage rules from Step 2.
+
+If today's run leaves any Tier 1 firm (Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup) at zero appearances in the rolling 9-post tally, flag it in your final report so the next run prioritizes that firm.
+
 ## Step 7 — Publish on approval
 
 When the user picks a specific option, delegate to `linkedin-publisher`:
@@ -180,3 +193,4 @@ through the setup steps in `.env.example` instead of attempting to publish.
 - **5 slides per option, every time.** Three posts = three carousels = fifteen PNGs.
 - **Persistence is silent but visible.** When you add a discovered source, mention it in your final report to the user ("Added Korn Ferry's 2026 Workforce Survey to the catalog — first time seen.") so they can audit the growing catalog.
 - **No theme overlap with prior runs.** Before drafting, the skill reads `.claude/skills/linkedin-post/usage-history.md` and excludes parent themes used within 14 days. After drafting, the skill appends the newly-used themes to the ledger. The user can manually delete an entry to allow recycling. If fewer than 3 non-excluded themes meet the cross-firm bar, stop and ask before drafting a smaller set.
+- **Lead-firm rotation across the rolling 9-post window.** Big-3 firms (McKinsey, Deloitte, Aon) may not lead more than 1 of every 3 posts in a single run. In the rolling 9-post window, every Tier 1 firm (Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup) must appear at least once, and at least 2 non-Big-3 Tier 1 firms (Mercer / WTW / Gartner / WEF / Gallup) must lead at least one post. Track utilization in `sources.md` after every run. If the rule blocks all available themes, surface the conflict in the brief and ask the user to relax it explicitly.

@@ -79,6 +79,48 @@ contributed to, so a human reviewing the catalog can see the context.
 
 ---
 
+## Lead-firm utilization (last 9 posts)
+
+The scout reads this table at the start of every run and applies the
+**lead-firm rotation + 9-post coverage minimum** (see SKILL.md Step 2).
+After each draft, the skill appends new rows here and prunes to the
+most recent 9 (older rows roll off).
+
+| Date | Slug | Lead firm | Supporting firms |
+|---|---|---|---|
+| 2026-06-02 | leadership-the-job-not-the-pipeline | Deloitte | McKinsey, Aon, Gartner |
+| 2026-06-02 | knowledge-on-a-clock | Deloitte | McKinsey, WEF |
+| 2026-06-02 | evp-is-architecture | Aon | Deloitte, Mercer, WTW |
+| 2026-06-02 | flow-over-structure | McKinsey | Aon, Mercer, Deloitte |
+| 2026-06-02 | connection-is-infrastructure | Deloitte | Aon, Gartner |
+| 2026-06-02 | geopolitics-is-planning-input | McKinsey | Aon, Mercer, CHRO Association |
+| 2026-06-02 | speed-runs-on-decision-rights | McKinsey | Deloitte, Aon, WTW |
+| 2026-06-02 | built-to-outperform | McKinsey | Aon, Deloitte, WTW |
+| 2026-06-02 | opportunity-is-the-next-equity | Aon | McKinsey, Deloitte, Gartner |
+
+### Rolling tally (last 9 posts as lead firm)
+
+- McKinsey: 4 (Big-3 ⚠ — rule says ≤ 1/3 per run; this window has 4/9 over multiple runs which is borderline)
+- Deloitte: 3 (Big-3 ⚠)
+- Aon: 2 (Big-3)
+- Mercer: 0 ❌ — Tier 1, must lead ≥1 in next run
+- WTW: 0 ❌ — Tier 1, must lead ≥1 in next run
+- Gartner: 0 ❌ — Tier 2 but heavily used; could lead a post
+- WEF: 0 ❌ — Tier 1, prioritize when relevant
+- BCG: 0 ❌ — Tier 1, search-only; under-mined
+- Gallup: 0 ❌ — Tier 1, State of Global Workplace 2026 unused
+
+### Next-run flag
+
+The next `/linkedin-post` run MUST lead at least 2 of its 3 posts with non-Big-3 firms (Mercer / WTW / Gartner / WEF / Gallup / BCG / KPMG / PwC / CHRO Association). Prioritize:
+- **PwC Workforce Hopes & Fears 2025/26** (PDF on hand, fully unused as lead) — strong employee-voice angles
+- **Gallup State of Global Workplace 2026** — engagement, wellbeing, intent-to-leave dimensions
+- **Mercer Global Talent Trends 2026** — many under-used chapters
+- **WTW Dynamic Total Rewards / Reinventing Performance Management** — compensation, performance redesign
+- **BCG AI/Work research** — search-only; surface a stat as lead
+
+---
+
 ## Auto-discovered sources
 
 <!-- Append new entries below this line as: -->
