@@ -17,6 +17,27 @@ When excluding, match on **parent theme**, not slug — two slugs about "Human-A
 
 ## Used themes (most recent first)
 
+### Geopolitical fragmentation as workforce planning input (NEW parent theme)
+- Slugs: geopolitics-is-planning-input
+- Source stats: McKinsey State of Orgs 2026 — 72% of leaders say geopolitical shifts already affected operating context (Shift #4: finding value in a new geopolitical context) [PDF: mckinsey/state-of-organizations-2026.pdf, p.28]; CHRO Association 2026 — geopolitics ranks as #1 external concern [PDF: chro-association/chro-survey-key-findings-2026.pdf]; Aon HCT 2026 — 39% pursuing M&A as workforce reshape [PDF: aon/human-capital-trends-2026.pdf]; Mercer GTT 2026 — talent foresight as scenario discipline (search-only)
+- Distinct from theme #4 (Scenario-based workforce planning under AI uncertainty — was about AI-future scenarios) and theme #7 (Global mobility reinvention — was about long-term vs short-term expat). This theme is specifically about geopolitical risk shaping hiring, comp, and footprint decisions.
+- Commits: (pending this run-2)
+- Date(s): 2026-06-02
+
+### Purpose, belonging, social connection as retention infrastructure (NEW parent theme)
+- Slugs: connection-is-infrastructure
+- Source stats: Deloitte Gen Z/Mill 2026 — Gen Z with close work friend 15pp more likely to stay 5+ years (48% vs 33%); millennials 18pp (61% vs 43%); 96/97% say purpose drives satisfaction; 41% Gen Z / 39% millennials rejected employer on ethics [PDF: deloitte/gen-z-millennial-survey-2026.pdf, p.41-44]; Aon HCT 2026 — culture/leadership/belonging central to sustainable wellbeing [PDF: aon/human-capital-trends-2026.pdf]; Gartner CHRO Priorities 2026 — only 47% of CHROs say culture drives performance (culture atrophy) [PDF: gartner/chro-top-priorities-2026.pdf]
+- Distinct from theme #17 (Wellbeing & FOBO — about Mercer 44% thriving / AI fear) and theme #11 (Internal mobility — about retention via mobility). This theme is about purpose + connection as the retention mechanism, not wellbeing dashboards or career mobility.
+- Commits: (pending this run-2)
+- Date(s): 2026-06-02
+
+### Organizational adaptability over structural redesign (NEW parent theme)
+- Slugs: flow-over-structure
+- Source stats: McKinsey State of Orgs 2026 — 2 of 3 leaders say orgs overly complex; 43% rank productivity as top priority; end-to-end process redesign 3x decision speed; only 13% blame lack of capex [PDF: mckinsey/state-of-organizations-2026.pdf, p.5, p.36-37]; Aon HCT 2026 — adaptability ranked #1 critical workforce skill ahead of AI literacy [PDF: aon/human-capital-trends-2026.pdf, p.23]; Mercer GTT 2026 — work redesign for AI as #1 ROI lever (search-only); Deloitte HCT 2026 — reinvention as operating baseline (search-only)
+- Distinct from theme #14 (Human-AI work redesign — about BCG 50-55% AI work design) and theme #10 (Skills-based workforce planning — about Mercer 5% advanced). This theme is about organizational process flow and end-to-end simplification, not AI augmentation or skills inventory.
+- Commits: (pending this run-2)
+- Date(s): 2026-06-02
+
 ### Personalized EVP as competitive moat (NEW parent theme)
 - Slugs: evp-is-architecture
 - Source stats: Aon HCT 2026 — only 19% of orgs have a clearly defined EVP; EVP-clear orgs lead peers by 34pp on visible leadership wellbeing commitment, 21pp on retirement gender-gap action, 20pp on benefit personalization; 84% employers say wellbeing strategy works vs 72% employees still report high stress [PDF: aon/human-capital-trends-2026.pdf, p.7, p.26]; Deloitte Gen Z/Mill 2026 — 96/97% say purpose drives satisfaction [PDF: deloitte/gen-z-millennial-survey-2026.pdf, p.41]; WTW Dynamic Total Rewards 2026 + 2026 Global EX Market Study (search-only); Mercer GTT 2026 (search-only)
