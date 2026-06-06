@@ -8,6 +8,31 @@ run below.
 
 ## Past runs (most recent first)
 
+### Run of 2026-06-05 (SEA edition, run 5 / first run under LinkedIn-publishable format)
+- Window: 2026-05-29 to 2026-06-05
+- Region: SEA
+- Lens(es): both
+- Format: ranked top-10 flat list, LinkedIn-publishable, CTO first-person voice (Biz Strategy + HR + IT)
+- **Dedup relaxed:** all 10 picks recurring from earlier runs same day (runs 1-4)
+- Stories covered (with rank):
+  1. thaksin-royal-pardon: https://www.bangkokpost.com/thailand/politics/3265280/thaksin-granted-royalbirthday-pardon [recurring from run 1]
+  2. indonesia-disinformation-probe: https://www.thejakartapost.com/indonesia/2026/06/04/media-probe-reveals-disinformation-behind-foreign-backed-2025-protests [recurring from run 3]
+  3. michelin-guide-vietnam-2026: https://guide.michelin.com/us/en/article/michelin-guide-ceremony/michelin-guide-vietnam-2026 [recurring from run 4]
+  4. malaysia-johor-snap-poll: https://www.bloomberg.com/news/articles/2026-06-01/malaysia-s-johor-state-set-for-polls-as-assembly-dissolved [recurring from run 2]
+  5. jinggoy-estrada-arrest: https://www.philstar.com/headlines/2026/06/01/2532002/jinggoy-estrada-ordered-arrested-plunder-flood-control-scandal [recurring from run 1]
+  6. meta-doj-sea-scam-compound: https://about.fb.com/news/2026/06/leading-tech-companies-law-enforcement-disrupt-criminal-scam-networks-in-southeast-asia/ [recurring from run 1]
+  7. ph-senate-marines-hearing: https://www.gmanetwork.com/news/topstories/nation/990169/live-updates-alan-peter-cayetano-bloc-holds-flood-control-hearing-june-4-2026/story/ [recurring from run 3]
+  8. indonesia-silmy-karim-kpk: https://jakartaglobe.id/news/deputy-immigration-minister-silmy-karim-detained-in-foreign-residency-permit-corruption-case [recurring from run 2]
+  9. thailand-land-bridge-ehia: https://www.bangkokpost.com/thailand/general/3266564/land-bridge-project-hits-new-snag [recurring from run 4]
+  10. asean-u19-aqasha-kick: https://e.vnexpress.net/news/sports/football/malaysian-player-kicks-singaporean-opponent-in-chest-at-asean-u19-championship-5081927.html [recurring from run 4]
+- Three-lens balance: W 0 / C 7 / both 3 — workforce-only gap flagged in closing
+- Regional spread: Thailand, Indonesia, Vietnam, Malaysia, Philippines, Singapore + scam-compound system touches Myanmar, Cambodia (8 of 10 SEA countries touched directly or indirectly; Brunei, Laos as story origins not represented)
+- LinkedIn-worthiness review: pass — no revise iterations needed
+- Post slug: top-10-viral-sea-2026-06-05
+- Word count: 403 (incl. hashtags per script) / Character count: 2,892 / LinkedIn cap 3,000
+- Date: 2026-06-05
+- Post draft path: posts/drafts/viral-watch-2026-06-05.md
+
 ### Run of 2026-06-05 (SEA edition, run 4 / first run under ranked-top-N format)
 - Window: 2026-05-29 to 2026-06-05
 - Lens(es): both (workforce + culture/equity)
