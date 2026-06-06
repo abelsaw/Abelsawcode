@@ -1,28 +1,23 @@
 ---
 name: viral-watch
-description: On-demand research brief that ranks the top 10 viral SEA news stories of the window (most-cited → least) and produces full deep-dives on the top 3, all with implications for workforce/labor and/or culture/equity/values. Default focus is Southeast Asia (Singapore, Indonesia, Malaysia, Thailand, Philippines, Vietnam, Cambodia, Laos, Myanmar, Brunei). Identifies stories that surged across ≥3 catalog news outlets within 48-72 hours, verifies the facts against primary sources, separates verified content from hype/distortion. NOT for posting. Use when the user says "what's gone viral", "what's blowing up this week", "viral watch", "society pulse", "top 10 viral SEA", or invokes /viral-watch.
+description: Generate a single LinkedIn post for a Chief Transformation Officer (Business Strategy + HR + IT remit) covering the top 10 viral SEA news stories of the window, ranked most-cited → least-cited and presented in a uniform flat list with one CTO take per story. Default region is Southeast Asia (Singapore, Indonesia, Malaysia, Thailand, Philippines, Vietnam, Cambodia, Laos, Myanmar, Brunei). Surge bar: ≥3 catalog outlets in 48-72h, ≥1 Tier-1 anchor, workforce/labor or culture/equity/values lens. Output goes through a LinkedIn-worthiness review before saving. Use when the user says "what's gone viral in SEA", "top 10 viral SEA", "viral watch", or invokes /viral-watch.
 ---
 
-# Viral watch — on-demand societal-implication brief (ranked top 10 + top-3 deep-dives)
+# Viral watch — LinkedIn post on top 10 viral SEA news
 
-You are running the `viral-watch` skill. Produce a **research-grade Markdown report** that:
+You are running the `viral-watch` skill. Produce **one LinkedIn post (text only, no image)** that lists the **top 10 viral SEA news stories** of the resolved window — ranked most-cited → least-cited — each carrying implications for **workforce/labor** and/or **culture/equity/values**, written in the first-person voice of a **Chief Transformation Officer whose remit spans Business Strategy, HR, and IT**.
 
-1. **Ranks the top 10 viral SEA stories** of the resolved window — most-cited → least-cited by cross-citation count — each carrying implications for **workforce/labor** and/or **culture/equity/values**.
-2. **Full deep-dives on the top 3** (default; configurable via `count:`).
-3. **Mini-entries on ranks 4-10** (structured short format for each).
-4. Three-lens balance check and regional-spread check after ranking.
-
-This skill is for **internal awareness and analysis** — NOT for LinkedIn publishing. The voice is analytical and sober, not first-person opinion.
+This is **LinkedIn-publishable output**, not internal research. The voice is first-person, bold-and-humble CTO — professional, progressive, measured, and engaging for a LinkedIn professional audience.
 
 ## Optional arguments (parsed from the skill `args` string)
 
-- `window: <N>d` — look back N days from today (default: `7d`, max: `14d`). Viral signal degrades quickly past two weeks.
+- `window: <N>d` — look back N days from today (default: `7d`, max: `14d`).
 - `lens: <workforce|culture|both>` — restrict the lens (default: `both`).
-- `count: <N>` — produce **N deep-dive entries** on the top-N of the ranked list (default: `3`, cap: `5`). The **ranked top 10** is always produced regardless of `count`.
+- `region: <sea|apac|us|global|eu>` — bias toward stories landing in the named region. **Default: `sea`**.
 - `rank: <N>` — produce a ranked list of N stories instead of 10 (default: `10`, range: `5-15`).
-- `region: <sea|apac|us|global|eu>` — bias toward stories landing in the named region. **Default: `sea`** (Southeast Asia: Singapore, Indonesia, Malaysia, Thailand, Philippines, Vietnam, Cambodia, Laos, Myanmar, Brunei). Use `apac` to widen to all Asia-Pacific including India, Japan, Korea, China, Australia; `global` to remove regional anchoring; `us` or `eu` for those regions.
+- `urls: on` — include source URLs inline. Default: off (citations in metadata block, not in the publishable body).
 
-If args are empty, run defaults: 7-day window, both lenses, 3 deep dives, **SEA region**.
+If args are empty, run defaults: 7-day window, both lenses, SEA, ranked top 10, URLs off in body.
 
 ---
 
@@ -30,10 +25,8 @@ If args are empty, run defaults: 7-day window, both lenses, 3 deep dives, **SEA 
 
 Read **two** inputs before researching:
 
-1. `.claude/skills/viral-watch/sources.md` — the curated catalog of news / culture / labor / global outlets used to measure cross-media surge.
-2. `.claude/skills/viral-watch/usage-history.md` — every story URL covered in prior runs. If the file doesn't exist yet, treat history as empty (first run).
-
-From the usage history, extract the **exclusion set**: every story URL covered in the **last 3 runs**. Stories on the list are off-limits — pick a different angle or a different story instead.
+1. `.claude/skills/viral-watch/sources.md` — the SEA-tuned catalog.
+2. `.claude/skills/viral-watch/usage-history.md` — prior runs (used for awareness, NOT for hard exclusion — see Step 3 dedup-relaxation note).
 
 ## Step 2 — Compute the window
 
@@ -45,214 +38,184 @@ From the usage history, extract the **exclusion set**: every story URL covered i
 
 A story qualifies as "viral" when it meets ALL of:
 
-1. **Cross-media surge:** the story is covered by **≥3 catalog news outlets** within a **48-72 hour cluster** inside the resolved window. The cluster matters — slow-burn stories don't count as viral here even if total coverage is high.
-2. **Tier-1 anchor:** at least one of those catalog outlets is from the **Tier-1 group** in `sources.md` (global tier-1 news, AI-era specialty culture/labor magazines of record, or a flagship public broadcaster).
-3. **Lens fit:** the story carries a clear implication for at least one of the two lenses:
-   - **Workforce & labor:** layoffs, automation, AI displacement, unions, gig work, education-to-work pipeline, immigration & talent flows, work-from-home shifts.
-   - **Culture, equity & values:** identity, social movements, DEI, free speech, generational shifts, attention economy, religion, sport-as-culture, language, online community dynamics.
+1. **Cross-media surge:** ≥3 catalog news outlets within a 48-72h cluster inside the resolved window.
+2. **Tier-1 anchor:** ≥1 of those outlets is from a Tier-1 group in `sources.md`.
+3. **Lens fit:** clear implication for workforce/labor and/or culture/equity/values.
 
-Sweep WebSearch against the catalog. For candidates that look promising, **WebFetch the lead source** to confirm dates and key facts. Never include a story you have not actually read.
+Sweep WebSearch against the catalog. For candidates that look promising, WebFetch the lead source to confirm dates and key facts.
 
-**Velocity boost (tiebreaker):** when two stories have the same outlet count, the one that surged in a tighter window (24-48h) ranks higher than the one that spread across the full 72h.
+**Dedup is RELAXED in this version of the skill.** A story that appeared in a prior run **may recur in the current run** if it is still demonstrably viral within the resolved window (still being covered by ≥3 catalog outlets inside the window, not just trailing coverage). The goal is to capture **the actual top 10 viral SEA stories of the period** — even if some recur week to week.
 
-**Region weighting (default `sea`):**
-- **With `region: sea` (default),** apply SEA as a relevance and ranking weight. **Topic filter:** prioritize stories that originated in or materially affect at least one of the ten SEA countries (Singapore, Indonesia, Malaysia, Thailand, Philippines, Vietnam, Cambodia, Laos, Myanmar, Brunei). **Source weighting:** prefer the SEA Tier-1 outlets in `sources.md` (Straits Times, CNA, Jakarta Post, Bangkok Post, Inquirer, Rappler, The Star Malaysia, Malay Mail, VnExpress, etc.) as primary cross-citation sources; treat global Tier-1 (Reuters, BBC, AP, FT) as second citations when they cover the same SEA story. A story that's pure US/EU/non-SEA but is being amplified in SEA media still counts when it's clearly landing locally (e.g. a US tech layoff that hits regional staff). A pure US-domestic story without SEA resonance is dropped.
-- **With `region: apac`,** widen to all Asia-Pacific (include India, Japan, Korea, China, Australia, NZ, plus SEA).
-- **With `region: global`,** no regional anchoring; rank by raw surge magnitude across the full catalog.
-- **With `region: us` or `region: eu`,** focus on that geography.
+When a recurring story is picked, note it in the metadata block as `[recurring from {prior-run-date}]` so the reader can see the persistence — but do not drop it from the ranking on that basis.
 
-Aim to identify **15-20 surge candidates** in the window so you can rank the top **`rank:`** (default 10) by surge magnitude × lens-fit weight × region-fit weight. From within the ranked list, the **top `count:`** (default 3) get full deep-dive treatment; the remaining ranked items get a short summary entry.
+**Region weighting (default `sea`):** prioritize SEA-originating or SEA-impacting stories; SEA Tier-1 outlets (Straits Times, CNA, Jakarta Post, Bangkok Post, Inquirer, Rappler, The Star Malaysia, VnExpress, etc.) are the primary cross-citation sources; global Tier-1 (Reuters, BBC, AP, FT) supply second citations for SEA stories. Pure US/EU stories without SEA resonance are dropped.
 
-If fewer than `rank:` (10) stories clear the bar in the resolved window, present the ranked list at its actual length and explicitly flag the gap — do not pad the list with stories below the surge bar.
+Aim to surface **15-20 surge candidates**, then rank the top `rank:` (default 10) by surge magnitude × lens-fit weight × region-fit weight. **If fewer than `rank:` stories clear the bar**, present at actual length and explicitly flag the gap in the metadata block — do not pad below the bar.
 
 ## Step 4 — Verify and separate fact from hype
 
-For each picked story:
+For each ranked story:
 
-1. **Identify the primary source** (the original report, court filing, government release, company statement, or first credible outlet).
-2. **WebFetch the primary source if reachable.** Note what is directly verifiable from primary sources vs. what is being amplified secondhand.
-3. **Track the framings** different outlets used. When a story is being read differently by different audiences (left/right, in-group/out-group, professional/lay, regional), capture those framings as observed facts — not as the brief's own positions.
-4. **Flag hype patterns:** missing context, mis-attributed quotes, statistics from non-primary sources, viral-but-uncorroborated claims, AI-generated misinformation indicators.
+1. **Identify and confirm the primary source.** WebFetch where reachable.
+2. **Note what is verifiable from primary sources** vs. amplified secondhand.
+3. **Track the audience framings** so the post can land its take without strawmanning any audience.
 
 ### Translation-on-fetch (for non-English SEA sources)
 
-When the source is in a non-English SEA language (Bahasa Indonesia / Bahasa Malaysia, Thai, Vietnamese, Tagalog/Filipino, Khmer, Burmese, Lao), use WebFetch's prompt parameter to translate during extraction. Pattern:
+When the source is in a non-English SEA language, use WebFetch's prompt parameter to translate during extraction. Pattern preserved from prior skill version. Native-language sources to consider: Kompas.id, Tempo, Detik.com, CNN Indonesia (Indonesian); Matichon, Thairath, Prachatai, Khaosod (Thai); VnExpress Vietnamese, Tuoi Tre, Thanh Nien, Lao Dong (Vietnamese); Inquirer Pilipino, ABS-CBN/GMA Filipino (Tagalog); Berita Harian, Sinar Harian, Utusan (Bahasa Malaysia); RFA Khmer, VOD (Khmer); Frontier Myanmar Burmese, Mizzima (Burmese); Lianhe Zaobao (Mandarin Singapore); Sin Chew Daily (Mandarin Malaysia).
 
-```
-WebFetch(
-  url: "<native-language URL>",
-  prompt: "This article may be in {Bahasa Indonesia | Thai | Vietnamese | ...}. Translate to English and extract:
-    1. Publication date
-    2. Headline (original + English translation)
-    3. Lead paragraph (English summary)
-    4. Key verifiable facts with named entities and quoted statements (preserve original-language quotes alongside English translation)
-    5. Author / outlet attribution
-    6. Any local-context framing (religion, ethnicity, regional politics) that English-language regional press might miss"
-)
-```
+## Step 5 — Write the LinkedIn post
 
-Native-language sources to consider when a story originates in or has its sharpest framing in the local press:
-
-- **Indonesian:** Kompas.id, Tempo, Detik.com, CNN Indonesia, Tribunnews
-- **Thai:** Matichon, Thairath, Prachatai (independent), Khaosod
-- **Vietnamese:** VnExpress (Vietnamese edition), Tuoi Tre (Vietnamese edition), Thanh Nien, Lao Dong (labor specialty)
-- **Filipino / Tagalog:** Inquirer Pilipino-language sections, ABS-CBN's Filipino reporting, GMA's Tagalog reporting
-- **Bahasa Malaysia:** Berita Harian, Sinar Harian, Utusan Malaysia
-- **Khmer:** RFA Khmer, VOD (Voice of Democracy archives)
-- **Burmese:** Frontier Myanmar (Burmese edition), Mizzima
-- **Mandarin (Singapore / Malaysia diaspora):** Lianhe Zaobao (Singapore), Sin Chew Daily (Malaysia)
-
-When using translated sources, **preserve original-language quotes inline** alongside the English translation so the contested framings can be audited later. Mark each translated source `[translated from {language}]` in the citation.
-
-The brief's voice is **sober and analytical**. It does not take sides between contested framings — it surfaces them.
-
-## Step 5 — Save the report
-
-Save to `reports/viral-watch/YYYY-MM-DD.md` (date = today). Use this template:
+Save to `posts/drafts/viral-watch-YYYY-MM-DD.md` using this template (matches the `linkedin-publisher` slug-extraction format):
 
 ```markdown
-# Viral watch — {YYYY-MM-DD}
-Window: {start_date} to {end_date}
-Lens(es): {workforce | culture | both}
-Region focus: {sea | us | global | apac | eu}
+# Viral watch — top 10 viral SEA news (week of {Friday YYYY-MM-DD})
 
-## Ranked top {N} — most-cited → least-cited
+## Post 1 — top-10-viral-sea-{YYYY-MM-DD}
+- **Window:** {Mon YYYY-MM-DD} to {Fri YYYY-MM-DD}
+- **Region focus:** SEA
+- **Lens:** {workforce | culture | both}
+- **Stories ranked 1-10:** {slug-1}, {slug-2}, ..., {slug-10} [note any `[recurring from {prior-date}]`]
+- **Three-lens balance:** Workforce {N} / Culture {N} / both {N}
+- **Regional spread:** {SEA countries represented}
+- **Word count:** {N} (excl. hashtags)
+- **Character count:** {M}
+- **LinkedIn-worthiness review:** pass | revise — see Step 6 notes
+- **Status:** draft
 
-| # | Slug | Headline | Outlets | Tier-1 anchor | Lens | Surge window |
-|---|------|----------|---------|---------------|------|--------------|
-| 1 | {slug-1} | {short headline} | {N} | {names} | {workforce/culture/both} | {YYYY-MM-DD → YYYY-MM-DD} |
-| 2 | {slug-2} | ... | ... | ... | ... | ... |
-| ... | ... | ... | ... | ... | ... | ... |
-| 10 | {slug-10} | ... | ... | ... | ... | ... |
+---POST---
+{Opening: CTO framing of the SEA week — 50-80 words. First person. Bold AND humble. Name what made the week distinctive in SEA.}
 
-**Three-lens balance check (Workforce / Culture / both):** {count by lens — if any lens is empty in the top 10, flag here}
+1. {Story 1 headline.} {1-2 sentence CTO take — what it means for the people / institutions / decisions a CTO of Strategy+HR+IT would be tracking in SEA.}
 
-**Regional spread (SEA countries represented in the top 10):** {comma-separated countries — if a story is regional/multi-country, note it}
+2. {Story 2 headline.} {CTO take.}
 
----
+...
 
-## Surge candidates considered ({N total before ranking})
-- {slug} — {one-line headline} — {outlet count} — {tier-1 anchor: Y/N} — {lens fit} — {rank in top 10 or "below cut"}
-- ...
+10. {Story 10 headline.} {CTO take.}
 
----
+{Closing: one move the CTO is making off this week, or the open question being carried into next week. 40-80 words. Invite engagement — a real question, a specific claim, an action.}
 
-## Mini-entries — ranks 4-{N}
+#Hashtag1 #Hashtag2 #Hashtag3 #Hashtag4
+---END---
 
-For each ranked story NOT covered by a full deep-dive, produce a short entry:
+## Sources (for audit, not in publishable body)
+1. {slug-1}: {primary URL}
+2. {slug-2}: {primary URL}
+...
+10. {slug-10}: {primary URL}
 
-### #{rank} — {slug}
-- **Headline:** {1 line}
-- **Window of surge:** {YYYY-MM-DD → YYYY-MM-DD}
-- **Outlets:** {N catalog total; Tier-1: {names}}
-- **What's verified (key facts):** {2-3 bullet points}
-- **What's amplified or distorted:** {1-2 specifics}
-- **Lens fit:** {workforce + 1 line / culture + 1 line / both + 1 line}
-- **Dominant contested framing:** {1 line naming the sharpest disagreement}
-- **Primary source:** {Outlet}, {URL}
-
----
-
-## Deep-dive 1 — {slug}
-
-### Headline & current framing
-{1-2 sentences on what the story is and how it is being framed publicly.}
-
-### Surge signals
-- **Window of surge:** {YYYY-MM-DD HH:MM to YYYY-MM-DD HH:MM} ({hours} hours)
-- **Catalog outlets covering:** {N} (Tier-1: {names}; second-citation: {names})
-- **Notable velocity tells:** {e.g. "covered by both BBC and Fox in the same 6-hour window", "trended on Reddit r/news for 14h", "Wikipedia article created within 24h"}
-- **Primary source:** {Outlet}, {date}, {URL}
-
-### What's verified
-{Facts that trace to the primary source or to ≥2 catalog Tier-1 outlets. List as bullets.}
-
-### What's amplified or distorted
-{Patterns of misframing, missing context, mis-attributed quotes, viral-but-uncorroborated claims. Specific, not vague.}
-
-### Societal implication — Workforce & labor
-{2-3 sentences on how this story sits in the workforce/labor landscape. Skip this subsection if lens is culture-only.}
-
-### Societal implication — Culture, equity & values
-{2-3 sentences on how this story sits in the culture/equity/values landscape. Skip this subsection if lens is workforce-only.}
-
-### Contested framings observed
-- **Framing A ({audience}):** {one sentence}
-- **Framing B ({audience}):** {one sentence}
-- **Framing C ({audience}):** {one sentence, if present}
-
-### Open questions for the next 7-14 days
-- {question}
-- {question}
-
-### Sources
-- {Outlet}, {date} — {URL}
-- ...
-
-## Deep-dive 2 — {slug}
-{same structure}
-
-## Deep-dive 3 — {slug}
-{same structure}
-
-## Stories considered but not picked
-- {slug} — {one-line headline} — {reason dropped, e.g. "below surge bar", "lens-fit thin", "primary source unreachable", "in exclusion set from prior run"}
+## Recurring stories (if any)
+- {slug}: recurring from {prior-run-date} — {1 line why it's still viral}
 ```
 
-## Step 6 — Persist any newly discovered sources
+Target body length: **400-600 words (excluding hashtags)**. Hard cap at **2,900 characters** to stay under LinkedIn's 3,000-char limit.
 
-If a credible outlet surfaced repeatedly and meets the discovery rules in `sources.md`, append it to the **Auto-discovered sources** section. Be conservative.
+## Step 6 — LinkedIn-worthiness review
+
+Before saving the final draft, **run this review** and either pass or revise:
+
+### A. Voice and tone checks
+- First person used throughout (not third-person analytical).
+- **Bold AND humble** — at least one place where a position is stated firmly; at least one place where uncertainty is named.
+- **Progressive** — forward-looking framing (what's becoming possible, not what's broken).
+- **Professional** — measured tone, no adversarial jabs, no rhetorical gotchas.
+- **No AI-tells:** delve, tapestry, navigating the landscape, in today's fast-paced world, in conclusion, moreover, furthermore — search and remove.
+- **No hype/jargon:** game-changer, revolutionary, must-read, synergy, leverage, unlock value — search and remove.
+- **No emojis** in the body.
+
+### B. Engagement checks (LinkedIn-professional audience)
+- **Specific opening hook** — the first sentence is something a CTO in Singapore, KL, Jakarta, Manila, Bangkok, HCMC would actually stop scrolling for. Not generic ("Here are 10 stories from SEA this week" is generic; "Three things happened in SEA this week that should change how every CTO budgets for Q3" is specific).
+- **Each story entry has a take, not just a summary** — the 1-2 sentence CTO read should add interpretation a LinkedIn reader can't get from a headline alone.
+- **Stories are named with regional specificity** — country names, named institutions, named actors. SEA professional readers know the difference between "in Indonesia" and "Jakarta," between "a senator" and "Jinggoy Estrada."
+- **Closing invites engagement** — a real question, a specific claim, or an action. Not a generic call to "share your thoughts."
+- **Hashtags** are 3-5, lowercase or CamelCase, oriented to the week's themes and the SEA professional audience (e.g. `#FutureOfWorkAsia`, `#ASEAN`, `#SEALeadership`, `#WorkforceTransformation`).
+
+### C. Length and format checks
+- **Word count: 400-600** (excluding hashtags). Run `python3 scripts/linkedin_post.py posts/drafts/viral-watch-YYYY-MM-DD.md --slug <slug> --dry-run` and confirm.
+- **Character count: under 2,900** (LinkedIn limit is 3,000).
+- **Numbered 1-10** ranked list — uniform format, no separate deep-dives or mini-entries (per skill design).
+- **Each entry: headline + 1-2 sentence take** — no "what's verified" or "contested framings" sections; that's research-grade output for `/viral-watch`'s prior version. This skill produces publishable content.
+
+### D. Truth and verification checks
+- Every factual claim in the post traces to a source in the Sources block.
+- No quotes attributed to people or institutions without a verifiable primary source.
+- Recurring stories from prior runs are clearly named as still-viral, not freshly broken.
+- If a story is `[search-only]` (primary source unreachable), the CTO take must be hedged accordingly ("reports suggest…") rather than asserted.
+
+### E. Reviewer decision
+- **Pass:** body publishable as written; set `LinkedIn-worthiness review: pass` in metadata.
+- **Revise:** name the specific failing check(s) and revise the body. Re-run the review until pass.
 
 ## Step 7 — Append to usage history
 
-Immediately after saving the report (BEFORE presenting):
+After save, append to `.claude/skills/viral-watch/usage-history.md`:
 
 ```markdown
 ### Run of {YYYY-MM-DD}
 - Window: {start} to {end}
-- Lens(es): {lens(es)}
-- Stories covered:
-  1. {slug-1}: {primary URL}
+- Region: SEA (or other)
+- Lens(es): {lens}
+- Stories covered (with rank):
+  1. {slug-1}: {primary URL} [note `[recurring from {prior-date}]` if applicable]
   2. {slug-2}: {primary URL}
-  3. {slug-3}: {primary URL}
-- Report path: reports/viral-watch/{YYYY-MM-DD}.md
+  ...
+  10. {slug-10}: {primary URL}
+- Three-lens balance: W {N} / C {N} / both {N}
+- Regional spread: {countries}
+- LinkedIn-worthiness review: pass | revise iterations: N
+- Post slug: top-10-viral-sea-{YYYY-MM-DD}
+- Date: {YYYY-MM-DD}
 ```
 
-Append to the top of the "Past runs (most recent first)" section. Create the file if it does not exist.
+Append to the top of "Past runs (most recent first)." Recurrence is noted but does NOT block a story from this run's top 10.
 
 ## Step 8 — Present compactly to the user
 
 Show, in this order:
 
 1. **Resolved window**, **lens(es)**, and **region**.
-2. **The ranked top 10** — full table (rank, slug, one-line headline, outlet count, Tier-1 anchor, lens, surge window).
-3. **Three-lens balance check** (Workforce / Culture / both — counts by lens) and **regional spread** (SEA countries represented).
-4. **The 3 deep dives** — slug, the headline, and 2-3 lines summarizing the verified facts + the most important contested framing.
-5. **Mini-entries summary** — one line each for ranks 4-10 (slug + headline + dominant framing).
-6. **The report path** (`reports/viral-watch/YYYY-MM-DD.md`).
+2. **The ranked top 10** as a short table (rank, slug, headline, outlets, lens, recurring-from if applicable).
+3. **Three-lens balance** and **regional spread** counts.
+4. **The post body** (the full text between `---POST---` and `---END---`).
+5. **LinkedIn-worthiness review result** — pass/revise iterations.
+6. **Sources block path** (`posts/drafts/viral-watch-YYYY-MM-DD.md`).
+7. **Recurring stories noted** (if any).
 
-End with: "Want a deeper dive on any one of these, a different window, or a different lens?"
+End with: "Want me to revise the tone, swap a story, or publish to LinkedIn?"
+
+## Step 9 — Publish on approval
+
+When approved, delegate to `linkedin-publisher`:
+
+```bash
+python3 scripts/linkedin_post.py posts/drafts/viral-watch-YYYY-MM-DD.md \
+  --slug top-10-viral-sea-YYYY-MM-DD \
+  --dry-run
+```
+
+Dry-run preview first; on explicit "yes" / "publish," re-run without `--dry-run`.
 
 ---
 
-## Hard rules
-
-- **Ranked top 10 (default) is always produced** — most-cited → least-cited by cross-citation count. Ties broken by velocity (tighter 24-48h cluster ranks above the full 72h).
-- **Top 3 (default, configurable via `count:`) get full deep-dives.** Ranks 4-10 get the structured mini-entry format.
-- **≥3 catalog news outlets covering the story within 48-72h** — that's the viral bar for any story to appear in the ranked list. Slow-burn or single-outlet stories don't qualify.
-- **≥1 Tier-1 catalog anchor** in the qualifying outlet set.
-- **Lens fit required** — workforce/labor and/or culture/equity/values implication must be specific, not generic ("everyone is talking about AI" is not a lens fit).
-- **Three-lens balance is monitored.** After ranking, check Workforce / Culture / Both counts. If a lens has zero entries in the top 10, name that gap in the brief.
-- **Regional spread is monitored.** After ranking, list which SEA countries are represented in the top 10. If only 1-2 countries appear, flag that as a window-skew condition.
-- **Verify the primary source** for each deep dive. If primary source is unreachable, mark `[primary source unverified]` and flag the brief as provisional. Mini-entries require ≥2 catalog sources read but full primary-source verification is not mandated.
-- **Sober, analytical voice.** Third person. The brief surfaces contested framings — it does not take sides between them.
-- **No fabrication.** Every URL is one you actually fetched (or attempted to fetch with the failure logged). Every claim traces to a named source.
-- **No story duplication across the last 3 runs.** Usage history is the ledger.
-- **If fewer than `rank:` (10) stories clear the bar**, present the ranked list at its actual length and explicitly flag the gap. Do NOT pad below the bar.
-- **Not for posting.** This is internal research. If the user wants a LinkedIn post, they should use `/weekly-summary`.
-
 ## Output locations (recap)
 
-- Report: `reports/viral-watch/YYYY-MM-DD.md`
+- LinkedIn post draft: `posts/drafts/viral-watch-YYYY-MM-DD.md`
 - Source catalog: `.claude/skills/viral-watch/sources.md`
-- Usage history: `.claude/skills/viral-watch/usage-history.md`
+- Usage history (relaxed dedup ledger): `.claude/skills/viral-watch/usage-history.md`
+- Prior internal-research-format reports (historical): `reports/viral-watch/`
+
+## Hard rules
+
+- **Top 10 ranked, uniform flat list** — most-cited → least-cited by cross-citation count. Ties broken by velocity (24-48h cluster ranks above 72h). **No deep-dives; no mini-entries split. One entry format for all 10.**
+- **≥3 catalog news outlets covering the story within 48-72h** — viral bar.
+- **≥1 Tier-1 catalog anchor** in the qualifying outlet set.
+- **Lens fit required** — workforce/labor and/or culture/equity/values implication.
+- **Dedup RELAXED** — recurring stories from prior runs MAY appear in the current top 10 if they remain demonstrably viral inside the resolved window. Note recurrence in the metadata but do not exclude.
+- **First-person CTO voice** (Business Strategy + HR + IT remit). Bold AND humble. Progressive. Professional. No AI-tells, no hype, no emojis.
+- **400-600 words / under 2,900 characters** in the post body. Verified before save.
+- **LinkedIn-worthiness review (Step 6) must pass** before save. The review explicitly checks engagement for a SEA professional audience.
+- **Sources block kept in the file for audit** but does NOT appear in the publishable body (unless `urls: on` is set).
+- **No fabrication.** Every claim traces to a named source.
+- **Three-lens balance and regional spread are monitored** and shown in the metadata block. If a lens has zero entries, the closing should acknowledge it.
+- **Output is LinkedIn-publishable** — the skill writes for posting, not internal research.
