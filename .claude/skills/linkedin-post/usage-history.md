@@ -17,6 +17,27 @@ When excluding, match on **parent theme**, not slug — two slugs about "Human-A
 
 ## Used themes (most recent first)
 
+### Opportunity equity / D&I matures, not retreats (NEW parent theme)
+- Slugs: opportunity-is-the-next-equity
+- Source stats: Aon HCT 2026 — 84% ensure equal pay, only 14% ensure equal career progression (Ch 2, p.28) [PDF: aon/human-capital-trends-2026.pdf]; McKinsey State of Orgs 2026 Shift #7 — 90% of leaders still call D&I a priority; APAC 84% / EU 83% / NA 75% maintaining or expanding [PDF: mckinsey/state-of-organizations-2026.pdf, pp.53-56]; Deloitte HCT 2026 — belonging delivers 56% performance lift, 50% lower turnover risk (search-only)
+- Distinct from theme #18 (Pay transparency execution — about EU Pay Transparency Directive mechanics) — this theme is about D&I evolution from pay equity to opportunity/career equity.
+- Commits: (pending this run-3)
+- Date(s): 2026-06-02
+
+### People & Performance (P&P) organizations — high-performance edge (NEW parent theme)
+- Slugs: built-to-outperform
+- Source stats: McKinsey State of Orgs 2026 Shift #6 — P&P orgs 4.3x more likely to maintain top-tier financial performance 9 of 10 years [PDF: mckinsey/state-of-organizations-2026.pdf, pp.46-49]; Aon HCT 2026 — 77% of employees with regular development conversations feel motivated vs 21% without (Ch 2, pp.24-27) [PDF: aon/human-capital-trends-2026.pdf]; WTW Reinventing Performance Management 2026 — only 20% of leaders believe non-financial rewards meaningfully boost performance (search-only); Deloitte 2026 HCT — 47% cite limited career progression as top barrier (search-only)
+- Distinct from theme #16 (Manager engagement & leadership pipeline — about Gallup engagement scores) and theme #17 (Wellbeing & FOBO — about thriving %). This theme is specifically about the P&P org category as a high-performance discipline (development conversations, dev cadence, non-comp rewards).
+- Commits: (pending this run-3)
+- Date(s): 2026-06-02
+
+### Decision rights as productivity lever (NEW parent theme)
+- Slugs: speed-runs-on-decision-rights
+- Source stats: Deloitte HCT 2026 — 67% of leaders want orgs fast & nimble, only 7% report great progress (search-only / press); McKinsey State of Orgs 2026 Shift #3 — managers spend 40-65% of time on cross-functional work without accountability for outcomes; end-to-end redesign lifts engagement 25pp [PDF: mckinsey/state-of-organizations-2026.pdf, pp.35-40]; WTW & Aon corroborating
+- Distinct from theme #22 (Organizational adaptability over structural redesign — used today's run-2; McKinsey Shift #5 about structure-to-flow, complexity reduction). This theme is McKinsey Shift #3 specifically about decision rights and authority distribution, not structure/complexity. The "reorgs don't fix productivity" thread is shared, but the diagnostic and lever are distinct: Shift #5 = simplify the structure; Shift #3 = define who decides what.
+- Commits: (pending this run-3)
+- Date(s): 2026-06-02
+
 ### Geopolitical fragmentation as workforce planning input (NEW parent theme)
 - Slugs: geopolitics-is-planning-input
 - Source stats: McKinsey State of Orgs 2026 — 72% of leaders say geopolitical shifts already affected operating context (Shift #4: finding value in a new geopolitical context) [PDF: mckinsey/state-of-organizations-2026.pdf, p.28]; CHRO Association 2026 — geopolitics ranks as #1 external concern [PDF: chro-association/chro-survey-key-findings-2026.pdf]; Aon HCT 2026 — 39% pursuing M&A as workforce reshape [PDF: aon/human-capital-trends-2026.pdf]; Mercer GTT 2026 — talent foresight as scenario discipline (search-only)
