@@ -17,6 +17,30 @@ When excluding, match on **parent theme**, not slug — two slugs about "Human-A
 
 ## Used themes (most recent first)
 
+### CEO ownership of AI upskilling — budget + personal time (NEW parent theme)
+- Slugs: budget-shows-belief
+- Source stats: BCG AI Radar 2026 — Trailblazer/Pragmatist/Follower CEOs allocate 60%/27%/24% of AI budget to upskilling and retraining; 72% of CEOs now main AI decision-maker (double last year); 8+ hrs/week of CEO personal AI upskilling time (search-only, BCG); KPMG 2026 CEO Outlook — 83% of CEOs prioritize workforce reskilling (search-only); Mercer GTT 2026 — 62% of employees say leaders underestimate AI's emotional impact (search-only); WEF Reskilling Revolution pledge — 120M workers by 2030 (search-only)
+- Distinct from theme #15 (AI literacy & reskilling at scale — about workforce-level deployment vs reskilling rates) and theme #1 (AI value-capture / 12% vanguard — about realized value differential). This theme is specifically about CEO as the upskilling-budget owner and personal-time investor.
+- Lead firm: BCG (Tier 1 non-Big-3)
+- Commits: (pending this run-4)
+- Date(s): 2026-06-02
+
+### Performance management reinvented — process to purpose (NEW parent theme)
+- Slugs: rebuild-performance-management
+- Source stats: WTW Reinventing Performance Management + Pay for Performance 2026 (from 2025 Global PM Focus Group) — ~50% of orgs say productivity would rise 10%+ if PM optimized (search-only); Gartner CHRO Priorities 2026 — embedding culture in daily work delivers up to 34% performance lift; AI-evolved HR ops adds up to 29% productivity [PDF: gartner/chro-top-priorities-2026.pdf]; Mercer GTT 2026 — 63% C-suite vs 46% HR on whether redesigning work for AI is top ROI lever (search-only); Deloitte HCT 2026 — adaptability built into work (search-only)
+- Distinct from theme #14 (Human-AI work redesign — about task allocation between humans and AI) and theme #22 (Organizational adaptability — about org topology / structure to flow). This theme is specifically about the PM SYSTEM itself — goal-setting, calibration, reward linkage, manager coaching — being rewired.
+- Lead firm: WTW (Tier 1 non-Big-3)
+- Commits: (pending this run-4)
+- Date(s): 2026-06-02
+
+### The clarity gap — workers want clarity / leaders run on speed (NEW parent theme)
+- Slugs: clarity-is-the-multiplier
+- Source stats: PwC Workforce Hopes & Fears 2025 (50,000 workers, 28 sectors, 48 economies; rolled forward to 2026 commentary) — workers most aligned with leadership goals are 78% more motivated; workers most trusting their direct manager are 72% more motivated (search-only, PwC press); WTW 2026 Global EX Market Study — four-part Clarity / Confidence / Capability / Connection frame; 58% → 91% AI changes EX 3yr→10yr (search-only); Deloitte HCT 2026 — only 27% say org manages change effectively, 1/3 saw 15+ major changes last year (search-only); WEF Davos 2026 — engagement depends less on perks more on trust (search-only). PwC Malaysia cut shows higher APAC optimism on AI productivity (50% vs 41%) [PDF: pwc/workforce-hopes-and-fears-2025.pdf]
+- Distinct from theme #21 (Personalized EVP — about EVP architecture for rewards/benefits) and theme #23 (Purpose/belonging — about social connection). This theme is specifically about INFORMATION ASYMMETRY between leadership intent and employee comprehension — a communication/cadence/credibility failure.
+- Lead firm: PwC (Tier 2 non-Big-3 — first PwC lead in rolling-9 window)
+- Commits: (pending this run-4)
+- Date(s): 2026-06-02
+
 ### Opportunity equity / D&I matures, not retreats (NEW parent theme)
 - Slugs: opportunity-is-the-next-equity
 - Source stats: Aon HCT 2026 — 84% ensure equal pay, only 14% ensure equal career progression (Ch 2, p.28) [PDF: aon/human-capital-trends-2026.pdf]; McKinsey State of Orgs 2026 Shift #7 — 90% of leaders still call D&I a priority; APAC 84% / EU 83% / NA 75% maintaining or expanding [PDF: mckinsey/state-of-organizations-2026.pdf, pp.53-56]; Deloitte HCT 2026 — belonging delivers 56% performance lift, 50% lower turnover risk (search-only)
