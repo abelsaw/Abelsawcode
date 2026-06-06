@@ -1,6 +1,6 @@
 ---
 name: viral-watch
-description: Generate a single LinkedIn post for a Chief Transformation Officer (Business Strategy + HR + IT remit) covering the top 10 viral Malaysia and Singapore news stories of the window, ranked most-cited → least-cited and presented in a uniform flat list with one CTO take per story. Default region: Malaysia + Singapore (no SEA-wide reports by default). Two LinkedIn-worthiness gates: (1) per-story gate scores each ranked story on 5 criteria (business relevance / comment-worthy / reshareable / avoids partisan harm / clear business implication); stories scoring ≤2/5 are dropped. (2) Post-level review checks voice, engagement, length before save. Surge bar: ≥3 catalog outlets in 48-72h, ≥1 Tier-1 anchor, workforce/labor or culture/equity/values lens. Use when the user says "what's gone viral in Malaysia/Singapore", "top 10 viral MY SG", "viral watch", or invokes /viral-watch.
+description: Generate a single LinkedIn post for a Chief Transformation Officer (Business Strategy + HR + IT remit) covering the top 10 viral Malaysia and Singapore news stories of the window, ranked most-cited → least-cited and presented in a uniform flat list with one CTO take per story. Default region: Malaysia + Singapore (no SEA-wide reports by default). Political content is EXCLUDED by default (elections, party politics, partisan corruption, royal-house political messaging, federal-state political contests, partisan-flashpoint legislation) via a hard topic filter at Step 3.5 — use `politics: include` to opt in. Two LinkedIn-worthiness gates: (1) per-story gate scores each ranked story on 5 criteria (business relevance / comment-worthy / reshareable / avoids partisan harm / clear business implication); stories scoring ≤2/5 are dropped. (2) Post-level review checks voice, engagement, length before save. Surge bar: ≥3 catalog outlets in 48-72h, ≥1 Tier-1 anchor, workforce/labor or culture/equity/values lens. Use when the user says "what's gone viral in Malaysia/Singapore", "top 10 viral MY SG", "viral watch", or invokes /viral-watch.
 ---
 
 # Viral watch — LinkedIn post on top 10 viral Malaysia + Singapore news
@@ -20,6 +20,7 @@ Two gates protect quality:
 - `region: <my-sg|my|sg|sea|apac|us|global|eu>` — bias toward stories landing in the named region. **Default: `my-sg`** (Malaysia + Singapore). Use `my` for Malaysia only, `sg` for Singapore only. `sea` widens back to the full Southeast Asia set; `apac` to all Asia-Pacific; `global` removes regional anchoring.
 - `rank: <N>` — produce a ranked list of N stories instead of 10 (default: `10`, range: `5-15`).
 - `urls: on` — include source URLs inline. Default: off (citations in metadata block, not in the publishable body).
+- `politics: include` — opt IN to including political content (elections, party politics, corruption-and-political-scandal, federal-state political contests, royal-house political messaging). **Default: political content is EXCLUDED** by the Step 3.5 sensitivity filter to keep the LinkedIn post non-partisan for a professional audience. Use only when the user explicitly wants politics in scope.
 
 If args are empty, run defaults: 7-day window, both lenses, **Malaysia + Singapore**, ranked top 10, URLs off in body.
 
@@ -45,6 +46,47 @@ A story qualifies as "viral" when it meets ALL of:
 1. **Cross-media surge:** ≥3 catalog news outlets within a 48-72h cluster inside the resolved window.
 2. **Tier-1 anchor:** ≥1 of those outlets is from a Tier-1 group in `sources.md`.
 3. **Lens fit:** clear implication for workforce/labor and/or culture/equity/values.
+4. **Not political (NEW — sensitivity filter):** see Step 3.5 below.
+
+### Step 3.5 — Political-content exclusion (hard topic filter)
+
+Pure political stories are **excluded by default** from `/viral-watch` and all its variants. This is a sensitivity filter — the CTO LinkedIn audience does not benefit from being pulled into partisan or politically-charged conversations.
+
+A story counts as "political" and is **dropped** when it is PRIMARILY about any of:
+
+- **Elections** — election timing, dissolutions, snap polls, voter mobilization, campaign launches, results
+- **Party / coalition politics** — intra-party disputes, coalition negotiations, party leadership contests, partisan positioning
+- **Political-figure maneuvering** — named politicians' tactical statements aimed at partisan audiences
+- **Corruption / scandal investigations tied to political alignment** — partisan-coded prosecutions, opposition arrests
+- **Legislative votes on partisan-flashpoint issues** — immigration enforcement votes, DEI/civil-rights enforcement actions, ideological-litmus-test legislation
+- **Royal-house political messaging** — monarch statements that take a political position
+- **Federal-state political contests** — secession, federalism contests framed as partisan
+- **Geopolitical accusation cycles** — government-vs-foreign-actor blame narratives that read as political
+
+A story **stays in** `/viral-watch` (NOT dropped by the political filter) when its primary angle is:
+
+- **Administrative policy with business / workforce impact** — wage floors, employment law, housing policy, payments infrastructure, regulatory frameworks (kept even if announced by a politician)
+- **Government enforcement of non-political crime** — fraud, scam compounds, trafficking, organized crime (kept; framing must focus on enforcement and workforce/security implications, not political alignment of the prosecutor)
+- **Business / corporate / tech / market / earnings** — kept
+- **Cultural events, sport, food, religion (non-political)** — kept
+- **Workforce / HR / labor market changes** — kept
+- **Personal/family minister resignations not tied to political pressure** — kept (frame the workforce/HR angle, not the political dynamic)
+
+### Edge cases — decision rule
+
+- **Wage-policy change announced by a politician:** kept (administrative, not political)
+- **Wage-policy change becoming a partisan fight in legislature:** dropped (political)
+- **Minister resigns for family/health reasons:** kept (frame as workforce/personal angle; do NOT use political framing in the take)
+- **Minister resigns under political pressure or scandal:** dropped (political)
+- **Federal-state resource contest (e.g. Petronas-Sarawak federalism):** dropped by default — the contest is fundamentally political. Override only if the user explicitly opts in with `politics: include`.
+- **Royal-house Agong's Birthday speech:** dropped if the speech includes political messaging (caution to politicians, succession framing, etc.). Kept only if the speech is purely ceremonial.
+- **Election dissolutions, snap polls (e.g. Johor):** dropped (political).
+- **Civil-rights investigations (e.g. DOJ ASU DEI):** dropped (political).
+- **Cross-border enforcement cooperation (e.g. SPF + Royal Thai Police on scam compounds):** kept — the underlying crime is non-political; enforcement framing reads as workforce/security.
+
+### Optional override
+
+If the user explicitly passes `politics: include`, the political filter is OFF for that run. The political-content exclusion is the **default**, and overrides require explicit opt-in.
 
 Sweep WebSearch against the catalog. For candidates that look promising, WebFetch the lead source to confirm dates and key facts.
 
@@ -284,6 +326,7 @@ Dry-run preview first; on explicit "yes" / "publish," re-run without `--dry-run`
 - **Dedup RELAXED** — recurring stories from prior runs MAY appear in the current top 10 if they remain demonstrably viral inside the resolved window. Note recurrence in the metadata but do not exclude.
 - **First-person CTO voice** (Business Strategy + HR + IT remit). Bold AND humble. Progressive. Professional. No AI-tells, no hype, no emojis.
 - **400-600 words / under 2,900 characters** in the post body. Verified before save.
+- **Political-content exclusion (Step 3.5) runs as a hard topic filter** before the surge bar. Stories about elections, party politics, partisan corruption, royal-house political messaging, federal-state political contests, and partisan-flashpoint legislation are dropped by default. Override via `politics: include` only when the user explicitly opts in.
 - **Per-story LinkedIn-worthiness gate (Step 4.5) runs before writing.** Stories scoring ≤2/5 on the 5 LinkedIn-worthiness criteria are dropped from the ranked list. Stories scoring 3/5 stay but are flagged as marginal. The ranked list may shrink — no padding.
 - **Post-level LinkedIn-worthiness review (Step 6) must pass** before save. The review explicitly checks voice, engagement, length, and verification for a Malaysia + Singapore professional audience.
 - **Sources block kept in the file for audit** but does NOT appear in the publishable body (unless `urls: on` is set).

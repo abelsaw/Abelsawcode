@@ -1,6 +1,6 @@
 ---
 name: viral-watch-malaysia
-description: Variant of /viral-watch locked to Malaysia only. Top 10 viral Malaysia news of the window in a single LinkedIn post, CTO voice (Business Strategy + HR + IT remit), with per-story LinkedIn-worthiness gate + post-level review. Use when the user says "viral watch Malaysia", "top 10 viral MY", "viral Malaysia news", or invokes /viral-watch-malaysia.
+description: Variant of /viral-watch locked to Malaysia only. Top 10 viral Malaysia news of the window in a single LinkedIn post, CTO voice (Business Strategy + HR + IT remit), with per-story LinkedIn-worthiness gate + post-level review. **Political content is EXCLUDED by default** (inherited from parent /viral-watch Step 3.5 filter: no elections, party politics, partisan corruption, royal-house political messaging, federal-state political contests, partisan-flashpoint legislation). Use `politics: include` to opt in. Use when the user says "viral watch Malaysia", "top 10 viral MY", "viral Malaysia news", or invokes /viral-watch-malaysia.
 ---
 
 # Viral watch — Malaysia only
@@ -31,6 +31,7 @@ Thin wrapper over `/viral-watch`. **Read `.claude/skills/viral-watch/SKILL.md` f
 
 - Surge bar (≥3 catalog outlets in 48-72h, ≥1 Tier-1 anchor)
 - Lens fit (workforce/labor + culture/equity/values)
+- **Political-content exclusion (Step 3.5 hard topic filter)** — no elections, party politics, partisan corruption, royal-house political messaging, federal-state political contests, partisan-flashpoint legislation. Override only via `politics: include` arg.
 - Per-story LinkedIn-worthiness gate (Step 4.5, 5 criteria: business relevance / comment-worthy / reshareable / non-partisan / clear business implication)
 - Post-level LinkedIn-worthiness review (Step 6)
 - CTO voice (first-person, bold AND humble, no AI-tells, no hype, no emojis)
