@@ -1,23 +1,23 @@
 ---
 name: viral-watch
-description: Generate a single LinkedIn post for a Chief Transformation Officer (Business Strategy + HR + IT remit) covering the top 10 viral SEA news stories of the window, ranked most-cited → least-cited and presented in a uniform flat list with one CTO take per story. Default region is Southeast Asia (Singapore, Indonesia, Malaysia, Thailand, Philippines, Vietnam, Cambodia, Laos, Myanmar, Brunei). Surge bar: ≥3 catalog outlets in 48-72h, ≥1 Tier-1 anchor, workforce/labor or culture/equity/values lens. Output goes through a LinkedIn-worthiness review before saving. Use when the user says "what's gone viral in SEA", "top 10 viral SEA", "viral watch", or invokes /viral-watch.
+description: Generate a single LinkedIn post for a Chief Transformation Officer (Business Strategy + HR + IT remit) covering the top 10 viral Malaysia and Singapore news stories of the window, ranked most-cited → least-cited and presented in a uniform flat list with one CTO take per story. Default region: Malaysia + Singapore (no SEA-wide reports by default). Surge bar: ≥3 catalog outlets in 48-72h, ≥1 Tier-1 anchor, workforce/labor or culture/equity/values lens. Output goes through a LinkedIn-worthiness review before saving. Use when the user says "what's gone viral in Malaysia/Singapore", "top 10 viral MY SG", "viral watch", or invokes /viral-watch.
 ---
 
-# Viral watch — LinkedIn post on top 10 viral SEA news
+# Viral watch — LinkedIn post on top 10 viral Malaysia + Singapore news
 
-You are running the `viral-watch` skill. Produce **one LinkedIn post (text only, no image)** that lists the **top 10 viral SEA news stories** of the resolved window — ranked most-cited → least-cited — each carrying implications for **workforce/labor** and/or **culture/equity/values**, written in the first-person voice of a **Chief Transformation Officer whose remit spans Business Strategy, HR, and IT**.
+You are running the `viral-watch` skill. Produce **one LinkedIn post (text only, no image)** that lists the **top 10 viral Malaysia and Singapore news stories** of the resolved window — ranked most-cited → least-cited — each carrying implications for **workforce/labor** and/or **culture/equity/values**, written in the first-person voice of a **Chief Transformation Officer whose remit spans Business Strategy, HR, and IT**.
 
-This is **LinkedIn-publishable output**, not internal research. The voice is first-person, bold-and-humble CTO — professional, progressive, measured, and engaging for a LinkedIn professional audience.
+This is **LinkedIn-publishable output**, not internal research. The voice is first-person, bold-and-humble CTO — professional, progressive, measured, and engaging for a Malaysia + Singapore professional audience.
 
 ## Optional arguments (parsed from the skill `args` string)
 
 - `window: <N>d` — look back N days from today (default: `7d`, max: `14d`).
 - `lens: <workforce|culture|both>` — restrict the lens (default: `both`).
-- `region: <sea|apac|us|global|eu>` — bias toward stories landing in the named region. **Default: `sea`**.
+- `region: <my-sg|my|sg|sea|apac|us|global|eu>` — bias toward stories landing in the named region. **Default: `my-sg`** (Malaysia + Singapore). Use `my` for Malaysia only, `sg` for Singapore only. `sea` widens back to the full Southeast Asia set; `apac` to all Asia-Pacific; `global` removes regional anchoring.
 - `rank: <N>` — produce a ranked list of N stories instead of 10 (default: `10`, range: `5-15`).
 - `urls: on` — include source URLs inline. Default: off (citations in metadata block, not in the publishable body).
 
-If args are empty, run defaults: 7-day window, both lenses, SEA, ranked top 10, URLs off in body.
+If args are empty, run defaults: 7-day window, both lenses, **Malaysia + Singapore**, ranked top 10, URLs off in body.
 
 ---
 
@@ -48,7 +48,16 @@ Sweep WebSearch against the catalog. For candidates that look promising, WebFetc
 
 When a recurring story is picked, note it in the metadata block as `[recurring from {prior-run-date}]` so the reader can see the persistence — but do not drop it from the ranking on that basis.
 
-**Region weighting (default `sea`):** prioritize SEA-originating or SEA-impacting stories; SEA Tier-1 outlets (Straits Times, CNA, Jakarta Post, Bangkok Post, Inquirer, Rappler, The Star Malaysia, VnExpress, etc.) are the primary cross-citation sources; global Tier-1 (Reuters, BBC, AP, FT) supply second citations for SEA stories. Pure US/EU stories without SEA resonance are dropped.
+**Region weighting (default `my-sg`):** prioritize stories that **originated in or materially affect Malaysia or Singapore**. Primary cross-citation sources are the Malaysia + Singapore Tier-1 outlets:
+- **Singapore Tier-1:** The Straits Times, Channel News Asia (CNA), The Business Times Singapore, TODAY Online, Mothership (specialty), AsiaOne (specialty)
+- **Malaysia Tier-1:** The Star Malaysia, Malay Mail, New Straits Times, Free Malaysia Today, Bernama (state news agency), The Edge Malaysia
+- **Bahasa Malaysia:** Berita Harian, Sinar Harian, Utusan Malaysia
+- **Mandarin (SG/MY):** Lianhe Zaobao (Singapore), Sin Chew Daily (Malaysia)
+- **Tamil (SG/MY):** Tamil Murasu (Singapore), Tamil Nesan (Malaysia)
+
+Global Tier-1 (Reuters, BBC, AP, FT, Bloomberg, SCMP, Nikkei Asia) supply **second citations** for Malaysia/Singapore stories. A story that originates outside Malaysia/Singapore but is being amplified inside MY/SG media (e.g. a US tech layoff that lands in Singapore regional staff; a Cambodian scam compound case affecting Malaysians) counts when there is clear local landing. **Pure other-country stories without Malaysia/Singapore resonance are dropped.**
+
+Region overrides: `region: my` = Malaysia only; `region: sg` = Singapore only; `region: sea` widens back to all 10 SEA countries; `region: apac` widens further; `region: global` removes regional anchoring.
 
 Aim to surface **15-20 surge candidates**, then rank the top `rank:` (default 10) by surge magnitude × lens-fit weight × region-fit weight. **If fewer than `rank:` stories clear the bar**, present at actual length and explicitly flag the gap in the metadata block — do not pad below the bar.
 
@@ -60,24 +69,34 @@ For each ranked story:
 2. **Note what is verifiable from primary sources** vs. amplified secondhand.
 3. **Track the audience framings** so the post can land its take without strawmanning any audience.
 
-### Translation-on-fetch (for non-English SEA sources)
+### Translation-on-fetch (for non-English Malaysia + Singapore sources)
 
-When the source is in a non-English SEA language, use WebFetch's prompt parameter to translate during extraction. Pattern preserved from prior skill version. Native-language sources to consider: Kompas.id, Tempo, Detik.com, CNN Indonesia (Indonesian); Matichon, Thairath, Prachatai, Khaosod (Thai); VnExpress Vietnamese, Tuoi Tre, Thanh Nien, Lao Dong (Vietnamese); Inquirer Pilipino, ABS-CBN/GMA Filipino (Tagalog); Berita Harian, Sinar Harian, Utusan (Bahasa Malaysia); RFA Khmer, VOD (Khmer); Frontier Myanmar Burmese, Mizzima (Burmese); Lianhe Zaobao (Mandarin Singapore); Sin Chew Daily (Mandarin Malaysia).
+When the source is in a non-English Malaysia/Singapore language, use WebFetch's prompt parameter to translate during extraction. Languages relevant to the default `my-sg` region:
+
+- **Bahasa Malaysia:** Berita Harian, Sinar Harian, Utusan Malaysia, mStar (Malaysian Malay-language press)
+- **Mandarin (Singapore):** Lianhe Zaobao, Shin Min Daily News, Wanbao
+- **Mandarin (Malaysia):** Sin Chew Daily, China Press, Nanyang Siang Pau
+- **Tamil (Singapore):** Tamil Murasu (Singapore Tamil daily)
+- **Tamil (Malaysia):** Tamil Nesan, Makkal Osai, Malaysia Nanban
+
+When using translated sources, **preserve original-language quotes inline** alongside the English translation so contested framings are auditable. Mark each translated source `[translated from {language}]` in the metadata.
+
+When a region override widens scope (e.g. `region: sea`), the broader translation language set from the prior skill version applies (Indonesian, Thai, Vietnamese, Filipino, Khmer, Burmese, Lao).
 
 ## Step 5 — Write the LinkedIn post
 
 Save to `posts/drafts/viral-watch-YYYY-MM-DD.md` using this template (matches the `linkedin-publisher` slug-extraction format):
 
 ```markdown
-# Viral watch — top 10 viral SEA news (week of {Friday YYYY-MM-DD})
+# Viral watch — top 10 viral Malaysia + Singapore news (week of {Friday YYYY-MM-DD})
 
-## Post 1 — top-10-viral-sea-{YYYY-MM-DD}
+## Post 1 — top-10-viral-my-sg-{YYYY-MM-DD}
 - **Window:** {Mon YYYY-MM-DD} to {Fri YYYY-MM-DD}
-- **Region focus:** SEA
+- **Region focus:** Malaysia + Singapore
 - **Lens:** {workforce | culture | both}
 - **Stories ranked 1-10:** {slug-1}, {slug-2}, ..., {slug-10} [note any `[recurring from {prior-date}]`]
 - **Three-lens balance:** Workforce {N} / Culture {N} / both {N}
-- **Regional spread:** {SEA countries represented}
+- **Country split:** Malaysia {N} / Singapore {N} / cross-border (both) {N}
 - **Word count:** {N} (excl. hashtags)
 - **Character count:** {M}
 - **LinkedIn-worthiness review:** pass | revise — see Step 6 notes
@@ -125,11 +144,11 @@ Before saving the final draft, **run this review** and either pass or revise:
 - **No emojis** in the body.
 
 ### B. Engagement checks (LinkedIn-professional audience)
-- **Specific opening hook** — the first sentence is something a CTO in Singapore, KL, Jakarta, Manila, Bangkok, HCMC would actually stop scrolling for. Not generic ("Here are 10 stories from SEA this week" is generic; "Three things happened in SEA this week that should change how every CTO budgets for Q3" is specific).
+- **Specific opening hook** — the first sentence is something a CTO in Singapore CBD or Kuala Lumpur would actually stop scrolling for. Not generic ("Here are 10 stories from Malaysia and Singapore this week" is generic; "Three things happened in Singapore and Malaysia this week that should change how every CTO budgets for Q3" is specific).
 - **Each story entry has a take, not just a summary** — the 1-2 sentence CTO read should add interpretation a LinkedIn reader can't get from a headline alone.
-- **Stories are named with regional specificity** — country names, named institutions, named actors. SEA professional readers know the difference between "in Indonesia" and "Jakarta," between "a senator" and "Jinggoy Estrada."
+- **Stories are named with local specificity** — Malaysian and Singaporean readers know the difference between "the MAS" and "the Monetary Authority of Singapore," between "PM Anwar" and "Anwar Ibrahim's Unity Government," between "Johor" and "Putrajaya," between "Suntec" and "Marina Bay." Use the names locals use.
 - **Closing invites engagement** — a real question, a specific claim, or an action. Not a generic call to "share your thoughts."
-- **Hashtags** are 3-5, lowercase or CamelCase, oriented to the week's themes and the SEA professional audience (e.g. `#FutureOfWorkAsia`, `#ASEAN`, `#SEALeadership`, `#WorkforceTransformation`).
+- **Hashtags** are 3-5, lowercase or CamelCase, oriented to the week's themes and the Malaysia + Singapore professional audience (e.g. `#Singapore`, `#Malaysia`, `#SGBusiness`, `#MalaysiaLeadership`, `#KLCorporate`, `#SingaporeHR`, `#WorkforceTransformation`, `#FutureOfWorkAsia`).
 
 ### C. Length and format checks
 - **Word count: 400-600** (excluding hashtags). Run `python3 scripts/linkedin_post.py posts/drafts/viral-watch-YYYY-MM-DD.md --slug <slug> --dry-run` and confirm.
@@ -162,9 +181,9 @@ After save, append to `.claude/skills/viral-watch/usage-history.md`:
   ...
   10. {slug-10}: {primary URL}
 - Three-lens balance: W {N} / C {N} / both {N}
-- Regional spread: {countries}
+- Country split: Malaysia {N} / Singapore {N} / cross-border {N}
 - LinkedIn-worthiness review: pass | revise iterations: N
-- Post slug: top-10-viral-sea-{YYYY-MM-DD}
+- Post slug: top-10-viral-my-sg-{YYYY-MM-DD}
 - Date: {YYYY-MM-DD}
 ```
 
@@ -176,7 +195,7 @@ Show, in this order:
 
 1. **Resolved window**, **lens(es)**, and **region**.
 2. **The ranked top 10** as a short table (rank, slug, headline, outlets, lens, recurring-from if applicable).
-3. **Three-lens balance** and **regional spread** counts.
+3. **Three-lens balance** and **Malaysia/Singapore country split** counts.
 4. **The post body** (the full text between `---POST---` and `---END---`).
 5. **LinkedIn-worthiness review result** — pass/revise iterations.
 6. **Sources block path** (`posts/drafts/viral-watch-YYYY-MM-DD.md`).
@@ -190,7 +209,7 @@ When approved, delegate to `linkedin-publisher`:
 
 ```bash
 python3 scripts/linkedin_post.py posts/drafts/viral-watch-YYYY-MM-DD.md \
-  --slug top-10-viral-sea-YYYY-MM-DD \
+  --slug top-10-viral-my-sg-YYYY-MM-DD \
   --dry-run
 ```
 
@@ -217,5 +236,6 @@ Dry-run preview first; on explicit "yes" / "publish," re-run without `--dry-run`
 - **LinkedIn-worthiness review (Step 6) must pass** before save. The review explicitly checks engagement for a SEA professional audience.
 - **Sources block kept in the file for audit** but does NOT appear in the publishable body (unless `urls: on` is set).
 - **No fabrication.** Every claim traces to a named source.
-- **Three-lens balance and regional spread are monitored** and shown in the metadata block. If a lens has zero entries, the closing should acknowledge it.
+- **Default region is Malaysia + Singapore only.** Stories must originate in or materially affect Malaysia or Singapore. Use `region: sea` / `region: apac` / `region: global` to widen.
+- **Three-lens balance and Malaysia/Singapore country split are monitored** and shown in the metadata block. If a lens has zero entries, the closing should acknowledge it. If only one country (MY or SG) appears, flag the skew.
 - **Output is LinkedIn-publishable** — the skill writes for posting, not internal research.
