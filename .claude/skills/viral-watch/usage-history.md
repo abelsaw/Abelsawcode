@@ -8,6 +8,31 @@ run below.
 
 ## Past runs (most recent first)
 
+### Run of 2026-06-05 (MY+SG edition, run 6 / first run under Malaysia+Singapore default)
+- Window: 2026-05-29 to 2026-06-05
+- Region: Malaysia + Singapore (new default `my-sg`)
+- Lens(es): both
+- Format: ranked top-10 flat list, LinkedIn-publishable, CTO first-person voice
+- Dedup relaxed; recurring stories noted in metadata
+- Stories covered (with rank):
+  1. malaysia-johor-snap-poll: https://www.bloomberg.com/news/articles/2026-06-01/malaysia-s-johor-state-set-for-polls-as-assembly-dissolved [recurring from runs 2 & 5]
+  2. singapore-spf-disabling-directions-anti-indian: https://mothership.sg/2026/06/spore-social-media-anxiety-indian-population/ [NEW]
+  3. singapore-koh-poh-koon-resignation: https://www.pmo.gov.sg/newsroom/statement-on-the-resignation-of-dr-koh-poh-koon-as-senior-minister-of-state/ [NEW]
+  4. asean-u19-aqasha-kick: https://e.vnexpress.net/news/sports/football/malaysian-player-kicks-singaporean-opponent-in-chest-at-asean-u19-championship-5081927.html [recurring from runs 4 & 5]
+  5. sg-cambodia-tan-scam-arrest: https://www.thestar.com.my/aseanplus/aseanplus-news/2026/06/06/another-singaporean-arrested-for-alleged-links-to-cambodia-based-scam-ring-30-men-still-at-large [recurring from run 4]
+  6. singapore-lqs-1800-cliff: https://www.mom.gov.sg/employment-practices/progressive-wage-model/local-qualifying-salary [recurring from run 2]
+  7. sabah-sarawak-petronas-federalism: https://www.nst.com.my/amp/business/insight/2026/06/1452559/beyond-oil-petronas%E2%80%93sarawak-question-really-about-malaysias-future [NEW]
+  8. malaysia-ringgit-strongest-since-2018: https://tradingeconomics.com/malaysia/currency [NEW]
+  9. singapore-hdb-bto-june-launch: https://www.hdb.gov.sg/about-us/news-and-publications/press-releases [NEW]
+  10. anwar-energy-transition-federal-agenda: https://www.malaymail.com/amp/news/malaysia/2026/06/04/pm-stays-focused-on-federal-agenda-amid-johor-election-buzz/222480 [NEW]
+- Three-lens balance: W 2 / C 5 / both 3 — light workforce-only, acknowledged in closing
+- Country split: Malaysia 4 / Singapore 4 / cross-border 2
+- LinkedIn-worthiness review: pass — no revise iterations
+- Post slug: top-10-viral-my-sg-2026-06-05
+- Word count: 417 (incl. hashtags per script) / Character count: 2,760 / LinkedIn cap 3,000
+- Date: 2026-06-05
+- Post draft path: posts/drafts/viral-watch-2026-06-05-my-sg.md
+
 ### Run of 2026-06-05 (SEA edition, run 5 / first run under LinkedIn-publishable format)
 - Window: 2026-05-29 to 2026-06-05
 - Region: SEA
