@@ -8,12 +8,13 @@ run below.
 
 ## Past runs (most recent first)
 
-### Run of 2026-06-05
+### Run of 2026-06-05 (SEA edition)
 - Window: 2026-05-29 to 2026-06-05
 - Lens(es): both (workforce + culture/equity)
-- Region: global
+- Region: SEA (Southeast Asia)
 - Stories covered:
-  1. senate-70b-ice-anti-weaponization: https://www.npr.org/2026/06/05/nx-s1-5847589/senate-passes-immigration-enforcement-bill-without-limits-on-trump-settlement-fund
-  2. doj-asu-dei-viral-videos: https://www.justice.gov/opa/pr/justice-department-launches-title-vi-investigation-dei-programs-arizona-state-university
-  3. meta-mouse-tracking-worker-protest: https://www.hcamag.com/ca/news/general/meta-workers-revolt-against-ai-surveillance/575070
+  1. thaksin-royal-pardon: https://www.bangkokpost.com/thailand/politics/3265280/thaksin-granted-royalbirthday-pardon
+  2. meta-doj-sea-scam-compound-disruption: https://about.fb.com/news/2026/06/leading-tech-companies-law-enforcement-disrupt-criminal-scam-networks-in-southeast-asia/
+  3. jinggoy-estrada-flood-control-arrest: https://www.philstar.com/headlines/2026/06/01/2532002/jinggoy-estrada-ordered-arrested-plunder-flood-control-scandal
 - Report path: reports/viral-watch/2026-06-05.md
+- Supersedes: prior 2026-06-05 entry that used `region: global` (US-anchored stories) — replaced per user request to focus on SEA.

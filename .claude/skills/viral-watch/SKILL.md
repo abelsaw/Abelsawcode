@@ -66,6 +66,36 @@ For each picked story:
 3. **Track the framings** different outlets used. When a story is being read differently by different audiences (left/right, in-group/out-group, professional/lay, regional), capture those framings as observed facts — not as the brief's own positions.
 4. **Flag hype patterns:** missing context, mis-attributed quotes, statistics from non-primary sources, viral-but-uncorroborated claims, AI-generated misinformation indicators.
 
+### Translation-on-fetch (for non-English SEA sources)
+
+When the source is in a non-English SEA language (Bahasa Indonesia / Bahasa Malaysia, Thai, Vietnamese, Tagalog/Filipino, Khmer, Burmese, Lao), use WebFetch's prompt parameter to translate during extraction. Pattern:
+
+```
+WebFetch(
+  url: "<native-language URL>",
+  prompt: "This article may be in {Bahasa Indonesia | Thai | Vietnamese | ...}. Translate to English and extract:
+    1. Publication date
+    2. Headline (original + English translation)
+    3. Lead paragraph (English summary)
+    4. Key verifiable facts with named entities and quoted statements (preserve original-language quotes alongside English translation)
+    5. Author / outlet attribution
+    6. Any local-context framing (religion, ethnicity, regional politics) that English-language regional press might miss"
+)
+```
+
+Native-language sources to consider when a story originates in or has its sharpest framing in the local press:
+
+- **Indonesian:** Kompas.id, Tempo, Detik.com, CNN Indonesia, Tribunnews
+- **Thai:** Matichon, Thairath, Prachatai (independent), Khaosod
+- **Vietnamese:** VnExpress (Vietnamese edition), Tuoi Tre (Vietnamese edition), Thanh Nien, Lao Dong (labor specialty)
+- **Filipino / Tagalog:** Inquirer Pilipino-language sections, ABS-CBN's Filipino reporting, GMA's Tagalog reporting
+- **Bahasa Malaysia:** Berita Harian, Sinar Harian, Utusan Malaysia
+- **Khmer:** RFA Khmer, VOD (Voice of Democracy archives)
+- **Burmese:** Frontier Myanmar (Burmese edition), Mizzima
+- **Mandarin (Singapore / Malaysia diaspora):** Lianhe Zaobao (Singapore), Sin Chew Daily (Malaysia)
+
+When using translated sources, **preserve original-language quotes inline** alongside the English translation so the contested framings can be audited later. Mark each translated source `[translated from {language}]` in the citation.
+
 The brief's voice is **sober and analytical**. It does not take sides between contested framings — it surfaces them.
 
 ## Step 5 — Save the report
