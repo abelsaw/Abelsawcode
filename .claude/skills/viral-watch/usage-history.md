@@ -8,6 +8,18 @@ run below.
 
 ## Past runs (most recent first)
 
+### Run of 2026-06-05 (SEA edition, run 2 / second-pass picks)
+- Window: 2026-05-29 to 2026-06-05
+- Lens(es): both (workforce + culture/equity)
+- Region: SEA (Southeast Asia)
+- Excluded from run 1: thaksin-royal-pardon, meta-doj-sea-scam-compound-disruption, jinggoy-estrada-flood-control-arrest
+- Stories covered:
+  1. indonesia-silmy-karim-kpk-prabowo-dismissal: https://jakartaglobe.id/news/deputy-immigration-minister-silmy-karim-detained-in-foreign-residency-permit-corruption-case
+  2. malaysia-johor-snap-poll-dissolution: https://www.bloomberg.com/news/articles/2026-06-01/malaysia-s-johor-state-set-for-polls-as-assembly-dissolved
+  3. singapore-lqs-1800-cliff: https://www.mom.gov.sg/employment-practices/progressive-wage-model/local-qualifying-salary [marginal — flagged below strict surge bar]
+- Report path: reports/viral-watch/2026-06-05-run2.md
+- Note: Same date as run 1 (the SEA edition) — file uses `-run2.md` suffix to preserve both reports.
+
 ### Run of 2026-06-05 (SEA edition)
 - Window: 2026-05-29 to 2026-06-05
 - Lens(es): both (workforce + culture/equity)
