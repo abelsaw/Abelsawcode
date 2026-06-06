@@ -8,6 +8,21 @@ run below.
 
 ## Past runs (most recent first)
 
+### Run of 2026-06-05 (SEA edition, run 4 / first run under ranked-top-N format)
+- Window: 2026-05-29 to 2026-06-05
+- Lens(es): both (workforce + culture/equity)
+- Region: SEA (Southeast Asia)
+- Format: ranked-top-N + top-3 deep-dives + mini-entries (per skill update)
+- Excluded from runs 1+2+3 (9 stories): thaksin-royal-pardon, meta-doj-sea-scam-compound-disruption, jinggoy-estrada-flood-control-arrest, indonesia-silmy-karim-kpk-prabowo-dismissal, malaysia-johor-snap-poll-dissolution, singapore-lqs-1800-cliff, indonesia-disinformation-probe-foreign-agents, ph-senate-flood-control-hearing-marines-testimony, laos-china-state-visit-32-agreements
+- **Ranked at actual length (4 stories — not padded to 10 per no-padding rule)**
+- Stories covered:
+  1. michelin-guide-vietnam-2026-11-stars: https://guide.michelin.com/us/en/article/michelin-guide-ceremony/michelin-guide-vietnam-2026
+  2. thailand-land-bridge-ehia-fresh-studies-ordered: https://www.bangkokpost.com/thailand/general/3266564/land-bridge-project-hits-new-snag
+  3. asean-u19-aqasha-kick-incident: https://e.vnexpress.net/news/sports/football/malaysian-player-kicks-singaporean-opponent-in-chest-at-asean-u19-championship-5081927.html
+  4. sg-cambodia-scam-ring-francis-tan-arrest: https://www.thestar.com.my/aseanplus/aseanplus-news/2026/06/06/another-singaporean-arrested-for-alleged-links-to-cambodia-based-scam-ring-30-men-still-at-large (mini-entry; edge of window)
+- Report path: reports/viral-watch/2026-06-05-run4.md
+- **Honest assessment in report:** SEA window now substantially mined; recommends next default-args run on 2026-06-08 → 2026-06-12 fresh Mon-Fri window.
+
 ### Run of 2026-06-05 (SEA edition, run 3 / third-pass picks)
 - Window: 2026-05-29 to 2026-06-05
 - Lens(es): both (workforce + culture/equity)
