@@ -16,7 +16,7 @@ SpaceX is about to test what a company can be worth.
 
 Its IPO targets a $1.75 trillion valuation and a $75 billion raise, the largest in history. Goldman, Morgan Stanley, Bank of America, Citi and JPMorgan are all on the ticket. The valuation has more than doubled in under six months.
 
-Here's the tension worth noting. Morningstar values it closer to $780 billion, roughly half. The market isn't pricing today's numbers. It's pricing Starship, Starlink, and what comes next.
+Here's the tension. Morningstar values it closer to $780 billion, roughly half. The market isn't pricing today's numbers. It's pricing Starship, Starlink, and what comes next.
 
 That's every transformation bet: you fund the future before the spreadsheet agrees.
 
