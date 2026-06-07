@@ -1,66 +1,79 @@
-# Viral watch — top viral Malaysia news (week of Fri 2026-06-05)
+# Viral watch — top viral Malaysia news (week of Fri 2026-06-05) — POLITICAL FILTER + VALIDATION ACTIVE
 
 ## Post 1 — top-10-viral-malaysia-2026-06-05
 - **Window:** 2026-05-29 to 2026-06-05
 - **Region focus:** Malaysia only (locked)
 - **Lens:** both (workforce + culture/equity)
 - **Ranking criterion:** raw citation count across the catalog (most-mentioned → least-mentioned)
-- **Length flag:** Presenting at actual length **8 (not padded to 10)** per skill's no-padding rule. Only 8 Malaysia-anchored stories cleared the surge bar + LinkedIn-worthiness gate this window. Two below-bar candidates (PETRONAS Q1 earnings on May 19-21, Advanced Packaging Consortium SEMICON SEA — date uncertain) excluded.
-- **Stories ranked 1-8:** malaysia-johor-snap-poll, sabah-sarawak-petronas-petros-federalism, agong-birthday-sultan-ibrahim-political-caution, anwar-energy-transition-federal-agenda, madani-dap-marina-ibrahim-patronage, penang-business-events-mice-push, sg-cambodia-tan-scam-arrest (MY angle: Royal Malaysia Police), fomo-pay-duitnow-my-paynet-rail (MY angle: DuitNow infrastructure)
-- **Three-lens balance:** Workforce 1 / Culture 4 / both 3
-- **Geographic spread within Malaysia:** Peninsula 3 (Johor x2, Penang) / Sabah-Sarawak 1 / Federal-level 4 (Agong, Anwar, Tan/RMP, DuitNow/PayNet)
+- **Length flag:** Presenting at actual length **5 (not padded to 10)** per skill's no-padding rule. The political-content filter (Step 3.5) is the binding constraint this week — Malaysia's biggest viral stories (Johor snap poll, Petronas-Sarawak federalism, Anwar federal-agenda comments, Madani-DAP patronage, Agong birthday address) were all political and dropped.
+- **Stories ranked 1-5:** bus-cap-berhad-ipo-bursa-malaysia, penang-business-events-mice-push, fomo-pay-duitnow-my-paynet-rail, sg-cambodia-tan-scam-rmp-handover, airasia-x-kuala-lumpur-tashkent-suspension
+- **Three-lens balance:** Workforce 3 / Culture 1 / both 1
+- **Geographic spread within Malaysia:** Peninsula 4 (KL/national: BUS CAP, FOMO/DuitNow, AirAsia X; Penang) / Sabah-Sarawak 0 (gap flagged — would normally appear via Petronas-Sarawak but that was political-filtered) / Federal-level 1 (Tan/RMP)
 - **Per-story LinkedIn-worthiness scores (criteria 1/2/3/4/5 → result):**
-  - malaysia-johor-snap-poll: 5/5 pass
-  - sabah-sarawak-petronas-petros-federalism: 5/5 pass
-  - agong-birthday-sultan-ibrahim-political-caution: Y/Y/Y/N/Y → 4/5 pass (slight partisan risk on royal-house framing)
-  - anwar-energy-transition-federal-agenda: Y/N/Y/Y/N → 3/5 marginal (thin business implication)
-  - madani-dap-marina-ibrahim-patronage: Y/Y/N/N/Y → 3/5 marginal (intra-coalition partisan flashpoint)
+  - bus-cap-berhad-ipo-bursa-malaysia: 5/5 pass
   - penang-business-events-mice-push: 5/5 pass
-  - sg-cambodia-tan-scam-arrest: 5/5 pass
   - fomo-pay-duitnow-my-paynet-rail: 5/5 pass
-- **Validation note (carried over from /viral-watch run 9):** Ringgit "highest since 2018" claim excluded — factually incorrect (USD/MYR was ~4.03 on Jun 5, not 3.97).
-- **Word count:** 407 (per linkedin_post.py, incl. hashtags)
-- **Character count:** 2,767 (LinkedIn cap 3,000)
+  - sg-cambodia-tan-scam-rmp-handover: 5/5 pass
+  - airasia-x-kuala-lumpur-tashkent-suspension: 5/5 pass
+- **Excluded by political-content filter (Step 3.5):**
+  - malaysia-johor-snap-poll (election dissolution)
+  - sabah-sarawak-petronas-petros-federalism (federal-state political contest)
+  - agong-birthday-sultan-ibrahim-political-caution (royal-house political messaging)
+  - anwar-energy-transition-federal-agenda (PM political messaging on state polls)
+  - madani-dap-marina-ibrahim-patronage (intra-coalition political flashpoint)
+- **Validation status:** all 5 stories cross-checked; dates and primary figures confirmed against catalog sources. No mixed-date errors carried forward. See validation log below.
+- **Word count:** 374 (per linkedin_post.py, incl. hashtags) — under the 400-word target since the list is 5 not 10; appropriate scale for a 5-story post
+- **Character count:** 2,474 (LinkedIn cap 3,000)
 - **Post-level LinkedIn-worthiness review:** pass
 - **Status:** draft
 
 ---POST---
-Eight stories defined Malaysia's week. Coalition stress in Johor. The Petronas–Sarawak federalism question reopening. The Agong's birthday speech to political leaders. Plus a federal-stability signal from Anwar, Penang's MICE push, and the DuitNow payments rail gaining regional reach. Ranked by how widely they were cited, most to least.
+Five Malaysia stories defined a quieter week beyond the political headlines. A new Bursa listing. Penang's MICE bet. A cross-border payments rail extending to Singapore. Cross-border enforcement on the Cambodia scam ring. And aviation routes shifting. Ranked by how widely they were cited, most to least.
 
-1. Johor Assembly dissolved June 1. Snap state election within 60 days. Barisan Nasional contests all 56 seats without Pakatan Harapan. Anwar's Unity Government faces its first real coalition test; Negeri Sembilan signaling parallel polls.
+1. BUS CAP BERHAD lists on Bursa Malaysia's ACE Market on June 3. ACE Market listings have been measured in recent quarters; the cadence of listings matters more than any single name. For CFOs and CTOs watching Malaysian capital markets, this week's listing is a quiet but real signal that primary issuance is still finding its rhythm in a higher-rate environment.
 
-2. The Petronas–Sarawak question returned. Sabah's High Court win on revenue, Sarawak's Petros aggregator bid, and the February federal court petition on MA63 applicability are reshaping Malaysian federalism. Not an oil story; a state-federal question.
+2. Penang is doubling down on business events — heavy industries, automotive, healthcare, hobby-related — to offset broader tourism softness. MICE remains the state's strategic talent-and-capital draw. Watch which sectors actually choose to locate; that is where the Penang growth story gets written for the next cycle.
 
-3. His Majesty Sultan Ibrahim used the June 1 Agong's Birthday address to remind political leaders to exercise caution in public statements and uphold proper conduct. Royal-house calibration landed days before the Johor dissolution.
+3. DuitNow QR is going live in Singapore via FOMO Pay; AXS and NTT DATA Japan announced a cross-border bill payment link starting with Singapore — both on June 5. Malaysia's payments rail (PayNet under Bank Negara) just gained regional reach in our largest neighbour. For finance teams running cross-border collections, the operational implications start this quarter.
 
-4. PM Anwar told the Energy Transition Conference 2026 his federal government stays focused on its agenda, not Johor polls. Federal policy continues regardless of state weather. Read it as steadying the macro story.
+4. Royal Malaysia Police handed over Singaporean Francis Tan to the SPF on June 5 over the Cambodia scam ring tied to 535 victims and S$53M losses. Tan had been arrested in Perlis in March. Bilateral enforcement is working; 30 of the original 34 suspects are still at large. Security and compliance teams should expect more of this cadence.
 
-5. A viral letter centred on Skudai assemblywoman Marina Ibrahim reopened the Madani-DAP patronage conversation. IDEAS counted 238 political appointments in statutory bodies under the Madani administration. Coalition-management at its sharpest.
+5. AirAsia X suspended Kuala Lumpur–Tashkent flights across June 2026, disrupting Central Asia travel plans. Network rebalancing continues as Capital A completes the consolidation of its aviation businesses under AirAsia X. The second A321LR delivery is expected this month. Travel planners and HR mobility teams should re-check routings.
 
-6. Penang is doubling down on business events — heavy industries, automotive, healthcare, hobby-related — to offset broader tourism softness. MICE is the state's strategic talent-and-capital draw. Watch which sectors choose to locate.
+What I am carrying into next week: Malaysia's non-political headlines tell their own story — capital markets ticking again, payment rails crossing borders, tourism sectors recalibrating, aviation networks reshaping. For CTOs running operations here, the quieter announcements often shape the operating environment more than the loud ones. What's moving on your watch?
 
-7. Royal Malaysia Police handed over Singaporean Francis Tan to the SPF on June 5 over the Cambodia scam ring tied to 535 victims and S$53M losses. Tan had been arrested in Perlis in March. Bilateral enforcement is working; 30 of the original 34 suspects are still at large.
-
-8. DuitNow QR is going live in Singapore via FOMO Pay, and AXS plus NTT DATA Japan announced a cross-border bill payment link starting with Singapore — both on June 5. Malaysia's payments rail (PayNet under Bank Negara) just gained regional reach in our largest neighbour.
-
-What I am carrying into next week: Malaysia's federalism stories are stitching tighter with its capital-and-payments stories. Johor and Petronas-Petros are about how power is shared; DuitNow regional and Penang MICE are about how capital and talent move. For CTOs running Peninsula or East Malaysia operations, those are the same question with different surfaces. How are you sequencing?
-
-#Malaysia #MalaysiaLeadership #KLCorporate #MalaysiaBusiness
+#Malaysia #MalaysiaLeadership #MalaysiaBusiness #KLCorporate
 ---END---
 
 ## Sources (for audit, not in publishable body)
-1. malaysia-johor-snap-poll: https://www.bloomberg.com/news/articles/2026-06-01/malaysia-s-johor-state-set-for-polls-as-assembly-dissolved
-2. sabah-sarawak-petronas-petros-federalism: https://www.nst.com.my/amp/business/insight/2026/06/1452559/beyond-oil-petronas%E2%80%93sarawak-question-really-about-malaysias-future
-3. agong-birthday-sultan-ibrahim-political-caution: https://www.nst.com.my/amp/news/nation/2026/06/1453189/news9-todays-top-headlines-june-1-2026-watch
-4. anwar-energy-transition-federal-agenda: https://www.malaymail.com/amp/news/malaysia/2026/06/04/pm-stays-focused-on-federal-agenda-amid-johor-election-buzz/222480
-5. madani-dap-marina-ibrahim-patronage: https://www.malaysianow.com/opinion/2026/06/02/madani-daps-politics-of-patronage
-6. penang-business-events-mice-push: https://www.thevibes.com/articles/news/123695/penang-boosts-business-events-push-as-state-seeks-to-offset-tourism-slowdown
-7. sg-cambodia-tan-scam-arrest: https://www.thestar.com.my/aseanplus/aseanplus-news/2026/06/06/another-singaporean-arrested-for-alleged-links-to-cambodia-based-scam-ring-30-men-still-at-large
-8. fomo-pay-duitnow-my-paynet-rail: https://fintechnews.sg/
+1. bus-cap-berhad-ipo-bursa-malaysia: https://klse.i3investor.com/web/announcement/detail/2066267 [Bursa Malaysia ACE Market listing scheduled June 3, 2026]
+2. penang-business-events-mice-push: https://www.thevibes.com/articles/news/123695/penang-boosts-business-events-push-as-state-seeks-to-offset-tourism-slowdown
+3. fomo-pay-duitnow-my-paynet-rail: https://fintechnews.sg/
+4. sg-cambodia-tan-scam-rmp-handover: https://www.thestar.com.my/aseanplus/aseanplus-news/2026/06/06/another-singaporean-arrested-for-alleged-links-to-cambodia-based-scam-ring-30-men-still-at-large
+5. airasia-x-kuala-lumpur-tashkent-suspension: https://www.travelandtourworld.com/news/article/malaysia-and-uzbekistan-aviation-shock-as-airasia-x-suspends-kuala-lumpur-tashkent-flights-across-june-2026-disrupting-central-asia-tourism-plans-what-international-travelers-should-expect/
 
-## Candidates considered but not picked
-- petronas-chemicals-petronas-gas-q1-2026: PETRONAS Chemicals Q1 (May 21, RM401M profit) and PETRONAS Gas Q1 (May 19, RM438.69M, 16-sen dividend) — outside window opening
-- malaysia-advanced-packaging-consortium: Inari + Pentamaster + NSW Automation + SkyeChip + FusionAP launched at SEMICON SEA 2026 with 7% global advanced packaging target by 2035 — SEMICON SEA event date uncertain; likely earlier in May
-- epf-i-legasi-i-emas-ria-framework: EPF announced suite of retirement-readiness products in May 2026 — date uncertain, likely earlier in May
-- malaysia-celcomdigi-postpaid-5g-2026: refresh and Pavilion KL rollout — Feb 2026, outside window
-- visit-johor-year-2026-rm42.48b-target: announced May 2025, outside window
+## Validation log
+
+| # | Claim | Status |
+|---|-------|--------|
+| 1 | BUS CAP BERHAD lists Bursa Malaysia ACE Market June 3, 2026 | ✓ verified via Bursa Malaysia calendar + I3Investor announcement |
+| 2 | Penang MICE push — heavy industries, automotive, healthcare, hobby-related | ✓ verified via The Vibes June 2026 article |
+| 3 | DuitNow QR via FOMO Pay + AXS-NTT bill pay, both June 5 | ✓ verified via FintechNewsSG roundup |
+| 4 | Francis Tan / RMP handover Jun 5 / 535 victims / S$53M / 30 of 34 at large | ✓ verified via The Star Malaysia + SPF (carried over from run 9) |
+| 5 | AirAsia X suspends KUL-Tashkent across June 2026; second A321LR delivery expected this month | ✓ verified via Travel and Tour World + Flight Global (A321LR delivery framing); Capital A consolidation completed Jan 18, 2026 per AirAsia Newsroom |
+
+## Candidates considered but EXCLUDED by political-content filter (Step 3.5)
+- malaysia-johor-snap-poll — election dissolution
+- sabah-sarawak-petronas-petros-federalism — federal-state political contest
+- agong-birthday-sultan-ibrahim-political-caution — royal-house political messaging
+- anwar-energy-transition-federal-agenda — PM political messaging on state polls
+- madani-dap-marina-ibrahim-patronage — intra-coalition political flashpoint
+
+## Other candidates considered but not picked
+- petronas-chemicals-q1-rm401m-profit — earnings May 21, outside window
+- petronas-gas-q1-rm438.69m-16sen-dividend — earnings May 19, outside window
+- malaysia-advanced-packaging-consortium-semicon-sea — SEMICON SEA was May 5-7, outside window
+- epf-rai-framework-rm390k-target — figures verified but specific announcement date not confirmable to this window; would need primary EPF release date to include
+- visit-malaysia-2026-campaign — campaign launched Jan 2025, ongoing — not a fresh in-window viral surge
+- taiwan-malaysia-data-center-collaboration — May 6 article, outside window
+- airasia-x-uk-london-gatwick-reentry — service launches June 26, outside window

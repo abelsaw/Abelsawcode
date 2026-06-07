@@ -6,6 +6,28 @@ ledger only.
 
 ## Past runs (most recent first)
 
+### Run of 2026-06-05 (second run — political filter + validation active)
+- Window: 2026-05-29 to 2026-06-05
+- Region: Malaysia only (locked)
+- Lens(es): both
+- Format: ranked flat list (presented at actual length 5, not padded to 10 per no-padding rule)
+- **Political-content filter active.** 5 stories from prior MY run dropped (Johor, Petronas-Sarawak, Agong, Anwar, Marina Ibrahim DAP).
+- **Stories ranked 1-5 (post LinkedIn-worthiness gate + political filter):**
+  1. bus-cap-berhad-ipo-bursa-malaysia (Jun 3 listing) — 5/5 pass [NEW]
+  2. penang-business-events-mice-push — 5/5 pass [recurring from run 1]
+  3. fomo-pay-duitnow-my-paynet-rail (MY angle: PayNet/BNM) — 5/5 pass [recurring]
+  4. sg-cambodia-tan-scam-rmp-handover (MY angle: Royal Malaysia Police) — 5/5 pass [recurring]
+  5. airasia-x-kuala-lumpur-tashkent-suspension — 5/5 pass [NEW]
+- **Excluded by political filter (Step 3.5):** malaysia-johor-snap-poll, sabah-sarawak-petronas-petros-federalism, agong-birthday-sultan-ibrahim-political-caution, anwar-energy-transition-federal-agenda, madani-dap-marina-ibrahim-patronage
+- Three-lens balance: W 3 / C 1 / both 1
+- Geographic spread within Malaysia: Peninsula 4 / Sabah-Sarawak 0 (gap flagged) / Federal-level 1
+- Validation status: all 5 verified against catalog sources
+- Post-level LinkedIn-worthiness review: pass
+- Post slug: top-10-viral-malaysia-2026-06-05
+- Word count: 374 / Character count: 2,474 / LinkedIn cap 3,000
+- Date: 2026-06-05
+- Post draft path: posts/drafts/viral-watch-malaysia-2026-06-05.md (overwrites the run-1 ungated/unfiltered version; git history preserves prior)
+
 ### Run of 2026-06-05 (first run of /viral-watch-malaysia)
 - Window: 2026-05-29 to 2026-06-05
 - Region: Malaysia only (locked)
