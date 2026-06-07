@@ -19,9 +19,10 @@
   - sg-my-cross-border-payments-fomo-axs: 5/5 pass
   - singapore-restaurant-openings-milli-torikizoku-hikiniku: 5/5 pass
 - **Excluded by political-content filter (Step 3.5):** `singapore-spf-disabling-directions-anti-indian` — civil-rights enforcement framing + China-platform geopolitical accusation reads as politically charged for a professional LinkedIn audience
-- **Word count:** 402 (per linkedin_post.py, incl. hashtags)
-- **Character count:** 2,544 (LinkedIn cap 3,000)
-- **Post-level LinkedIn-worthiness review:** pass
+- **Word count:** 416 (per linkedin_post.py, incl. hashtags) — after validation corrections
+- **Character count:** 2,643 (LinkedIn cap 3,000)
+- **Post-level LinkedIn-worthiness review:** pass (re-passed after corrections)
+- **Validation status:** all 8 stories validated against primary sources; 3 corrections applied — see validation log below
 - **Status:** draft
 
 ---POST---
@@ -31,17 +32,17 @@ Eight stories defined Singapore's week. Wage floors lifting July 1. A senior min
 
 2. Senior Minister of State Koh Poh Koon stepped down effective June 1, leaving Manpower and Health. He returns to surgery. A senior leader choosing medicine and family is its own signal on the cost of public office.
 
-3. COE on June 4: Cat A S$126,009, Cat B S$126,989 — the tightest gap between the two car categories in months. Cat E drew a 1.90× bid ratio, Cat A 1.67×. Buyers still outnumber certificates.
+3. COE on June 4: Cat A S$126,009, Cat B S$126,989 — the tightest gap between the two car categories in months at just S$980. Cat E drew the fiercest competition at a 1.90× bid-to-quota ratio. Buyers still outnumber certificates.
 
-4. HDB launched 6,860 new flats across seven BTO projects in June, including Lakeview and Shunfu — first time in over four decades for those areas. The housing pipeline is the retention story SG employers are watching.
+4. HDB launched 6,860 new flats across seven BTO projects in June, including Lakeview and Shunfu — first new HDB injection in those areas since 1984. The housing pipeline is the retention story SG employers are watching.
 
-5. MediShield Life and MediSave coverage extends to embryo freezing, egg freezing, and ovarian tissue freezing from June 2026. The annual MediSave outpatient-scan limit doubled to S$600. Workforce family-planning support, formalised.
+5. MediShield Life and MediSave coverage extends to embryo, egg, and ovarian tissue freezing from June 2026, for medically necessary fertility-preservation cases. A meaningful workforce family-planning signal, formalised.
 
 6. Singaporean Francis Tan was handed over by Royal Malaysia Police to SPF on June 5 over the Cambodia scam ring tied to 535 victims and S$53M losses. Thirty of 34 suspects still at large.
 
 7. FOMO Pay rolled out DuitNow QR acceptance in Singapore on June 5; same day, AXS and NTT DATA Japan announced a cross-border bill payment link starting with Singapore. The MY-SG payments rail just got two new lanes.
 
-8. Three new restaurant concepts opened: Milli Sky Dining at National Gallery (Labyrinth's LG Han with Native's Vijay Mudaliar), Torikizoku from Tokyo's 600-location yakitori chain, and Hikiniku To Come at VivoCity. The F&B sector is still in expansion mode.
+8. Three new restaurant concepts are landing the city's June dining map: Milli Sky Dining at National Gallery (opened in May; Labyrinth's LG Han with Native's Vijay Mudaliar), Tokyo's Torikizoku yakitori chain (700+ stores in Japan) at VivoCity, and Hikiniku To Come hamburg steak at VivoCity. F&B sector still in expansion mode.
 
 What I am carrying into next week: Singapore's workforce stack is moving on multiple surfaces this week — wages, housing, healthcare, payments. The operational implication is that planning across all four belongs in the same quarter. For leaders running operations here, that's a shift from sequencing programmes to co-designing them. How are you running yours?
 
@@ -57,6 +58,19 @@ What I am carrying into next week: Singapore's workforce stack is moving on mult
 6. sg-cambodia-tan-scam-arrest: https://www.thestar.com.my/aseanplus/aseanplus-news/2026/06/06/another-singaporean-arrested-for-alleged-links-to-cambodia-based-scam-ring-30-men-still-at-large
 7. sg-my-cross-border-payments-fomo-axs: https://fintechnews.sg/
 8. singapore-restaurant-openings-milli-torikizoku-hikiniku: https://www.timeout.com/singapore/news/5-new-restaurants-in-singapore-to-check-out-this-june-2026-060126
+
+## Validation log (post user request to double-check)
+
+| # | Claim | Status | Correction applied |
+|---|-------|--------|--------------------|
+| 1 | LQS S$1,800 from July 1; PWCS 30% co-fund through 2028 | ✓ verified via MOM official | none |
+| 2 | Koh Poh Koon effective June 1; Manpower + Health; returns to surgery | ✓ verified via PMO Singapore | none |
+| 3 | COE Jun 4: Cat A S$126,009, Cat B S$126,989, gap S$980, Cat E 1.90× | ✓ verified | **removed unverified "Cat A 1.67×" detail** |
+| 4 | HDB 6,860 flats / 7 projects / Lakeview + Shunfu first since 1984 | ✓ verified — official figure 6,860 (one source said 6,900; HDB/Property Guru/Stacked confirm 6,860). "First time in 40+ years" sharpened to "first new HDB injection since 1984" | "since 1984" precision added |
+| 5 | MediShield Life + MediSave extends to embryo/egg/ovarian tissue freezing from June 2026 | ✓ verified via MOH Coverage of Fertility Preservation. **Important clarifier added: "medically necessary fertility-preservation cases"** (does NOT cover elective egg freezing) | clarifier added; **removed inaccurate MediSave outpatient-scan limit detail** (that change was effective Jan 1, 2026, not June) |
+| 6 | Francis Tan / RMP handover Jun 5 / 535 victims / S$53M / 30 of 34 at large | ✓ verified via The Star Malaysia + SPF (carried over from run 9 validation) | none |
+| 7 | FOMO Pay DuitNow QR + AXS-NTT bill pay both Jun 5 | ✓ verified via FintechNewsSG | none |
+| 8 | Restaurant openings: Milli (LG Han + Mudaliar), Torikizoku 600 stores, Hikiniku VivoCity | ✓ partially verified | **Milli opened in May** (not June — sharpened framing); **Torikizoku stores corrected to 700+** (not 600); **Hikiniku To Come at VivoCity confirmed** (opened ~Jun 2) |
 
 ## Candidates considered but not picked
 - singapore-spf-disabling-directions-anti-indian — **DROPPED by political-content filter** (civil-rights enforcement + geopolitical accusation framing)
