@@ -41,21 +41,21 @@ And what got missed?
 
 ---
 
-## Tight version (96 words)
+## Tight version (100 words)
 
-Singapore's week, ranked by how widely the city cited it.
+Singapore's week, ranked by how widely it was cited.
 
-1. Local Qualifying Salary rises to S$1,800 from July 1. Foreign-worker quotas recalculated. SMEs, review renewals now.
+1. Local Qualifying Salary rises to S$1,800 from July 1. Foreign-worker quotas recalculated. SMEs, review renewals.
 
 2. Koh Poh Koon steps down for family, returns to surgery.
 
-3. COE Cat A S$126,009, Cat B S$126,989. The gap: just S$980.
+3. COE Cat A S$126,009, Cat B S$126,989. The gap: S$980.
 
 4. HDB launches a 6,860-flat BTO pipeline. Lakeview and Shunfu get their first homes since 1984.
 
 5. MediShield extends to fertility preservation for patients in treatment.
 
-Four of five are about the cost of living and working here.
+Four of five are about the cost of living and working.
 
 Did the ranking get it right, or would you swap number one?
 
