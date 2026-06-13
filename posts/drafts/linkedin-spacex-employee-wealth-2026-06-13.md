@@ -16,7 +16,7 @@ The headline: the IPO made Musk the first trillionaire.
 
 Not the real story.
 
-SpaceX went public yesterday — biggest IPO ever, +19% debut. 4,400 became millionaires, welders and cafeteria staff included.
+SpaceX went public yesterday — biggest IPO ever, up 19%. 4,400 became millionaires, welders and cafeteria staff included.
 
 But read the room, not the ticker.
 
@@ -24,6 +24,6 @@ From Starbase, Musk talked mission, not valuation. SpaceX is about "taking the f
 
 I lead transformation for a living. The lesson: people commit to a mission first. Equity follows.
 
-Would your best people stay for the mission if the equity disappeared?
+Would your best people stay for the mission if equity disappeared?
 
 #Transformation #FutureOfWork #Leadership #Purpose
