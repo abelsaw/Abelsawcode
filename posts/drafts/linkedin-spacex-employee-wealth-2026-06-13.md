@@ -11,13 +11,15 @@ Voice: Group Chief Transformation Officer. Mission-led, less capital-weighted. ~
 
 ## Revised (99 words)
 
-Yesterday, SpaceX went public. The largest IPO ever, up 19% day one.
+The headline: the IPO made Musk the world's first trillionaire.
 
-The wealth was real: 4,400 employees became millionaires, welders and cafeteria staff among them.
+Not the real story.
+
+SpaceX went public yesterday, the largest IPO ever, +19% day one. 4,400 employees became millionaires too, welders and cafeteria staff included.
 
 But read the room, not the ticker.
 
-From Starbase, Musk talked mission, not valuation. SpaceX, he said, is about "taking the fiction out of science fiction" — the moon, Mars, and making life multiplanetary. A company he once gave "less than a 10% chance of succeeding."
+From Starbase, Musk talked mission, not valuation. SpaceX, he said, is about "taking the fiction out of science fiction" — moon, Mars, life multiplanetary. A company he once gave "less than a 10% chance."
 
 The payout followed the purpose. For two decades, people backed that mission, and equity tied them to it.
 
