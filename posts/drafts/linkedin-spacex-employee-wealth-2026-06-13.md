@@ -17,9 +17,9 @@ The wealth was real: 4,400 employees became millionaires, welders and cafeteria 
 
 But read the room, not the ticker.
 
-From Starbase, Musk talked not about valuation, but the mission. SpaceX, he said, is about "taking the fiction out of science fiction." A company he once gave "less than a 10% chance of succeeding."
+From Starbase, Musk talked mission, not valuation. SpaceX, he said, is about "taking the fiction out of science fiction" — the moon, Mars, and making life multiplanetary. A company he once gave "less than a 10% chance of succeeding."
 
-That's the real lesson. The payout followed the purpose. For over two decades, people backed that mission, and equity tied them to it.
+The payout followed the purpose. For two decades, people backed that mission, and equity tied them to it.
 
 What are your people building toward?
 
