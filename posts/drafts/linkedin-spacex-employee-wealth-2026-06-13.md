@@ -11,7 +11,7 @@ Voice: Group Chief Transformation Officer. Mission-led, less capital-weighted. ~
 
 ## Revised (99 words)
 
-The headline: the IPO made Musk the world's first trillionaire.
+The headline: the IPO made Musk the first trillionaire.
 
 Not the real story.
 
