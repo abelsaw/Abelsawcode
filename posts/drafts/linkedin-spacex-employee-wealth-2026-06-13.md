@@ -16,7 +16,7 @@ The headline: the IPO made Musk the first trillionaire.
 
 Not the real story.
 
-SpaceX went public yesterday — biggest IPO ever, up 19%. 4,400 became millionaires, welders and cafeteria staff included.
+SpaceX went public yesterday, biggest IPO ever, up 19%. 4,400 became millionaires, welders and cafeteria staff included.
 
 But read the room, not the ticker.
 
