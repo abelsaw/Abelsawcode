@@ -13,13 +13,13 @@ close, no AI-tells. ~100 words.
 
 Yesterday, SpaceX went public. The headline is the trillion-dollar valuation. The real story is who got rich.
 
-Over 4,400 current and former employees became millionaires overnight. Around 400 crossed $100 million. Early stock grants that started near $2 listed at $135.
+Over 4,400 employees became millionaires overnight. Around 400 crossed $100 million. Grants that started near $2 listed at $135.
 
 What makes this matter isn't the size. It's the spread. The new millionaires include welders, mechanics, and cafeteria staff. Not just executives and investors.
 
 For two decades, SpaceX paid its people in equity. Yesterday, that bet paid them back.
 
-This is what happens when a company ties its success to the people building it.
+This is what happens when a company ties success to its people.
 
 How does your organisation share the upside it creates?
 
