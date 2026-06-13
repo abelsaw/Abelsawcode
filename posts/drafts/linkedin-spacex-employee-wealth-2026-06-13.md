@@ -11,16 +11,16 @@ Voice: Group Chief Transformation Officer. Mission-led, less capital-weighted. ~
 
 ## Revised (99 words)
 
-Yesterday, SpaceX went public. The largest IPO in history, up 19% on day one.
+Yesterday, SpaceX went public. The largest IPO ever, up 19% day one.
 
-The wealth was real. Over 4,400 employees became millionaires, welders and cafeteria staff among them.
+The wealth was real: 4,400 employees became millionaires, welders and cafeteria staff among them.
 
 But read the room, not the ticker.
 
-From Starbase, Elon Musk didn't dwell on valuation. He talked about the mission. SpaceX, he said, is about "taking the fiction out of science fiction." A company he once gave "less than a 10% chance of succeeding."
+From Starbase, Musk talked not about valuation, but the mission. SpaceX, he said, is about "taking the fiction out of science fiction." A company he once gave "less than a 10% chance of succeeding."
 
-That's the real lesson. The payout followed the purpose. For over two decades, people backed an audacious mission, and equity tied them to it.
+That's the real lesson. The payout followed the purpose. For over two decades, people backed that mission, and equity tied them to it.
 
-What are your people actually building toward?
+What are your people building toward?
 
 #Transformation #FutureOfWork #Leadership #Purpose
