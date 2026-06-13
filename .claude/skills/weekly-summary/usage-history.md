@@ -10,6 +10,26 @@ thread), manually delete its entry from the relevant week below.
 
 ## Past weeks (most recent first)
 
+### Week of 2026-06-12
+- Through-line: The buyer and the seller showed up in the same news cycle — SpaceX listed above $2T, OpenAI confirmed a confidential S-1, Apple rebuilt Siri on Gemini, Anthropic shipped Fable 5, Oracle and Adobe printed record AI revenue. Palantir's Karp said the buyer's verdict out loud.
+- Ranked stories 1-10:
+  1. spacex-ipo-spcx-nasdaq-trillionaire: https://www.cnbc.com/2026/06/12/spacex-ipo-spcx-live-updates.html — 10+
+  2. apple-wwdc-2026-siri-gemini-liquid-glass: https://www.cnbc.com/2026/06/08/apple-wwdc-2026-live-updates.html — 10+
+  3. anthropic-claude-fable-5-mythos-public: https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5 — 8+
+  4. oracle-q4-fy26-67b-ai-contracts: https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/default.aspx — 7+
+  5. openai-confidential-s1-filing: https://www.cnbc.com/2026/06/08/openai-confidentially-files-for-ipo-prepping-wall-street-for-ai-debut.html — 7+
+  6. adobe-q2-fy26-ai-first-arr-500m: https://www.sec.gov/Archives/edgar/data/0000796343/000079634326000109/adbeex991q226.htm — 6+
+  7. palantir-karp-tokenmaxxing-unhappy: https://www.cnbc.com/2026/06/10/palantir-karp-enterprise-ai.html — 6+
+  8. crowdstrike-2026-tech-threat-landscape: https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-2026-technology-threat-landscape-report-china-steals — 5+
+  9. gitlab-agentic-restructure-350-roles: https://skillsyncer.com/layoffs-tracker — 3+ [thinner Tier-1]
+  10. amdocs-2900-role-reorganization: https://skillsyncer.com/layoffs-tracker — 3+ [thinner Tier-1]
+- Three-lens balance: Business Strategy 5 / IT 4 / HR 2 (rank 7 crosses IT/Strategy)
+- Post slug: buyer-and-seller-same-week
+- Word count: 463 / Character count: 2,893 / LinkedIn cap 3,000
+- Date: 2026-06-12
+- Post draft path: posts/drafts/weekly-summary-2026-06-12.md
+- Research brief: posts/drafts/weekly-research-2026-06-12.md
+
 ### Week of 2026-06-05 (user-specified window May 30 – June 5)
 - Through-line: Capital markets did the talking — Alphabet ($85B), Meta (FT exclusive), HPE, CrowdStrike and Anthropic all moved at the funding layer. Microsoft Build set Windows up as an OS for agents. Washington narrowed its AI EO. The HR lens stayed quiet.
 - Ranked stories 1-10:
