@@ -15,13 +15,13 @@ The headline: the IPO made Musk the world's first trillionaire.
 
 Not the real story.
 
-SpaceX went public yesterday, the largest IPO ever, +19% day one. 4,400 employees became millionaires too, welders and cafeteria staff included.
+SpaceX went public yesterday, the biggest IPO ever, +19% day one. 4,400 employees became millionaires, welders and cafeteria staff included.
 
 But read the room, not the ticker.
 
 From Starbase, Musk talked mission, not valuation. SpaceX, he said, is about "taking the fiction out of science fiction" — moon, Mars, life multiplanetary. A company he once gave "less than a 10% chance."
 
-The payout followed the purpose. For two decades, people backed that mission, and equity tied them to it.
+The payout followed the purpose. For two decades, people backed that mission, and equity tied them in.
 
 What are your people building toward?
 
