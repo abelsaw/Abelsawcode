@@ -10,7 +10,41 @@ sharper engagement question. ~100 words.
 
 ---
 
-## Final (100 words)
+## Viral long-form (no word cap, ~230 words) — RECOMMENDED for reach
+
+Yesterday, one IPO made Elon Musk the world's first trillionaire.
+
+That's the headline.
+
+It's not the story.
+
+When SpaceX rang the bell — the biggest IPO in history, up 19% on day one — Musk's net worth crossed $1.14 trillion.
+
+But look past him.
+
+4,400 employees became millionaires overnight. Around 400 crossed $100 million. Stock once granted at under $2 listed at $135.
+
+And this is the part that stopped me:
+
+The new millionaires weren't only executives and investors. They were welders. Mechanics. Cafeteria staff. The people who actually built the rockets.
+
+For two decades, SpaceX paid its people in equity. Yesterday, that bet paid them back.
+
+From Starbase, Musk didn't talk about valuation. He talked about the mission. SpaceX, he said, is about "taking the fiction out of science fiction" — the moon, Mars, and making life multiplanetary. A company he once gave "less than a 10% chance of succeeding."
+
+The payout followed the purpose. Never the other way around.
+
+I lead transformation for a living. This is the lesson I keep relearning: people give their best years to a mission, not a payslip. Equity only ties them to it.
+
+So here's the real question:
+
+Would your best people stay for the mission if the equity disappeared?
+
+#Transformation #FutureOfWork #Leadership #Purpose
+
+---
+
+## Tight alternative (100 words)
 
 The headline: the IPO made Musk the first trillionaire.
 
