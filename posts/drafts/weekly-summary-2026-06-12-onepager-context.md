@@ -1,8 +1,18 @@
 # Four stories, one thread — 2026 deep-context brief
 
 **Date:** 2026-06-13 (Sat, post Week of 2026-06-12 weekly summary)
+**Last refreshed:** 2026-06-14 (Sun) — see "Latest update" subsections per story
 **Use:** Supporting context for a one-pager graphic + LinkedIn narrative
 **Stories covered:** Rank 1, 3, 5, 7 from `posts/drafts/weekly-summary-2026-06-12.md`
+
+---
+
+## Weekend delta — what changed Sat-Sun 2026-06-13/14
+
+- **SpaceX SPCX:** after-hours Friday push to ~$166.76 / $2.2T cap; Sat reference $160.95 / $2.11T cap. Share count locked at 555.6M × $135 = ~$75B raise. First analyst comparable-IPO notes published.
+- **Anthropic Fable 5:** post-launch benchmarks landed — **80.3% on SWE-Bench Pro (11 points clear)**, 10%+ over Opus 4.8. Plan-weight confirmed at ~2× Opus 4.8 usage. **June 22 cliff** to metered billing flagged across reviews as the next decision gate.
+- **OpenAI:** banker triad **Goldman + Morgan Stanley + JPMorgan** surfacing on the deal; **$1T target valuation** circulating; pre-IPO M&A pattern emerging (TBPN, Tomoro, $4B-backed new subsidiary).
+- **Palantir / Karp:** full-interview nuance — Karp also called Anthropic the *"leading frontier model company"* and Amodei *"very, very important."* Foundry now framed publicly as the **AI-agnostic integration layer**. Multi-day press cycle ("Everyone hates frontier AI labs") plus PLTR investor reaction.
 
 ---
 
@@ -39,6 +49,13 @@ For a one-pager design, the unifying frame is **four faces of the same phenomeno
 ### CTO read
 The space-and-compute bet now has a public-market price. **Every internal capex assumption tied to Starlink, Starshield or SpaceX-adjacent infrastructure now re-anchors to a daily SPCX equity curve.** It also resets the comparable for what an AI-adjacent mega-listing looks like — the path OpenAI, Anthropic and xAI will reference.
 
+### Latest update — Sat-Sun 2026-06-13/14
+- **After-hours Fri Jun 12:** SPCX continued to climb after the cash close — last quote ~$166.76 (+3.5% from regular-session close), lifting market cap to ~$2.2T.
+- **Sat Jun 13 print:** Last reference price $160.95 with market cap at $2.11T (Investing.com).
+- **Share count clarified:** Final share count 555.6M at $135 — the ~$75B raise number now consistent across all wires.
+- **Analyst recap:** Motley Fool Jun 12 published "Buy SpaceX or wait for Anthropic and OpenAI?" framing — first of the comparable-AI-IPO analyst notes to land.
+- **Musk paper-billionaire status:** On the day-one cap, Musk crossed paper-trillionaire threshold per multiple wires; widely cited as "world's first trillionaire" framing, with the caveat that it is mark-to-market and concentrated.
+
 ---
 
 ## Story 3 — Anthropic Claude Fable 5 (rank 3, citation count 8+)
@@ -62,6 +79,12 @@ The space-and-compute bet now has a public-market price. **Every internal capex 
 ### CTO read
 A new tier above Opus is now generally available across every major hyperscaler at one consistent price. **The frontier tier has a public price tag for procurement** — and it's lower than Mythos Preview was. Combined with the IPO-track filing two weeks earlier, Anthropic in 2026 has moved from "research lab adjacent to AWS" to a **publicly distributed, IPO-track, multi-cloud frontier vendor.**
 
+### Latest update — Sat-Sun 2026-06-13/14
+- **Benchmark headline:** Fable 5 posts **80.3% on SWE-Bench Pro** — 11 points clear of the next-best model. Anthropic claims SOTA on nearly all tested benchmarks, with **10%+ gains over Opus 4.8** on multiple harnesses (per Codersera, EnterpriseDNA, TrueFoundry, ClaudeFast reviews over the weekend).
+- **Plan-weight detail confirmed:** Inside Pro/Max/Team/Enterprise plans Fable 5 weighs **roughly 2× Opus 4.8** in usage credits — meaningful for teams budgeting agent-hours.
+- **The June 22 cliff:** Multiple reviews (Developers Digest, ClaudeFast) now call out the June 22 transition explicitly — "Fable 5 leaves your Claude plan on June 22" — switching from bundled to $10/$50 metered. Procurement teams flagged this as the next decision gate.
+- **Karp angle:** Palantir's "Anthropic projects run on Palantir" comment (Jun 10) reframes Fable 5's go-to-market — the model ships through hyperscalers but lands inside enterprises through integrators. Worth tracking who Anthropic names as enterprise partners over the next two weeks.
+
 ---
 
 ## Story 5 — OpenAI confidential S-1 (rank 5, citation count 7+)
@@ -82,6 +105,15 @@ A new tier above Opus is now generally available across every major hyperscaler 
 
 ### CTO read
 Public-market discipline starts shaping behavior the moment the filing exists — **not when the listing happens.** Expect changes in OpenAI's pricing cadence, partnership terms, model release pacing, and hiring posture over the next two quarters. Plus: with Anthropic confidentially filed (Jun 1) and OpenAI confirmed (Jun 8) **inside the same 7-day window**, the two-horse frontier race now has parallel IPO calendars.
+
+### Latest update — Sat-Sun 2026-06-13/14
+- **Banker line-up surfacing:** Coverage over the weekend (OpenPR, Crypto Briefing) names **Goldman Sachs, Morgan Stanley and JPMorgan** as joint leads on the OpenAI deal — same triad as SpaceX's lead bracket. If accurate, that locks the same bank consortium across both AI mega-IPOs.
+- **Targeted valuation chatter:** A potential **$1T listing valuation** is now circulating in pre-IPO commentary (vs. the $852B last private mark). Polymarket odds and analyst trackers are publishing "OpenAI IPO by..." prediction markets.
+- **Pre-IPO M&A pattern emerging:** Inside the last 10 days OpenAI has:
+  - Acquired **TBPN** (the tech-talk show) — a branding / communications consolidation pre-IPO.
+  - Launched a new subsidiary with **$4B** of backing.
+  - Acquired **Tomoro**, an AI consulting firm — enterprise-services build-out.
+- **Read on the pattern:** OpenAI is hardening the enterprise + brand surface area in the weeks immediately after filing — exactly what bankers ask for ahead of a roadshow.
 
 ---
 
@@ -107,6 +139,12 @@ Public-market discipline starts shaping behavior the moment the filing exists �
 
 ### CTO read
 The supply side just got publicly graded by a buyer that talks like one. **Procurement leverage shifts to integrators that operate inside the system of record, not labs that operate inside the model.** Karp's "running on Palantir" claim about Anthropic projects is a tell: if true, the frontier labs need the integrator more than the integrator needs any one lab. That changes vendor-management posture for 2026 H2.
+
+### Latest update — Sat-Sun 2026-06-13/14
+- **Karp's softer half:** Reviewing the full CNBC interview, Karp called Dario Amodei "a very, very important person" and described **Anthropic as the "leading frontier model company"** — meaningful nuance against the harsher "tokenmaxxing" sound-bite. The position is "the labs matter, the integrators win the enterprise."
+- **Headline crystallisation:** The Register Jun 11 — *"Everyone hates frontier AI labs, says Palantir boss"* — turned the comment into a multi-day tech-press story. CoinCentral surfaced the **investor angle**: "Anthropic is running on Palantir" being treated as material disclosure by PLTR holders.
+- **Foundry positioning sharpened:** Palantir Foundry is now publicly framed as the **AI-agnostic data integration platform** — explicitly model-neutral, sitting underneath whichever lab a customer chooses. That is the wedge into vendor-procurement leverage.
+- **Stock note (Jun 13):** "Is Palantir Stock Ripe for a Rebound?" coverage circulated over the weekend — investors reading Karp's comments as a strategic positioning move heading into Anthropic and OpenAI IPO roadshows.
 
 ---
 
