@@ -88,43 +88,50 @@ most recent 9 (older rows roll off).
 
 | Date | Slug | Lead firm | Supporting firms |
 |---|---|---|---|
-| 2026-06-02 | flow-over-structure | McKinsey | Aon, Mercer, Deloitte |
-| 2026-06-02 | connection-is-infrastructure | Deloitte | Aon, Gartner |
-| 2026-06-02 | geopolitics-is-planning-input | McKinsey | Aon, Mercer, CHRO Association |
 | 2026-06-02 | speed-runs-on-decision-rights | McKinsey | Deloitte, Aon, WTW |
 | 2026-06-02 | built-to-outperform | McKinsey | Aon, Deloitte, WTW |
 | 2026-06-02 | opportunity-is-the-next-equity | Aon | McKinsey, Deloitte, Gartner |
 | 2026-06-02 | clarity-is-the-multiplier | PwC | WTW, Deloitte, WEF |
 | 2026-06-02 | rebuild-performance-management | WTW | Gartner, Mercer, Deloitte |
 | 2026-06-02 | budget-shows-belief | BCG | KPMG, Mercer, WEF |
+| 2026-06-14 | productivity-hides-in-redesign | Mercer | Deloitte, BCG, McKinsey |
+| 2026-06-14 | embedded-or-absorbed | Gartner | Mercer, CHRO Association, Deloitte |
+| 2026-06-14 | manager-wellbeing-is-infrastructure | Gallup | Mercer, Deloitte, McKinsey |
 
-(Run-1 entries — leadership-the-job-not-the-pipeline, knowledge-on-a-clock, evp-is-architecture — rolled off the rolling-9 window after run-4 was added.)
+(Run-2 entries — flow-over-structure, connection-is-infrastructure, geopolitics-is-planning-input — rolled off the rolling-9 window after 2026-06-14 was added.)
 
 ### Rolling tally (last 9 posts as lead firm)
 
-- McKinsey: 4 (Big-3 ⚠ — rolling-9 still heavily McKinsey; one window away from compliance)
+- McKinsey: 2 (Big-3 — down from 4 last window)
 - Aon: 1 (Big-3)
-- Deloitte: 1 (Big-3)
-- BCG: 1 ✅ — Tier 1 non-Big-3 (first lead in window)
-- PwC: 1 ✅ — Tier 2 (first lead in window)
-- WTW: 1 ✅ — Tier 1 non-Big-3 (first lead in window)
-- Mercer: 0 ❌ — Tier 1, still must lead ≥1 in next run
-- Gartner: 0 ❌ — Tier 2, must lead ≥1 in next run
-- WEF: 0 ❌ — Tier 1, prioritize when relevant
-- Gallup: 0 ❌ — Tier 1, State of Global Workplace 2026 unused
+- PwC: 1 ✅ Tier 2
+- WTW: 1 ✅ Tier 1 non-Big-3
+- BCG: 1 ✅ Tier 1 non-Big-3
+- Mercer: 1 ✅ Tier 1 non-Big-3 (NEW lead this run)
+- Gartner: 1 ✅ Tier 2 (NEW lead this run)
+- Gallup: 1 ✅ Tier 1 non-Big-3 (NEW lead this run)
+- Deloitte: 0 ❌ (rolled off after connection-is-infrastructure left the window — Big-3 lead coverage still satisfied via McKinsey + Aon)
+- WEF: 0 ❌ Tier 1, still never led in the window — priority for next run
+
+### Big-3 lead share in rolling 9
+
+- Now: 3/9 (33%) — McKinsey 2 + Aon 1
+- Was last window: 6/9 (66%)
+- Two windows ago: 9/9 (100%)
+
+The policy is working: Big-3 lead concentration is below the structural cap (Big-3 ≤ 1/3 per run, which extrapolates to 3/9 in rolling). Next runs can ease the strict Big-3 block.
 
 ### Next-run flag
 
-Coverage minimum partially restored — PwC / WTW / BCG now each have 1 lead. Big-3 share of leads in rolling-9 dropped from 9/9 to 6/9 (66%). McKinsey still over-rotated (4 leads). **Next run MUST:**
-- Lead at least 2 of 3 with non-Big-3 firms (rule continues until rolling-9 Big-3 share is ≤ 3/9).
-- Prioritize **Mercer** (Tier 1, 0 leads), **Gartner** (Tier 2, heavily corroborates but never leads), **Gallup** (Tier 1, 0 leads — State of Global Workplace 2026 is fully unused), **WEF** (Tier 1, only 1 supporting mention).
-- McKinsey is BLOCKED as a lead next run unless no alternative exists.
+Big-3 share is compliant for the first time. Next run rules:
+- **Strict Big-3 block lifted.** McKinsey and Aon may lead 1 post each in the next run, but Deloitte should be prioritized as the Big-3 lead (rolled off, 0 leads in rolling-9).
+- **WEF priority:** WEF (Tier 1, never led in rolling-9). Surface a WEF-led theme if viable — Future of Jobs 2026 update due, Reskilling Revolution data.
+- **Continue under-rotation correction:** PwC, BCG, Gartner, Gallup all at 1 lead — each could lead another, but not the same firm twice in a 3-post run.
 
-Sources to surface in the next run for under-used leads:
-- **Mercer GTT 2026** — employee experience, work design ROI, talent foresight (search-only but credible)
-- **Gartner CHRO Priorities 2026** PDF has Priorities 1 & 5 unused; Priority 1 "Lead through complex change", Priority 5 "Strengthen the HR function"
-- **Gallup State of the Global Workplace 2026** — engagement (22%), thriving (34%), intent-to-leave (51%), "choice in work" finding
-- **WEF Future of Jobs 2026** — fresh-skill displacement, green jobs, mid-career transitions
+Sources to surface in the next run:
+- **WEF Future of Jobs 2026** — fresh-skill displacement, AI displacement curves, green jobs
+- **Deloitte HCT 2026** parent report — chapters not yet led (governance, risk, board oversight)
+- **SHRM / Bain / Conference Board** — Tier 2 firms not yet led
 
 ---
 

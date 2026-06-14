@@ -17,6 +17,30 @@ When excluding, match on **parent theme**, not slug — two slugs about "Human-A
 
 ## Used themes (most recent first)
 
+### Manager engagement collapse / leading indicator of productivity crisis (recycle of theme #16 with fresh evidence)
+- Slugs: manager-wellbeing-is-infrastructure
+- Source stats: Gallup State of Global Workplace 2026 — manager engagement 31%→22% in three years (search-only); +7 stress, +12 anger, +11 sadness, +10 loneliness deltas vs ICs (search-only); Mercer GTT 2026 — thriving 66%→44% (lowest since measure began), 12% planning to quit (3× 2024 rate), 40% want leader who sets clear direction (up from 21%) [PDF: mercer/global-talent-trends-2026.pdf, pp.27, 31]; Deloitte HCT 2026 — 1/3 saw 15+ major changes last year, only 27% say org manages change well (search-only); McKinsey work-related stress data (search-only)
+- Recycle basis: theme #16 (Manager engagement & leadership pipeline) used 2026-05-19 has aged out of the 14-day window. Fresh sub-evidence not in the prior post: Mercer 66%→44% thriving collapse, Deloitte 15+ changes / 27% manage well, emotional-load deltas (+7/+12/+11/+10).
+- Lead firm: Gallup (Tier 1 non-Big-3 — first Gallup lead in rolling-9 window)
+- Commits: (pending this run)
+- Date(s): 2026-06-14, 2026-05-19 (prior)
+
+### HR function rebuild — embedded or absorbed in the AI era (NEW parent theme)
+- Slugs: embedded-or-absorbed
+- Source stats: Gartner CHRO Priorities 2026 — Priorities 1 (Transform HR through AI) + 5 (Strengthen the HR function); the new AI-infused HR operating model with Strategic Talent Leader Pods, Custom AI Product Designers, Digital HR Solutions & Delivery, HR Innovation Command [PDF: gartner/chro-top-priorities-2026.pdf, p.1]; Mercer GTT 2026 — only 8% of C-suite see HR as embedded today, 56% of HR leaders expect HR and IT to merge, 81% of investors say embedded HR essential for growth [PDF: mercer/global-talent-trends-2026.pdf, pp.6, 37-40]; CHRO Association 2026 — operating model rethink, AI changing HRBP role, "AI is becoming the impetus to rethink the traditional three-tier HR model" [PDF: chro-association/chro-survey-key-findings-2026.pdf, pp.7-8]; Deloitte HCT 2026 (search-only)
+- Distinct from theme #8 (P&P organizations — McKinsey Shift #6) and theme #25 (decision rights — McKinsey Shift #3). This theme is specifically about HR-function structural reinvention; the Gartner operating-model architecture and Mercer's "embedded vs siloed vs advisor vs partner" segmentation are new evidence.
+- Lead firm: Gartner (Tier 2 — first Gartner lead in rolling-9 window)
+- Commits: (pending this run)
+- Date(s): 2026-06-14
+
+### Work redesign at task level / AI ROI gated by job decomposition (NEW parent theme)
+- Slugs: productivity-hides-in-redesign
+- Source stats: Mercer GTT 2026 — 63% of C-suite say redesigning work for AI is #1 ROI lever; only 32% believe their workforce can combine human + machine; only 46% of HR leaders plan to prioritize work redesign [PDF: mercer/global-talent-trends-2026.pdf, pp.4, 12-13, 40]; Deloitte HCT 2026 — tech-first orgs 1.6× more likely to miss AI returns (search-only); BCG 2026 — 50-55% of US jobs to be reshaped (not replaced) by AI in 2-3 years (search-only); McKinsey 2026 "Agentic Organization" framing (search-only)
+- Distinct from theme #14 (Human-AI work redesign — about general task allocation; BCG 50-55% / Deloitte 6% confident) and theme #22 (Organizational adaptability — McKinsey Shift #5 about structure to flow). This theme is specifically the Mercer 63%/32%/46% triangle anchoring task-level decomposition and the C-suite-vs-HR alignment gap.
+- Lead firm: Mercer (Tier 1 non-Big-3 — first Mercer lead in rolling-9 window)
+- Commits: (pending this run)
+- Date(s): 2026-06-14
+
 ### CEO ownership of AI upskilling — budget + personal time (NEW parent theme)
 - Slugs: budget-shows-belief
 - Source stats: BCG AI Radar 2026 — Trailblazer/Pragmatist/Follower CEOs allocate 60%/27%/24% of AI budget to upskilling and retraining; 72% of CEOs now main AI decision-maker (double last year); 8+ hrs/week of CEO personal AI upskilling time (search-only, BCG); KPMG 2026 CEO Outlook — 83% of CEOs prioritize workforce reskilling (search-only); Mercer GTT 2026 — 62% of employees say leaders underestimate AI's emotional impact (search-only); WEF Reskilling Revolution pledge — 120M workers by 2030 (search-only)
