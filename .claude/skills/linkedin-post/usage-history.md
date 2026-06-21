@@ -17,6 +17,30 @@ When excluding, match on **parent theme**, not slug — two slugs about "Human-A
 
 ## Used themes (most recent first)
 
+### CHRO-CEO confidence divergence — HR as the steady hand (NEW parent theme)
+- Slugs: hr-is-the-steady-hand
+- Source stats: Conference Board CHRO Confidence Index Q2 2026 = 58 (near Q1 series-high 59); Conference Board CEO Confidence Q2 2026 "tumbled" (search-only); SHRM 2026 CHRO Priorities — 46% cite leadership/manager development as #1, 31% culture (up from 15%), 92% greater AI integration in workforce ops (search-only); Aon 2026 Human Capital Outlook — 70%+ cite cost as #1 total-rewards barrier; 50%+ APAC want to redesign total rewards (search-only); Mercer GTT 2026 — 44% thriving signal
+- Net-new theme. The HR-as-steady-hand framing has not surfaced in any prior run.
+- Lead firm: Conference Board (Tier 2 — first CB lead in rolling-9)
+- Commits: (pending this run)
+- Date(s): 2026-06-21
+
+### AI decision governance — "decisions that echo" (NEW parent theme)
+- Slugs: decisions-that-echo
+- Source stats: Deloitte HCT 2026 ("Decisions that echo" + "Human AI interaction design" chapters) — 60% executives use AI in decisions, only 5% govern well; only 6% making progress on human-AI design, 59% tech-first; intentional design 2× ROI vs tech-first 1.6× shortfall (search-only); BCG AI Radar 2026 + "AI at Work: Why Strategy Matters" (search-only); Mercer GTT 2026 — C-suite human-machine confidence dropped 65% → 51% (search-only); Aon 2026 HCO (search-only)
+- Distinct from theme #6 (AI governance inside HR — was about formal HR governance architecture, SHRM 49%/25%/52%, IBM IBV CAIO). This theme is about AI decision-making accountability + human-AI interaction design as audit risk.
+- Lead firm: Deloitte (Big-3, rotated-back slot — Deloitte had 0 leads in rolling-9 before this run)
+- Commits: (pending this run)
+- Date(s): 2026-06-21
+
+### Reskilling / human-skills hedge as 2026 AI moat (recycle of #12 CEO-ownership-of-AI-upskilling with fresh WEF/PwC/Mercer evidence)
+- Slugs: fund-the-humans
+- Source stats: WEF Reskilling Revolution Jan 2026 update — 850M+ workers reached; 25+ tech firms pledged 120M by 2030 (search-only); WEF "Invest in the workforce for the AI age" blueprint Jan 2026 (search-only); PwC 2026 Global AI Jobs Barometer (Jun 2026) — AI-skilled wage premium 56-62%; AI-expertise jobs grew 69% since 2019 vs 9% market-wide (search-only); Mercer GTT 2026 — 63% would trade 10% raise for AI upskilling; 77% of investors prefer firms investing in human-AI capability (search-only); BCG AI Radar 2026 — trailblazer firms upskill 70% before scaling agents (search-only)
+- Recycle basis: theme #12 (CEO ownership of AI upskilling — BCG 60%/27%/24% budget split) used 2026-06-02 has aged out of the 14-day window. This re-aiming leads with WEF, reframes around scale + human-skills hedge (not CEO ownership), and three of four anchor stats are fresh.
+- Lead firm: WEF (Tier 1 — first WEF lead in rolling-9 window)
+- Commits: (pending this run)
+- Date(s): 2026-06-21, 2026-06-02 (prior — different angle)
+
 ### Manager engagement collapse / leading indicator of productivity crisis (recycle of theme #16 with fresh evidence)
 - Slugs: manager-wellbeing-is-infrastructure
 - Source stats: Gallup State of Global Workplace 2026 — manager engagement 31%→22% in three years (search-only); +7 stress, +12 anger, +11 sadness, +10 loneliness deltas vs ICs (search-only); Mercer GTT 2026 — thriving 66%→44% (lowest since measure began), 12% planning to quit (3× 2024 rate), 40% want leader who sets clear direction (up from 21%) [PDF: mercer/global-talent-trends-2026.pdf, pp.27, 31]; Deloitte HCT 2026 — 1/3 saw 15+ major changes last year, only 27% say org manages change well (search-only); McKinsey work-related stress data (search-only)
