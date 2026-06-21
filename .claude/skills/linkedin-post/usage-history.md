@@ -17,6 +17,30 @@ When excluding, match on **parent theme**, not slug — two slugs about "Human-A
 
 ## Used themes (most recent first)
 
+### Performance-management rebuild — coaching effectiveness as the hidden bottleneck (recycle-adjacent to #11 PM reinvented, fresh coaching angle)
+- Slugs: the-lever-is-the-coach
+- Source stats: WTW 2026 Reinventing Performance Management — only 20% of managers are effective coaches (search-only); McKinsey State of Organizations 2026 — 75% of orgs fail to build high-performance cultures (search-only / HRZone coverage); Deloitte HCT 2026 — 68% global / 76% UK report change-fatigue wellbeing decline (search-only); Mercer GTT 2026 supporting (search-only)
+- Distinct from theme #11 (Performance management reinvented, WTW-led 2026-06-02 — about ~50% productivity unlock + Gartner 34% culture lift + 63%/46% C-suite/HR alignment gap) which has aged out of dedup window. This re-aiming focuses specifically on the coaching-effectiveness bottleneck + McKinsey's 75% high-perf culture failure, fresh angles not in the prior post.
+- Lead firm: WTW (Tier 1 non-Big-3 — rotation-eligible; previously led 2026-06-02)
+- Commits: (pending this run-2)
+- Date(s): 2026-06-21, 2026-06-02 (prior — different angle)
+
+### 2026 benefits affordability crunch — choice architecture replaces uniform plans (recycle of #13 Medical inflation with 15-year-high US data + choice-pivot)
+- Slugs: choice-replaces-cost-share
+- Source stats: Mercer 2026 — US per-employee health cost +6.5% (highest single-year increase in 15 years); past $18,500 per employee threshold (search-only / Mercer newsroom); Mercer Marsh Benefits Health Trends 2026 (search-only); WTW 2026 Global Medical Trends Survey — 10.3% global, APAC 14% (search-only); Aon 2026 Global Medical Trend Rates Report — 9.8% global (search-only / Aon newsroom Oct 2025); WTW Dynamic Total Rewards 2026 — choice-architecture pivot
+- Distinct from theme #13 (Medical inflation & benefits redesign, used 2026-05-19 with WTW global 10.3%/APAC 14%) — now aged out. Recycle basis: the 2026 US 15-year-high figure + $18,500 threshold + the choice-architecture frame are all fresh; the prior post stopped at the rate, this one moves to the structural response.
+- Lead firm: Mercer (Tier 1 non-Big-3 — rotation-eligible; previously led 2026-06-14)
+- Commits: (pending this run-2)
+- Date(s): 2026-06-21, 2026-05-19 (prior — different angle)
+
+### EU Pay Transparency execution gap — readiness as a board question (recycle of #18 EU Pay Transparency with post-deadline reality data)
+- Slugs: pay-transparency-is-a-board-question
+- Source stats: EU Pay Transparency Directive in force from 7 June 2026; Aon 2026 — 53% cite leader alignment as #1 readiness blocker (search-only / Aon Pay Transparency collection); Mercer 2026 — only 9% of European employers fully ready (search-only / Mercer pay-transparency build); WTW Dynamic Total Rewards 2026 — operational response framework (search-only)
+- Distinct from theme #18 (Pay transparency execution, used 2026-05-19 with EU Directive landing + WTW US 3.4%) — now aged out. Recycle basis: the directive is now LIVE (post-deadline), the Aon 53%-leader-alignment-blocker stat is new, and the Mercer 9%-ready figure documents the actual reality after the deadline rather than predictions before it.
+- Lead firm: Aon (Big-3 — rotated-back priority slot per source-balance; 0 leads in rolling-9 before this run)
+- Commits: (pending this run-2)
+- Date(s): 2026-06-21, 2026-05-19 (prior — pre-deadline angle)
+
 ### CHRO-CEO confidence divergence — HR as the steady hand (NEW parent theme)
 - Slugs: hr-is-the-steady-hand
 - Source stats: Conference Board CHRO Confidence Index Q2 2026 = 58 (near Q1 series-high 59); Conference Board CEO Confidence Q2 2026 "tumbled" (search-only); SHRM 2026 CHRO Priorities — 46% cite leadership/manager development as #1, 31% culture (up from 15%), 92% greater AI integration in workforce ops (search-only); Aon 2026 Human Capital Outlook — 70%+ cite cost as #1 total-rewards barrier; 50%+ APAC want to redesign total rewards (search-only); Mercer GTT 2026 — 44% thriving signal
