@@ -12,15 +12,15 @@ Voice: Group Chief Transformation Officer (Malaysia-based). ~100 words.
 
 ## Draft (98 words)
 
-Malaysia just moved up the world.
+Malaysia just climbed the world.
 
-In the IMD 2026 World Competitiveness Ranking, we jumped to 15th. From 34th in 2024, to 23rd, to 15th. Our best in over a decade.
+In the IMD 2026 competitiveness ranking, we jumped to 15th. From 34th in 2024, to 23rd, to 15th. Our best in over a decade.
 
-This isn't a vanity number. It rests on fundamentals: 4th globally in economic performance, government efficiency up 11 places, business efficiency up 16.
+This isn't a vanity number. It rests on fundamentals: 4th in economic performance, government efficiency up 11, business efficiency up 16.
 
 I read it as a tailwind, not a trophy. Rankings open doors. Execution decides who walks through them.
 
-For those of us building businesses here, the question shifts. Not "is Malaysia competitive?" but "how fast can we convert that into investment, talent, and growth?"
+For those building businesses here, the question shifts. Not "is Malaysia competitive?" but "how fast can we convert it into investment, talent, growth?"
 
 Proud of the climb. Now the work.
 
