@@ -25,3 +25,25 @@ For those building businesses here, the question shifts. Not "is Malaysia compet
 Proud of the climb. Now the work.
 
 #Malaysia #Competitiveness #Transformation #Growth
+
+---
+
+## Alternate angle — momentum/trajectory (98 words)
+
+(English infographic version. Tagline: "Stronger today, leading tomorrow.")
+
+Three years. Three big jumps.
+
+Malaysia: 34th in 2024. 23rd in 2025. Now 15th in the world on the IMD Global Competitiveness Index 2026.
+
+That's not luck. That's a trend.
+
+Climbing a ranking is one thing. Sustaining the climb is the harder, more telling test. It means the gains are structural, not seasonal.
+
+For global investors and talent scanning the region, the signal is simple. Malaysia is moving in the right direction, fast.
+
+The headline says stronger today. The real work is leading tomorrow.
+
+Momentum is a gift. What we build on it is the choice.
+
+#Malaysia #Competitiveness #Investment #Transformation
