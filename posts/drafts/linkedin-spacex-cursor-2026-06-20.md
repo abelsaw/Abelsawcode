@@ -12,13 +12,13 @@ Voice: Group Chief Transformation Officer. ~100 words.
 
 ## Draft (96 words)
 
-Four days after the largest IPO in history, SpaceX spent the proceeds.
+Four days after the biggest IPO ever, SpaceX spent the proceeds.
 
-It's acquiring Cursor, the AI coding company, for $60 billion in stock. Cursor went from founded-in-2022 to $2.6 billion in annual revenue. Now it belongs to a rocket company.
+It's buying Cursor, the AI coding company, for $60 billion in stock. Cursor: founded 2022, already $2.6 billion in revenue. Now it belongs to a rocket company.
 
-Look at the shape of this. SpaceX is assembling the full stack: compute, models through xAI, and now the layer that writes the code. Vertical integration at a speed we've never seen.
+Look at the shape of this. SpaceX is assembling the full stack: compute, models via xAI, now the layer that writes the code. Vertical integration at a speed we've never seen.
 
-The signal for the rest of us: AI that builds software isn't a tool you buy seats for. It's infrastructure worth owning.
+The signal: AI that builds software isn't a tool you buy seats for. It's infrastructure worth owning.
 
 What in your AI stack should you own, not rent?
 
