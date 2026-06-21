@@ -16,11 +16,11 @@ Voice: Group Chief Transformation Officer. ~100 words.
 
 Microsoft just signalled where enterprise AI is heading: cost discipline.
 
-It's moving Copilot Cowork to usage-based pricing and testing a cheaper engine underneath. The reason is simple math. Some users run hundreds of agent tasks a week. At premium-model prices, "unlimited" doesn't survive contact with reality.
+It's moving Copilot Cowork to usage-based pricing, testing a cheaper engine underneath. The reason is simple math. Some users run hundreds of agent tasks a week. At premium-model prices, "unlimited" doesn't survive contact with reality.
 
-So Microsoft is weighing a fine-tuned DeepSeek, hosted on its own Azure cloud. The price gap is staggering: about $50 per million tokens for the top model, versus under $1 for DeepSeek. Roughly 57 times cheaper.
+So Microsoft is weighing a fine-tuned DeepSeek, hosted on Azure. The price gap is staggering: $50 per million tokens for the top model, under $1 for DeepSeek. Roughly 57 times cheaper.
 
-The lesson for the rest of us: at scale, AI strategy becomes unit economics.
+The lesson: at scale, AI strategy becomes unit economics.
 
 Do you know your cost per task?
 
