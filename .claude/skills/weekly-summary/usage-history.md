@@ -10,6 +10,23 @@ thread), manually delete its entry from the relevant week below.
 
 ## Past weeks (most recent first)
 
+### Week of 2026-06-19 (partial — Mon Jun 15 only, current-week early trigger)
+- Window: 2026-06-15 to 2026-06-19, ranked off Mon Jun 15 events only
+- Length: 5 of 10 (not padded) — partial-week run, only one trading day inside window
+- Through-line: The week opened on geopolitics, not tech — US-Iran MOU re-priced oil and equities in one session; SpaceX kept climbing; FOMC Wednesday under a new Chair is the real hinge; BBC's 2,000-job restructure is the HR story.
+- Ranked stories 1-5:
+  1. us-iran-mou-hormuz-reopening: https://www.cnbc.com/2026/06/15/us-iran-deal-hormuz-markets.html — 10+
+  2. spcx-day2-monday-ath: https://www.cnbc.com/2026/06/15/spacex-stock-record-ipo-debut.html — 7+
+  3. fomc-june-warsh-debut-preview: https://www.cnbc.com/2026/06/17/fed-interest-rate-decision-june-2026.html — 6+
+  4. bbc-2000-layoffs-budget-cut: https://www.theworkersrights.com/bbc-layoffs-2026-2000-job-cuts-impact/ — 5+
+  5. pltr-monday-bounce-5pct: https://stockinvest.us/stock-news/a-very-strong-day-for-palantir-stock-price-on-monday-2026-06-15 — 4+ [adjacent to #1]
+- Three-lens balance: Business Strategy 4 / HR 1 / IT 0 (gap named in closing)
+- Post slug: week-opened-on-geopolitics
+- Word count: 415 / Character count: 2,469 / LinkedIn cap 3,000
+- Date: 2026-06-15 (early trigger; full Friday wrap to come)
+- Post draft path: posts/drafts/weekly-summary-2026-06-19.md
+- Research brief: posts/drafts/weekly-research-2026-06-19.md
+
 ### Week of 2026-06-12
 - Through-line: The buyer and the seller showed up in the same news cycle — SpaceX listed above $2T, OpenAI confirmed a confidential S-1, Apple rebuilt Siri on Gemini, Anthropic shipped Fable 5, Oracle and Adobe printed record AI revenue. Palantir's Karp said the buyer's verdict out loud.
 - Ranked stories 1-10:
