@@ -16,7 +16,7 @@ Voice: Group Chief Transformation Officer (people remit). ~100 words.
 
 The CEO of a leading AI lab is asking governments to regulate his own industry.
 
-In a new interview, Anthropic's Dario Amodei warned of white-collar job losses and called for guardrails: a narrow power to block unsafe AI, plus worker protections like retention incentives and stronger unemployment support. He even floated taxing AI companies.
+In a new interview, Anthropic's Dario Amodei warned of white-collar job losses and called for guardrails: a narrow power to block unsafe AI, plus worker protections like retention incentives and stronger unemployment support. He floated taxing AI companies.
 
 Sit with that. The person building the technology is the one calling for brakes.
 
