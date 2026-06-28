@@ -10,6 +10,31 @@ thread), manually delete its entry from the relevant week below.
 
 ## Past weeks (most recent first)
 
+### Week of 2026-06-26 (TECH-ONLY, OpenAI/Anthropic model releases EXCLUDED — filter-change re-rank)
+- Window: 2026-06-22 to 2026-06-26
+- Length: 10 of 10
+- **Args:** `exclude the Open AI and Anthropic new model release`
+- **Scope:** Pure tech & AI, with GPT-5.6 Sol/Terra/Luna and Anthropic Mythos 5 removed by user request
+- **Dedup note:** Softened — prior tech-only Jun 22-26 run (f68c565) carryover. 2 new stories surface to fill the GPT-5.6 / Mythos 5 vacancies: OpenAI Daybreak expansion (Mon Jun 22) and Microsoft 365 Copilot Business permanent SKU transition (Jul 1 effective).
+- Through-line: Set aside the two frontier model launches, and the week's story is cost-down, defense-up, dependency-real. The substrate is what moved.
+- Three-lens balance: Models 2 · Infra 3 · Enterprise tech 5 (Models thin by design — excluding the frontier releases hollows out this lens)
+- Ranked stories 1-10:
+  1. openai-broadcom-jalapeno-chip: https://www.cnbc.com/2026/06/24/openai-and-broadcom-reveal-jalapeno-first-ai-chip-in-partnership.html — 7+
+  2. qualcomm-modular-4b-acquisition: https://www.bloomberg.com/news/articles/2026-06-22/qualcomm-is-said-to-near-deal-for-ai-chip-startup-modular — 5+
+  3. openai-daybreak-expansion-patch-the-planet: https://openai.com/index/daybreak-securing-the-world/ — 6+
+  4. anthropic-alibaba-qwen-distillation: https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html — 4+
+  5. nvidia-isc-2026-bionemo-halos-eu: https://nvidianews.nvidia.com/news/latest — 3+
+  6. check-point-vpn-cve-cisa-emergency-directive: https://www.esecurityplanet.com/weekly-roundup/zero-days-ai-exploits-and-supply-chain-risks-define-this-week-in-cybersecurity-in-june-2026/ — 3+
+  7. tokenmaxxing-to-efficiency-shift: https://www.cnbc.com/2026/06/26/openai-anthropic-new-ai-spending-reality-as-users-shift-to-efficiency.html — 3+
+  8. microsoft-365-copilot-pricing-transition-permanent: https://learn.microsoft.com/en-us/partner-center/announcements/2026-june — 3+ [thin Tier-1]
+  9. claude-enterprise-updates-batch: https://support.claude.com/en/articles/12138966-release-notes — 2+ [thin]
+  10. openssl-pkcs7-rce-vulnerability: (OpenSSL Security Advisory, week of 2026-06-22) — 2+ [thin]
+- Post slug: the-substrate-is-what-moved
+- Word count: ~440 / Character count: 2,897 / LinkedIn cap 3,000
+- Date: 2026-06-26 (run on 2026-06-28, filter-change re-rank)
+- Post draft path: posts/drafts/weekly-summary-2026-06-26-no-model-releases.md
+- Research brief: posts/drafts/weekly-research-2026-06-26-no-model-releases.md
+
 ### Week of 2026-06-26 (TECH-ONLY RE-RUN — scope-transition)
 - Window: 2026-06-22 to 2026-06-26
 - Length: 10 of 10
