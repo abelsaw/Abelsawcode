@@ -10,6 +10,28 @@ thread), manually delete its entry from the relevant week below.
 
 ## Past weeks (most recent first)
 
+### Week of 2026-06-26 (Mon Jun 22 - Fri Jun 26)
+- Window: 2026-06-22 to 2026-06-26 (clamped from user-requested Jun 21-28)
+- Length: 10 of 10
+- Through-line: The AI cost equation tightened across every lens — OpenAI's Jalapeño at ~50% GPU cost, Qualcomm-Modular CUDA challenger, Oracle 21K AI-driven cuts, VW 100K-job restructure threat, four senior Google→Anthropic exits in 6 days.
+- Ranked stories 1-10:
+  1. openai-broadcom-jalapeno-chip: https://www.cnbc.com/2026/06/24/openai-and-broadcom-reveal-jalapeno-first-ai-chip-in-partnership.html — 9+
+  2. anthropic-alibaba-qwen-distillation: https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html — 9+
+  3. vw-100k-layoffs-4-plants: https://www.cnn.com/2026/06/26/economy/volkswagen-job-cuts — 7+
+  4. oracle-21k-ai-driven: https://www.bloomberg.com/news/articles/2026-06-22/oracle-layoffs-fueled-by-ai-reduces-workforce-by-21-000 — 6+
+  5. qualcomm-modular-4b: https://www.bloomberg.com/news/articles/2026-06-22/qualcomm-is-said-to-near-deal-for-ai-chip-startup-modular — 7+
+  6. google-anthropic-gemini-exodus: https://www.bloomberg.com/news/articles/2026-06-24/google-poised-to-lose-two-more-high-profile-ai-staffers-to-anthropic — 6+
+  7. fedex-q4-fy26-earnings-beat: https://www.cnbc.com/2026/06/23/fedex-fdx-q4-2026-earnings.html — 5+
+  8. carnival-q2-2026-record: https://www.investing.com/news/company-news/carnival-q2-2026-slides-record-results-amid-geopolitical-headwinds-93CH-4756051 — 5+
+  9. nvidia-isc-2026-bionemo-halos-eu: https://nvidianews.nvidia.com/news/latest — 4+
+  10. tokenmaxxing-to-efficiency-shift: https://www.cnbc.com/2026/06/26/openai-anthropic-new-ai-spending-reality-as-users-shift-to-efficiency.html — 4+
+- Three-lens balance: IT 5 / HR 3 / Business Strategy 2 — all cleared
+- Post slug: the-cost-equation-tightened
+- Word count: 449 / Character count: 2,980 / LinkedIn cap 3,000
+- Date: 2026-06-26 (run on 2026-06-28, standard post-Friday cadence)
+- Post draft path: posts/drafts/weekly-summary-2026-06-26.md
+- Research brief: posts/drafts/weekly-research-2026-06-26.md
+
 ### Week of 2026-06-19 (partial — Mon Jun 15 only, current-week early trigger)
 - Window: 2026-06-15 to 2026-06-19, ranked off Mon Jun 15 events only
 - Length: 5 of 10 (not padded) — partial-week run, only one trading day inside window
