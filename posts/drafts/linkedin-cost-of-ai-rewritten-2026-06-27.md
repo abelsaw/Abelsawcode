@@ -13,13 +13,13 @@ Voice: Group Chief Transformation Officer. Both <=100 words.
 
 ## Option A — Measured (97 words)
 
-Two deals last week, one target: the economics of AI compute.
+Two deals last week, one target: AI compute economics.
 
-OpenAI built its own inference chip with Broadcom. "Jalapeño" runs about 50% cheaper per token than typical GPUs. At hyperscaler capex scale, that's not a footnote. It's a balance-sheet variable.
+OpenAI built its own inference chip with Broadcom. "Jalapeño" runs ~50% cheaper per token than GPUs. At hyperscaler capex scale, that's not a footnote. It's a balance-sheet variable.
 
-Qualcomm bought Modular for $3.92 billion. Its MAX/Mojo stack runs models across different chips, a real alternative to Nvidia's CUDA. And CUDA's value was never just lock-in. It was pricing power.
+Qualcomm bought Modular for $3.92 billion. Its MAX/Mojo stack runs across any chip, a real alternative to Nvidia's CUDA. CUDA was never just lock-in. It was pricing power.
 
-One move lowers the cost of compute. The other loosens a dominant platform's grip.
+One lowers the cost of compute. The other loosens a dominant platform's grip.
 
 The frontier is shifting from "which model is best?" to "which stack delivers the best outcome per dollar?"
 
@@ -31,7 +31,7 @@ The frontier is shifting from "which model is best?" to "which stack delivers th
 
 Nvidia's pricing power took two hits in one week.
 
-OpenAI made its own chip with Broadcom. "Jalapeño" runs inference about 50% cheaper per token than GPUs. OpenAI now controls its own cost curve.
+OpenAI made its own chip with Broadcom. "Jalapeño" runs inference ~50% cheaper per token than GPUs. OpenAI now controls its own cost curve.
 
 Qualcomm paid $3.92 billion for Modular to build a real CUDA alternative, one that runs across any chip. CUDA was never just lock-in. It was pricing power. A working alternative compresses Nvidia's margins across the whole industry.
 
