@@ -17,7 +17,7 @@ Voice: Group Chief Transformation Officer. Both <=100 words.
 
 Four of last week's biggest AI stories were really one story: the cost of AI.
 
-OpenAI's new Broadcom chip, "Jalapeño," cuts inference cost roughly in half. Qualcomm spent $3.92 billion on Modular to challenge Nvidia's CUDA lock-in. Enterprise buyers are shifting their benchmark from token volume to outcome per dollar. And Microsoft made Copilot a permanent, bundled SKU at $23.50 a seat.
+OpenAI's new Broadcom chip, "Jalapeño," cuts inference cost in half. Qualcomm spent $3.92 billion on Modular to challenge Nvidia's CUDA lock-in. Buyers are shifting their benchmark from token volume to outcome per dollar. Microsoft made Copilot a permanent SKU at $23.50 a seat.
 
 Producer, software, buyer, subscription. Every side of the market moved the same way.
 
