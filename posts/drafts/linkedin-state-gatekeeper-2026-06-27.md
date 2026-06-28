@@ -12,7 +12,41 @@ Voice: Group Chief Transformation Officer. ~100 words.
 
 ---
 
-## Draft (98 words)
+## Option A — Measured (96 words)
+
+Something structural shifted on June 26.
+
+Two frontier models launched the same Friday. OpenAI's GPT-5.6 went to roughly 20 federally cleared organizations. Anthropic's Mythos 5, to around 100 US institutions defending critical infrastructure.
+
+Neither went to the open market. Both passed through federal review first, under the June 2 executive order that lets Washington vet powerful models before release.
+
+It's worth noticing the pattern. For the most capable AI, the state now sits in the deployment path.
+
+Access is starting to depend on clearance, not just budget.
+
+Where does that leave your AI roadmap?
+
+#AI #Governance #ResponsibleAI #Strategy
+
+---
+
+## Option B — Bold (94 words)
+
+Frontier AI just changed hands. The gatekeeper is now the government.
+
+On June 26, OpenAI's GPT-5.6 and Anthropic's Mythos 5 both shipped to cleared lists, not the market. Twenty federally approved organizations for one. A hundred critical-infrastructure institutions for the other. All under the June 2 executive order.
+
+Read what that means. The most powerful models no longer ship first and get regulated later. They clear first, then ship.
+
+We're heading toward two-tier access: organisations cleared for frontier capability, and everyone else.
+
+Which tier is your company planning to be in?
+
+#AI #Governance #ResponsibleAI #Strategy
+
+---
+
+## Original single draft (97 words)
 
 Something quietly historic happened on June 26.
 
