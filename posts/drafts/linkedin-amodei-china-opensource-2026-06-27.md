@@ -27,3 +27,19 @@ The deeper tension is ours. Open access accelerates progress. It also widens the
 How do you balance the two?
 
 #AI #ResponsibleAI #Cybersecurity #Strategy
+
+---
+
+## Bold — US vs China tone, no closing question (96 words)
+
+This is the new arms race, and Dario Amodei just named the stakes.
+
+China's open-source models, DeepSeek and Qwen, have closed most of the gap with US frontier labs, at a fraction of the cost. Cheap, capable, everywhere.
+
+His warning is blunt. The more powerful these models get, the greater the cyber risk they carry. His prescription is blunter still: structured access to frontier models, chip controls that exclude China, hard limits on what crosses the line.
+
+Get the chips wrong, he argues, and we wake in a bipolar world. Two superpowers. Two AI stacks. Both moving at breakneck speed.
+
+The race isn't coming. It's here.
+
+#AI #USChina #Cybersecurity #Geopolitics
