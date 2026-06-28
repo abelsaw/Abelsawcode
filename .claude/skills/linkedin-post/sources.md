@@ -88,51 +88,50 @@ most recent 9 (older rows roll off).
 
 | Date | Slug | Lead firm | Supporting firms |
 |---|---|---|---|
-| 2026-06-14 | productivity-hides-in-redesign | Mercer | Deloitte, BCG, McKinsey |
-| 2026-06-14 | embedded-or-absorbed | Gartner | Mercer, CHRO Association, Deloitte |
-| 2026-06-14 | manager-wellbeing-is-infrastructure | Gallup | Mercer, Deloitte, McKinsey |
 | 2026-06-21 | fund-the-humans | WEF | PwC, Mercer, BCG |
 | 2026-06-21 | decisions-that-echo | Deloitte | BCG, Mercer, Aon |
 | 2026-06-21 | hr-is-the-steady-hand | Conference Board | SHRM, Aon, Mercer |
 | 2026-06-21 | pay-transparency-is-a-board-question | Aon | Mercer, WTW |
 | 2026-06-21 | choice-replaces-cost-share | Mercer | Aon, WTW |
 | 2026-06-21 | the-lever-is-the-coach | WTW | McKinsey, Deloitte |
+| 2026-06-21 | speed-is-a-design-choice | McKinsey | Deloitte, Mercer |
+| 2026-06-21 | saved-time-leaks | BCG | McKinsey, Mercer |
+| 2026-06-21 | the-cheapest-retention-lever | PwC | Mercer, WTW |
 
-(Earlier 2026-06-02 entries — clarity-is-the-multiplier, rebuild-performance-management, budget-shows-belief — rolled off the rolling-9 window after this run-2 was added.)
+(The three 2026-06-14 entries — productivity-hides-in-redesign, embedded-or-absorbed, manager-wellbeing-is-infrastructure — rolled off the rolling-9 window after this run-3 was added. The window is now entirely 2026-06-21 — 9 posts across 3 runs in one day.)
 
 ### Rolling tally (last 9 posts as lead firm)
 
-- Mercer: 2 ✅ (rotated again as Theme 2 lead this run)
-- WTW: 1 ✅ (rotated again)
-- Aon: 1 ✅ Big-3 (NEW lead this run — rotated-back priority slot)
-- Deloitte: 1 ✅ Big-3 (from this morning)
-- WEF: 1 ✅ (from this morning)
-- Conference Board: 1 ✅ (from this morning)
-- Gartner: 1 ✅
-- Gallup: 1 ✅
-- McKinsey: 0 ❌ Big-3 (still rolled off — priority for next run)
-- BCG: 0 ❌ (rolled off when budget-shows-belief left the window)
-- PwC: 0 ❌ (rolled off when clarity-is-the-multiplier left the window)
+- McKinsey: 1 ✅ Big-3 (NEW lead this run — rotated-back top-priority slot, now filled)
+- BCG: 1 ✅ (NEW lead this run — rotated back)
+- PwC: 1 ✅ (NEW lead this run — rotated back)
+- WEF: 1 ✅
+- Deloitte: 1 ✅ Big-3
+- Conference Board: 1 ✅
+- Aon: 1 ✅ Big-3
+- Mercer: 1 ✅ (dropped from 2 to 1 as choice-replaces-cost-share is now the only Mercer lead in window)
+- WTW: 1 ✅
+- Gartner: 0 ❌ (rolled off)
+- Gallup: 0 ❌ (rolled off)
 
 ### Big-3 lead share in rolling 9
 
-- Now: 2/9 (22%) — Aon 1 + Deloitte 1
-- Was last window: 1/9 (11%)
-- Trend: still well below the 1/3 cap; healthy
+- Now: 3/9 (33%) — McKinsey 1 + Deloitte 1 + Aon 1 (exactly at the structural cap; all three Big-3 each lead exactly once)
+- Trend across the day: 1/9 → 2/9 → 3/9. At the ceiling now — next run should lean non-Big-3.
+
+**Near-perfect distribution again.** Every one of the 9 leads in the window is a distinct firm — no firm repeats. The rotation engine is self-correcting cleanly.
 
 ### Next-run flag
 
-- **McKinsey priority — still at 0 leads.** Should lead next run if a credible theme exists from State of Organizations 2026 Shifts not yet led (Speed/Resilience, Embracing Imperfection, productivity→performance) or other McKinsey 2026 work.
-- **BCG and PwC also rolled off (0 leads now).** Strong secondary priority — BCG AI Radar / Henderson Institute, PwC Workforce Hopes & Fears 2025/26.
-- **Mercer now at 2 leads.** Avoid Mercer leading a third post in the next 1-2 runs to let other firms catch up.
-- **Aon led today; avoid Aon leading again immediately.** Big-3 rotation should swing to McKinsey next.
+- **Gartner and Gallup rolled off (0 leads).** Both Tier 1/2 priority fills for the next run.
+- **Big-3 at the 3/9 ceiling.** Next run should lead with AT MOST 1 Big-3 (ideally 0) to bring the share back down. Prefer non-Big-3 leads: Gartner, Gallup (both 0), plus WEF / WTW / BCG / PwC / Conference Board (all at 1, eligible).
+- **No firm is over-rotated** — every firm sits at 0 or 1. Clean slate for rotation.
 
 Sources to surface in the next run:
-- **McKinsey State of Organizations 2026** — Shifts #1 (Speed/Resilience), #8 (Embracing imperfection), #3 (productivity→performance — not the same as the PM-rebuild we just covered)
-- **BCG AI Radar 2026 / Henderson Institute 2026** — beyond AI upskilling budget (used) and reshape stats (used)
-- **PwC Workforce Hopes & Fears 2026** — PDF on disk, only led once
-- **Gallup State of Global Workplace 2026** — beyond manager engagement (used)
-- **WEF Future of Jobs 2026** — beyond Reskilling Revolution scale (used)
+- **Gartner CHRO Priorities 2026** — Priority 5 (Strengthen HR function) angle not yet led standalone
+- **Gallup State of Global Workplace 2026** — thriving / intent-to-leave / choice-in-work (beyond manager engagement)
+- **WEF Future of Jobs 2026** — older-worker retention, green jobs, skill-displacement curves
+- **Newly discoverable credible global firms** via discovery pass
 
 ---
 

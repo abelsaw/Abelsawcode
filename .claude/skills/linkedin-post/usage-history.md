@@ -17,6 +17,30 @@ When excluding, match on **parent theme**, not slug — two slugs about "Human-A
 
 ## Used themes (most recent first)
 
+### Workforce financial stress as a productivity & retention risk (NEW parent theme)
+- Slugs: the-cheapest-retention-lever
+- Source stats: PwC 2026 Employee Financial Wellness Survey — employees rank financial wellbeing #1 concern (66%) vs employers near-last (23%); 59% stressed about money; 53% hold <$5,000 emergency savings; paycheck-to-paycheck staff lose ~2 productive days/yr to presenteeism (search-only); PwC Global Workforce Hopes & Fears 2025 financial-strain track (search-only); Mercer GTT 2026 — 70% say inflation/volatility raise financial stress (search-only); WTW Employee Financial Resilience 2026 (search-only)
+- Distinct from theme #8 (Benefits affordability crunch — employer-side plan cost + choice architecture, used 2026-06-21 run-2). This theme is employee-side financial precarity + its productivity/retention cost; lead stat is the 66% vs 23% priority mismatch.
+- Lead firm: PwC (Tier 2 — rotated back in; 0 leads in rolling-9 before this run)
+- Commits: (pending this run-3)
+- Date(s): 2026-06-21
+
+### AI time-reinvestment gap — saved hours leak without a redeployment system (NEW parent theme)
+- Slugs: saved-time-leaks
+- Source stats: BCG AI at Work 2026 (Fourth Edition, June 2026) — 42% of frontline AI users save a full workday a week, but 66% get little/no guidance on reinvesting it; >half not redeploying to higher-value work (search-only); McKinsey State of Orgs 2026 — "capability chasm" framing (search-only); Mercer GTT 2026 — value-exchange redesign (search-only)
+- Distinct from theme #1 (Work redesign at task level — about decomposing jobs to FIND AI ROI, used 2026-06-14) and theme #4 (Reskilling/human-skills hedge, used 2026-06-21 run-1). This theme is the downstream reinvestment problem: time is ALREADY saved and leaks back into busywork.
+- Lead firm: BCG (Tier 1 — rotated back in; 0 leads in rolling-9 before this run)
+- Commits: (pending this run-3)
+- Date(s): 2026-06-21
+
+### Speed + resilience as the 2026 organizational superpower (NEW parent theme)
+- Slugs: speed-is-a-design-choice
+- Source stats: McKinsey State of Orgs 2026 (Shift #1 Speed/Resilience) — ~50% of orgs say they are unprepared for future shocks; "bounce forward" firms pull ahead (search-only); Deloitte HCT 2026 — 7 in 10 leaders name "fast and nimble" as primary 3-year competitive strategy; stable-dynamics model (search-only); Mercer GTT 2026 — macro-volatility / job-security anxiety (search-only)
+- Distinct from theme #2 (HR function rebuild, used 2026-06-14) and theme #9 (PM rebuild/coaching, used 2026-06-21 run-2). This is operating-model speed + shock-resilience — McKinsey Shift #1, previously unused.
+- Lead firm: McKinsey (Big-3 — rotated-back top-priority slot; 0 leads in rolling-9 before this run)
+- Commits: (pending this run-3)
+- Date(s): 2026-06-21
+
 ### Performance-management rebuild — coaching effectiveness as the hidden bottleneck (recycle-adjacent to #11 PM reinvented, fresh coaching angle)
 - Slugs: the-lever-is-the-coach
 - Source stats: WTW 2026 Reinventing Performance Management — only 20% of managers are effective coaches (search-only); McKinsey State of Organizations 2026 — 75% of orgs fail to build high-performance cultures (search-only / HRZone coverage); Deloitte HCT 2026 — 68% global / 76% UK report change-fatigue wellbeing decline (search-only); Mercer GTT 2026 supporting (search-only)
