@@ -32,13 +32,13 @@ How do you balance the two?
 
 ## Bold — US vs China tone, no closing question (96 words)
 
-This is the new arms race, and Dario Amodei just named the stakes.
+This is the new arms race. Dario Amodei just named the stakes.
 
-China's open-source models, DeepSeek and Qwen, have closed most of the gap with US frontier labs, at a fraction of the cost. Cheap, capable, everywhere.
+China's open-source models, DeepSeek and Qwen, have closed most of the gap with US labs, at a fraction of the cost. Cheap, capable, everywhere.
 
-His warning is blunt. The more powerful these models get, the greater the cyber risk they carry. His prescription is blunter still: structured access to frontier models, chip controls that exclude China, hard limits on what crosses the line.
+His warning is blunt: the more powerful they get, the greater the cyber risk. His prescription, blunter still: structured access, chip controls that exclude China, hard limits at the border.
 
-Get the chips wrong, he argues, and we wake in a bipolar world. Two superpowers. Two AI stacks. Both moving at breakneck speed.
+Get the chips wrong, he argues, and we wake in a bipolar world. Two superpowers. Two AI stacks. Moving at breakneck speed.
 
 The race isn't coming. It's here.
 
