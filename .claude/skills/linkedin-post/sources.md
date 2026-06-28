@@ -31,7 +31,7 @@ below with the URL, firm name, report title, and discovery date.
 | SHRM | 2026 CHRO Priorities and Perspectives |
 | Bain | Aura labor market data |
 | KPMG | 2026 CEO Outlook (people section) |
-| Conference Board | CHRO Confidence Survey Q1 2026 |
+| Conference Board | CHRO Confidence Survey Q1/Q2 2026; CEO Confidence Q2 2026 |
 | Gartner | CHRO Priorities 2026 |
 
 ## Regional lens directive

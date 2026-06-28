@@ -1,23 +1,30 @@
 ---
 name: linkedin-post
-description: Generate 3 LinkedIn post options (≤50 words each) plus matching 5-slide bold-editorial carousels on HR best practices for a CHRO, sourced from 2026 research reports across Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup and other credible firms. The skill can actively discover NEW credible 2026 sources during research and append them to the catalog. Use when the user wants fresh LinkedIn content — phrases like "give me LinkedIn post options", "draft a LinkedIn carousel", "create LinkedIn content", "I need new posts", or invokes /linkedin-post.
+description: Generate 3 LinkedIn post options (≤50 words each) plus matching 7-slide carousels on HR best practices for a CHRO, sourced from 2026 research reports across Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup and other credible firms. Carousels render in one of three locked styles (hr-linkedin-option1 chip icons / option2 TOC tiles / option3 photo cover). The skill can actively discover NEW credible 2026 sources during research and append them to the catalog. Use when the user wants fresh LinkedIn content — phrases like "give me LinkedIn post options", "draft a LinkedIn carousel", "create LinkedIn content", "I need new posts", or invokes /linkedin-post.
 ---
 
 # LinkedIn post + carousel — on-demand
 
 You are running the `linkedin-post` skill. Produce **3 LinkedIn post options
-(each ≤50 words)** with matching **5-slide bold-editorial carousels**, sourced
-from 2026 HR research, ready for the user to review and publish.
+(each ≤50 words)** with matching **7-slide carousels**, sourced from 2026 HR
+research, ready for the user to review and publish.
 
 ## Optional arguments (parsed from the skill `args` string)
 
+- `with /hr-linkedin-option<N>` — carousel style. **Default: `option1`.** Pick the carousel design preset:
+  - `option1` — playful-iconic with geometric chip icons (default; most general-purpose)
+  - `option2` — playful-iconic with numbered TOC tiles (best for structured 4-part frameworks)
+  - `option3` — photo-driven cover (the user supplies a photo; pass `--palette cool` for cool-toned photos)
+  Each is a registered project skill with its own SKILL.md and renderer scripts.
 - `region: <apac|global>` — geographic lens. **Default: `apac`.** Asia Pacific is the default audience and source-weighting for this CHRO. Pass `region: global` to remove the regional anchor.
 - `theme: <topic>` — scope the posts to one topic (e.g. `theme: AI in HR`, `theme: pay transparency`). Default: surface the most-mentioned 2026 themes across the catalog.
 - `sources: +<Firm1>, +<Firm2>` — include named firms in addition to the catalog. Use `-<Firm>` to exclude.
 - `count: N` — produce N post options instead of the default 3 (cap at 5).
 - `discover: off` — disable the new-source discovery pass (default: on).
 
-If args are empty, run the default flow: `region: apac`, default themes, 3 options, discovery on.
+If args are empty, run the default flow: `region: apac`, default themes, 3 options, discovery on, carousel style `option1`.
+
+A common workflow: run once to produce drafts + carousels in one style, then the user re-invokes with a different `/hr-linkedin-optionN` (and/or a supplied photo) to re-render the SAME post bodies in another style. Save each style's output in a sibling directory (see Output locations) so all renderings stay available.
 
 ---
 
@@ -25,7 +32,7 @@ If args are empty, run the default flow: `region: apac`, default themes, 3 optio
 
 Read **three** inputs before invoking the scout:
 
-1. `.claude/skills/linkedin-post/sources.md` — the canonical Tier 1 / Tier 2 / Tier 3 source catalog plus any auto-discovered sources from prior runs.
+1. `.claude/skills/linkedin-post/sources.md` — the canonical Tier 1 / Tier 2 source catalog (Tier 3 was excluded 2026-05-22; an archive of the removed entries remains at the bottom of the file) plus any auto-discovered sources from prior runs, AND the **Lead-firm utilization (last 9 posts)** tracker.
 2. `.claude/skills/linkedin-post/usage-history.md` — every theme/slug used in prior runs of this skill.
 3. `reports/2026/` — any user-attached full PDFs of 2026 research reports. List the directory recursively; note which firms have a PDF present. The scout uses these as primary sources, tagging extracted claims `[PDF: {filename}, p.{n}]` instead of `[search-only]`. A parent theme on the dedup ledger CAN recycle when a PDF surfaces a fresh sub-angle (cite page/exhibit).
 
@@ -69,25 +76,74 @@ append them to the **Auto-discovered sources** section of
 
 Be conservative — only add what passes the discovery rules in the catalog.
 
-## Step 4 — Delegate to `hr-best-practices-writer`
+## Step 4 — Draft the posts and render the 7-slide carousels
 
-Invoke the `hr-best-practices-writer` agent with the same dedup exclusion
-set you gave the scout. The writer must NOT draft a post on an excluded
-parent theme. If the brief surfaces an angle that maps to an excluded
-parent theme, the writer should pick a different angle from a non-excluded
-theme instead.
+Using the same dedup exclusion set and source-balance constraints you gave
+the scout, draft the N post options and render their carousels. Do NOT draft
+on an excluded parent theme; if the brief surfaces an angle that maps to one,
+pick a different angle from a non-excluded theme.
 
-The writer reads the research brief and produces:
+You can run this step inline (read the brief, write the draft markdown, render
+the slides with the option scripts) or delegate the drafting to the
+`hr-best-practices-writer` agent — but note that agent is wired to the legacy
+Style C generator, so if you delegate, you must still re-render the carousels
+with the option1/2/3 scripts below. Inline is the default in current practice.
 
-- `posts/drafts/best-practices-YYYY-MM-DD.md` with the N post options (default 3).
-- 5-slide carousels at `posts/drafts/carousels/YYYY-MM-DD-option-N/slide-M.png`.
+### 4a — Write the post-draft markdown
 
-Style is locked: **bold editorial** (Style C) — top color band with the topic
-tag (white, uppercase) and oversized slide number; cream body with a big sans
-headline; short accent rule bottom-left. Accent rotates per option: navy (1),
-rust (2), moss (3). Plum (4) and slate (5) for runs with `count: 4` or `5`.
+Save `posts/drafts/best-practices-YYYY-MM-DD.md` (append `-run2`, `-run3`, …
+for additional same-day runs). One `## Option N — <slug>` section per post,
+each with a `---POST---` / `---END---` block holding the publishable body, plus
+metadata (lead firm, theme, source reports, carousel dir, slide specs, word
+count). Mirror the structure of prior drafts in `posts/drafts/`.
 
-All images are generated via `scripts/generate_post_image.py`.
+### 4b — Render the carousel (7 slides, in the chosen style)
+
+The carousel style comes from the `with /hr-linkedin-option<N>` argument
+(default `option1`). Each style is a registered skill with its own renderer
+scripts in `scripts/`. **Every carousel is 7 slides:**
+
+- **Slide 1** — cover (style-specific: chip icons / TOC tiles / photo)
+- **Slides 2-5** — four data/insight slides
+- **Slide 6** — action list ("What CHROs are doing now") — pass a multi-line
+  `--lead` (literal `\n` between items), drop `--bold`
+- **Slide 7** — dark-background conclusion (the ONLY dark slide in the carousel)
+
+The body shape on every content slide is two-part: a **headline** (the
+observation), a muted-regular **lead** (the bridge phrase), and a bold
+**payoff** (the punchline). Slide 7 must land as a **conclusion, not a
+question** — the bold payoff is the screenshot-worthy takeaway.
+
+Renderer scripts per style:
+
+| Style | Cover script | Content (slides 2-6) | Dark conclusion (slide 7) |
+|---|---|---|---|
+| option1 (chip icons) | `scripts/generate_post_image_playful_cover.py` | `scripts/generate_post_image_playful_content.py` | `scripts/generate_post_image_playful_dark_conclusion.py` |
+| option2 (TOC tiles) | `scripts/generate_post_image_playful_v2_cover.py` | `scripts/generate_post_image_playful_v2_content.py` | `scripts/generate_post_image_playful_v2_dark_conclusion.py` |
+| option3 (photo cover) | `scripts/generate_post_image_photo_cover.py` | `scripts/generate_post_image_photo_content.py` | `scripts/generate_post_image_photo_dark_conclusion.py` |
+
+The full CLI flags, palettes, fonts, and slide conventions for each style live
+in the style's own SKILL.md (`.claude/skills/hr-linkedin-option1/`,
+`.../option2/`, `.../option3/`). Read the relevant one before rendering.
+
+Style-specific notes:
+- **option2** — the cover passes a `--tiles "01:WORD,02:WORD,03:WORD,04:WORD"`
+  TOC; each content slide's `--tile-color` must match the cover-tile position
+  (slide 2 coral, 3 navy, 4 mustard, 5 dark_coral; slide 6 reuses mustard).
+- **option3** — the user supplies a photo (copy it into the carousel dir as
+  `source-photo.*`). Add `--palette cool` for cool-toned photos (navy
+  interiors, blue/steel, AI/holographic, cityscapes); default palette is warm.
+- **Lead-firm stat anchors slide 2.** The lead firm designated for each post
+  (per the source-balance rotation) is the firm whose stat headlines slide 2.
+
+Default brand tag is `CHRO` (the "Abel Saw" tag was removed 2026-06-02).
+
+### 4c — Environment notes
+
+A fresh container may be missing Pillow and/or poppler-utils. If a render
+fails with "Pillow not installed", run `pip install Pillow`. If PDF text
+extraction is needed and fails, run `apt-get update && apt-get install -y
+poppler-utils`.
 
 ## Step 5 — Voice & word-count enforcement
 
@@ -165,10 +221,14 @@ When the user picks a specific option, delegate to `linkedin-publisher`:
 ```bash
 python3 scripts/linkedin_post.py posts/drafts/best-practices-YYYY-MM-DD.md \
   --slug <chosen-slug> \
-  --carousel-dir posts/drafts/carousels/YYYY-MM-DD-option-<N> \
+  --carousel-dir posts/drafts/carousels/<carousel-dir-for-chosen-style> \
   --image-alt "<slide-1 headline>" \
   --dry-run
 ```
+
+Use the carousel directory that matches the style the user wants to publish
+(e.g. `…-option-1/` for chip icons, `…-option-1-tiles/` for TOC tiles,
+`…-option-1-photo/` for the photo cover — see Output locations).
 
 Show the dry-run output. On explicit "yes" / "publish", re-run without
 `--dry-run`. Never batch-publish without confirmation per option.
@@ -180,17 +240,24 @@ through the setup steps in `.env.example` instead of attempting to publish.
 
 ## Output locations (recap)
 
-- Research brief: `posts/drafts/best-practices-research-YYYY-MM-DD.md`
-- Post drafts: `posts/drafts/best-practices-YYYY-MM-DD.md`
-- Carousel slides: `posts/drafts/carousels/YYYY-MM-DD-option-N/slide-M.png`
-- Source catalog: `.claude/skills/linkedin-post/sources.md`
+- Research brief: `posts/drafts/best-practices-research-YYYY-MM-DD.md` (append `-run2`, `-run3` for same-day reruns)
+- Post drafts: `posts/drafts/best-practices-YYYY-MM-DD.md` (same `-runN` suffix)
+- Carousel slides: `posts/drafts/carousels/YYYY-MM-DD[-runN]-option-N[-STYLE]/slide-M.png`
+  - chip icons (option1): no style suffix — `…-option-1/`
+  - TOC tiles (option2): `…-option-1-tiles/`
+  - photo cover (option3): `…-option-1-photo/` (plus `-photo-v2/`, `-photo-v3/` for alternate photos)
+  - Each post's slides are `slide-1.png` … `slide-7.png`.
+- Source catalog + lead-firm tracker: `.claude/skills/linkedin-post/sources.md`
+- Usage history (theme dedup ledger): `.claude/skills/linkedin-post/usage-history.md`
+- Carousel style presets: `.claude/skills/hr-linkedin-option1/`, `…/option2/`, `…/option3/`
 
 ## Hard rules
 
 - **2026-only sources.** No 2025-or-earlier reports cited as 2026.
 - **≤50 words per post body**, including hashtags.
 - **No fabrication.** Every stat traces back to a source in the brief.
-- **5 slides per option, every time.** Three posts = three carousels = fifteen PNGs.
+- **7 slides per option, every time.** Three posts = three carousels = twenty-one PNGs. Slide 1 cover, slides 2-5 data/insight, slide 6 action list, slide 7 dark conclusion.
+- **Slide 7 ends with a conclusion, not a question.** The bold payoff is the takeaway.
 - **Persistence is silent but visible.** When you add a discovered source, mention it in your final report to the user ("Added Korn Ferry's 2026 Workforce Survey to the catalog — first time seen.") so they can audit the growing catalog.
 - **No theme overlap with prior runs.** Before drafting, the skill reads `.claude/skills/linkedin-post/usage-history.md` and excludes parent themes used within 14 days. After drafting, the skill appends the newly-used themes to the ledger. The user can manually delete an entry to allow recycling. If fewer than 3 non-excluded themes meet the cross-firm bar, stop and ask before drafting a smaller set.
 - **Lead-firm rotation across the rolling 9-post window.** Big-3 firms (McKinsey, Deloitte, Aon) may not lead more than 1 of every 3 posts in a single run. In the rolling 9-post window, every Tier 1 firm (Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup) must appear at least once, and at least 2 non-Big-3 Tier 1 firms (Mercer / WTW / Gartner / WEF / Gallup) must lead at least one post. Track utilization in `sources.md` after every run. If the rule blocks all available themes, surface the conflict in the brief and ask the user to relax it explicitly.
