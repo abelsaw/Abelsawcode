@@ -18,11 +18,11 @@ Dario Amodei made a point worth sitting with.
 
 The same forces democratising AI are the ones that worry him most.
 
-China's open-source models, like DeepSeek, now rival the frontier at a fraction of the cost. Powerful capability, spreading fast and cheap. His concern: as these models grow more capable, so do the cyber and security risks they carry.
+China's open-source models, like DeepSeek, now rival the frontier at a fraction of the cost. Powerful capability, spreading fast and cheap. His concern: as these models grow more capable, so do the cyber risks they carry.
 
 His answer leans toward control: structured access to frontier models, tighter chip trade, cooperation on the hardest risks.
 
-The deeper tension is ours to manage. Open access accelerates progress. It also widens the threat surface.
+The deeper tension is ours. Open access accelerates progress. It also widens the threat surface.
 
 How do you balance the two?
 
