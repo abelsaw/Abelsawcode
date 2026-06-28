@@ -18,9 +18,9 @@ Something quietly historic happened on June 26.
 
 Two frontier AI models launched the same Friday. OpenAI's GPT-5.6 and Anthropic's Mythos 5. Not to the market. To a cleared list.
 
-GPT-5.6 went to roughly 20 federally approved organizations. Mythos 5, to around 100 US institutions defending critical infrastructure. Both under the June 2 executive order, which gives the government up to 30 days to review powerful models before release.
+GPT-5.6 went to ~20 federally approved organizations. Mythos 5, to ~100 US institutions defending critical infrastructure. Both under the June 2 executive order: up to 30 days of government review before release.
 
-The pattern is the headline: the state is now in the deployment path.
+The headline: the state is now in the deployment path.
 
 Frontier AI just shifted from "ship first" to "clear first."
 
