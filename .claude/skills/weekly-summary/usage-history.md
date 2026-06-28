@@ -10,6 +10,30 @@ thread), manually delete its entry from the relevant week below.
 
 ## Past weeks (most recent first)
 
+### Week of 2026-06-26 (TECH-ONLY RE-RUN — scope-transition)
+- Window: 2026-06-22 to 2026-06-26
+- Length: 10 of 10
+- **Scope:** Pure tech & AI (per refactored skill — HR / workforce / culture / DEI excluded by design)
+- **Dedup note:** Softened dedup for this single run because the prior 2026-06-26 entry below ran under the OLD scope (CTO + HR + Business Strategy). 5 of this run's stories overlap with the prior run's tech stories (Jalapeño, Anthropic-Alibaba, Qualcomm-Modular, NVIDIA ISC, tokenmaxxing). Going forward, normal dedup applies against THIS entry.
+- Through-line: Same Friday, OpenAI shipped GPT-5.6 and Anthropic shipped Mythos 5 — both under US-government limited preview. OpenAI also taped out its first custom chip with Broadcom (Jalapeño). The model layer and its substrate moved together.
+- Three-lens balance: Models 3 · Infra 3 · Enterprise tech 4
+- Ranked stories 1-10:
+  1. gpt-5-6-sol-terra-luna-limited-preview: https://openai.com/index/previewing-gpt-5-6-sol/ — 7+
+  2. anthropic-mythos-5-us-gov-cleared: https://edition.cnn.com/2026/06/26/tech/anthropic-mythos-release — 4+
+  3. openai-broadcom-jalapeno-chip: https://www.cnbc.com/2026/06/24/openai-and-broadcom-reveal-jalapeno-first-ai-chip-in-partnership.html — 9+
+  4. qualcomm-modular-4b-acquisition: https://www.bloomberg.com/news/articles/2026-06-22/qualcomm-is-said-to-near-deal-for-ai-chip-startup-modular — 7+
+  5. anthropic-alibaba-qwen-distillation: https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html — 6+
+  6. check-point-vpn-cve-cisa-emergency-directive: https://www.esecurityplanet.com/weekly-roundup/zero-days-ai-exploits-and-supply-chain-risks-define-this-week-in-cybersecurity-in-june-2026/ — 3+
+  7. nvidia-isc-2026-bionemo-halos-eu: https://nvidianews.nvidia.com/news/latest — 4+
+  8. tokenmaxxing-to-efficiency-shift: https://www.cnbc.com/2026/06/26/openai-anthropic-new-ai-spending-reality-as-users-shift-to-efficiency.html — 4+
+  9. claude-enterprise-updates-batch: https://support.claude.com/en/articles/12138966-release-notes — 3+
+  10. openssl-pkcs7-rce-vulnerability: (OpenSSL Security Advisory, week of 2026-06-22) — 2+ [thin]
+- Post slug: frontier-and-substrate-rewired-same-week
+- Word count: ~445 / Character count: 2,940 / LinkedIn cap 3,000
+- Date: 2026-06-26 (run on 2026-06-28, scope-transition re-rank)
+- Post draft path: posts/drafts/weekly-summary-2026-06-26-tech.md
+- Research brief: posts/drafts/weekly-research-2026-06-26-tech.md
+
 ### Week of 2026-06-26 (Mon Jun 22 - Fri Jun 26)
 - Window: 2026-06-22 to 2026-06-26 (clamped from user-requested Jun 21-28)
 - Length: 10 of 10
