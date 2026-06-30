@@ -1,18 +1,30 @@
 ---
 name: weekly-summary
-description: Generate a single LinkedIn weekly-summary post for a Chief Technology Officer focused purely on technology and AI — covering the 10 most-cited stories of the Mon-Fri window ranked most-mentioned to least across a curated catalog (Tier-1 news US + global/APAC, AI labs, big tech, tech-research firms, and IT/CIO specialty outlets). Use when the user says "give me a weekly summary post", "draft my week-in-review", "wrap up the week", or invokes /weekly-summary.
+description: Generate a single LinkedIn weekly-summary post for a Chief Technology Officer focused purely on technology and AI — covering the 10 most-engaged tech/AI stories of the Mon-Fri window ranked by cross-platform engagement signal across LinkedIn, X/Twitter, Hacker News, and Reddit. Engagement is approximated via public visibility (WebSearch + visible like/upvote/point counts) — not API-measured. Use when the user says "give me a weekly summary post", "draft my week-in-review", "wrap up the week", or invokes /weekly-summary.
 ---
 
-# Weekly summary — Friday wrap on Technology & AI
+# Weekly summary — Friday wrap on Technology & AI (engagement-ranked)
 
-You are running the `weekly-summary` skill. Produce **one LinkedIn post (text only, no image)** that surfaces the **10 most-cited tech/AI stories of the Mon-Fri window**, ranked from most-mentioned to least-mentioned across the source catalog, written in the first-person voice of a **Chief Technology Officer whose remit is AI strategy, infrastructure, and enterprise technology** — reflecting on what shifted this week.
+You are running the `weekly-summary` skill. Produce **one LinkedIn post (text only, no image)** that surfaces the **10 most-engaged tech/AI stories of the Mon-Fri window**, ranked by **cross-platform engagement signal** across LinkedIn, X/Twitter, Hacker News, and Reddit, written in the first-person voice of a **Chief Technology Officer whose remit is AI strategy, infrastructure, and enterprise technology** — reflecting on what the practitioner community engaged with most this week.
 
-The three lenses to keep balanced across the top 10:
+## Fidelity caveat — read this first
+
+This skill **does not call any social-platform engagement API**. It approximates engagement using publicly visible signals via WebSearch:
+
+- LinkedIn posts surfaced in search results — visible like / comment / reshare counts when shown
+- X/Twitter posts — visible like / repost / reply counts when shown
+- Hacker News submissions — point count and comment count (publicly visible)
+- Reddit submissions — upvote count and comment count (publicly visible)
+
+The result is an **approximation, not a measurement**. Numbers are sampled, not exhaustive. Some platforms (especially LinkedIn) hide engagement counts behind login walls. State this caveat in every research brief and post so the reader knows the ranking is signal-based, not metric-perfect.
+
+## Three lenses to keep balanced across the top 10
+
 - **AI models & research** — frontier-lab releases, capability shifts, evaluations, safety, AI policy/regulation
 - **Infrastructure & compute** — chips, data centers, capex, networking, hyperscaler buildouts
 - **Enterprise tech & security** — adoption patterns, dev tools, productivity software, cybersecurity, enterprise AI deployment
 
-Not every week will have a 3-3-4 split. Rank by cross-citation first, then check for at least one story per lens — if a lens has zero entries in the top 10, name that in the brief.
+Not every week will have a 3-3-4 split. Rank by cross-platform engagement first, then check for at least one story per lens — if a lens has zero entries in the top 10, name that in the brief.
 
 The skill is designed for a **Friday afternoon manual trigger** covering the **Monday-Friday window of the current week**.
 
@@ -20,12 +32,12 @@ The skill is designed for a **Friday afternoon manual trigger** covering the **M
 
 - `week: previous` — cover Mon-Fri of the previous week instead of the current week. Default: current week.
 - `week: YYYY-MM-DD..YYYY-MM-DD` — explicit window override.
-- `theme: <topic>` — bias the picks toward a specific tech lens (e.g. `theme: agentic AI in enterprise`, `theme: AI chips`). Default: pure cross-citation ranking, no theme filter.
-- `sources: +<Source1>, -<Source2>` — add or exclude sources beyond the catalog.
+- `theme: <topic>` — bias the picks toward a specific tech lens (e.g. `theme: agentic AI in enterprise`, `theme: AI chips`). Default: pure engagement ranking, no theme filter.
+- `platforms: +<P1>, -<P2>` — add or exclude engagement platforms beyond the catalog default (LinkedIn / X / HN / Reddit).
 - `count: N` — produce a ranked list of N stories instead of 10 (cap at 15).
 - `urls: on` — include source URLs inline in the post body. Default: off (URLs live in the research brief only).
 
-If args are empty, run defaults: current week Mon-Fri, no theme filter, 10 ranked stories, URLs off.
+If args are empty, run defaults: current week Mon-Fri, no theme filter, 10 ranked stories, URLs off, all four platforms.
 
 ---
 
@@ -33,10 +45,10 @@ If args are empty, run defaults: current week Mon-Fri, no theme filter, 10 ranke
 
 Read **two** inputs before researching:
 
-1. `.claude/skills/weekly-summary/sources.md` — the canonical AI / tech source catalog plus any auto-discovered sources from prior runs.
-2. `.claude/skills/weekly-summary/usage-history.md` — every story URL and ranked list used in prior weekly-summary runs. If the file does not exist yet, treat the history as empty (this is the first run).
+1. `.claude/skills/weekly-summary/sources.md` — the canonical catalog: discovery-layer news outlets PLUS the engagement-platform sources (LinkedIn / X / HN / Reddit).
+2. `.claude/skills/weekly-summary/usage-history.md` — every story used in prior weekly-summary runs. If the file does not exist yet, treat the history as empty (this is the first run).
 
-From the usage history, extract the **exclusion set**: every story URL that appeared in the **last 3 weekly-summary runs**. Stories on this list are off-limits for this run — pick the next-strongest story instead. Theme overlap across weeks is allowed (some topics are sustained); story duplication is not.
+From the usage history, extract the **exclusion set**: every story slug used in the **last 3 weekly-summary runs**. Stories on this list are off-limits for this run — pick the next-strongest by engagement instead. Theme overlap across weeks is allowed (some topics are sustained); story duplication is not.
 
 ## Step 2 — Compute the week window
 
@@ -46,100 +58,140 @@ From the usage history, extract the **exclusion set**: every story URL that appe
 - If `week: YYYY-MM-DD..YYYY-MM-DD` is passed, use that exact range.
 - Print the resolved window before researching: `Window: {start} to {end}`.
 
-## Step 3 — Research across AI models, infrastructure, and enterprise tech
+## Step 3 — Discovery (find candidate stories)
 
-Run WebSearch queries against the catalog in `sources.md`, sweeping all groups:
+The news catalog in `sources.md` is the **discovery layer** — it tells you what events HAPPENED inside the window. Sweep it the way prior versions of this skill did, but **only to assemble a candidate pool of 15-25 tech/AI stories** — not to rank.
 
-- **Tier-1 news (US + global/APAC):** TechCrunch, FT, WSJ, NYT, Bloomberg, Reuters, The Information, CNBC, The Economist, Axios, BBC, Guardian, Nikkei Asia, SCMP, Straits Times — the citations that clear the bar.
-- **Tier-1 tech thought leadership:** MIT Technology Review, Stanford HAI, Stratechery, HBR / MIT Sloan Management Review (tech pieces only).
-- **AI labs:** Anthropic, OpenAI, Google DeepMind, Meta AI, Mistral, Cohere, xAI — model releases, research, policy/safety, enterprise launches.
+Cover these discovery groups:
+- **Tier-1 news (US + global/APAC):** TechCrunch, FT, WSJ, NYT, Bloomberg, Reuters, The Information, CNBC, The Economist, Axios, BBC, Guardian, Nikkei Asia, SCMP, Straits Times.
+- **AI labs:** Anthropic, OpenAI, Google DeepMind, Meta AI, Mistral, Cohere, xAI.
 - **Big tech newsrooms:** Microsoft, AWS, Google, NVIDIA, IBM, Intel, Oracle, Apple, Meta.
-- **Tech-research / analyst firms:** Gartner, Forrester, IDC, SemiAnalysis (chip beat), McKinsey Digital, BCG X, Bain Technology, Deloitte Tech Trends — tech and AI research only.
-- **IT / CIO specialty (supplies second citation):** CIO.com, The Register, InfoQ, VentureBeat, SiliconANGLE, Cybersecurity Dive, SecurityWeek, Pragmatic Engineer, Latent Space, Import AI, The New Stack, DataCenterDynamics, DigiTimes.
 
-**Excluded sources** (per `sources.md` "Do not count" list) MUST NOT contribute to the citation count. When a hype/aggregator/crypto outlet shows up in WebSearch, trace to the underlying primary source and cite that.
+**Out of scope (do not include):** HR / workforce / talent / layoffs / org-design / culture / DEI. Even when a tech company runs a layoff cycle, the workforce angle is excluded by design.
 
-For each candidate, **WebFetch the source** to confirm date, claims, and that it falls inside the resolved week. Never include a story you have not actually read.
+## Step 4 — Engagement sampling (the new ranking signal)
 
-**Cross-citation rule (per `sources.md`):** a story qualifies for the top 10 only when it has **≥2 catalog citations AND at least one of those is from a Tier-1 group** (Tier-1 news US, Tier-1 news global/APAC, Tier-1 tech thought leadership, AI lab, big tech newsroom, or a tech-research firm's own publication). IT specialty outlets supply the second citation but cannot alone clear the bar.
+For EACH candidate story from Step 3, run **targeted WebSearch queries against the four engagement platforms** to gauge how the community engaged with it.
 
-**Ranking signal:** cross-citation count is the primary ranking — most-cited at rank 1, least-cited at rank 10. Use novelty and technical significance only to break ties.
+Recommended query patterns:
 
-Aim to surface **15-20 ranked candidates** so you can confidently identify the top 10 by citation count (with the next 5-10 visible for tie-breaks and audit). After picking the top 10, check the **three-lens balance** (Models / Infra / Enterprise tech) — if any lens has zero entries, name that gap in the brief.
+**LinkedIn**
+- `site:linkedin.com/posts "<story keywords>" "<month> 2026"` — surfaces individual public posts; check visible like/comment/reshare counts where shown
+- `linkedin.com pulse "<topic>" <month> 2026` — surfaces LinkedIn articles (longer-form)
+- Note: LinkedIn often hides counts behind login; record "engagement visible: yes/no/partial"
 
-**Out of scope (do not include):** HR / workforce / talent / layoffs / org-design / culture / DEI / benefits / compensation. Even when a tech company runs a layoff cycle, do NOT include it unless the headline is a tech/AI shift (e.g. "AI-driven product reorg"); the workforce angle alone is excluded by design.
+**X/Twitter**
+- `site:x.com "<story keywords>"` and `site:twitter.com "<story keywords>"` — visible likes/reposts/replies when shown
+- News aggregators often quote viral X posts with their numbers — search `"X post" "<story keywords>" likes`
 
-## Step 4 — Rank 10 stories by citation count
+**Hacker News**
+- `site:news.ycombinator.com "<story keywords>"` — point count and comment count are publicly visible
+- Hacker News rewards original-source submissions; expect to find the canonical story URL submitted there
 
-From the candidate pool, select the **top 10 by cross-citation count**, ranked most-cited (rank 1) to least-cited (rank 10).
+**Reddit** (these subs are the AI/tech core)
+- `site:reddit.com r/MachineLearning "<story keywords>"`
+- `site:reddit.com r/singularity "<story keywords>"`
+- `site:reddit.com r/OpenAI "<story keywords>"`
+- `site:reddit.com r/Anthropic "<story keywords>"`
+- `site:reddit.com r/LocalLLaMA "<story keywords>"`
+- `site:reddit.com r/programming "<story keywords>"`
+- `site:reddit.com r/technology "<story keywords>"`
+- Reddit upvotes and comment counts are publicly visible
+
+For each candidate, record:
+- **Platform-signal count** (0-4): how many of the four platforms showed measurable engagement on this story
+- **Visible engagement numbers per platform** (when available): "HN 1,247 points / 423 comments · Reddit r/MachineLearning 3.4k upvotes · LinkedIn ~12k likes (sampled) · X 8.2k reposts"
+- **A rough engagement tier**: high / medium / low (qualitative — based on whether numbers stand out vs typical platform baselines for tech content)
+
+## Step 5 — Rank by cross-platform engagement signal
+
+Rank the candidates by, in this order:
+
+1. **Platform-signal count first** — a story that lands measurably on 4 of 4 platforms ranks above a story that lands on 2, all else equal. This is the analogue of "cross-citation count" from prior versions.
+2. **Within the same signal-count, by visible engagement volume** — sum the engagement signals where they're visible. Heuristic weights for unit-normalization:
+   - HN point ×10 (rare, curated audience)
+   - Reddit upvote ×1 (in the AI/tech subs above)
+   - LinkedIn like ×2 (when visible)
+   - X like ×1 (when visible)
+   - HN/Reddit comment counts add a 0.5× multiplier (discussion depth signal)
+3. **Tie-break by novelty and technical significance** — the original ranking signal moves down here.
 
 Each ranked story must:
-- Be inside the resolved week window.
-- Come from at least 2 credible sources in the catalog (cross-citation bar).
+- Be inside the resolved week window (the underlying news event, not necessarily the engagement). It's fine if engagement accrued through Saturday; the underlying story must have broken Mon-Fri.
+- Show measurable engagement on **at least 2 of 4 platforms** (cross-platform bar — analogue of the prior 2-citation rule).
 - Not be on the exclusion set from the prior 3 runs.
-- Be a tech / AI story (not HR, workforce, or culture — see Step 3 exclusion).
+- Be a tech / AI story (HR / workforce / culture excluded per Step 3).
 
-If fewer than 10 stories clear the ≥2-citation bar, fill to 10 with the next-strongest candidates and **flag in the brief** which entries cleared by a thinner margin. If fewer than 6 clear the bar, stop and report back so the user can relax constraints.
+If fewer than 10 stories clear the 2-platform bar, fill to 10 with the next-strongest single-platform candidates and **flag in the brief** which entries cleared by a thinner margin. If fewer than 6 clear the bar, stop and report back so the user can relax constraints.
 
-A **shared theme is optional**, not required. If a clean through-line emerges from the top stories, name it in the brief and the post. If not, present the ranked list as a landscape view — the value is the ranking, not the synthesis.
+A **shared theme is optional**. If a clean through-line emerges, name it. If not, present the ranked list as a landscape view.
 
-## Step 5 — Save the research brief
+## Step 6 — Save the research brief
 
-Save to `posts/drafts/weekly-research-YYYY-MM-DD.md` (date = the resolved Friday) using this template:
+Save to `posts/drafts/weekly-research-YYYY-MM-DD.md` using this template:
 
 ```markdown
 # Weekly research brief — {Friday YYYY-MM-DD}
 Window: {Mon YYYY-MM-DD} to {Fri YYYY-MM-DD}
 
+## Fidelity note
+Engagement is approximated via WebSearch + publicly visible counts.
+Not API-measured. Numbers are sampled, not exhaustive.
+
 ## Through-line (optional)
-{One-sentence statement of the connecting thread if one emerges, or "No single through-line this week — see ranked landscape below."}
+{One-sentence statement of the connecting thread, or "No single through-line this week — see ranked landscape below."}
 
 ## Three-lens balance check (Models / Infra / Enterprise tech)
 - Models & research: {ranks}
 - Infrastructure & compute: {ranks}
 - Enterprise tech & security: {ranks}
 
-## Ranked top 10 (most-cited → least-cited)
+## Ranked top 10 (most-engaged → least-engaged)
 
-### 1. {short slug} — {citation count}
+### 1. {short slug} — engagement: {signal count}/4 platforms
 - **Headline:** {original headline}
-- **Lead source:** {Outlet}, {date}, {URL}
-- **Also covered by:** {other outlets in the catalog, with dates}
+- **Lead source (discovery):** {Outlet}, {date}, {URL}
+- **Engagement signal:**
+  - LinkedIn: {visible likes/comments/reshares OR "counts hidden / sampled"}
+  - X: {visible likes/reposts OR "not surfaced"}
+  - Hacker News: {points / comments OR "not surfaced"}
+  - Reddit: {sub / upvotes / comments OR "not surfaced"}
 - **What happened:** {3-4 sentence factual summary, no interpretation}
 - **Why a CTO cares:** {1-2 sentences on the technical or deployment implication}
 
-### 2. {short slug} — {citation count}
+### 2. {short slug} — engagement: {signal count}/4 platforms
 ...
 
-### 10. {short slug} — {citation count}
+### 10. {short slug} — engagement: {signal count}/4 platforms
 ...
 
 ## Candidates considered but not in the top 10
-- {headline} — {citation count} — {reason ranked below the cut}
+- {headline} — {signal count}/4 — {reason ranked below the cut}
 ```
 
-## Step 6 — Persist any newly discovered sources
+## Step 7 — Persist any newly discovered sources
 
-If your searches surfaced credible new tech outlets/firms not yet in `sources.md` that you actually cited in the brief, append them to the **Auto-discovered sources** section using the format in `sources.md`. Be conservative — only add sources that meet the discovery rules in the catalog.
+If your searches surfaced credible new discovery outlets OR engagement-platform subs not yet in `sources.md`, append them to **Auto-discovered sources** using the catalog's format.
 
-## Step 7 — Draft one ranked-digest post
+## Step 8 — Draft one ranked-digest post
 
 Save to `posts/drafts/weekly-summary-YYYY-MM-DD.md`. Produce **one post** with this shape:
 
-- **Opening (50-80 words):** short CTO framing of the week — the through-line if one emerged, otherwise the landscape ("ten things landed this week; here they are in order of how loudly").
-- **Ranked items 1-10:** each entry is **2-3 sentences (~30-45 words)** — the headline as one line, then the CTO read on it. Numbered explicitly. No source URLs by default (set `urls: on` to include them).
-- **Closing (40-80 words):** the one move the CTO is making off the back of the week, or the open technical/architectural question they're carrying.
+- **Opening (50-80 words):** short CTO framing — note that ranking is by community engagement, not news coverage, and the through-line if one emerged.
+- **Ranked items 1-10:** each entry is **2-3 sentences (~30-45 words)** — the headline as one line, then the CTO read on it. Numbered explicitly.
+- **Closing (40-80 words):** the one move the CTO is making off the back of the week, or the open question they're carrying.
 - **3-5 hashtags** off the week's tech themes.
 
 Target body length: **400-600 words** excluding hashtags. **Hard cap: 2,900 characters** (LinkedIn's limit is 3,000).
 
-Use this file template (the `---POST---` / `---END---` markers matter — `linkedin-publisher` reads them to extract the publishable text):
+Use this file template (the `---POST---` / `---END---` markers matter):
 
 ```markdown
 # Weekly summary — {Friday YYYY-MM-DD}
 
 ## Post 1 — {slug}
-- **Through-line:** {one-line if any, else "landscape view"}
+- **Through-line:** {one-line if any, else "engagement landscape view"}
+- **Ranking signal:** cross-platform engagement (LinkedIn / X / HN / Reddit), approximated via public visibility
 - **Stories ranked 1-10:** {comma-separated slugs in ranked order}
 - **Three-lens balance:** Models {N} · Infra {M} · Enterprise tech {K}
 - **Word count:** {N} (excl. hashtags)
@@ -148,7 +200,7 @@ Use this file template (the `---POST---` / `---END---` markers matter — `linke
 - **Status:** draft
 
 ---POST---
-{Opening framing.}
+{Opening framing — mention "what the practitioner community engaged with most" rather than "what got covered most".}
 
 1. {Story 1 headline}. {1-2 sentence CTO read.}
 
@@ -164,58 +216,60 @@ Use this file template (the `---POST---` / `---END---` markers matter — `linke
 ---END---
 ```
 
-## Step 8 — Voice & length enforcement
+## Step 9 — Voice & length enforcement
 
-The CTO voice is **professional, technical, progressive, bold, humble, and learning** — bold AND humble in the same breath. Take a position on the landscape; show you're still figuring it out.
-
-Voice rules:
+Voice rules unchanged from prior versions:
 - **First person.** "I sat with ten stories this week." "What I'm watching in the stack." "I don't have the answer yet."
-- **Bold.** Stand behind the ranking. Strong declaratives in the CTO reads. No hedging the whole post.
-- **Technical, not technicalist.** Use real numbers (parameters, tokens-per-dollar, throughput, capex) when they sharpen the point. Skip the deep math.
-- **Progressive.** Forward-looking. Frame what's becoming possible architecturally.
-- **Humble.** Name what you don't know. Worn lightly — confidence and curiosity together.
-- **Learning.** Show the update where it lands ("two weeks ago I would have said X").
+- **Bold.** Stand behind the ranking. Strong declaratives in the CTO reads.
+- **Technical, not technicalist.** Use real numbers when they sharpen the point.
+- **Progressive.** Forward-looking.
+- **Humble.** Name what you don't know.
+- **Learning.** Show updates ("two weeks ago I would have said X").
 - **No corporate jargon, no hype words, no emojis.**
-- **No AI-tells:** delve, tapestry, navigating the landscape, in conclusion, moreover, furthermore, in today's fast-paced world.
-- **Each ranked item is 2-3 sentences max.** Numbered prefix. The headline first, then the CTO read.
-- **3-5 hashtags max**, lowercase or CamelCase, off the week's tech themes (examples: #AILeadership #AIInfrastructure #EnterpriseAI #AgenticAI #TechStrategy).
+- **No AI-tells:** delve, tapestry, navigating the landscape, in conclusion, moreover, furthermore.
+- **Each ranked item is 2-3 sentences max.**
+- **3-5 hashtags max.**
 
-Length enforcement: before presenting to the user, **count words in the `---POST---` block (excluding hashtags) and confirm it is between 400 and 600. Confirm character count is under 2,900.** If outside the range, revise. Report both counts to the user.
+**Engagement-ranking-specific voice notes:**
+- Mention up front that the ranking reflects what the community **engaged with**, not what news outlets covered. That difference is the value of this version.
+- When a story has dramatic single-platform engagement (e.g. 5K HN points), call that out — it's a signal of depth, not just breadth.
+- When a heavily-covered news story didn't generate platform engagement, that's worth naming in the closing — "the news cycle isn't always the practitioner cycle."
 
-## Step 9 — Present compactly to the user
+Length enforcement: before presenting, count words in the `---POST---` block (excluding hashtags) and confirm 400-600. Confirm chars under 2,900.
+
+## Step 10 — Present compactly to the user
 
 Show, in this order:
 
-1. **Resolved window** and **through-line** (or "landscape view, no single through-line").
-2. **The ranked top 10** — slug, citation count, lead source, one-line headline. Most-cited at the top.
+1. **Resolved window** and **through-line** (or "engagement landscape view").
+2. **The ranked top 10** — slug, platform-signal count, key engagement number, one-line headline.
 3. **Three-lens balance** — Models / Infra / Enterprise tech counts.
 4. **The drafted post** — slug, word count, character count, first 200 chars of the body.
 5. **Path to the draft file and research brief.**
+6. **Fidelity reminder** — "ranking signal approximated via WebSearch, not API-measured."
 
 End with: "Want me to revise it, or publish?"
 
-## Step 9.5 — Append to usage history
+## Step 10.5 — Append to usage history
 
-Immediately after the draft is written (BEFORE the user picks publish), append to `.claude/skills/weekly-summary/usage-history.md`:
+Append to `.claude/skills/weekly-summary/usage-history.md` immediately after the draft is written:
 
 ```markdown
 ### Week of {Friday YYYY-MM-DD}
-- Through-line: {one-liner if any, else "landscape view"}
+- Ranking signal: cross-platform engagement (LinkedIn / X / HN / Reddit)
+- Through-line: {one-liner if any, else "engagement landscape view"}
 - Three-lens balance: Models {N} · Infra {M} · Enterprise tech {K}
 - Ranked stories 1-10:
-  1. {slug-1}: {URL} — {citation count}
-  2. {slug-2}: {URL} — {citation count}
+  1. {slug-1}: {URL} — {signal-count}/4 — {key engagement number}
+  2. {slug-2}: {URL} — {signal-count}/4 — {key engagement number}
   ...
-  10. {slug-10}: {URL} — {citation count}
 - Post slug: {post-slug}
 - Date: {YYYY-MM-DD}
 ```
 
-Append to the top of the "Past weeks (most recent first)" section. Create the file if it does not exist.
+## Step 11 — Publish on approval
 
-## Step 10 — Publish on approval
-
-When the user approves, delegate to `linkedin-publisher`:
+When the user approves:
 
 ```bash
 python3 scripts/linkedin_post.py posts/drafts/weekly-summary-YYYY-MM-DD.md \
@@ -223,9 +277,7 @@ python3 scripts/linkedin_post.py posts/drafts/weekly-summary-YYYY-MM-DD.md \
   --dry-run
 ```
 
-Show the dry-run output. On explicit "yes" / "publish", re-run without `--dry-run`. No carousel, no image — weekly summary is text-only.
-
-If `LINKEDIN_ACCESS_TOKEN` or `LINKEDIN_AUTHOR_URN` are not set, walk the user through `.env.example` instead of attempting to publish.
+Show the dry-run. On explicit "yes" / "publish", re-run without `--dry-run`.
 
 ---
 
@@ -238,13 +290,14 @@ If `LINKEDIN_ACCESS_TOKEN` or `LINKEDIN_AUTHOR_URN` are not set, walk the user t
 
 ## Hard rules
 
-- **Mon-Fri window only.** Every story dates inside the resolved week. No older stories framed as this week's.
-- **Top 10 ranked by cross-citation count.** Most-mentioned at rank 1. Ties broken by novelty and technical significance.
-- **Pure tech / AI scope.** No HR, workforce, layoffs, talent, culture, or DEI stories. If a layoff is genuinely a tech-strategy shift (e.g. agentic restructure, AI-product reorg), frame the tech angle, not the workforce one — and only if no purer tech story would otherwise rank.
-- **Each story cross-cited by ≥2 credible sources** in the catalog (flag any rank that clears by a thinner margin).
-- **400-600 words per post body** (excluding hashtags). **Under 2,900 characters total.** Verify before presenting.
-- **No story repeats across the last 3 weekly summaries.** The usage history is the ledger.
-- **No fabrication.** Every URL is one you actually fetched. Every claim traces to a source in the brief.
-- **No images, no carousel.** Weekly summary is text-only by design.
+- **Mon-Fri window only** for the underlying story; engagement may accrue through the weekend.
+- **Top 10 ranked by cross-platform engagement signal.** Most-engaged at rank 1.
+- **Each story shows measurable engagement on ≥2 of 4 platforms** (flag thin entries).
+- **Pure tech / AI scope** — no HR, workforce, layoffs, talent, culture, DEI.
+- **400-600 words per post body** (excluding hashtags). **Under 2,900 characters.**
+- **No story repeats across the last 3 weekly summaries.**
+- **No fabrication.** Every URL is one you actually fetched. Every engagement number traces to a visible source — if a number can't be verified, write "not visible" rather than guessing.
+- **Fidelity caveat** stated in every brief and once in the post or its accompanying note.
+- **No images, no carousel.** Weekly summary is text-only.
 - **URLs default off** in post body — `urls: on` to include them. Citations always remain in the research brief.
-- **Bold AND humble.** The voice takes positions on the ranking and admits what it's still learning, in the same post.
+- **Bold AND humble.** Take positions on what the community engaged with and admit when the engagement signal is approximate.
