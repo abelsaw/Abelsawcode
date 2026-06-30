@@ -88,49 +88,49 @@ most recent 9 (older rows roll off).
 
 | Date | Slug | Lead firm | Supporting firms |
 |---|---|---|---|
-| 2026-06-21 | fund-the-humans | WEF | PwC, Mercer, BCG |
-| 2026-06-21 | decisions-that-echo | Deloitte | BCG, Mercer, Aon |
-| 2026-06-21 | hr-is-the-steady-hand | Conference Board | SHRM, Aon, Mercer |
 | 2026-06-21 | pay-transparency-is-a-board-question | Aon | Mercer, WTW |
 | 2026-06-21 | choice-replaces-cost-share | Mercer | Aon, WTW |
 | 2026-06-21 | the-lever-is-the-coach | WTW | McKinsey, Deloitte |
 | 2026-06-21 | speed-is-a-design-choice | McKinsey | Deloitte, Mercer |
 | 2026-06-21 | saved-time-leaks | BCG | McKinsey, Mercer |
 | 2026-06-21 | the-cheapest-retention-lever | PwC | Mercer, WTW |
+| 2026-06-21 | make-change-boring | Gartner | Deloitte, McKinsey |
+| 2026-06-21 | the-longevity-dividend | WEF | Mercer, Aon |
+| 2026-06-21 | the-thriving-gap | Gallup | Deloitte |
 
-(The three 2026-06-14 entries — productivity-hides-in-redesign, embedded-or-absorbed, manager-wellbeing-is-infrastructure — rolled off the rolling-9 window after this run-3 was added. The window is now entirely 2026-06-21 — 9 posts across 3 runs in one day.)
+(The first three 2026-06-21 entries — fund-the-humans (WEF), decisions-that-echo (Deloitte), hr-is-the-steady-hand (Conference Board) — rolled off the rolling-9 window after this run-4 was added.)
 
 ### Rolling tally (last 9 posts as lead firm)
 
-- McKinsey: 1 ✅ Big-3 (NEW lead this run — rotated-back top-priority slot, now filled)
-- BCG: 1 ✅ (NEW lead this run — rotated back)
-- PwC: 1 ✅ (NEW lead this run — rotated back)
-- WEF: 1 ✅
-- Deloitte: 1 ✅ Big-3
-- Conference Board: 1 ✅
 - Aon: 1 ✅ Big-3
-- Mercer: 1 ✅ (dropped from 2 to 1 as choice-replaces-cost-share is now the only Mercer lead in window)
+- Mercer: 1 ✅
 - WTW: 1 ✅
-- Gartner: 0 ❌ (rolled off)
-- Gallup: 0 ❌ (rolled off)
+- McKinsey: 1 ✅ Big-3
+- BCG: 1 ✅
+- PwC: 1 ✅
+- Gartner: 1 ✅ Tier 2 (NEW lead this run — 0-lead priority slot filled)
+- WEF: 1 ✅ (NEW lead this run)
+- Gallup: 1 ✅ Tier 1 (NEW lead this run — 0-lead priority slot filled)
+- Deloitte: 0 ❌ Big-3 (rolled off — priority for next run)
+- Conference Board: 0 ❌ (rolled off)
 
 ### Big-3 lead share in rolling 9
 
-- Now: 3/9 (33%) — McKinsey 1 + Deloitte 1 + Aon 1 (exactly at the structural cap; all three Big-3 each lead exactly once)
-- Trend across the day: 1/9 → 2/9 → 3/9. At the ceiling now — next run should lean non-Big-3.
+- Now: 2/9 (22%) — Aon 1 + McKinsey 1 (Deloitte rolled off)
+- Trend across the day: 1/9 → 2/9 → 3/9 → 2/9. Self-correcting around the 22-33% band, well under control.
 
-**Near-perfect distribution again.** Every one of the 9 leads in the window is a distinct firm — no firm repeats. The rotation engine is self-correcting cleanly.
+**Near-perfect distribution holds.** Every one of the 9 leads is a distinct firm. Gartner and Gallup (the two 0-lead firms flagged last run) were both filled this run — the rotation engine is doing exactly what it should.
 
 ### Next-run flag
 
-- **Gartner and Gallup rolled off (0 leads).** Both Tier 1/2 priority fills for the next run.
-- **Big-3 at the 3/9 ceiling.** Next run should lead with AT MOST 1 Big-3 (ideally 0) to bring the share back down. Prefer non-Big-3 leads: Gartner, Gallup (both 0), plus WEF / WTW / BCG / PwC / Conference Board (all at 1, eligible).
-- **No firm is over-rotated** — every firm sits at 0 or 1. Clean slate for rotation.
+- **Deloitte and Conference Board rolled off (0 leads).** Both priority fills for the next run; Deloitte is the only Big-3 at 0, so it's the natural Big-3 lead next time.
+- **Big-3 at 2/9** — room for 1 more Big-3 lead next run (ideally Deloitte).
+- **No firm over-rotated** — every firm at 0 or 1. Clean slate.
 
 Sources to surface in the next run:
-- **Gartner CHRO Priorities 2026** — Priority 5 (Strengthen HR function) angle not yet led standalone
-- **Gallup State of Global Workplace 2026** — thriving / intent-to-leave / choice-in-work (beyond manager engagement)
-- **WEF Future of Jobs 2026** — older-worker retention, green jobs, skill-displacement curves
+- **Deloitte HCT 2026** — chapters not yet led standalone (board oversight, risk reframing, productivity→performance)
+- **Conference Board** — a survey cut beyond CHRO/CEO confidence (already used)
+- **Gallup State of Global Workplace 2026** — intent-to-leave / choice-in-work (engagement + thriving now both used)
 - **Newly discoverable credible global firms** via discovery pass
 
 ---

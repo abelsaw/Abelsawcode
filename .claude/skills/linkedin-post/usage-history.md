@@ -17,6 +17,30 @@ When excluding, match on **parent theme**, not slug — two slugs about "Human-A
 
 ## Used themes (most recent first)
 
+### The thriving gap — wellbeing stagnation beyond engagement (NEW parent theme)
+- Slugs: the-thriving-gap
+- Source stats: Gallup State of the Global Workplace 2026 — only 34% of employees are thriving (two in three are not); 40% report daily stress; engagement at 20%; low engagement costs ~$10T/yr (search-only); Deloitte HCT 2026 — 68% globally say workplace change harmed their wellbeing, 76% UK (search-only)
+- Distinct from theme #3 (Manager engagement collapse, Gallup 22%, used 2026-06-14) — that is manager-as-leading-indicator. This is employee thriving / life-evaluation as the metric that beats engagement for predicting retention.
+- Lead firm: Gallup (Tier 1 — 0-lead priority slot filled this run)
+- Commits: (pending this run-4)
+- Date(s): 2026-06-21
+
+### The longevity dividend — retaining 55+ workers (NEW parent theme)
+- Slugs: the-longevity-dividend
+- Source stats: WEF Future of Jobs 2026 / "4 ways to retain older workers" — 150M jobs shift to over-55s by the 2030s; flexibility (not pay) is the #1 factor for 50-64s choosing a job (search-only); Aon aging-workforce 2026 — 35% of 55-64s trained last year vs 48% of 35-54s (search-only); Mercer longevity-economy 2026; McKinsey Health Institute ~$5T older-worker output (search-only)
+- Distinct from theme #4 (Reskilling/human-skills hedge, used 2026-06-21 run-1) — that is AI-skills scale. This is demographic retention + age-inclusive job design.
+- Lead firm: WEF (Tier 1)
+- Commits: (pending this run-4)
+- Date(s): 2026-06-21
+
+### Change is ungovernable — routinize change, don't inspire it (NEW parent theme)
+- Slugs: make-change-boring
+- Source stats: Gartner CHRO Priorities 2026 — 73% of HR leaders report change fatigue; routinizing change ~3x more effective than inspiring it; only 32% get healthy adoption (search-only); Deloitte HCT 2026 — one-third of workers went through 15 major changes last year, only 27% say org manages change well ("changefulness") (search-only); McKinsey State of Orgs 2026 — "business as change" (search-only)
+- Distinct from theme #2 (HR function rebuild, also Gartner-led, used 2026-06-14 — about operating model) and theme #10 (Speed + resilience, used 2026-06-21 run-3 — about org speed). This is change ADOPTION CAPACITY / change-fatigue specifically.
+- Lead firm: Gartner (Tier 2 — 0-lead priority slot filled this run)
+- Commits: (pending this run-4)
+- Date(s): 2026-06-21
+
 ### Workforce financial stress as a productivity & retention risk (NEW parent theme)
 - Slugs: the-cheapest-retention-lever
 - Source stats: PwC 2026 Employee Financial Wellness Survey — employees rank financial wellbeing #1 concern (66%) vs employers near-last (23%); 59% stressed about money; 53% hold <$5,000 emergency savings; paycheck-to-paycheck staff lose ~2 productive days/yr to presenteeism (search-only); PwC Global Workforce Hopes & Fears 2025 financial-strain track (search-only); Mercer GTT 2026 — 70% say inflation/volatility raise financial stress (search-only); WTW Employee Financial Resilience 2026 (search-only)
