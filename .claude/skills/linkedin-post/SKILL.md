@@ -26,6 +26,19 @@ If args are empty, run the default flow: `region: apac`, default themes, 3 optio
 
 A common workflow: run once to produce drafts + carousels in one style, then the user re-invokes with a different `/hr-linkedin-optionN` (and/or a supplied photo) to re-render the SAME post bodies in another style. Save each style's output in a sibling directory (see Output locations) so all renderings stay available.
 
+## Primary objective — drive high LinkedIn engagement
+
+Every post is optimized for **engagement** (stops, dwell time, comments, saves, reshares, profile visits) — not just for being correct. Engagement is the goal the drafting, the carousel, and the option-ranking all serve. The rule is: **earn the engagement, don't bait it.** This means no clickbait, no manufactured outrage, no "comment YES if you agree", no withheld-payoff teasing — those conflict with the locked professional/progressive/bold voice and erode a CHRO's credibility. Instead, engagement comes from genuine signal:
+
+- **A scroll-stopping first line.** LinkedIn truncates at ~140-210 chars ("…see more"). The opening line must carry a complete, surprising, or counter-intuitive claim that earns the click to expand. Lead with the sharpest idea, never a windup.
+- **One memorable number or reframe** the reader will repeat. A single concrete stat (the lead firm's anchor) or an inversion ("It's not a pipeline problem, it's a role-design problem") is what gets quoted in comments and screenshots.
+- **Save-worthiness.** Posts that read like something a CHRO would bookmark for a board deck get saves — the strongest ranking signal LinkedIn weights. Concrete frameworks, named stats, and a clear "what to do" beat generic observation.
+- **A real conversation opener, not a loaded one.** End on a forward-looking question or a take that invites a peer to add their view ("Where does this sit in your 2026 plan?") — never a gotcha or a yes/no engagement-bait prompt.
+- **Carousel as dwell-time engine.** The 7-slide format exists to maximize dwell time (LinkedIn rewards in-feed time). Slide 1 must hook, slides 2-5 must each reward the swipe with a distinct stat, slide 7 must close with a takeaway worth a save.
+- **First-30-minutes comment fuel.** A post that gives readers something specific to react to (a number to debate, a reframe to extend, a peer experience to share) earns early comments, which drive the algorithm's reach decision.
+
+This objective is measured at Step 6, where the options are ranked by predicted engagement and the reasoning is shown to the user.
+
 ---
 
 ## Step 1 — Read the source catalog, usage history, and attached PDFs
@@ -161,6 +174,14 @@ Voice rules:
 - Reflective questions ("Where does X sit in your stack?") are fine; loaded ones are not.
 - 3-4 hashtags max.
 
+**Engagement craft (serves the Primary objective above):**
+- **First line is the hook.** It must stand alone as a complete, scroll-stopping claim within ~140 chars — before LinkedIn's "…see more" fold. If the first line needs the second line to make sense, rewrite it.
+- **Front-load the sharpest stat or reframe.** The single most quotable element (the lead firm's anchor number, or a clean inversion) belongs in the first two lines, not buried at the end.
+- **Earn it, don't bait it.** No "comment X if…", no "agree?", no withheld payoff, no outrage framing. Engagement-bait reads as desperation and clashes with the CHRO voice. The hook is a real idea, not a tease.
+- **Leave room for the reader to add value.** The strongest comment-drivers give peers something specific to extend — a number to debate, a reframe to apply to their org, an experience to share. Either close works: a bold declarative take that invites agreement/challenge ("Fund the humans.") OR a forward-looking question ("Where does this sit in your 2026 plan?"). What kills comments is a closed, self-contained summary that leaves nothing to add.
+- **One idea per post.** A post that argues one thing well out-engages one that lists three. Save breadth for the carousel.
+- **Whitespace.** One idea per line, blank lines between beats. Dense paragraphs kill dwell time on mobile.
+
 **APAC framing (when `region: apac`):**
 - **Universal best-practices framing is the default.** Don't open posts with "APAC's biggest..." or "APAC moved past..." style leads. Write as a senior CHRO sharing a general insight that happens to land in APAC.
 - **Weave APAC data into the body as evidence**, not as the headline. Example: instead of "APAC's medical trend is the highest in the world," write "Medical inflation is rewriting benefits strategy. WTW 2026: global 10.3%, with APAC leading at 14%."
@@ -182,7 +203,7 @@ For each option, show:
 - Slug, theme, sources, word count
 - The post body (in a blockquote)
 - Path to the carousel directory
-- **An engagement-likelihood note** ranking the options (which is most likely to perform on LinkedIn and why — comment volume, controversy, save-worthiness, audience scope).
+- **An engagement-likelihood note** ranking the options against the Primary objective (most likely to perform on LinkedIn and why). Score each on the levers that drive reach: hook strength (first-line stop power), one-quotable-element, save-worthiness, early-comment fuel, and audience scope. Name the single highest-engagement pick and say why it beats the others.
 
 End with: "Want me to revise any of these, or publish one?"
 
@@ -258,6 +279,7 @@ through the setup steps in `.env.example` instead of attempting to publish.
 - **No fabrication.** Every stat traces back to a source in the brief.
 - **7 slides per option, every time.** Three posts = three carousels = twenty-one PNGs. Slide 1 cover, slides 2-5 data/insight, slide 6 action list, slide 7 dark conclusion.
 - **Slide 7 ends with a conclusion, not a question.** The bold payoff is the takeaway.
+- **Engagement is the objective, earned not baited.** Every post is optimized for reach (hook, dwell, comments, saves, reshares) via genuine signal — a scroll-stopping first line, one quotable stat/reframe, save-worthy substance, a real conversation opener. Never via clickbait, engagement-bait prompts, outrage, or withheld payoffs (see "Primary objective" up top). The post-body question on the page and the carousel question are different surfaces — the *post* may end on an inviting question; the *carousel slide 7* ends on a conclusion.
 - **Persistence is silent but visible.** When you add a discovered source, mention it in your final report to the user ("Added Korn Ferry's 2026 Workforce Survey to the catalog — first time seen.") so they can audit the growing catalog.
 - **No theme overlap with prior runs.** Before drafting, the skill reads `.claude/skills/linkedin-post/usage-history.md` and excludes parent themes used within 14 days. After drafting, the skill appends the newly-used themes to the ledger. The user can manually delete an entry to allow recycling. If fewer than 3 non-excluded themes meet the cross-firm bar, stop and ask before drafting a smaller set.
 - **Lead-firm rotation across the rolling 9-post window.** Big-3 firms (McKinsey, Deloitte, Aon) may not lead more than 1 of every 3 posts in a single run. In the rolling 9-post window, every Tier 1 firm (Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup) must appear at least once, and at least 2 non-Big-3 Tier 1 firms (Mercer / WTW / Gartner / WEF / Gallup) must lead at least one post. Track utilization in `sources.md` after every run. If the rule blocks all available themes, surface the conflict in the brief and ask the user to relax it explicitly.
