@@ -52,3 +52,30 @@ organisations.
   3–4 hashtags; reflective (not loaded) closing question.
 - **No fabrication** — every figure traces to the provided source/infographic. Flag
   internal inconsistencies in source material rather than asserting an exact number.
+
+## Primary objective for every LinkedIn draft: HIGH engagement rate
+
+Every LinkedIn draft is written to **maximise engagement** (comments, shares, saves,
+dwell time) — not just to inform. Treat engagement as the goal, accuracy and voice
+as the constraints. Apply these levers to every post:
+
+- **Hook first.** The opening 1–2 lines must stop the scroll and survive LinkedIn's
+  "see more" truncation. Lead with the surprising number, the contrarian claim, or
+  the "headline vs. real story" reframe — never a headline restatement.
+- **Scannability.** Short lines, generous line breaks, one idea per line. White space
+  raises dwell time.
+- **A point of view.** State a clear, debatable position the reader can agree or push
+  back on. No fence-sitting — give people something to react to.
+- **One concrete, surprising stat** carried high in the post (the share-worthy fact).
+- **Comment-driving close.** End on a sharp, specific question that pokes at the
+  reader's own situation (e.g. "Would your best people stay if the equity disappeared?")
+  — not a generic "what do you think?" A bold post may instead close on a strong
+  declarative when a question would soften it.
+- **Personal stake** where natural — first-person operator conviction ("I lead
+  transformation for a living…") outperforms detached commentary.
+- Keep voice rules and **no-fabrication** intact — engagement never justifies hype,
+  emojis, AI-tells, or unverified claims.
+
+After drafting, briefly note **why each post should earn engagement** and, when useful,
+flag non-copy levers the user controls (a visual/clip to attach, posting-time window,
+tagging the source/people, replying fast in the first 60–90 minutes).
