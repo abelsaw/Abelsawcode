@@ -10,6 +10,33 @@ thread), manually delete its entry from the relevant week below.
 
 ## Past weeks (most recent first)
 
+### Week of 2026-06-26 (ENGAGEMENT-RANKED — first run of new methodology, test pass)
+- Window: 2026-06-22 to 2026-06-26
+- Length: 10 of 10
+- **Ranking signal:** cross-platform engagement (LinkedIn / X / HN / Reddit), approximated via WebSearch + visible counts
+- **Fidelity:** approximated, not API-measured; LinkedIn counts often hidden
+- **Test-pass deltas vs prior citation-ranked runs (f68c565 / 72306c3):**
+  - PROMOTED: Amazon Q Developer CVE-2026-12957/12958 (climbed from outside top 10), METR cheating-rate / Terminal-Bench scores on Sol Ultra (new)
+  - DEMOTED: NVIDIA ISC drops to #10; Microsoft 365 Copilot pricing / tokenmaxxing→efficiency / Claude enterprise updates / OpenSSL all dropped from top 10
+- Through-line: Same week, ranked by community engagement, not news coverage. Top three held. Middle shifted. Two stories climbed from outside the news cycle.
+- Three-lens balance: Models 4 · Infra 3 · Enterprise tech 3
+- Ranked stories 1-10:
+  1. gpt-5-6-sol-terra-luna-us-gov-gated: https://openai.com/index/previewing-gpt-5-6-sol/ — 4/4 (HN front-page 1,000+ points)
+  2. openai-broadcom-jalapeno-chip: https://www.cnbc.com/2026/06/24/openai-and-broadcom-reveal-jalapeno-first-ai-chip-in-partnership.html — 4/4
+  3. qualcomm-modular-4b-acquisition: https://www.bloomberg.com/news/articles/2026-06-22/qualcomm-is-said-to-near-deal-for-ai-chip-startup-modular — 4/4 (Lattner factor)
+  4. amazon-q-developer-cve-mcp-cred-theft: https://www.wiz.io/blog/amazon-q-vulnerability — 4/4 ⭐ NEW
+  5. anthropic-alibaba-qwen-distillation: https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html — 4/4
+  6. anthropic-mythos-5-us-gov-cleared: https://edition.cnn.com/2026/06/26/tech/anthropic-mythos-release — 3-4/4
+  7. openai-daybreak-expansion-patch-the-planet: https://openai.com/index/daybreak-securing-the-world/ — 3-4/4
+  8. check-point-vpn-cve-cisa-emergency-directive: https://www.esecurityplanet.com/weekly-roundup/zero-days-ai-exploits-and-supply-chain-risks-define-this-week-in-cybersecurity-in-june-2026/ — 3-4/4
+  9. metr-sol-ultra-cheating-detection-terminalbench: https://www.latent.space/p/ainews-openai-gpt-56-sol-terra-luna — 3/4 ⭐ NEW
+  10. nvidia-isc-2026-bionemo-halos-eu: https://nvidianews.nvidia.com/news/latest — 2-3/4
+- Post slug: what-the-community-actually-engaged-with
+- Word count: 414 / Character count: 2,930 / LinkedIn cap 3,000
+- Date: 2026-06-26 (test pass run on 2026-06-28)
+- Post draft path: posts/drafts/weekly-summary-2026-06-26-engagement.md
+- Research brief: posts/drafts/weekly-research-2026-06-26-engagement.md
+
 ### Week of 2026-06-26 (TECH-ONLY, OpenAI/Anthropic model releases EXCLUDED — filter-change re-rank)
 - Window: 2026-06-22 to 2026-06-26
 - Length: 10 of 10
