@@ -70,6 +70,13 @@ slide 6's ribbon reusing mustard for the action takeaway):
 
 ## Palette
 
+Default is `warm-classic`. All three renderers accept `--palette` for the
+design-rotation system (`warm-classic` / `cool-steel` / `earth-editorial` /
+`ink-slate`) — pass the SAME `--palette` to all 7 slides. See the Design
+rotation ledger in the `linkedin-post` skill's `sources.md`.
+
+`warm-classic` (default):
+
 - `BG` cream — `(244, 235, 220)` — `#F4EBDC`
 - `NAVY` deep navy — `(27, 49, 71)` — `#1B3147` (title, headline, payoff, tile 2)
 - `CORAL` warm coral — `(226, 106, 75)` — `#E26A4B` (tile 1, mini-stripe)
@@ -107,6 +114,7 @@ python3 scripts/generate_post_image_playful_v2_cover.py \
 
 | Flag | Required | Use |
 |---|---|---|
+| `--palette`  | no  | `warm-classic` (default) / `cool-steel` / `earth-editorial` / `ink-slate`. Use the same value on all 7 slides. |
 | `--tag`      | no  | Brand tag tracked caps. Default `"CTRO"`. |
 | `--title`    | yes | Bold sans title. Supports `\n`. |
 | `--subtitle` | no  | Italic serif subtitle. Supports `\n`. |
@@ -114,6 +122,8 @@ python3 scripts/generate_post_image_playful_v2_cover.py \
 | `--source`   | no  | Em-dash source row. |
 | `--slide`    | no  | `N/M` slide indicator. |
 | `--output`   | yes | Output PNG. |
+
+Content and dark-conclusion scripts take the same `--palette` flag.
 
 ### Content CLI
 

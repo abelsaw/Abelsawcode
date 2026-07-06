@@ -139,6 +139,59 @@ Sources to surface in the next run:
 
 ---
 
+## Design rotation (last 6 runs)
+
+To keep the account from pattern-flagging as templated AI slop, **every
+`/linkedin-post` run picks a fresh layout × palette combination** that hasn't
+been used recently. The skill reads this ledger at the start of a run and
+applies the **design-rotation rule** (see SKILL.md Step 4b).
+
+The library:
+
+| Layout | Style skill | Renderer family | Palette support |
+|---|---|---|---|
+| `chips` | hr-linkedin-option1 | `playful_*` | 4 palettes (`--palette`) |
+| `tiles` | hr-linkedin-option2 | `playful_v2_*` | 4 palettes (`--palette`) |
+| `photo` | hr-linkedin-option3 | `photo_*` | 2 palettes (`--palette warm|cool`) |
+
+Palettes (chips + tiles):
+
+| Palette | Feel | BG | Primary | Accent 1 | Accent 2 |
+|---|---|---|---|---|---|
+| `warm-classic` | cream / navy / coral / mustard (original) | `#F4EBDC` | `#1B3147` | `#E26A4B` | `#D49A38` |
+| `cool-steel` | light gray / ink-navy / steel blue | `#E8E8E8` | `#1A2434` | `#4E769E` | `#788CA5` |
+| `earth-editorial` | sand / espresso / terracotta / ochre | `#EFE5D0` | `#2E2418` | `#B5663C` | `#A07A40` |
+| `ink-slate` | bone / near-black / brick / gray | `#EEECE6` | `#202024` | `#C65842` | `#808084` |
+
+### The rotation rule
+
+Each run picks one `layout × palette` combo subject to:
+
+1. **No layout repeats within the last 3 runs.** (chips → tiles → photo → chips …)
+2. **No palette repeats within the last 2 runs.**
+3. Prefer a combo not present anywhere in the ledger below; only reuse a combo
+   once all fresh ones are exhausted, and never one from the last 3 runs.
+4. `photo` requires a user-supplied photo — if none is available this run, skip
+   `photo` and pick the next-oldest layout instead (still honoring rules 1-2).
+
+That yields ~10 distinct looks (chips ×4 + tiles ×4 + photo ×2) before any repeat.
+
+After rendering, the skill appends the chosen combo here and prunes to the most
+recent 6 rows.
+
+| Date | Slug(s) / run | Layout | Palette |
+|---|---|---|---|
+| 2026-06-21 | run5 (option-1) | chips | warm-classic |
+| 2026-06-21 | run5 (option-2 tiles) | tiles | warm-classic |
+| 2026-06-21 | run5 (option-3 photo) | photo | warm |
+
+(Rows before the design-rotation system was introduced are backfilled from the
+locked run-5 renders, which all used the original warm palette. The next run
+should move OFF `warm-classic` on a non-`chips` layout — e.g. `tiles` +
+`cool-steel`, or `chips` + `earth-editorial`.)
+
+---
+
 ## Auto-discovered sources
 
 <!-- Append new entries below this line as: -->

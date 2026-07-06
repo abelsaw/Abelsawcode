@@ -110,8 +110,22 @@ def fit_headline(draw, text, max_w, max_h, size_hi=82, size_lo=40, step=2):
     return font, lines, lh
 
 
+
+_PALETTES = {
+    'warm-classic': dict(bg=(244, 235, 220), primary=(27, 49, 71), a1=(226, 106, 75), a2=(212, 154, 56), da=(175, 75, 55), muted=(108, 95, 80), mi=(188, 178, 158)),
+    'cool-steel': dict(bg=(232, 232, 232), primary=(26, 36, 52), a1=(78, 118, 158), a2=(120, 140, 165), da=(44, 62, 86), muted=(110, 124, 140), mi=(170, 180, 195)),
+    'earth-editorial': dict(bg=(239, 229, 208), primary=(46, 36, 24), a1=(181, 102, 60), a2=(160, 122, 64), da=(120, 70, 44), muted=(120, 102, 84), mi=(175, 165, 148)),
+    'ink-slate': dict(bg=(238, 236, 230), primary=(32, 32, 36), a1=(198, 88, 66), a2=(128, 128, 132), da=(70, 70, 74), muted=(118, 116, 110), mi=(180, 178, 172)),
+}
+
+def _apply_palette(name):
+    global BG, CREAM, CORAL, MUSTARD, MUTED_CREAM
+    _p = _PALETTES.get(name, _PALETTES['warm-classic'])
+    BG=_p['primary']; CREAM=_p['bg']; CORAL=_p['a1']; MUSTARD=_p['a2']; MUTED_CREAM=_p['mi']
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--palette", default="warm-classic", choices=list(_PALETTES), help="Color palette (design rotation).")
     p.add_argument("--headline", required=True)
     p.add_argument("--lead", default="")
     p.add_argument("--bold", default="")
@@ -119,6 +133,7 @@ def main() -> int:
     p.add_argument("--slide", default="")
     p.add_argument("--output", required=True)
     args = p.parse_args()
+    _apply_palette(args.palette)
 
     img = Image.new("RGB", (CANVAS, CANVAS), BG)
     draw = ImageDraw.Draw(img)

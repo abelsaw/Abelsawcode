@@ -13,18 +13,19 @@ sourced from 2026 HR research, ready for the user to review and publish.
 
 ## Optional arguments (parsed from the skill `args` string)
 
-- `with /hr-linkedin-option<N>` — carousel style. **Default: `option1`.** Pick the carousel design preset:
-  - `option1` — playful-iconic with geometric chip icons (default; most general-purpose)
+- `with /hr-linkedin-option<N>` — carousel style. **Default: auto-rotate (see the Design rotation rule in Step 4b).** When the user names a style explicitly, honor it; otherwise the skill picks the next un-repeated layout from the rotation ledger. Pick the carousel design preset:
+  - `option1` — playful-iconic with geometric chip icons (most general-purpose)
   - `option2` — playful-iconic with numbered TOC tiles (best for structured 4-part frameworks)
   - `option3` — photo-driven cover (the user supplies a photo; pass `--palette cool` for cool-toned photos)
   Each is a registered project skill with its own SKILL.md and renderer scripts.
+- `palette: <name>` — override the auto-rotated color palette. chips/tiles accept `warm-classic` / `cool-steel` / `earth-editorial` / `ink-slate`; photo accepts `warm` / `cool`. **Default: auto-rotate** (the skill picks a palette not used in the last 2 runs — see Step 4b). A user-named palette wins over the rotation.
 - `region: <apac|global>` — geographic lens. **Default: `apac`.** Asia Pacific is the default audience and source-weighting for this CTRO. Pass `region: global` to remove the regional anchor.
 - `theme: <topic>` — scope the posts to one topic (e.g. `theme: AI in HR`, `theme: pay transparency`). Default: surface the most-mentioned 2026 themes across the catalog.
 - `sources: +<Firm1>, +<Firm2>` — include named firms in addition to the catalog. Use `-<Firm>` to exclude.
 - `count: N` — produce N post options instead of the default 3 (cap at 5).
 - `discover: off` — disable the new-source discovery pass (default: on).
 
-If args are empty, run the default flow: `region: apac`, default themes, 3 options, discovery on, carousel style `option1`.
+If args are empty, run the default flow: `region: apac`, default themes, 3 options, discovery on, and **auto-rotate the carousel layout + palette** off the design-rotation ledger (Step 4b) so no two consecutive runs look alike.
 
 A common workflow: run once to produce drafts + carousels in one style, then the user re-invokes with a different `/hr-linkedin-optionN` (and/or a supplied photo) to re-render the SAME post bodies in another style. Save each style's output in a sibling directory (see Output locations) so all renderings stay available.
 
@@ -192,6 +193,41 @@ The full CLI flags, palettes, fonts, and slide conventions for each style live
 in the style's own SKILL.md (`.claude/skills/hr-linkedin-option1/`,
 `.../option2/`, `.../option3/`). Read the relevant one before rendering.
 
+#### Design rotation — pick a fresh look every run (anti-slop)
+
+A recognizable, repeated design is itself a suppression signal: an account
+that posts the same cream/navy chip carousel every time reads as templated.
+So **each run picks a layout × palette combination that hasn't been used
+recently**, unless the user names one explicitly.
+
+Read the **Design rotation (last 6 runs)** ledger in
+`.claude/skills/linkedin-post/sources.md` before rendering, then apply:
+
+1. **No layout repeats within the last 3 runs** (`chips` → `tiles` → `photo` → …).
+2. **No palette repeats within the last 2 runs.**
+3. Prefer a `layout × palette` combo absent from the ledger; only reuse one
+   once all fresh combos are spent, never one from the last 3 runs.
+4. `photo` (option3) needs a user-supplied photo. If none is available this run,
+   drop `photo` from the candidate set and take the next-oldest layout.
+
+The library (chips ×4 palettes + tiles ×4 palettes + photo ×2 palettes ≈ 10
+distinct looks before any repeat):
+
+| Layout | Style | `--palette` values |
+|---|---|---|
+| `chips` (option1) | `playful_*` | `warm-classic` / `cool-steel` / `earth-editorial` / `ink-slate` |
+| `tiles` (option2) | `playful_v2_*` | `warm-classic` / `cool-steel` / `earth-editorial` / `ink-slate` |
+| `photo` (option3) | `photo_*` | `warm` / `cool` |
+
+Pass the chosen palette to **every** slide script in the run via `--palette`
+(cover, content, and dark-conclusion) so the whole carousel is consistent.
+Example: `--palette cool-steel` on all seven chips slides. If the user passed an
+explicit `palette:` arg or named a style, honor it and skip the auto-pick for
+that dimension (still record what was used in the ledger).
+
+**After rendering, append the chosen combo to the ledger** (Step 6.6 area) and
+prune to the most recent 6 rows, mirroring the lead-firm tracker.
+
 Style-specific notes:
 - **option2** — the cover passes a `--tiles "01:WORD,02:WORD,03:WORD,04:WORD"`
   TOC; each content slide's `--tile-color` must match the cover-tile position
@@ -301,6 +337,20 @@ After appending, prune the tracker to the **most recent 9 rows** — older rows 
 
 If today's run leaves any Tier 1 firm (Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup) at zero appearances in the rolling 9-post tally, flag it in your final report so the next run prioritizes that firm.
 
+## Step 6.7 — Update the design-rotation ledger
+
+After rendering, append this run's chosen look to the **Design rotation (last 6
+runs)** section of `.claude/skills/linkedin-post/sources.md`:
+
+```markdown
+| YYYY-MM-DD | run-slug or run label | layout | palette |
+```
+
+Prune to the most recent 6 rows. The next run reads this to apply the
+design-rotation rule (no layout within 3 runs, no palette within 2). Note in
+your final report which look was chosen this run and why (which combos it
+avoided).
+
 ## Step 7 — Publish on approval
 
 When the user picks a specific option, delegate to `linkedin-publisher`:
@@ -349,4 +399,5 @@ through the setup steps in `.env.example` instead of attempting to publish.
 - **Anti-AI-slop is mandatory (protects reach from suppression).** Hard bans: no em-dashes, no "It's not X, it's Y" inversions, no template phrases ("not a perk", "unlock", "the X lever", etc.), no forced rule-of-three. The 3 options must use 3 distinct structures, exactly one written in first-person CTRO POV. Every post clears the human gate ("would a specific experienced CTRO write this exact sentence?") before presenting. See the "Anti-AI-slop" section for the full list.
 - **Persistence is silent but visible.** When you add a discovered source, mention it in your final report to the user ("Added Korn Ferry's 2026 Workforce Survey to the catalog — first time seen.") so they can audit the growing catalog.
 - **No theme overlap with prior runs.** Before drafting, the skill reads `.claude/skills/linkedin-post/usage-history.md` and excludes parent themes used within 14 days. After drafting, the skill appends the newly-used themes to the ledger. The user can manually delete an entry to allow recycling. If fewer than 3 non-excluded themes meet the cross-firm bar, stop and ask before drafting a smaller set.
+- **Design rotation every run (anti-slop).** Each run picks a fresh layout × palette combo from the ledger in `sources.md`: no layout repeats within 3 runs, no palette within 2. The user can pin a style (`with /hr-linkedin-optionN`) or palette (`palette: <name>`) to override the auto-pick. Pass the chosen `--palette` to all 7 slide scripts, then record the combo in the ledger and prune to 6 rows. A repeated house style is itself a suppression signal.
 - **Lead-firm rotation across the rolling 9-post window.** Big-3 firms (McKinsey, Deloitte, Aon) may not lead more than 1 of every 3 posts in a single run. In the rolling 9-post window, every Tier 1 firm (Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup) must appear at least once, and at least 2 non-Big-3 Tier 1 firms (Mercer / WTW / Gartner / WEF / Gallup) must lead at least one post. Track utilization in `sources.md` after every run. If the rule blocks all available themes, surface the conflict in the brief and ask the user to relax it explicitly.

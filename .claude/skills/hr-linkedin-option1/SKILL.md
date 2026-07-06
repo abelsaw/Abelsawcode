@@ -51,11 +51,23 @@ as decorative anchors without veering into clip-art.
 
 ## Palette
 
+Default is `warm-classic`. All three renderers accept `--palette` for the
+design-rotation system (`warm-classic` / `cool-steel` / `earth-editorial` /
+`ink-slate`) — pass the SAME `--palette` to all 7 slides so the carousel is
+consistent. See the Design rotation ledger in the `linkedin-post` skill's
+`sources.md` for how a palette is chosen per run.
+
+`warm-classic` (default):
+
 - `BG` cream — `(244, 235, 220)` — `#F4EBDC`
 - `NAVY` deep navy — `(27, 49, 71)` — `#1B3147` (titles, headlines, payoff bold)
 - `CORAL` warm coral — `(226, 106, 75)` — `#E26A4B` (slide #, chip 1 & 4, mini-stripe)
 - `MUSTARD` rich mustard — `(212, 154, 56)` — `#D49A38` (accent rules, chip 3)
 - `MUTED` warm gray-brown — `(108, 95, 80)` — `#6C5F50` (subtitle, lead, counter)
+
+Other palettes remap these same roles: `cool-steel` (light gray / ink-navy /
+steel blue), `earth-editorial` (sand / espresso / terracotta / ochre),
+`ink-slate` (bone / near-black / brick / gray).
 
 ## Fonts (deliberate sans-throughout)
 
@@ -89,6 +101,7 @@ python3 scripts/generate_post_image_playful_cover.py \
 
 | Flag | Required | Use |
 |---|---|---|
+| `--palette`  | no  | `warm-classic` (default) / `cool-steel` / `earth-editorial` / `ink-slate`. Use the same value on all 7 slides. |
 | `--tag`      | no  | Brand tag tracked caps. Default `"CTRO"`. |
 | `--title`    | yes | Bold sans title. Supports `\n` for forced breaks. |
 | `--subtitle` | no  | Italic serif subtitle. Supports `\n`. |
@@ -96,6 +109,8 @@ python3 scripts/generate_post_image_playful_cover.py \
 | `--source`   | no  | Em-dash + tracked small-caps source row. |
 | `--slide`    | no  | `N/M` slide indicator. |
 | `--output`   | yes | Output PNG path. |
+
+Content and dark-conclusion scripts take the same `--palette` flag.
 
 ### Content CLI
 
