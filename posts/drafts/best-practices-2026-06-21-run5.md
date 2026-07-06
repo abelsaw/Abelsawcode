@@ -36,9 +36,11 @@ All three distinct from the 15-item dedup window. **Verification: `[search-only]
 ---POST---
 Six in ten hiring managers already believe a candidate faked something with AI (Gartner 2026).
 
-Résumés, portfolios, even live interview answers are now synthetically polished.
+Think about what that does to a hiring process. The résumé is polished by a model. The portfolio is generated. In a remote interview, the "right" answer can be fed in real time. None of it is obviously fake, and most of it never gets caught.
 
-Quality of hire is the metric quietly at risk. The teams that build real verification skills this year protect it.
+We spent a decade optimizing for speed and candidate experience. The next skill our recruiters need is older than any of that: judgment. Knowing what to probe, when a story is too clean, how to test for the thing a model can't fake.
+
+Quality of hire is the number quietly at risk here. The teams that rebuild verification into their process this year will protect it. The ones that trust the polish will find out the hard way, one bad hire at a time.
 
 #Hiring #TalentAcquisition #AIatWork
 ---END---
@@ -64,11 +66,15 @@ Quality of hire is the metric quietly at risk. The teams that build real verific
 - **Status:** draft — POV, pending user sign-off
 
 ---POST---
-Every AI pilot I review shows hours saved per person. Almost none reach the P&L.
+Every AI pilot I review comes back with the same headline: hours saved per person. Ten minutes here, an afternoon there. The decks look great.
 
-Conference Board 2026: nearly every big employer deployed AI last year. The gains landed in one firm in five.
+Then I ask the harder question. Where did those hours actually go? And almost no one can point to it landing in the P&L.
 
-Personal productivity doesn't roll up on its own. That handoff is our job.
+That gap is the real story of 2026. Conference Board found nearly every large employer deployed AI last year, yet the productivity gains showed up in only about one company in five. Adoption is nearly universal. The payoff is not.
+
+What I keep coming back to: personal productivity and organizational productivity are not the same thing, and one does not automatically become the other. An hour saved on a calendar isn't value until the work is redesigned to capture it. Otherwise it quietly refills.
+
+That handoff, from time saved to value realized, is squarely our job. Not the vendor's, not IT's. Ours.
 
 #AI #Productivity #FutureOfWork
 ---END---
@@ -93,11 +99,15 @@ Personal productivity doesn't roll up on its own. That handoff is our job.
 - **Status:** draft
 
 ---POST---
-One in five employers is cutting the 2026 raise budget. Only 6% are raising it (WTW).
+Look at the headline salary numbers for 2026 and you'd think comp strategy went quiet. WTW found one in five employers cutting their raise budget, and only 6% raising it. Flat, maybe shrinking.
 
-The pool looks flat. Underneath, comp is reallocating hard toward scarce skills. AI talent commands a 62% premium (PwC).
+The headline is misleading. The money isn't disappearing. It's being aimed.
 
-A flat budget can still be a sharp strategic bet.
+Underneath a flat pool, employers are reallocating hard toward the skills they can't find. PwC puts the AI-skills wage premium at 62% this year, up from 57%. The same budget that gives most people a modest bump is quietly funding a scramble for a scarce few.
+
+This is the moment to be deliberate rather than across-the-board. A flat budget can still be a sharp strategic bet, if you know exactly which capabilities you're paying up for and can defend it to the people who aren't. That second part is where the trust gets won or lost.
+
+So the real question isn't how big the budget is. It's where you're pointing it, and whether you can explain why.
 
 #Compensation #TotalRewards #SkillsBasedPay
 ---END---

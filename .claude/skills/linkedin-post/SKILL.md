@@ -1,13 +1,13 @@
 ---
 name: linkedin-post
-description: Generate 3 LinkedIn post options (≤50 words each) plus matching 7-slide carousels on HR best practices for a CHRO, sourced from 2026 research reports across Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup and other credible firms. Carousels render in one of three locked styles (hr-linkedin-option1 chip icons / option2 TOC tiles / option3 photo cover). The skill can actively discover NEW credible 2026 sources during research and append them to the catalog. Use when the user wants fresh LinkedIn content — phrases like "give me LinkedIn post options", "draft a LinkedIn carousel", "create LinkedIn content", "I need new posts", or invokes /linkedin-post.
+description: Generate 3 LinkedIn post options (60-150 words each, 200 hard cap) plus matching 7-slide carousels on HR best practices for a CHRO, sourced from 2026 research reports across Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup and other credible firms. Carousels render in one of three locked styles (hr-linkedin-option1 chip icons / option2 TOC tiles / option3 photo cover). The skill can actively discover NEW credible 2026 sources during research and append them to the catalog. Use when the user wants fresh LinkedIn content — phrases like "give me LinkedIn post options", "draft a LinkedIn carousel", "create LinkedIn content", "I need new posts", or invokes /linkedin-post.
 ---
 
 # LinkedIn post + carousel — on-demand
 
 You are running the `linkedin-post` skill. Produce **3 LinkedIn post options
-(each ≤50 words)** with matching **7-slide carousels**, sourced from 2026 HR
-research, ready for the user to review and publish.
+(each 60-150 words, 200 hard cap)** with matching **7-slide carousels**,
+sourced from 2026 HR research, ready for the user to review and publish.
 
 ## Optional arguments (parsed from the skill `args` string)
 
@@ -242,14 +242,21 @@ Voice rules:
 - **Filter, don't force.** If a topic doesn't apply to APAC employers (e.g. US-only NLRB rulings, US state labor law), don't draft a post on it. If a topic applies universally, treat it universally and only invoke APAC where the data adds material dimension.
 - **Hashtags default to universal.** `#APAC`, `#FutureOfWorkAsia`, `#ASEAN`, `#SingaporeHR`, `#AsiaCHRO` are optional — use only when the post specifically targets APAC employers (e.g. regional regulatory deadlines).
 
-**≤50 words per post body, including hashtags.** Hard cap. Verify each option's
-word count by running:
+**Word count: target 60-150 words, hard cap 200 (including hashtags).**
+
+The old ≤50-word cap forced terse, stat-stacked lines that read as AI slop. The carousel carries the dense data; the *post* carries voice, framing, and one or two anchor stats, not a data dump. Give the writing room to sound like a person: a micro-observation, a short setup, a genuine beat. Do not pad to hit a number, but do not compress a human thought into a telegram either.
+
+- **Sweet spot: 60-150 words.** Long enough to breathe, short enough to stay scannable on mobile.
+- **Hard cap: 200 words.** Beyond this, dwell drops and it stops being a "post."
+- **First ~140 chars still carry the hook** (before the "see more" fold) regardless of total length.
+- **Stat density over length is the real risk.** A 130-word post with one well-interpreted stat and a human voice beats a 50-word post that stacks three. Fewer facts, more thought.
+
+Verify each option's word count:
 ```bash
 python3 scripts/linkedin_post.py posts/drafts/best-practices-YYYY-MM-DD.md \
   --slug <slug> --dry-run
 ```
-The script prints `Words: N` — confirm `N ≤ 50` for every option before
-presenting to the user.
+The script prints `Words: N` — confirm `N ≤ 200` for every option, and that it lands in the 60-150 sweet spot unless there's a reason to run longer.
 
 ## Step 6 — Present compactly to the user
 
@@ -332,7 +339,7 @@ through the setup steps in `.env.example` instead of attempting to publish.
 ## Hard rules
 
 - **2026-only sources.** No 2025-or-earlier reports cited as 2026.
-- **≤50 words per post body**, including hashtags.
+- **60-150 words per post body (200 hard cap)**, including hashtags. The carousel carries the data; the post carries voice. Fewer facts, more thought — don't compress a human thought into a telegram.
 - **No fabrication.** Every stat traces back to a source in the brief.
 - **7 slides per option, every time.** Three posts = three carousels = twenty-one PNGs. Slide 1 cover, slides 2-5 data/insight, slide 6 action list, slide 7 dark conclusion.
 - **Slide 7 ends with a conclusion, not a question.** The bold payoff is the takeaway.
