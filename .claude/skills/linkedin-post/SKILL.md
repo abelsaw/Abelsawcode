@@ -39,6 +39,37 @@ Every post is optimized for **engagement** (stops, dwell time, comments, saves, 
 
 This objective is measured at Step 6, where the options are ranked by predicted engagement and the reasoning is shown to the user.
 
+## Anti-AI-slop — protect reach
+
+High engagement is wasted if the post is suppressed before it reaches a feed. Since 2025-26, LinkedIn down-ranks content its classifiers read as low-effort AI-generated and rewards specific-practitioner knowledge. **This is one system with the engagement objective: earn attention AND avoid the slop filter.**
+
+The paradox: polish and consistency read as slop. A recognizable formula repeated across an account is itself a suppression signal. Variety and a genuine human fingerprint beat a "perfect" template.
+
+### Hard bans (non-negotiable AI fingerprints)
+
+- **No em-dashes** (`—` or `–`). A notorious AI tell. Use a period, comma, colon, or parentheses instead.
+- **No "It's not X, it's Y" inversions** and close variants ("X isn't A. It's B.", "The lever isn't the form, it's the coach."). This two-beat reversal is a signature AI-slop move — we over-used it badly in early runs. Make the point directly instead.
+- **No template phrases:** "not a perk", "the cheapest X you already own", "unlock" (as a noun), "the [X] lever", "isn't a [thing], it's [infrastructure]", "here's the thing", "the truth is", "let that sink in", "game-changer", "in today's landscape", "navigating the".
+- **No forced rule-of-three.** Vary the count of stats, action items, and beats. Not every post gets exactly three of anything.
+
+### Structural variety across the batch (enforced)
+
+The N options in a run MUST each use a DIFFERENT architecture — never three clones of one skeleton (that's what pattern-flags the whole account). Rotate:
+
+- **Observation / POV-led** — opens with a specific first-person practitioner beat, then the data supports it. **Exactly one option per run is this type** (see below).
+- **Single-stat-led** — one dominant number carries the post; interpret it in depth rather than stacking three stats.
+- **Contrarian-claim-led** — opens with a claim that challenges the conventional wisdom on the topic, then earns it with evidence. Contrarian ≠ inversion: state the claim directly, do NOT use the banned "not X, it's Y" form.
+
+When `count > 3`, add: question-led (a genuine problem the reader is living) or sequence-led (a short before/after or trajectory).
+
+### One POV option per run
+
+Exactly one of the N options is written in an explicit first-person seasoned-CHRO voice — a lived observation, a genuine stance, or a mild disagreement with the data ("the reports frame this as X; in practice I'd push back on…"). This is the single strongest anti-slop + reach lever, because it is content only a real practitioner could write; the algorithm and the reader both reward it. The other options stay evidence-led. Keep it authentic — a real professional observation, never a manufactured anecdote or invented specific.
+
+### The human gate (final review before presenting)
+
+Before showing drafts at Step 6, run every post through one test: **"Would a specific, smart, experienced CHRO write this exact sentence — or does it read like a research digest any tool could generate?"** Where a line reads generic, rewrite it with a concrete detail, a real stance, or plainer words. Reduce stat density (one well-interpreted number beats three stacked). Vary sentence rhythm — not every line is one short sentence. This gate applies to the post body; the carousel slide copy follows the same bans (no em-dashes, no inversions, no template phrases).
+
 ---
 
 ## Step 1 — Read the source catalog, usage history, and attached PDFs
@@ -168,11 +199,14 @@ Each post body must be **highly professional, progressive, and bold** — first-
 
 Voice rules:
 - Open with a clear claim or forward-looking observation, not a headline restatement.
-- Short sentences. Often one per line.
+- Vary sentence rhythm. Short sentences work, but not every line one-per-line every post — that cadence is itself an AI tell now.
 - No corporate jargon, no emojis, no hype words.
 - No AI-tells: delve, tapestry, navigating the landscape, in conclusion, moreover, furthermore.
+- **Apply the Anti-AI-slop hard bans** (see the "Anti-AI-slop" section above): no em-dashes, no "It's not X, it's Y" inversions, no template phrases, no forced rule-of-three.
+- **The 3 options must use 3 different structures** (observation/POV-led · single-stat-led · contrarian-claim-led), and **exactly one is the first-person POV option.**
 - Reflective questions ("Where does X sit in your stack?") are fine; loaded ones are not.
-- 3-4 hashtags max.
+- 3-4 hashtags max, and vary them across the batch — don't put the same `#CHRO #FutureOfWork` on all three.
+- **Run the human gate** before presenting: would a specific experienced CHRO write this exact sentence, or is it a digest any tool could produce?
 
 **Engagement craft (serves the Primary objective above):**
 - **First line is the hook.** It must stand alone as a complete, scroll-stopping claim within ~140 chars — before LinkedIn's "…see more" fold. If the first line needs the second line to make sense, rewrite it.
@@ -201,9 +235,12 @@ presenting to the user.
 
 For each option, show:
 - Slug, theme, sources, word count
+- **Structure label** — which architecture it uses (observation/POV-led · single-stat-led · contrarian-claim-led), so the batch variety is visible at a glance. Confirm exactly one is the POV option.
 - The post body (in a blockquote)
 - Path to the carousel directory
 - **An engagement-likelihood note** ranking the options against the Primary objective (most likely to perform on LinkedIn and why). Score each on the levers that drive reach: hook strength (first-line stop power), one-quotable-element, save-worthiness, early-comment fuel, and audience scope. Name the single highest-engagement pick and say why it beats the others.
+
+Before presenting, confirm the **human gate** and **anti-slop hard bans** passed for every option (no em-dashes, no inversions, no template phrases, 3 distinct structures, 1 POV option). If any post still reads like a digest, rewrite it, don't ship it.
 
 End with: "Want me to revise any of these, or publish one?"
 
@@ -280,6 +317,7 @@ through the setup steps in `.env.example` instead of attempting to publish.
 - **7 slides per option, every time.** Three posts = three carousels = twenty-one PNGs. Slide 1 cover, slides 2-5 data/insight, slide 6 action list, slide 7 dark conclusion.
 - **Slide 7 ends with a conclusion, not a question.** The bold payoff is the takeaway.
 - **Engagement is the objective, earned not baited.** Every post is optimized for reach (hook, dwell, comments, saves, reshares) via genuine signal — a scroll-stopping first line, one quotable stat/reframe, save-worthy substance, a real conversation opener. Never via clickbait, engagement-bait prompts, outrage, or withheld payoffs (see "Primary objective" up top). The post-body question on the page and the carousel question are different surfaces — the *post* may end on an inviting question; the *carousel slide 7* ends on a conclusion.
+- **Anti-AI-slop is mandatory (protects reach from suppression).** Hard bans: no em-dashes, no "It's not X, it's Y" inversions, no template phrases ("not a perk", "unlock", "the X lever", etc.), no forced rule-of-three. The 3 options must use 3 distinct structures, exactly one written in first-person CHRO POV. Every post clears the human gate ("would a specific experienced CHRO write this exact sentence?") before presenting. See the "Anti-AI-slop" section for the full list.
 - **Persistence is silent but visible.** When you add a discovered source, mention it in your final report to the user ("Added Korn Ferry's 2026 Workforce Survey to the catalog — first time seen.") so they can audit the growing catalog.
 - **No theme overlap with prior runs.** Before drafting, the skill reads `.claude/skills/linkedin-post/usage-history.md` and excludes parent themes used within 14 days. After drafting, the skill appends the newly-used themes to the ledger. The user can manually delete an entry to allow recycling. If fewer than 3 non-excluded themes meet the cross-firm bar, stop and ask before drafting a smaller set.
 - **Lead-firm rotation across the rolling 9-post window.** Big-3 firms (McKinsey, Deloitte, Aon) may not lead more than 1 of every 3 posts in a single run. In the rolling 9-post window, every Tier 1 firm (Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup) must appear at least once, and at least 2 non-Big-3 Tier 1 firms (Mercer / WTW / Gartner / WEF / Gallup) must lead at least one post. Track utilization in `sources.md` after every run. If the rule blocks all available themes, surface the conflict in the brief and ask the user to relax it explicitly.
