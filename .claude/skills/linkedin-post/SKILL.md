@@ -62,9 +62,17 @@ The N options in a run MUST each use a DIFFERENT architecture — never three cl
 
 When `count > 3`, add: question-led (a genuine problem the reader is living) or sequence-led (a short before/after or trajectory).
 
-### One POV option per run
+### One POV option per run — sourced from the user, not invented
 
-Exactly one of the N options is written in an explicit first-person seasoned-CHRO voice — a lived observation, a genuine stance, or a mild disagreement with the data ("the reports frame this as X; in practice I'd push back on…"). This is the single strongest anti-slop + reach lever, because it is content only a real practitioner could write; the algorithm and the reader both reward it. The other options stay evidence-led. Keep it authentic — a real professional observation, never a manufactured anecdote or invented specific.
+Exactly one of the N options is written in an explicit first-person seasoned-CHRO voice — a lived observation, a genuine stance, or a mild disagreement with the data. This is the single strongest anti-slop + reach lever, because it is content only a real practitioner could write; the algorithm and the reader both reward it.
+
+**The POV comes from the user, never fabricated.** Before drafting the POV option, ASK the user for their **"POV of the week"** — a one-to-two-line genuine take, stance, or observation from their actual experience. Build the POV post around what they give you; do not invent a practitioner anecdote, a specific number they didn't state, or a stance they don't hold. A fabricated "in my experience…" is worse than no POV post — it reads false and risks their credibility.
+
+Practical flow:
+- **Ask once per week.** The "POV of the week" applies to the POV option in every run that week. Don't re-ask on each same-week run unless the user offers a new one or the week's themes have moved on.
+- **When to ask:** after the scout's brief is in (so you can tell the user which themes surfaced and invite a POV that fits one of them), and before drafting. A good prompt: "Which of these themes do you have a personal take on this week, and what's your one-line view?"
+- **If the user gives no POV** (declines, unavailable, or it's a quick test): skip the POV option and draft all N options evidence-led — but STILL enforce the 3-distinct-structures rule (e.g. single-stat-led, contrarian-claim-led, question-led). Note in the final report that no POV was supplied this run.
+- **Keep it theirs.** Lightly shape their words for LinkedIn (tighten, add the supporting stat, fit ≤50 words) but preserve their actual position and voice. Show them the POV draft and confirm it still reflects their view before it counts as final.
 
 ### The human gate (final review before presenting)
 
@@ -126,6 +134,18 @@ Using the same dedup exclusion set and source-balance constraints you gave
 the scout, draft the N post options and render their carousels. Do NOT draft
 on an excluded parent theme; if the brief surfaces an angle that maps to one,
 pick a different angle from a non-excluded theme.
+
+**Before drafting, secure the POV.** Exactly one option is the first-person
+POV post (see "One POV option per run" in the Anti-AI-slop section). Ask the
+user for their **"POV of the week"** if you don't already have one for this
+week — surface the scout's themes and invite a one-line personal take on
+whichever fits. Build the POV option around their words; never fabricate a
+stance. If they give none, draft all options evidence-led and still enforce
+the 3-distinct-structures rule.
+
+The N options must use N distinct structures (observation/POV-led ·
+single-stat-led · contrarian-claim-led · +question/sequence-led when N>3),
+and every post + carousel clears the Anti-AI-slop hard bans.
 
 You can run this step inline (read the brief, write the draft markdown, render
 the slides with the option scripts) or delegate the drafting to the
