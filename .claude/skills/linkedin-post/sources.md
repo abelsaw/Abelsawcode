@@ -97,41 +97,45 @@ most recent 9 (older rows roll off).
 | 2026-06-21 | make-change-boring | Gartner | Deloitte, McKinsey |
 | 2026-06-21 | the-longevity-dividend | WEF | Mercer, Aon |
 | 2026-06-21 | the-thriving-gap | Gallup | Deloitte |
+| 2026-06-21 | verify-the-human | Deloitte | WEF, Gartner |
+| 2026-06-21 | the-productivity-that-never-arrives | Conference Board | McKinsey, BCG, PwC |
+| 2026-06-21 | the-flat-budget-that-isnt | WTW | Mercer, PwC |
 
-(The first three 2026-06-21 entries — fund-the-humans (WEF), decisions-that-echo (Deloitte), hr-is-the-steady-hand (Conference Board) — rolled off the rolling-9 window after this run-4 was added.)
+(Rolled off after run-5: the three run-2 entries — pay-transparency (Aon), choice-replaces-cost-share (Mercer), the-lever-is-the-coach (WTW).)
 
 ### Rolling tally (last 9 posts as lead firm)
 
-- Aon: 1 ✅ Big-3
-- Mercer: 1 ✅
-- WTW: 1 ✅
 - McKinsey: 1 ✅ Big-3
 - BCG: 1 ✅
 - PwC: 1 ✅
-- Gartner: 1 ✅ Tier 2 (NEW lead this run — 0-lead priority slot filled)
-- WEF: 1 ✅ (NEW lead this run)
-- Gallup: 1 ✅ Tier 1 (NEW lead this run — 0-lead priority slot filled)
-- Deloitte: 0 ❌ Big-3 (rolled off — priority for next run)
-- Conference Board: 0 ❌ (rolled off)
+- Gartner: 1 ✅ Tier 2
+- WEF: 1 ✅
+- Gallup: 1 ✅
+- Deloitte: 1 ✅ Big-3 (NEW lead this run — 0-lead priority slot filled)
+- Conference Board: 1 ✅ Tier 2 (NEW lead this run — 0-lead priority slot filled)
+- WTW: 1 ✅ (NEW lead this run)
+- Aon: 0 ❌ Big-3 (rolled off — priority for next run)
+- Mercer: 0 ❌ (rolled off)
 
 ### Big-3 lead share in rolling 9
 
-- Now: 2/9 (22%) — Aon 1 + McKinsey 1 (Deloitte rolled off)
-- Trend across the day: 1/9 → 2/9 → 3/9 → 2/9. Self-correcting around the 22-33% band, well under control.
+- Now: 2/9 (22%) — McKinsey 1 + Deloitte 1 (Aon rolled off)
+- Trend: 1/9 → 2/9 → 3/9 → 2/9 → 2/9. Steady in the 22-33% band.
 
-**Near-perfect distribution holds.** Every one of the 9 leads is a distinct firm. Gartner and Gallup (the two 0-lead firms flagged last run) were both filled this run — the rotation engine is doing exactly what it should.
+**Distribution holds.** Every one of the 9 leads is a distinct firm. Deloitte and Conference Board (the two 0-lead priorities flagged last run) were both filled this run.
 
 ### Next-run flag
 
-- **Deloitte and Conference Board rolled off (0 leads).** Both priority fills for the next run; Deloitte is the only Big-3 at 0, so it's the natural Big-3 lead next time.
-- **Big-3 at 2/9** — room for 1 more Big-3 lead next run (ideally Deloitte).
-- **No firm over-rotated** — every firm at 0 or 1. Clean slate.
+- **Aon and Mercer rolled off (0 leads).** Both priority fills for the next run. Aon is the only Big-3 at 0, so it's the natural Big-3 lead next time. Mercer has been a heavy corroborator all week — good moment to let it lead again.
+- **Big-3 at 2/9** — room for 1 more Big-3 lead next run (ideally Aon).
+- **No firm over-rotated** — every firm at 0 or 1.
+
+Note: the dedup window is very heavy (18 themes across 06-14 + 06-21 runs 1-5). Fresh non-excluded themes are getting scarce; the next run may need to recycle an aged-out parent with genuinely fresh 2026 evidence, or the user may want to space runs out so the 14-day window clears.
 
 Sources to surface in the next run:
-- **Deloitte HCT 2026** — chapters not yet led standalone (board oversight, risk reframing, productivity→performance)
-- **Conference Board** — a survey cut beyond CHRO/CEO confidence (already used)
-- **Gallup State of Global Workplace 2026** — intent-to-leave / choice-in-work (engagement + thriving now both used)
-- **Newly discoverable credible global firms** via discovery pass
+- **Aon 2026 Human Capital Outlook** — forces not yet led (volatility/risk integration, workforce resilience)
+- **Mercer GTT 2026** — a chapter not yet led standalone
+- **Recycle candidates** (aged-out, fresh-evidence): leadership/Gen-Z, EVP, geopolitics, medical inflation, etc.
 
 ---
 

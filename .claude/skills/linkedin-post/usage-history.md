@@ -17,6 +17,31 @@ When excluding, match on **parent theme**, not slug — two slugs about "Human-A
 
 ## Used themes (most recent first)
 
+### Flat raise budgets quietly redirected to AI / critical skills (recycle of skills-based-planning with fresh 2026 SBP data)
+- Slugs: the-flat-budget-that-isnt
+- Source stats: WTW Salary Budget Planning 2026 — 21% of employers cutting 2026 raise budgets vs 6% raising (search-only); PwC 2026 AI Jobs Barometer — AI-skill wage premium 62%, up from 57% (search-only); Mercer GTT 2026 skills-based pay (search-only)
+- Distinct from theme #7 (EU pay transparency, used 06-21 r2 — disclosure mechanics) and theme #8 (benefits affordability / choice, used 06-21 r2 — health cost). This is base-pay budget reallocation toward scarce/AI skills. Recycles aged-out skills-based-planning with fresh 2026 SBP + AI-premium data.
+- Lead firm: WTW (Tier 1 non-Big-3)
+- Commits: (pending this run-5)
+- Date(s): 2026-06-21
+
+### The AI diffusion gap — individual gains don't roll up to the enterprise (NEW parent theme; carries user POV)
+- Slugs: the-productivity-that-never-arrives
+- Source stats: Conference Board 2026 "Transforming Organizations for AI" — nearly every large employer deployed AI last year, productivity gains concentrated in ~1 firm in 5 (search-only); McKinsey 2026 "where AI creates value" (search-only); PwC 2026 AI Jobs Barometer — top-20% AI-exposed firms ~163% productivity growth since 2018, ~5x average (search-only); BCG 2026 adoption-vs-value (search-only)
+- POV: user's take of the week — "individual productivity increase doesn't translate into organization productivity improvement." Post written first-person around it.
+- Distinct from theme #11 (AI time-reinvestment gap, used 06-21 r3 — worker-level saved-time leaks) and theme #10 (speed+resilience). This is the org/macro diffusion level: near-universal adoption, concentrated payoff.
+- Lead firm: Conference Board (Tier 2 — 0-lead priority slot filled)
+- Commits: (pending this run-5)
+- Date(s): 2026-06-21
+
+### Workforce-data integrity crisis — AI-faked candidates (NEW parent theme)
+- Slugs: verify-the-human
+- Source stats: Gartner 2026 — 59% of hiring managers suspect a candidate used AI to misrepresent themselves (search-only, unverified); Deloitte HCT 2026 worker-data / trust chapter (search-only); WEF 2026 AI-driven disinformation (search-only)
+- Distinct from theme #5 (AI decision governance / decisions that echo, used 06-21 r1 — Deloitte, exec decision-making). This is a DIFFERENT Deloitte HCT chapter: candidate/worker data integrity + hiring verification.
+- Lead firm: Deloitte (Big-3 — 0-lead priority slot filled; single allowed Big-3 lead this run)
+- Commits: (pending this run-5)
+- Date(s): 2026-06-21
+
 ### The thriving gap — wellbeing stagnation beyond engagement (NEW parent theme)
 - Slugs: the-thriving-gap
 - Source stats: Gallup State of the Global Workplace 2026 — only 34% of employees are thriving (two in three are not); 40% report daily stress; engagement at 20%; low engagement costs ~$10T/yr (search-only); Deloitte HCT 2026 — 68% globally say workplace change harmed their wellbeing, 76% UK (search-only)
