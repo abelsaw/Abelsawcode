@@ -87,7 +87,7 @@ def fit_title(draw, text, max_w, max_h, size_hi=86, size_lo=40):
 
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--tag", default="CHRO READS · VOL 01")
+    p.add_argument("--tag", default="CTRO READS · VOL 01")
     p.add_argument("--stat", required=True)
     p.add_argument("--title", required=True)
     p.add_argument("--subtitle", default="")

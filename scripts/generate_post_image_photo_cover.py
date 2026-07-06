@@ -117,7 +117,7 @@ def main() -> int:
     p.add_argument("--photo", required=True, help="Path to background photo.")
     p.add_argument("--palette", default="warm", choices=["warm", "cool"],
                    help="warm (default) or cool palette.")
-    p.add_argument("--tag", default="CHRO")
+    p.add_argument("--tag", default="CTRO")
     p.add_argument("--title", required=True)
     p.add_argument("--subtitle", default="")
     p.add_argument("--source", default="")

@@ -1,6 +1,8 @@
 ---
 name: linkedin-post
-description: Generate 3 LinkedIn post options (60-150 words each, 200 hard cap) plus matching 7-slide carousels on HR best practices for a CHRO, sourced from 2026 research reports across Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup and other credible firms. Carousels render in one of three locked styles (hr-linkedin-option1 chip icons / option2 TOC tiles / option3 photo cover). The skill can actively discover NEW credible 2026 sources during research and append them to the catalog. Use when the user wants fresh LinkedIn content — phrases like "give me LinkedIn post options", "draft a LinkedIn carousel", "create LinkedIn content", "I need new posts", or invokes /linkedin-post.
+description: Generate 3 LinkedIn post options (60-150 words each, 200 hard cap) plus matching 7-slide carousels on workforce and transformation best practices for a Chief Transformation Officer (CTRO), sourced from 2026 research reports across Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup and other credible firms. Carousels render in one of three locked styles (hr-linkedin-option1 chip icons / option2 TOC tiles / option3 photo cover). The skill can actively discover NEW credible 2026 sources during research and append them to the catalog. Use when the user wants fresh LinkedIn content — phrases like "give me LinkedIn post options", "draft a LinkedIn carousel", "create LinkedIn content", "I need new posts", or invokes /linkedin-post.
+
+Persona note: the account voice is a **Chief Transformation Officer (CTRO)** — the repositioning from HR/CHRO to Transformation as of 2026-06-21. The carousel brand tag is `CTRO`, the closing-slide source line is `CTRO Read`, and the action-slide label is `What CTROs are doing now`. The subject matter is still workforce, people, AI-adoption, and organizational transformation sourced from the 2026 research catalog; only the persona/branding shifted. Real source names keep their exact spelling (Gartner "CHRO Priorities 2026", the "CHRO Association", Conference Board "CHRO Confidence Index" are report/firm proper nouns, not our branding — never alter a citation).
 ---
 
 # LinkedIn post + carousel — on-demand
@@ -16,7 +18,7 @@ sourced from 2026 HR research, ready for the user to review and publish.
   - `option2` — playful-iconic with numbered TOC tiles (best for structured 4-part frameworks)
   - `option3` — photo-driven cover (the user supplies a photo; pass `--palette cool` for cool-toned photos)
   Each is a registered project skill with its own SKILL.md and renderer scripts.
-- `region: <apac|global>` — geographic lens. **Default: `apac`.** Asia Pacific is the default audience and source-weighting for this CHRO. Pass `region: global` to remove the regional anchor.
+- `region: <apac|global>` — geographic lens. **Default: `apac`.** Asia Pacific is the default audience and source-weighting for this CTRO. Pass `region: global` to remove the regional anchor.
 - `theme: <topic>` — scope the posts to one topic (e.g. `theme: AI in HR`, `theme: pay transparency`). Default: surface the most-mentioned 2026 themes across the catalog.
 - `sources: +<Firm1>, +<Firm2>` — include named firms in addition to the catalog. Use `-<Firm>` to exclude.
 - `count: N` — produce N post options instead of the default 3 (cap at 5).
@@ -28,11 +30,11 @@ A common workflow: run once to produce drafts + carousels in one style, then the
 
 ## Primary objective — drive high LinkedIn engagement
 
-Every post is optimized for **engagement** (stops, dwell time, comments, saves, reshares, profile visits) — not just for being correct. Engagement is the goal the drafting, the carousel, and the option-ranking all serve. The rule is: **earn the engagement, don't bait it.** This means no clickbait, no manufactured outrage, no "comment YES if you agree", no withheld-payoff teasing — those conflict with the locked professional/progressive/bold voice and erode a CHRO's credibility. Instead, engagement comes from genuine signal:
+Every post is optimized for **engagement** (stops, dwell time, comments, saves, reshares, profile visits) — not just for being correct. Engagement is the goal the drafting, the carousel, and the option-ranking all serve. The rule is: **earn the engagement, don't bait it.** This means no clickbait, no manufactured outrage, no "comment YES if you agree", no withheld-payoff teasing — those conflict with the locked professional/progressive/bold voice and erode a CTRO's credibility. Instead, engagement comes from genuine signal:
 
 - **A scroll-stopping first line.** LinkedIn truncates at ~140-210 chars ("…see more"). The opening line must carry a complete, surprising, or counter-intuitive claim that earns the click to expand. Lead with the sharpest idea, never a windup.
 - **One memorable number or reframe** the reader will repeat. A single concrete stat (the lead firm's anchor) or an inversion ("It's not a pipeline problem, it's a role-design problem") is what gets quoted in comments and screenshots.
-- **Save-worthiness.** Posts that read like something a CHRO would bookmark for a board deck get saves — the strongest ranking signal LinkedIn weights. Concrete frameworks, named stats, and a clear "what to do" beat generic observation.
+- **Save-worthiness.** Posts that read like something a CTRO would bookmark for a board deck get saves — the strongest ranking signal LinkedIn weights. Concrete frameworks, named stats, and a clear "what to do" beat generic observation.
 - **A real conversation opener, not a loaded one.** End on a forward-looking question or a take that invites a peer to add their view ("Where does this sit in your 2026 plan?") — never a gotcha or a yes/no engagement-bait prompt.
 - **Carousel as dwell-time engine.** The 7-slide format exists to maximize dwell time (LinkedIn rewards in-feed time). Slide 1 must hook, slides 2-5 must each reward the swipe with a distinct stat, slide 7 must close with a takeaway worth a save.
 - **First-30-minutes comment fuel.** A post that gives readers something specific to react to (a number to debate, a reframe to extend, a peer experience to share) earns early comments, which drive the algorithm's reach decision.
@@ -64,7 +66,7 @@ When `count > 3`, add: question-led (a genuine problem the reader is living) or 
 
 ### One POV option per run — sourced from the user, not invented
 
-Exactly one of the N options is written in an explicit first-person seasoned-CHRO voice — a lived observation, a genuine stance, or a mild disagreement with the data. This is the single strongest anti-slop + reach lever, because it is content only a real practitioner could write; the algorithm and the reader both reward it.
+Exactly one of the N options is written in an explicit first-person seasoned transformation-leader (CTRO) voice — a lived observation, a genuine stance, or a mild disagreement with the data. This is the single strongest anti-slop + reach lever, because it is content only a real practitioner could write; the algorithm and the reader both reward it.
 
 **The POV comes from the user, never fabricated.** Before drafting the POV option, ASK the user for their **"POV of the week"** — a one-to-two-line genuine take, stance, or observation from their actual experience. Build the POV post around what they give you; do not invent a practitioner anecdote, a specific number they didn't state, or a stance they don't hold. A fabricated "in my experience…" is worse than no POV post — it reads false and risks their credibility.
 
@@ -76,7 +78,7 @@ Practical flow:
 
 ### The human gate (final review before presenting)
 
-Before showing drafts at Step 6, run every post through one test: **"Would a specific, smart, experienced CHRO write this exact sentence — or does it read like a research digest any tool could generate?"** Where a line reads generic, rewrite it with a concrete detail, a real stance, or plainer words. Reduce stat density (one well-interpreted number beats three stacked). Vary sentence rhythm — not every line is one short sentence. This gate applies to the post body; the carousel slide copy follows the same bans (no em-dashes, no inversions, no template phrases).
+Before showing drafts at Step 6, run every post through one test: **"Would a specific, smart, experienced CTRO write this exact sentence — or does it read like a research digest any tool could generate?"** Where a line reads generic, rewrite it with a concrete detail, a real stance, or plainer words. Reduce stat density (one well-interpreted number beats three stacked). Vary sentence rhythm — not every line is one short sentence. This gate applies to the post body; the carousel slide copy follows the same bans (no em-dashes, no inversions, no template phrases).
 
 ---
 
@@ -169,7 +171,7 @@ scripts in `scripts/`. **Every carousel is 7 slides:**
 
 - **Slide 1** — cover (style-specific: chip icons / TOC tiles / photo)
 - **Slides 2-5** — four data/insight slides
-- **Slide 6** — action list ("What CHROs are doing now") — pass a multi-line
+- **Slide 6** — action list ("What CTROs are doing now") — pass a multi-line
   `--lead` (literal `\n` between items), drop `--bold`
 - **Slide 7** — dark-background conclusion (the ONLY dark slide in the carousel)
 
@@ -200,7 +202,7 @@ Style-specific notes:
 - **Lead-firm stat anchors slide 2.** The lead firm designated for each post
   (per the source-balance rotation) is the firm whose stat headlines slide 2.
 
-Default brand tag is `CHRO` (the "Abel Saw" tag was removed 2026-06-02).
+Default brand tag is `CTRO` (repositioned from `CHRO` on 2026-06-21; the "Abel Saw" tag was removed 2026-06-02). The closing-slide source line is `CTRO Read` and the action slide is `What CTROs are doing now`.
 
 ### 4c — Environment notes
 
@@ -211,7 +213,7 @@ poppler-utils`.
 
 ## Step 5 — Voice & word-count enforcement
 
-Each post body must be **highly professional, progressive, and bold** — first-person senior-CHRO voice. The writer takes a clear position and points forward without picking fights:
+Each post body must be **highly professional, progressive, and bold** — first-person senior transformation-leader (CTRO) voice. The writer takes a clear position and points forward without picking fights:
 
 - **Bold** = stands behind a view, doesn't hedge, owns the take. Strong declaratives.
 - **Progressive** = forward-looking. Frames the opportunity ahead, not the blame for what's broken.
@@ -226,18 +228,18 @@ Voice rules:
 - **The 3 options must use 3 different structures** (observation/POV-led · single-stat-led · contrarian-claim-led), and **exactly one is the first-person POV option.**
 - Reflective questions ("Where does X sit in your stack?") are fine; loaded ones are not.
 - 3-4 hashtags max, and vary them across the batch — don't put the same `#CHRO #FutureOfWork` on all three.
-- **Run the human gate** before presenting: would a specific experienced CHRO write this exact sentence, or is it a digest any tool could produce?
+- **Run the human gate** before presenting: would a specific experienced CTRO write this exact sentence, or is it a digest any tool could produce?
 
 **Engagement craft (serves the Primary objective above):**
 - **First line is the hook.** It must stand alone as a complete, scroll-stopping claim within ~140 chars — before LinkedIn's "…see more" fold. If the first line needs the second line to make sense, rewrite it.
 - **Front-load the sharpest stat or reframe.** The single most quotable element (the lead firm's anchor number, or a clean inversion) belongs in the first two lines, not buried at the end.
-- **Earn it, don't bait it.** No "comment X if…", no "agree?", no withheld payoff, no outrage framing. Engagement-bait reads as desperation and clashes with the CHRO voice. The hook is a real idea, not a tease.
+- **Earn it, don't bait it.** No "comment X if…", no "agree?", no withheld payoff, no outrage framing. Engagement-bait reads as desperation and clashes with the CTRO voice. The hook is a real idea, not a tease.
 - **Leave room for the reader to add value.** The strongest comment-drivers give peers something specific to extend — a number to debate, a reframe to apply to their org, an experience to share. Either close works: a bold declarative take that invites agreement/challenge ("Fund the humans.") OR a forward-looking question ("Where does this sit in your 2026 plan?"). What kills comments is a closed, self-contained summary that leaves nothing to add.
 - **One idea per post.** A post that argues one thing well out-engages one that lists three. Save breadth for the carousel.
 - **Whitespace.** One idea per line, blank lines between beats. Dense paragraphs kill dwell time on mobile.
 
 **APAC framing (when `region: apac`):**
-- **Universal best-practices framing is the default.** Don't open posts with "APAC's biggest..." or "APAC moved past..." style leads. Write as a senior CHRO sharing a general insight that happens to land in APAC.
+- **Universal best-practices framing is the default.** Don't open posts with "APAC's biggest..." or "APAC moved past..." style leads. Write as a senior transformation leader (CTRO) sharing a general insight that happens to land in APAC.
 - **Weave APAC data into the body as evidence**, not as the headline. Example: instead of "APAC's medical trend is the highest in the world," write "Medical inflation is rewriting benefits strategy. WTW 2026: global 10.3%, with APAC leading at 14%."
 - **Filter, don't force.** If a topic doesn't apply to APAC employers (e.g. US-only NLRB rulings, US state labor law), don't draft a post on it. If a topic applies universally, treat it universally and only invoke APAC where the data adds material dimension.
 - **Hashtags default to universal.** `#APAC`, `#FutureOfWorkAsia`, `#ASEAN`, `#SingaporeHR`, `#AsiaCHRO` are optional — use only when the post specifically targets APAC employers (e.g. regional regulatory deadlines).
@@ -344,7 +346,7 @@ through the setup steps in `.env.example` instead of attempting to publish.
 - **7 slides per option, every time.** Three posts = three carousels = twenty-one PNGs. Slide 1 cover, slides 2-5 data/insight, slide 6 action list, slide 7 dark conclusion.
 - **Slide 7 ends with a conclusion, not a question.** The bold payoff is the takeaway.
 - **Engagement is the objective, earned not baited.** Every post is optimized for reach (hook, dwell, comments, saves, reshares) via genuine signal — a scroll-stopping first line, one quotable stat/reframe, save-worthy substance, a real conversation opener. Never via clickbait, engagement-bait prompts, outrage, or withheld payoffs (see "Primary objective" up top). The post-body question on the page and the carousel question are different surfaces — the *post* may end on an inviting question; the *carousel slide 7* ends on a conclusion.
-- **Anti-AI-slop is mandatory (protects reach from suppression).** Hard bans: no em-dashes, no "It's not X, it's Y" inversions, no template phrases ("not a perk", "unlock", "the X lever", etc.), no forced rule-of-three. The 3 options must use 3 distinct structures, exactly one written in first-person CHRO POV. Every post clears the human gate ("would a specific experienced CHRO write this exact sentence?") before presenting. See the "Anti-AI-slop" section for the full list.
+- **Anti-AI-slop is mandatory (protects reach from suppression).** Hard bans: no em-dashes, no "It's not X, it's Y" inversions, no template phrases ("not a perk", "unlock", "the X lever", etc.), no forced rule-of-three. The 3 options must use 3 distinct structures, exactly one written in first-person CTRO POV. Every post clears the human gate ("would a specific experienced CTRO write this exact sentence?") before presenting. See the "Anti-AI-slop" section for the full list.
 - **Persistence is silent but visible.** When you add a discovered source, mention it in your final report to the user ("Added Korn Ferry's 2026 Workforce Survey to the catalog — first time seen.") so they can audit the growing catalog.
 - **No theme overlap with prior runs.** Before drafting, the skill reads `.claude/skills/linkedin-post/usage-history.md` and excludes parent themes used within 14 days. After drafting, the skill appends the newly-used themes to the ledger. The user can manually delete an entry to allow recycling. If fewer than 3 non-excluded themes meet the cross-firm bar, stop and ask before drafting a smaller set.
 - **Lead-firm rotation across the rolling 9-post window.** Big-3 firms (McKinsey, Deloitte, Aon) may not lead more than 1 of every 3 posts in a single run. In the rolling 9-post window, every Tier 1 firm (Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup) must appear at least once, and at least 2 non-Big-3 Tier 1 firms (Mercer / WTW / Gartner / WEF / Gallup) must lead at least one post. Track utilization in `sources.md` after every run. If the rule blocks all available themes, surface the conflict in the brief and ask the user to relax it explicitly.

@@ -15,7 +15,7 @@ as decorative anchors without veering into clip-art.
 
 ```
 ┌──────────────────────────────────────────────────┐
-│ CHRO                                  │ ← brand tag tracked caps
+│ CTRO                                  │ ← brand tag tracked caps
 │ ──                                                │   + coral mini-stripe
 │                                                  │
 │ Internal                                         │ ← bold sans navy title
@@ -78,7 +78,7 @@ cover; everything else stays sans for a modern, crisp feel.
 
 ```bash
 python3 scripts/generate_post_image_playful_cover.py \
-  --tag "CHRO" \
+  --tag "CTRO" \
   --title "Internal\nMobility" \
   --subtitle "The retention asset\nyou already own." \
   --chips "HIRE,KEEP,GROW,MOVE" \
@@ -89,7 +89,7 @@ python3 scripts/generate_post_image_playful_cover.py \
 
 | Flag | Required | Use |
 |---|---|---|
-| `--tag`      | no  | Brand tag tracked caps. Default `"CHRO"`. |
+| `--tag`      | no  | Brand tag tracked caps. Default `"CTRO"`. |
 | `--title`    | yes | Bold sans title. Supports `\n` for forced breaks. |
 | `--subtitle` | no  | Italic serif subtitle. Supports `\n`. |
 | `--chips`    | no  | Comma-separated 4 chip labels. Default `"HIRE,KEEP,GROW,MOVE"`. |
@@ -145,7 +145,7 @@ python3 scripts/generate_post_image_playful_dark_conclusion.py \
   --headline "Internal mobility is not a perk." \
   --lead     "It is the cheapest, fastest" \
   --bold     "retention strategy you already own." \
-  --source   "CHRO Read" \
+  --source   "CTRO Read" \
   --slide    "7/7" \
   --output   posts/sets/<date>/<slug>/slide-07.png
 ```

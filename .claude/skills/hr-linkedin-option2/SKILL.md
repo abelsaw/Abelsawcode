@@ -16,7 +16,7 @@ grid.
 
 ```
 ┌──────────────────────────────────────────────────┐
-│ CHRO                                  │ ← brand tag tracked caps
+│ CTRO                                  │ ← brand tag tracked caps
 │ ──                                                │   + coral mini-stripe
 │                                                  │
 │ Internal                                         │ ← bold sans navy title
@@ -96,7 +96,7 @@ slide 6's ribbon reusing mustard for the action takeaway):
 
 ```bash
 python3 scripts/generate_post_image_playful_v2_cover.py \
-  --tag      "CHRO" \
+  --tag      "CTRO" \
   --title    "Internal\nMobility" \
   --subtitle "The retention asset you already own." \
   --tiles    "01:HIRE,02:KEEP,03:GROW,04:MOVE" \
@@ -107,7 +107,7 @@ python3 scripts/generate_post_image_playful_v2_cover.py \
 
 | Flag | Required | Use |
 |---|---|---|
-| `--tag`      | no  | Brand tag tracked caps. Default `"CHRO"`. |
+| `--tag`      | no  | Brand tag tracked caps. Default `"CTRO"`. |
 | `--title`    | yes | Bold sans title. Supports `\n`. |
 | `--subtitle` | no  | Italic serif subtitle. Supports `\n`. |
 | `--tiles`    | no  | 4 comma-separated `NN:LABEL` pairs. Default `"01:HIRE,02:KEEP,03:GROW,04:MOVE"`. |
@@ -184,7 +184,7 @@ python3 scripts/generate_post_image_playful_v2_dark_conclusion.py \
   --headline "Internal mobility is not a perk." \
   --lead     "It is the cheapest, fastest" \
   --bold     "retention strategy you already own." \
-  --source   "CHRO Read" \
+  --source   "CTRO Read" \
   --slide    "7/7" \
   --output   posts/sets/<date>/<slug>/slide-07.png
 ```
