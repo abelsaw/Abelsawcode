@@ -10,6 +10,29 @@ thread), manually delete its entry from the relevant week below.
 
 ## Past weeks (most recent first)
 
+### Week of 2026-07-03 (engagement-ranked)
+- Window: 2026-06-29 to 2026-07-03 (current-week default; today 2026-07-06 Mon, so window = most recently completed Mon-Fri)
+- Length: 10 of 10
+- **Ranking signal:** cross-platform engagement (LinkedIn / X / HN / Reddit), approximated via WebSearch + visible counts
+- Through-line: Anthropic got its models back. OpenAI proposed handing 5% of itself to the US government. And someone found the Linux kernel bug Anthropic's Mythos scanned right past. Policy at the top, patches underneath.
+- Three-lens balance: Models 3 · Infra 1 · Enterprise tech 6 (Infra thin — named in closing)
+- Ranked stories 1-10:
+  1. anthropic-fable-mythos-export-controls-lifted: https://www.anthropic.com/news/redeploying-fable-5 — 4/4 (HN thread 48740758)
+  2. openai-us-gov-5-percent-stake-42b: https://www.bloomberg.com/news/articles/2026-07-02/openai-proposes-giving-the-us-government-a-5-stake-ft-says — 4/4
+  3. bad-epoll-linux-kernel-cve-2026-46242-mythos-missed: https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html — 4/4
+  4. phantom-squatting-llm-hallucinated-domains-palo-alto-unit42: (Palo Alto Unit 42 primary) — 4/4
+  5. apple-security-updates-webkit-ai-tools: (Apple primary Jun 29) — 4/4
+  6. nvidia-ai-factories-multi-tenant-compute-business-model: https://blogs.nvidia.com/blog/nvidia-unlocks-ai-compute-at-scale-capital-partners-to-power-ai-infrastructure-buildout/ — 3-4/4
+  7. oracle-ebs-cve-2026-46817-active-exploitation: (CVE.org + Oracle Security Alert Jun 30) — 3-4/4
+  8. citrix-bleed-2-cve-2025-5777-anubis-ransomware: (SecurityWeek + Hacker News Jul 2-3) — 3-4/4
+  9. z-ai-glm-5-2-chinese-agentic-coding: https://www.marketingprofs.com/opinions/2026/55197/ai-update-july-3-2026-ai-news-and-views-from-the-past-week — 3/4
+  10. sharepoint-rce-cve-2026-45659-cisa-kev: https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html — 2-3/4 [thin]
+- Post slug: the-week-the-state-and-the-kernel-both-moved
+- Word count: 442 / Character count: 2,997 / LinkedIn cap 3,000
+- Date: 2026-07-03 (run on 2026-07-06 Mon per default-window rule)
+- Post draft path: posts/drafts/weekly-summary-2026-07-03.md
+- Research brief: posts/drafts/weekly-research-2026-07-03.md
+
 ### Week of 2026-06-26 (ENGAGEMENT-RANKED — first run of new methodology, test pass)
 - Window: 2026-06-22 to 2026-06-26
 - Length: 10 of 10
