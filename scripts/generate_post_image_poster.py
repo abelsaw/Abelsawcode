@@ -25,16 +25,17 @@ LB = "/usr/share/fonts/truetype/liberation/"
 SANS_B = [DJ + "DejaVuSans-Bold.ttf", LB + "LiberationSans-Bold.ttf"]
 
 _PALETTES = {
-    "coral-dark":   dict(bg=(24, 24, 28), cream=(244, 238, 226), acc=(230, 96, 66), mut=(150, 146, 138)),
-    "mustard-dark": dict(bg=(26, 26, 24), cream=(245, 240, 228), acc=(224, 168, 60), mut=(150, 148, 138)),
-    "teal-dark":    dict(bg=(20, 26, 28), cream=(236, 242, 240), acc=(64, 176, 160), mut=(138, 150, 148)),
+    # Vibrant, high-saturation accents on near-black fields for max scroll-stop.
+    "electric-coral": dict(bg=(16, 16, 20), cream=(248, 243, 234), acc=(255, 79, 56), mut=(142, 138, 132)),
+    "vivid-cyan":     dict(bg=(12, 18, 23), cream=(236, 247, 247), acc=(22, 216, 216), mut=(124, 148, 150)),
+    "vivid-amber":    dict(bg=(20, 16, 11), cream=(249, 242, 230), acc=(255, 176, 28), mut=(152, 142, 124)),
 }
 BG = CREAM = ACC = MUT = None
 
 
 def _apply_palette(name):
     global BG, CREAM, ACC, MUT
-    p = _PALETTES.get(name, _PALETTES["coral-dark"])
+    p = _PALETTES.get(name, _PALETTES["electric-coral"])
     BG, CREAM, ACC, MUT = p["bg"], p["cream"], p["acc"], p["mut"]
 
 
@@ -184,7 +185,7 @@ def render_dark(a):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--kind", default="content", choices=["cover", "content", "action", "dark"])
-    p.add_argument("--palette", default="coral-dark", choices=list(_PALETTES))
+    p.add_argument("--palette", default="electric-coral", choices=list(_PALETTES))
     p.add_argument("--tag", default="CTRO")
     p.add_argument("--kicker", default="")
     p.add_argument("--stat", default="")

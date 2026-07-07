@@ -26,12 +26,13 @@ MONO = [DJ + "DejaVuSansMono.ttf"]
 MONO_B = [DJ + "DejaVuSansMono-Bold.ttf"]
 
 _PALETTES = {
-    "teal-paper":  dict(bg=(230, 234, 236), grid=(206, 213, 216), ink=(28, 36, 44), acc=(0, 122, 120), mut=(96, 108, 116),
-                        dbg=(18, 24, 28), dink=(224, 232, 230), dacc=(64, 196, 180), dmut=(120, 136, 140)),
-    "slate-paper": dict(bg=(233, 235, 238), grid=(210, 214, 220), ink=(30, 34, 44), acc=(70, 96, 150), mut=(104, 112, 128),
-                        dbg=(20, 24, 32), dink=(226, 230, 240), dacc=(120, 150, 220), dmut=(126, 134, 152)),
-    "amber-paper": dict(bg=(236, 233, 226), grid=(216, 212, 202), ink=(40, 34, 26), acc=(176, 110, 30), mut=(118, 110, 96),
-                        dbg=(28, 24, 18), dink=(238, 232, 220), dacc=(220, 158, 70), dmut=(140, 130, 112)),
+    # Vivid, saturated accents on a clean cool paper; punchy dark-terminal closer.
+    "electric-blue": dict(bg=(228, 233, 241), grid=(201, 211, 226), ink=(16, 24, 42), acc=(20, 108, 255), mut=(90, 102, 126),
+                          dbg=(10, 14, 26), dink=(226, 233, 245), dacc=(72, 154, 255), dmut=(118, 132, 158)),
+    "neon-teal":     dict(bg=(224, 236, 235), grid=(197, 214, 212), ink=(14, 30, 32), acc=(0, 194, 168), mut=(90, 112, 112),
+                          dbg=(8, 20, 20), dink=(224, 242, 238), dacc=(46, 236, 200), dmut=(116, 142, 138)),
+    "hot-coral":     dict(bg=(237, 231, 229), grid=(218, 208, 205), ink=(34, 24, 22), acc=(255, 82, 58), mut=(120, 102, 98),
+                          dbg=(24, 15, 14), dink=(245, 231, 227), dacc=(255, 116, 90), dmut=(150, 124, 118)),
 }
 BG = GRID = INK = ACC = MUT = None
 DBG = DINK = DACC = DMUT = None
@@ -39,7 +40,7 @@ DBG = DINK = DACC = DMUT = None
 
 def _apply_palette(name):
     global BG, GRID, INK, ACC, MUT, DBG, DINK, DACC, DMUT
-    p = _PALETTES.get(name, _PALETTES["teal-paper"])
+    p = _PALETTES.get(name, _PALETTES["electric-blue"])
     BG, GRID, INK, ACC, MUT = p["bg"], p["grid"], p["ink"], p["acc"], p["mut"]
     DBG, DINK, DACC, DMUT = p["dbg"], p["dink"], p["dacc"], p["dmut"]
 
@@ -222,7 +223,7 @@ def render_dark(a):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--kind", default="content", choices=["cover", "content", "action", "dark"])
-    p.add_argument("--palette", default="teal-paper", choices=list(_PALETTES))
+    p.add_argument("--palette", default="electric-blue", choices=list(_PALETTES))
     p.add_argument("--tag", default="CTRO.brief")
     p.add_argument("--kicker", default="")
     p.add_argument("--title", default="")
