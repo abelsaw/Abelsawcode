@@ -25,17 +25,18 @@ LB = "/usr/share/fonts/truetype/liberation/"
 SANS_B = [DJ + "DejaVuSans-Bold.ttf", LB + "LiberationSans-Bold.ttf"]
 
 _PALETTES = {
-    # Vibrant, high-saturation accents on near-black fields for max scroll-stop.
-    "electric-coral": dict(bg=(16, 16, 20), cream=(248, 243, 234), acc=(255, 79, 56), mut=(142, 138, 132)),
-    "vivid-cyan":     dict(bg=(12, 18, 23), cream=(236, 247, 247), acc=(22, 216, 216), mut=(124, 148, 150)),
-    "vivid-amber":    dict(bg=(20, 16, 11), cream=(249, 242, 230), acc=(255, 176, 28), mut=(152, 142, 124)),
+    # Muji / earth-tone: warm unbleached paper, walnut ink, muted natural accent.
+    # `cream` holds the dark ink (main text); the closer flips to that walnut field.
+    "kraft-clay": dict(bg=(226, 216, 198), cream=(60, 52, 43), acc=(168, 96, 66), mut=(120, 110, 96)),
+    "oat-sage":   dict(bg=(233, 229, 217), cream=(54, 56, 46), acc=(118, 138, 104), mut=(120, 124, 108)),
+    "sand-ochre": dict(bg=(231, 221, 201), cream=(62, 52, 40), acc=(172, 134, 74), mut=(126, 116, 98)),
 }
 BG = CREAM = ACC = MUT = None
 
 
 def _apply_palette(name):
     global BG, CREAM, ACC, MUT
-    p = _PALETTES.get(name, _PALETTES["electric-coral"])
+    p = _PALETTES.get(name, _PALETTES["kraft-clay"])
     BG, CREAM, ACC, MUT = p["bg"], p["cream"], p["acc"], p["mut"]
 
 
@@ -162,30 +163,30 @@ def render_action(a):
 
 
 def render_dark(a):
-    # the closer flips to a full accent field with ink text
-    img = Image.new("RGB", (CANVAS, CANVAS), ACC)
+    # the closer flips to a deep walnut field (calm Muji tonal shift, high contrast)
+    img = Image.new("RGB", (CANVAS, CANVAS), CREAM)
     d = ImageDraw.Draw(img)
-    ink = BG
-    d.text((PAD, 100), track(a.kicker or "The takeaway", 3), font=font(SANS_B, 26), fill=ink)
-    d.rectangle([PAD, 152, PAD + 90, 160], fill=ink)
+    text = BG  # light paper text on the walnut field
+    d.text((PAD, 100), track(a.kicker or "The takeaway", 3), font=font(SANS_B, 26), fill=ACC)
+    d.rectangle([PAD, 152, PAD + 90, 160], fill=ACC)
     yy = 300
     hf, hlines, hlh = fit(d, a.headline, CANVAS - 2 * PAD, 300, 96, 52)
     for i, ln in enumerate(hlines):
-        d.text((PAD, yy + i * hlh), ln, font=hf, fill=ink)
+        d.text((PAD, yy + i * hlh), ln, font=hf, fill=text)
     yy = yy + len(hlines) * hlh + 24
     if a.bold.strip():
         bf, blines, blh = fit(d, a.bold, CANVAS - 2 * PAD, 180, 56, 34)
         for ln in blines:
-            d.text((PAD, yy), ln, font=bf, fill=CREAM)
+            d.text((PAD, yy), ln, font=bf, fill=ACC)
             yy += blh
-    footer(d, a.source, a.slide, ink)
+    footer(d, a.source, a.slide, text)
     return img
 
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--kind", default="content", choices=["cover", "content", "action", "dark"])
-    p.add_argument("--palette", default="electric-coral", choices=list(_PALETTES))
+    p.add_argument("--palette", default="kraft-clay", choices=list(_PALETTES))
     p.add_argument("--tag", default="CTRO")
     p.add_argument("--kicker", default="")
     p.add_argument("--stat", default="")

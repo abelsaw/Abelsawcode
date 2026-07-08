@@ -26,13 +26,14 @@ MONO = [DJ + "DejaVuSansMono.ttf"]
 MONO_B = [DJ + "DejaVuSansMono-Bold.ttf"]
 
 _PALETTES = {
-    # Vivid, saturated accents on a clean cool paper; punchy dark-terminal closer.
-    "electric-blue": dict(bg=(228, 233, 241), grid=(201, 211, 226), ink=(16, 24, 42), acc=(20, 108, 255), mut=(90, 102, 126),
-                          dbg=(10, 14, 26), dink=(226, 233, 245), dacc=(72, 154, 255), dmut=(118, 132, 158)),
-    "neon-teal":     dict(bg=(224, 236, 235), grid=(197, 214, 212), ink=(14, 30, 32), acc=(0, 194, 168), mut=(90, 112, 112),
-                          dbg=(8, 20, 20), dink=(224, 242, 238), dacc=(46, 236, 200), dmut=(116, 142, 138)),
-    "hot-coral":     dict(bg=(237, 231, 229), grid=(218, 208, 205), ink=(34, 24, 22), acc=(255, 82, 58), mut=(120, 102, 98),
-                          dbg=(24, 15, 14), dink=(245, 231, 227), dacc=(255, 116, 90), dmut=(150, 124, 118)),
+    # Muji / earth-tone: warm unbleached graph paper, walnut ink, muted natural
+    # accent; the closer is a warm dark-walnut terminal, not a cold near-black.
+    "kraft-clay": dict(bg=(227, 218, 201), grid=(207, 197, 178), ink=(58, 50, 42), acc=(166, 98, 66), mut=(124, 114, 100),
+                       dbg=(40, 34, 28), dink=(230, 222, 208), dacc=(196, 128, 92), dmut=(140, 128, 112)),
+    "oat-sage":   dict(bg=(232, 228, 216), grid=(210, 206, 190), ink=(52, 56, 46), acc=(116, 136, 102), mut=(122, 128, 112),
+                       dbg=(34, 38, 30), dink=(228, 230, 216), dacc=(150, 172, 128), dmut=(128, 138, 120)),
+    "sand-ochre": dict(bg=(231, 222, 203), grid=(212, 202, 182), ink=(60, 50, 40), acc=(172, 134, 74), mut=(128, 118, 100),
+                       dbg=(40, 34, 26), dink=(232, 224, 208), dacc=(204, 166, 100), dmut=(138, 128, 108)),
 }
 BG = GRID = INK = ACC = MUT = None
 DBG = DINK = DACC = DMUT = None
@@ -40,7 +41,7 @@ DBG = DINK = DACC = DMUT = None
 
 def _apply_palette(name):
     global BG, GRID, INK, ACC, MUT, DBG, DINK, DACC, DMUT
-    p = _PALETTES.get(name, _PALETTES["electric-blue"])
+    p = _PALETTES.get(name, _PALETTES["kraft-clay"])
     BG, GRID, INK, ACC, MUT = p["bg"], p["grid"], p["ink"], p["acc"], p["mut"]
     DBG, DINK, DACC, DMUT = p["dbg"], p["dink"], p["dacc"], p["dmut"]
 
@@ -223,7 +224,7 @@ def render_dark(a):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--kind", default="content", choices=["cover", "content", "action", "dark"])
-    p.add_argument("--palette", default="electric-blue", choices=list(_PALETTES))
+    p.add_argument("--palette", default="kraft-clay", choices=list(_PALETTES))
     p.add_argument("--tag", default="CTRO.brief")
     p.add_argument("--kicker", default="")
     p.add_argument("--title", default="")
