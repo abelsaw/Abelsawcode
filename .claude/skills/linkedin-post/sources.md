@@ -146,15 +146,18 @@ To keep the account from pattern-flagging as templated AI slop, **every
 been used recently. The skill reads this ledger at the start of a run and
 applies the **design-rotation rule** (see SKILL.md Step 4b).
 
-The library:
+The library (6 layouts):
 
-| Layout | Style skill | Renderer family | Palette support |
+| Layout | Style skill | Renderer | Palettes |
 |---|---|---|---|
-| `chips` | hr-linkedin-option1 | `playful_*` | 4 palettes (`--palette`) |
-| `tiles` | hr-linkedin-option2 | `playful_v2_*` | 4 palettes (`--palette`) |
-| `photo` | hr-linkedin-option3 | `photo_*` | 2 palettes (`--palette warm|cool`) |
+| `chips` | hr-linkedin-option1 | `playful_*` | warm-classic / cool-steel / earth-editorial / ink-slate |
+| `tiles` | hr-linkedin-option2 | `playful_v2_*` | warm-classic / cool-steel / earth-editorial / ink-slate |
+| `photo` | hr-linkedin-option3 | `photo_*` | warm / cool |
+| `broadsheet` | hr-linkedin-option4 | `broadsheet.py` | classic-red / ink-blue / forest |
+| `poster` | hr-linkedin-option5 | `poster.py` | kraft-clay / oat-sage / sand-ochre |
+| `blueprint` | hr-linkedin-option6 | `blueprint.py` | kraft-clay / oat-sage / sand-ochre |
 
-Palettes (chips + tiles):
+Palettes — chips + tiles:
 
 | Palette | Feel | BG | Primary | Accent 1 | Accent 2 |
 |---|---|---|---|---|---|
@@ -162,6 +165,14 @@ Palettes (chips + tiles):
 | `cool-steel` | light gray / ink-navy / steel blue | `#E8E8E8` | `#1A2434` | `#4E769E` | `#788CA5` |
 | `earth-editorial` | sand / espresso / terracotta / ochre | `#EFE5D0` | `#2E2418` | `#B5663C` | `#A07A40` |
 | `ink-slate` | bone / near-black / brick / gray | `#EEECE6` | `#202024` | `#C65842` | `#808084` |
+
+Palettes — broadsheet (serif editorial, warm off-white + one accent):
+`classic-red` `#962D23` · `ink-blue` `#264A78` · `forest` `#346042`.
+
+Palettes — poster + blueprint (Muji earth tones, warm paper + muted natural accent):
+`kraft-clay` (clay `#A66242`) · `oat-sage` (sage `#748866`) · `sand-ochre` (ochre `#AC864A`).
+Poster closes on a deep-walnut field; blueprint content sits on graph paper and
+closes on a warm dark-walnut terminal.
 
 ### The rotation rule
 

@@ -1,6 +1,6 @@
 ---
 name: linkedin-post
-description: Generate 3 LinkedIn post options (60-150 words each, 200 hard cap) plus matching 7-slide carousels on workforce and transformation best practices for a Chief Transformation Officer (CTRO), sourced from 2026 research reports across Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup and other credible firms. Carousels render in one of three locked styles (hr-linkedin-option1 chip icons / option2 TOC tiles / option3 photo cover). The skill can actively discover NEW credible 2026 sources during research and append them to the catalog. Use when the user wants fresh LinkedIn content — phrases like "give me LinkedIn post options", "draft a LinkedIn carousel", "create LinkedIn content", "I need new posts", or invokes /linkedin-post.
+description: Generate 3 LinkedIn post options (60-150 words each, 200 hard cap) plus matching 7-slide carousels on workforce and transformation best practices for a Chief Transformation Officer (CTRO), sourced from 2026 research reports across Mercer, Aon, McKinsey, WEF, BCG, WTW, Deloitte, Gallup and other credible firms. Carousels render in one of six registered styles (option1 chip icons / option2 TOC tiles / option3 photo cover / option4 broadsheet serif-editorial / option5 stat-poster / option6 blueprint mono-data-brief), auto-rotated per run to avoid a repeated house look. The skill can actively discover NEW credible 2026 sources during research and append them to the catalog. Use when the user wants fresh LinkedIn content — phrases like "give me LinkedIn post options", "draft a LinkedIn carousel", "create LinkedIn content", "I need new posts", or invokes /linkedin-post.
 
 Persona note: the account voice is a **Chief Transformation Officer (CTRO)** — the repositioning from HR/CHRO to Transformation as of 2026-06-21. The carousel brand tag is `CTRO`, the closing-slide source line is `CTRO Read`, and the action-slide label is `What CTROs are doing now`. The subject matter is still workforce, people, AI-adoption, and organizational transformation sourced from the 2026 research catalog; only the persona/branding shifted. Real source names keep their exact spelling (Gartner "CHRO Priorities 2026", the "CHRO Association", Conference Board "CHRO Confidence Index" are report/firm proper nouns, not our branding — never alter a citation).
 ---
@@ -17,8 +17,11 @@ sourced from 2026 HR research, ready for the user to review and publish.
   - `option1` — playful-iconic with geometric chip icons (most general-purpose)
   - `option2` — playful-iconic with numbered TOC tiles (best for structured 4-part frameworks)
   - `option3` — photo-driven cover (the user supplies a photo; pass `--palette cool` for cool-toned photos)
+  - `option4` — broadsheet, serif editorial / newspaper (best for POV / thought-leadership)
+  - `option5` — stat poster, brutalist single-giant-number in Muji earth tones (best for single-stat posts)
+  - `option6` — blueprint, monospace analyst brief with drawn charts in Muji earth tones (best for trend / data posts)
   Each is a registered project skill with its own SKILL.md and renderer scripts.
-- `palette: <name>` — override the auto-rotated color palette. chips/tiles accept `warm-classic` / `cool-steel` / `earth-editorial` / `ink-slate`; photo accepts `warm` / `cool`. **Default: auto-rotate** (the skill picks a palette not used in the last 2 runs — see Step 4b). A user-named palette wins over the rotation.
+- `palette: <name>` — override the auto-rotated color palette. Valid values depend on the layout: chips/tiles → `warm-classic` / `cool-steel` / `earth-editorial` / `ink-slate`; photo → `warm` / `cool`; broadsheet → `classic-red` / `ink-blue` / `forest`; poster & blueprint → `kraft-clay` / `oat-sage` / `sand-ochre`. **Default: auto-rotate** (the skill picks a palette not used in the last 2 runs — see Step 4b). A user-named palette wins over the rotation.
 - `region: <apac|global>` — geographic lens. **Default: `apac`.** Asia Pacific is the default audience and source-weighting for this CTRO. Pass `region: global` to remove the regional anchor.
 - `theme: <topic>` — scope the posts to one topic (e.g. `theme: AI in HR`, `theme: pay transparency`). Default: surface the most-mentioned 2026 themes across the catalog.
 - `sources: +<Firm1>, +<Firm2>` — include named firms in addition to the catalog. Use `-<Firm>` to exclude.
@@ -188,6 +191,14 @@ Renderer scripts per style:
 | option1 (chip icons) | `scripts/generate_post_image_playful_cover.py` | `scripts/generate_post_image_playful_content.py` | `scripts/generate_post_image_playful_dark_conclusion.py` |
 | option2 (TOC tiles) | `scripts/generate_post_image_playful_v2_cover.py` | `scripts/generate_post_image_playful_v2_content.py` | `scripts/generate_post_image_playful_v2_dark_conclusion.py` |
 | option3 (photo cover) | `scripts/generate_post_image_photo_cover.py` | `scripts/generate_post_image_photo_content.py` | `scripts/generate_post_image_photo_dark_conclusion.py` |
+| option4 (broadsheet) | `scripts/generate_post_image_broadsheet.py --kind cover` | `... --kind content` (slides 2-5) · `--kind action` (slide 6) | `... --kind dark` |
+| option5 (stat poster) | `scripts/generate_post_image_poster.py --kind cover` | `... --kind content` (slides 2-5) · `--kind action` (slide 6) | `... --kind dark` |
+| option6 (blueprint) | `scripts/generate_post_image_blueprint.py --kind cover` | `... --kind content` (slides 2-5) · `--kind action` (slide 6) | `... --kind dark` |
+
+Options 4-6 use a single script per style with a `--kind cover|content|action|dark`
+flag (instead of three separate scripts). The slide-6 action list is `--kind action`
+on these styles, not a `--lead`-only content slide. See each style's SKILL.md for
+the full per-kind flags.
 
 The full CLI flags, palettes, fonts, and slide conventions for each style live
 in the style's own SKILL.md (`.claude/skills/hr-linkedin-option1/`,
@@ -210,14 +221,16 @@ Read the **Design rotation (last 6 runs)** ledger in
 4. `photo` (option3) needs a user-supplied photo. If none is available this run,
    drop `photo` from the candidate set and take the next-oldest layout.
 
-The library (chips ×4 palettes + tiles ×4 palettes + photo ×2 palettes ≈ 10
-distinct looks before any repeat):
+The library (6 layouts × their palettes ≈ 20 distinct looks before any repeat):
 
 | Layout | Style | `--palette` values |
 |---|---|---|
 | `chips` (option1) | `playful_*` | `warm-classic` / `cool-steel` / `earth-editorial` / `ink-slate` |
 | `tiles` (option2) | `playful_v2_*` | `warm-classic` / `cool-steel` / `earth-editorial` / `ink-slate` |
 | `photo` (option3) | `photo_*` | `warm` / `cool` |
+| `broadsheet` (option4) | `broadsheet.py` | `classic-red` / `ink-blue` / `forest` |
+| `poster` (option5) | `poster.py` | `kraft-clay` / `oat-sage` / `sand-ochre` |
+| `blueprint` (option6) | `blueprint.py` | `kraft-clay` / `oat-sage` / `sand-ochre` |
 
 Pass the chosen palette to **every** slide script in the run via `--palette`
 (cover, content, and dark-conclusion) so the whole carousel is consistent.
