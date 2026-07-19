@@ -1,27 +1,30 @@
-# LinkedIn draft — KABEL CEO Afternoon Series panel recap (Abel Saw)
+# LinkedIn draft — KABEL CEO Afternoon Series panel recap (Abel Saw) — engagement-optimised
 
 Event: KABEL "CEO Afternoon Series — Built to Experiment: The Cost of Standing Still".
-Panel: Abel Saw, Desmond Teo; moderated by TK Choo. Abel's slide: "One AI Strategy. Three Tracks."
+Panel: Abel Saw, Desmond Teo; moderated by TK Choo. Abel's slide (photo 2): "One AI Strategy. Three Tracks."
 Message (user-supplied): honoured to speak with industry leaders on hiring young talent for the AI era;
 AI transformation is workforce transformation; the AI-native generation is still in university / just grad;
 Malaysia is full of hope given the depth of young talent.
-Voice: first-person, warm, human. Anti-slop applied (no em-dashes, no inversions, no forced triads,
-no generic question close). Event-recap length (~200 words).
+Engagement build: leads with the idea (not logistics), sharpest POV up top, mild tension, peer-question close.
+Anti-slop: no em-dashes, no "not X, it's Y" inversion, human voice, varied sentence length. No fabricated quotes.
+NOTE: "kept circling back to people" is a soft recollection framing — confirm it matches your memory of the room.
 
 ---
 
-## Draft
+## Final draft (~185 words)
 
-Yesterday I spent an afternoon with a room full of CEOs and business leaders, talking about something close to me: how we hire and grow young talent for the AI era.
+AI transformation is workforce transformation. And the generation that grew up native to this technology is not in our companies yet. Most are still in university, or just graduated.
 
-Thank you to KABEL for having me on the "Built to Experiment" panel, alongside Desmond Teo and moderated by TK Choo. Our theme was "The Cost of Standing Still," and that cost is real.
+That was the thread through yesterday's KABEL "Built to Experiment" panel, where I joined Desmond Teo, moderated by TK Choo. Our theme was "The Cost of Standing Still."
 
-Here is what I keep returning to. AI transformation is workforce transformation. We spend our energy on models and tools, but the harder work is people. And the generation that grew up native to this technology is not in our companies yet. Most are still in university, or only just graduated.
+I shared a simple frame I keep returning to: one AI strategy, three tracks. But the conversation kept circling back to people. You can buy the tools. You still have to grow the talent.
 
-If we wait for them to arrive fully formed, we have already lost time. The task is to bring them in early, give them room to experiment, and let them teach us as much as we teach them.
+Here is my honest view. Many companies are building AI strategies for a workforce that has not arrived. We wait for this generation to graduate, then compete to hire them. By then we are already late.
 
-What stayed with me most was the optimism. The depth of young talent in Malaysia is real, and it is ready. Our job as leaders is to build the place where they can do their best work.
+The leaders who pull ahead will not wait. They will bring young talent in early, give them room to experiment, and learn from them as much as they teach.
 
-Grateful for the conversation, and for everyone building this future alongside us.
+Malaysia has real depth here. The talent is there. The question is whether we build the place for it fast enough.
+
+How are you bringing the AI-native generation in before they graduate?
 
 #FutureOfWork #AITransformation #Talent #Malaysia
